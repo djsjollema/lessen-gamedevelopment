@@ -1,4 +1,2 @@
-# wiki Gamedevelopment
+# lessen GameDevelopment
 
-Lesopdrachten gamedevelopment"# wiki" 
-"# lessen-gamedevelopment" 
