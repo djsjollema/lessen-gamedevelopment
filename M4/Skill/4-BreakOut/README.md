@@ -8,4 +8,4 @@ Leren werken met de raycast2D en de normaal
 
  
 ## De opdracht
-![Breakout game](images/Arcade%20Games%20Atari%20Breakout%20Gameplay.gif)
+![Breakout game](images/breakOut.gif)
