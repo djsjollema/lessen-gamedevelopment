@@ -5,7 +5,7 @@
 Leren werken met Euler-hoeken in graden
  
 ## De opdracht
-![myClock](images/myClock.gif)
+![myClock](images/myClock.gif)\
 
 ## Assets
-![assets](assets/myClock.zip)
+myClock.zip
