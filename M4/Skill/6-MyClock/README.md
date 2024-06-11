@@ -16,5 +16,20 @@ Een werkende analoge klok
 Je mag natuurlijk ook zelf andere assets zoeken, maken en/of ontwerpen voor jouw eigen ontwerp klok
 
 
-## Assets
-myClock.zip
+## Hints voor bij de opdracht
+
+### De datum en tijd weergeven
+
+````Cs
+        DateTime now = DateTime.Now;
+        int hours = now.Hour;
+        int minutes = now.Minute;
+        int seconds = now.Second;
+````
+
+### Rotaties in Euler-hoeken (in graden)
+
+In een 2D omgeving worden objecten geroteerd om de z-as. Rotaties worden in Unity weergegeven m.b.v. een Quaternion (een 4 dimensionale vector), maar kunnen met de methode "Euler" de rotatie in graden om respectievelijk de x-, y- en z-as worden opgegeven. 
+```` cs
+secondsHand.transform.rotation = Quaternion.Euler(new Vector(x-as, y-as, z-as))
+````
