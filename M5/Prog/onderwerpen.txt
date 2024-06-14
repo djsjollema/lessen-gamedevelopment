@@ -1,0 +1,17 @@
+
+Single Responsibility
+DRY
+Class diagrams
+Debuging (breakpoints vs Debug log)
+Gitflow
+
+object pooling?
+factory pattern?
+observer pattern (events)
+inheritance vs composition in unity
+
+
+
+mechanics:
+Path following
+Targeting (calculate future position)
