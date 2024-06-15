@@ -115,9 +115,12 @@ classDiagram
 
 ```
 
-We gaan de bovenstaande structuur nabouwen zodat we uiteindelijk onze eigen facory method pattern hebben.
+We gaan de bovenstaande structuur nabouwen zodat we uiteindelijk onze eigen facory method pattern hebben waarmee we wapens kunnen maken.
+
+![alt text](../src/10_10_smithy.png)
 
 **Opdracht 1:**
+
 Maak een **"/Scripts"** folder aan in je unity project als die er nog niet is.
 
 Maak in je Scripts folder een Script en Class voor Soldier.
@@ -249,7 +252,7 @@ Maak nu ook de SwordFactory en de ShieldFactory af en geef je soldier via deze f
 
 Contoleer dat de wapens niet rechtstreeks aan te maken zijn!
 
-![alt text](../src/10_08_final_check.png)
+![alt text](../src/10_08_final_check_errors.png)
 
 **Opdracht 5**
 
