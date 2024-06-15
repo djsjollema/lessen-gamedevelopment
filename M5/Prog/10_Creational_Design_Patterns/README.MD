@@ -252,6 +252,8 @@ Maak nu ook de SwordFactory en de ShieldFactory af en geef je soldier via deze f
 
 Contoleer dat de wapens niet rechtstreeks aan te maken zijn!
 
+![alt text](../src/10_09_final_check.png)
+
 ![alt text](../src/10_08_final_check_errors.png)
 
 **Opdracht 5**
