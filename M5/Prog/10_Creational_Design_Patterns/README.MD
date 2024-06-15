@@ -175,15 +175,15 @@ public class Soldier : MonoBehaviour
 
 ```
 
-Hang je Soldier script aan de camera en test de code. Je krijgt nu een swing te zien van je zwaard!
+Hang je Soldier script aan de camera en test de code. Je krijgt nu de log te zien van je boog!
 
 ![alt text](../src/10_04_swing_debug.png)
 
-De bedoeling is dat je code is afgeschermd dus we moeten zorgen dat je Soldier niet zomaar een zwaard kan aanmaken. Dat moet immers gedaan worden door de SwordFactory!
+De bedoeling is dat je code is afgeschermd dus we moeten zorgen dat je Soldier niet zomaar een wapen kan aanmaken. Dat moet immers gedaan worden door de Factories!
 
 **Opdracht 2:**
 
-Om code via het keyword **"internal"** af te schermen in unity moet je zorgen dat de **"assemblies"** (brokken gecompilede code in een DLL) goed zijn gedefinieerd. De map **"/WeaponFactory"** moet verwerkt worden in een eigen geisoleerde assembly. Dit doe je door in deze map een **"Assembly Definition Asset"** te maken.
+Om code via het keyword **"internal"** af te schermen in unity moet je zorgen dat de **"assemblies"** (verzameling gecompilede code in een DLL) goed zijn gedefinieerd. De map **"/WeaponFactory"** moet verwerkt worden in een eigen geisoleerde assembly. Dit doe je door in deze map een **"Assembly Definition Asset"** te maken.
 
 ![alt text](../src/10_05_assembly_def.png)
 
@@ -196,7 +196,7 @@ Als je de de code weer runt krijg je als het goed is de volgende errors:
 Je producten (Bow, Sword, Shield) zijn nu succesvol afgeschermd voor code van buitenaf!
 
 **Opdracht 3:**
-We gaan nu een werkende BowFactory maken. Om te beginnen maken we de abstacte **"WeaponFactory"** class aan:
+We gaan nu een werkende BowFactory maken. Om te beginnen maken we de abstracte **"WeaponFactory"** class aan:
 
 ```
 public abstract class WeaponFactory
@@ -222,7 +222,9 @@ public class BowFactory : WeaponFactory
 }
 ```
 
-Let op dat de factory classes **public** zijn en niet **internal** zoals de Bow class. De Soldier moet namelijk wel bij de factory kunnen komen. Zodat die een Bow voor hem kan aanmaken!
+Het **override** keyword zorgt ervoor dat de **_CreateWeapon()_** methode uit de abstracte class **WeaponFactory** een nieuwe invulling krijgt zoals die is gedefinieerd in de **BowFactory** class.
+
+Let op dat de factory classes zelf **public** zijn en niet **internal** zoals de Bow class. De Soldier moet namelijk wel bij de factory kunnen komen. Zodat hij deze wapens voor hem kan laten maken!
 
 Maak nu vanuit de **Soldier** class een nieuwe **bowfactory** aan en laat deze nu een boog voor je soldier aanmaken.
 
