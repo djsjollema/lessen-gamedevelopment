@@ -2,12 +2,12 @@
 
 
 ## Doelstelling
-Leren werken met rotaties in Radialen
+Werken met rotaties in Radialen
  
 ## De opdracht
-Laat een cirkel rollen. Teken een lijn op de cirkel, zodat je de rotatie goed kan zien. Geef de cirkel een constante hoeksnelheid, maar geef de cirkel diverse groottes 
+Laat het wiel rollen met de juiste snelheid.
 
-<img src="images/rollin.gif" alt="clock assets" width="50%"/>
+<img src="images/myCar-eindproduct.gif" alt="clock assets" width="50%"/>
 
 ## Een hoek in radialen
 
