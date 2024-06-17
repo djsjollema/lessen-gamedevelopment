@@ -17,4 +17,4 @@ Laat het wiel rollen met de juiste snelheid.
 
 ## Uitleg
 
-<a href="uitleg/14myCar.pptx" target="_blanc">Powerpoint</a>
+<a href="uitleg/myCar.pptx" target="_blanc">Powerpoint</a>
