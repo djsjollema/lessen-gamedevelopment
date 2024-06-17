@@ -9,15 +9,12 @@ Laat het wiel rollen met de juiste snelheid.
 
 <img src="images/myCar-eindproduct.gif" alt="clock assets" width="50%"/>
 
-## Een hoek in radialen
+## Assets
 
-De radiaal staat voor de omtrek van een cirkel met een straal van 1. 
+<img src="Assets/car.png" alt="clock assets" width="50%"/>
+<img src="Assets/wheel.png" alt="clock assets" width="50%"/>
+<img src="Assets/background.png" alt="clock assets" width="50%"/>
 
-Een volledige cirkel heeft een omtrek van 
-$$ Omtrek~cirkel = 2 \pi $$
+## Uitleg
 
-De **Radiaal** legt de hoek vast die hoort bij een bepaalde booglengte van een cirkel met straal 1
-
-Bij een hoek in radialen is het dus eenvoudig om de bijbehorende omtrek te vinden met
-
-$$ Omtrek~segment = \theta (in~radialen) \cdot r $$
+<a href="uitleg/14myCar.pptx" target="_blanc">Powerpoint</a>
