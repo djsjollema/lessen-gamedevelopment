@@ -1,47 +1,62 @@
-    # M4.2 Hit the ray Charles
-
-
-## Doelstelling
-Leren werken met de raycast2D
-
-## Context
-Op een 2d-scherm rijdt een animatie van een enemy-tank naar een willekeurige plek op het scherm en schiet een projectiel af
+Notes meeting GD1 & GD2 leerjaar 1
+Kim Verweij
+​
+Jelle Sjollema;
+​
+Erwin Henraat
+​
+Gedurende hele periode:
+Basic Git
+CMD periode 1
+Git tool (Source tree) periode 2
+Basic programming
+Inlever methode:
+Git link via simulise.
  
-## De opdracht
+Week 1
+Installation software (link)
 
-## Aangeboden Assets
-Opdrachten tot zover (Tank en EnemyTank)
-[zip bestand](Assets/TankGame.zip)
+Unity Essentials: Install Unity - Unity Learn
+In this tutorial, you’ll: Make sure you have the right computer system for using Unity Download the installation wizard Install the Unity Hub Install a version of the Unity Editor
+learn.unity.com
 
+Basic tools unity (link)
 
+Explore the Editor Interface - Unity Learn
+Jump into your first Unity scene and familiarize yourself with the main Editor windows.
+learn.unity.com
 
-# het aanbieden van een Raycast2D 
+Screenshots bewijs met gebruik tools.
+Unity video sturen ( uitleg basic tools)
+Hierarchy Unity (wordt ook gecovered in expore the editor interface tutorial)
+ 
+Week 2
+Create world
+Use (own or free) models.
+Week 3
+Create vehicle
+Rotation en move
+Components Unity
+Gameobjects.
+Collision
+Week 4
+Create UI
+Use canvas
+Restart game/pause
+Bonus points: setting dialog
+ 
 
-In Unity kan je een Physics2D.raycast-object aanbieden:
-
-````csharp
-     RaycastHit2D hit = Physics2D.Raycast(position, direction, length);
-````
-deze object retourneert een RaycastHit2D-object 
-
-
-````csharp
-        if (hit.collider != null)
-        {
-            //
-        }
-````
-
-Het RaycastHit2D-object heeft de volgende eigenschappen
-
-
-| property	| description           |
-| --------- | ------------------------------------------------------------------|
-| centroid	| The centroid of the primitive used to perform the cast.           |
-| collider	| The collider hit by the ray.                                      |
-| distance	| The distance from the ray origin to the impact point.             |
-| fraction	| Fraction of the distance along the ray that the hit occurred.     |
-| normal	| The normal vector of the surface hit by the ray.                  |
-| point	    | The point in world space where the ray hit the collider's surface.|
-| rigidbody	| The Rigidbody2D attached to the object that was hit.              |
-| transform	| The Transform of the object that was hit.                         |
+ 
+Week 1
+Animations (walk, run)
+Character controller
+Week 2
+Jump + animation
+Week 3
+Pick up (collectables)
+Week 4
+Polish & Presentation
+ 
+ 
+- Screen to gif inleveren.
+- Commit elke week.
