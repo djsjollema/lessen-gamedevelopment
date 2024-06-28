@@ -9,7 +9,7 @@ Classes
 
 Abstraction {Parameters, Arguments, return, abstract classes}
 Encapsulation {namespace, public, private, protected, internal, Getter, Setter}
-Inheritance
+Inheritance 
 Polymorphism (Interfaces)
 
 SOLID
