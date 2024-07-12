@@ -1,4 +1,4 @@
-#PROG les 1: Herhaling Functions, classes en Arrays
+# PROG les 1: Herhaling Functions, classes en Arrays
 
 Vorig schooljaar hebben jullie allemaal uitleg gehad over functions, classes en arrays.
 
