@@ -20,6 +20,8 @@ Wat is een **return value** en hoe kun je hiermee je functions gebruiken om ande
 
 Onderzoek nog eens deze termen en check of je ze nog kent. Zo niet vraag het nog eens even aan je klasgenoten of aan je docent. Het wordt nu tijd dat je ze goed kent.
 
+<a name = "opdracht1"></a>
+
 ### Opdracht 1 Functions, Methods, Parameters & return type
 
 Maak een function **CreateBall** waarmee je een 3d bol (prefab) met een rigidbody in de scene plaatst.
@@ -285,6 +287,8 @@ public class Game:Monobehaviour{
 
 ```
 
+<a name = "opdracht2"></a>
+
 ### Opdracht 2 Class, Object, Constructor & Instantiate
 
 Maak een class **TowerSpawner** en zet deze op je Camera of een ander leeg gameobject in je scene.
@@ -391,6 +395,8 @@ Een List maak je zo:
 In de code hierboven zie je dat je via de methode **Add()** items aan je list kunt toevoegen.
 
 De list bevat [nog veel meer handige methodes](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0) waaronder **Remove()**, **Sort()**, **Reverse()**, **Insert()** en nog veel meer.
+
+<a name = "opdracht3"></a>
 
 ### Opdracht 3 List en loop:
 
