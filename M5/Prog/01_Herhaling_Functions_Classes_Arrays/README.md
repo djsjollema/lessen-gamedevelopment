@@ -157,6 +157,11 @@ void Update()
 }
 ```
 
+Klaar met de opdracht?
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via educator._**
+
 <a name = "classes"></a>
 
 ## Class, Object, Constructor & Instantiate
@@ -304,6 +309,11 @@ Laat de **TowerSpawner** class elke keer als je in het scherm klikt een toren In
 
 ![place random towers](../src/01_05_place_towers.gif)
 
+Klaar met de opdracht?
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via educator._**
+
 ### Bonus:
 
 Zorg dat de toren op de plek komt waar je op de vloer klikt.
@@ -315,6 +325,11 @@ Neem [deze tutorial](https://gamedevbeginner.com/how-to-convert-the-mouse-positi
 
 Dit zou dus ongeveer het resultaat moeten zijn:
 ![resultaat bonus opdracht](../src/01_07_place_towers_at_location.gif)
+
+Klaar met de opdracht?
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via educator._**
 
 <a name = "arr"></a>
 
@@ -418,8 +433,18 @@ Laat de **EnemySpawner** alle enemies verwijderen als je op de **"Q"-toets** dru
 
 ![bonus result](../src/01_10_Lists_result.gif)
 
+Klaar met de opdracht?
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via educator._**
+
 ### Bonus:
 
 Verwijder 1 voor 1 alle enemies als je de **"X"-toets** indrukt. Je kunt hiervoor een [Coroutine](https://docs.unity3d.com/Manual/Coroutines.html) gebruiken.
 
 ![bonus result](../src/01_11_Lists_bonus.gif)
+
+Klaar met de opdracht?
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via educator._**
