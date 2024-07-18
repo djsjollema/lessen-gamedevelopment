@@ -71,13 +71,13 @@ Een goede manier om dependancies te voorkomen is het gebruiken van Events waarva
 
 Een Action Event moet je eigenlijk zien als een bericht wat je kunt versturen en waar elk script naar kan luisteren of niet.
 
-Dus bijvoorbeeld je enemies weten zelf wanneer ze door gaan. Dat kunnen ze in hun eigen update controleren door hun eigen lives variabele te checken.
+Dus bijvoorbeeld je enemies weten zelf wanneer ze dood gaan. Dat kunnen ze in hun eigen Update controleren door hun eigen lives variabele te checken.
 
 Op het moment dat de enemy dood gaat kun je de enemy een signaal laten versturen. Zo'n signaal noemen we dus een Action Event en die moeten we eerst klaarzetten.
 
 ```
 Class Enemy:Monobehaviour{
-    public static Action OnEnemyDeath; //Definitie van een Action Event
+    public static event Action OnEnemyDeath; //Definitie van een Action Event
     private int lives = 100;
     void Update(){
         if(lives <= 0 ){
@@ -94,11 +94,11 @@ Het Action Event is zowel **public** als **static**. Static betekent dat deze va
     Enemy.OnEnemyDeath //zo benader je vanuit een ander script een static variabele
 ```
 
-Op het moment dat de enemy dood gaat leten we hem nu het event versturen. Dit doen we met de Invoke functie:
+Op het moment dat de enemy dood gaat laten we hem nu het event versturen. Dit doen we met de **Invoke** functie:
 
 ```
 Class Enemy:Monobehaviour{
-    public static Action OnEnemyDeath; //Definitie van een Action Event
+    public static event Action OnEnemyDeath; //Definitie van een Action Event
     private int lives = 100;
     void Update(){
         if(lives <= 0 ){
@@ -109,8 +109,8 @@ Class Enemy:Monobehaviour{
 }
 ```
 
-**_Sidenote:
-Eigenlijk is het technisch gezien zo dat er geen bericht verstuurd wordt maar dat er wordt gekeken of er functies opgeslagen zitten in het Action Event. Maar voor de begrijpelijkheid houden we even het idee van een bericht versturen vast._**
+_Sidenote:
+Eigenlijk is het technisch gezien zo dat er geen bericht verstuurd wordt maar dat er wordt gekeken of er functies opgeslagen zitten in het Action Event. Als je dit echt goed wil begrijpen moet je onderzoeken hoe [Delegates](https://gamedevbeginner.com/events-and-delegates-in-unity/) werken. Maar voor de begrijpelijkheid houden we even het idee van een bericht versturen vast._
 
 Er wordt een bericht gestuurd als er een enemy dood gaat maar niemand luistert daar nog naar.
 
@@ -131,9 +131,14 @@ class Scoreboard:MonoBehaviour{
 }
 ```
 
-Ik heb nu een script dat mijn score verhoogt als er een enemy dood gaat. Als ik geen enemies meer heb doet mijn Scoreboard scipt het nogsteeds prima. Het script wacht wel op een bericht wat nooit komt maar dat maakt niet uit. Ook al verwijder ik nu mijn Scoreboard uit mijn game zullen mijn enemies gewoon berichten blijven sturen als ze dood gaan. er is gewoon geen Scoreboard meer wat daar naar luistert en vervolgens iets doet.
+Ik heb nu een script dat mijn score verhoogt als er een enemy dood gaat.
+
+Als ik geen enemies meer heb doet mijn Scoreboard script het nogsteeds prima. Het script wacht wel op een bericht wat nooit komt maar dat maakt niet uit.
+
+Ook al verwijder ik nu mijn Scoreboard uit mijn game zullen mijn enemies gewoon berichten blijven sturen als ze dood gaan. er is gewoon geen Scoreboard meer wat daar naar luistert en vervolgens iets doet.
 
 Je kunt zoveel scripts laten luisteren naar een Action Event als je wil en dat zal nooit een probleem opleveren.
+
 Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luiteren naar een event:
 
 ```
@@ -146,15 +151,15 @@ Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luit
 
 Maak op een canvas een gameobject genaamd scoreboard met een textfield (TMPro) aan waar je score in gaat bijhouden.
 
-Hang aan je scoreboard een script met de Class name Scoreboard.
+Hang aan je scoreboard een script met de classname **Scoreboard**.
 
 Maak een blokje waarmee je door een level rond kunt lopen met WASD.
 
-Maak een prefab voor een pickup en hang hieraan een script met als classname Pickup die checkt of hij geraakt wordt door de player.
+Maak een prefab voor een pickup en hang hieraan een script met als classname **Pickup** die checkt of hij geraakt wordt door de player.
 
-Laat de Pickup een Action Event versturen als hij is opgepakt.
+Laat de **Pickup** een Action Event versturen als hij is opgepakt.
 
-Laat het Scorebord luisteren naar het bericht en een score van 50 punten optellen en tonen in het tekstveld.
+Laat het **Scorebord** luisteren naar het bericht en een score van **50** punten optellen en tonen in het tekstveld van het scoreboard.
 
 ![Het Resultaat](../src/02_02_result.gif)
 
@@ -165,7 +170,7 @@ Klaar met de opdracht?
 
 ### Bonus
 
-Zoek uit hoe je aan het event data zoals bijvoorbeeld een integer mee kunt geven.
+Zoek uit hoe je aan het Action Event data zoals bijvoorbeeld een integer mee kunt geven.
 Zorg dat elke pickup een andere score geeft dat via het event wordt meegegeven en zo in de UI bij de score wordt opgeteld.
 
 ![Het Resultaat](../src/02_03_result_bonus.gif)
