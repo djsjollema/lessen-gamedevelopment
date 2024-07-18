@@ -1,8 +1,10 @@
 # PROG les 1: Herhaling Functions, classes en Arrays
 
-Vorig schooljaar hebben jullie allemaal uitleg gehad over functions, classes en arrays.
+Vorig schooljaar hebben jullie allemaal uitleg gehad over [functions](#functions), [classes](#classes) en [arrays](#arr).
 
 Echter is het balangrijk om dit te herhalen zodat je er zeker van bent dat je dit goed begrijpt en deze principes kunt toepassen als je een game bouwt.
+
+<a name = "functions"></a>
 
 ## Functions
 
@@ -153,6 +155,8 @@ void Update()
 }
 ```
 
+<a name = "classes"></a>
+
 ## Classes
 
 Wat is ook alweer een **Class**? en wat is dan ook alweer een **Instance** van een class?
@@ -262,7 +266,7 @@ public class Game:Monobehaviour{
 }
 ```
 
-Binnen Unity kun je met de Instantiate functie prefabs instantieren een prefab wordt dus ook behandeld als een class in de zin dat deze pas bestaat nadat hij geinstantieerd is.
+Binnen Unity kun je met de Instantiate functie prefabs instantieren een prefab wordt dus ook behandeld als een class in de zin dat deze pas bestaat nadat hij geinstantieerd is. Eigenlijk maken we binnen Unity dus geen gebruik van constructors zoals je dan normaal in C# wel zou doen.
 
 Het instantieren van prefabs kun je zo doen:
 
@@ -277,8 +281,133 @@ public class Game:Monobehaviour{
 
 ```
 
-### Opdracht 2 Class Instantieren:
+### Opdracht 2 Class, Instantiate:
 
-Maak nu zelf een eigen class aan voor een Toren.
+Maak een class **TowerSpawner** en zet deze op je Camera of een ander leeg gameobject in je scene.
 
-Als argument voor de constructor geef je het aantal levens en het type van de toren mee.
+Maak ook een prefab van een toren (dit mag ook een cylinder zijn). Zorg dat de base van de toren de zelfde positie heeft als de prefab.
+![tower base](../src/01_06_tower_base.png)
+
+Zorg voor een **Tower** class als script op je prefab. In de Start method van de **Tower** class geef je de toren een randomized Scale.
+
+Elke toren die je plaatst moet dus een andere size hebben.
+
+Laat de **TowerSpawner** class elke keer als je in het scherm klikt een toren Instantieren op een willekeurige positie.
+
+![place random towers](../src/01_05_place_towers.gif)
+
+### Bonus:
+
+Zorg dat de toren op de plek komt waar je op de vloer klikt.
+
+Zet een plane in je scene en gebruik de **ScreenPointToRay** functie om te bepalen waar de toren moet komen als je op de plane klikt.
+
+Neem [deze tutorial](https://gamedevbeginner.com/how-to-convert-the-mouse-position-to-world-space-in-unity-2d-3d/#ray_to_plane) door om erachter te komen hoe je de aangeklikte positie op een plane kunt krijgen:
+[![How to get the mouse position in world space](../src/01_04_ScreenToRay_Tutorial.png)](https://gamedevbeginner.com/how-to-convert-the-mouse-position-to-world-space-in-unity-2d-3d/#ray_to_plane)
+
+Dit zou dus ongeveer het resultaat moeten zijn:
+![resultaat bonus opdracht](../src/01_07_place_towers_at_location.gif)
+
+<a name = "arr"></a>
+
+## Arrays en Lists
+
+Ook het kunnen gebruiken van Arrays en Lists is een belangrijke skill om te hebben.
+Als je boodschappen moet doen schrijf je ook niet elk product op een apart briefje toch?
+
+Je maakt gewoon een lijst waar alles op staat.
+![list](../src/01_08_list.jpg)
+
+Zeker bij het maken van games waarbij je niet van te voren weet hoeveel kogels de speler gaat afvuren of hoeveel monsters de speler gaat tegenkomen zijn lijsten van groot belang.
+
+Een Array kun je bijvoorbeeld als volgt maken:
+
+```
+    string boodschappen[] = {
+        "melk",
+        "boter",
+        "vlees",
+        "rijst",
+        "eieren",
+        "sap",
+        "brood",
+        "fruit",
+        "uien"};
+
+```
+
+Er zijn ook [andere manieren](https://www.w3schools.com/cs/cs_arrays.php), bijvoorbeeld als de array nog leeg moet zijn.
+
+![array syntax](../src/01_09_array.png)
+
+Het voordeel van een Array of List is dat je in 1x logica kunt uitvoeren voor de inhoud van de gehele verzameling.
+
+Je hoeft dus niet meer voor elke enemy in je game code te schrijven om te kijken of hij wordt geraakt door een kogel. Je doet dat dan in 1X voor de gehele verzameling enemies. Hiervoor kun je bijvoorbeeld een [foreach](https://www.w3schools.com/cs/cs_foreach_loop.php) loop gebruiken.
+
+```
+    public GameObject enemies[] = new GameObject[10];
+    //enemies kun je via de inspector toevoegen
+
+    Update(){
+        foreach(GameObject enemy in enemies){
+            if(enemy.IsHit){
+                if(enemy.GetLife() <= 0)
+                {
+                    enemy.Die();
+                }
+            }
+        }
+    }
+```
+
+Een for each loop is speciaal voor het werken met verzamelingen. Deze gaat automatisch door de gehele verzameling heen.
+
+Een alternatief is werken met andere loops zoals een [while](https://www.w3schools.com/cs/cs_while_loop.php) of een [for](https://www.w3schools.com/cs/cs_for_loop.php) loop. Echter is de combinatie van foreach en verzamelingen (Arrays en Lists) het meest efficient om te gebruiken.
+
+De beperking van het gebruiken van een Array is dat de inhoud van de verzameling wel kan worden aangepast maar de grootte niet. In het bovenstaande vorbeeld zijn er 10 enemies. Dit kunnen er tijdens de game dan dus niet meer worden.
+
+De **List** is wat dat betreft een stuk dynamischer en daar kun je **"at runtime"** dan ook objecten aan je lijst toevoegen of de lijst verkleinen zodat er geen lege plekken in de lijst ontstaan.
+
+Een List maak je zo:
+
+```
+    public List<Enemy> enemies = new List<Enemy>();
+    //enemies kun je via de inspector toevoegen
+
+    CreateWave(int waveSize){
+        for(int = 0; i< waveSize;i++){
+            enemies.Add(Instantiate(enemyPrefab));
+            //At runtime kun je objecten aan je lijst toevoegen met de List.Add() methode
+        }
+    }
+
+
+```
+
+In de code hierboven zie je dat je via de methode **Add()** items aan je list kunt toevoegen.
+
+De list bevat [nog veel meer handige methodes](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0) waaronder **Remove()**, **Sort()**, **Reverse()**, **Insert()** en nog veel meer.
+
+### Opdracht 3 List en loop:
+
+Maak een **EnemySpawner** class en zet deze op een leeg game object in je scene.
+plaats dit gameobject op de locatie waar de enemies moeten spawnen.
+
+Maak een **Enemy** class en zet deze op de prefab van een enemy dit mag een rode kubus zijn.
+Zorg er in de Update methode van je Enemy voor dat deze over de z-as van je camera wegloopt.
+
+Maak in je **EnemySpawner** een List aan voor je enemies.
+
+Gebruik de **Add** methode om je enemies aan de lijst toe te voegen. Gebruik **Instantiate** om je enemies te creeren. Gebruik de **Clear** methode om je lijst te legen. Gebruik **Destroy** om je enemies te verwijderen.
+
+Laat de **EnemySpawner** in 1X 100 enemies spawnen als je op **"W"-toets** drukt.
+
+Laat de **EnemySpawner** elke seconde 3 enemies spawnen.
+
+Laat de **EnemySpawner** alle enemies verwijderen als je op de **"Q"-toets** drukt.
+
+### Bonus:
+
+Verwijder 1 voor 1 alle enemies als je de **"X"-toets** indrukt.
+
+![bonus result](../src/01_11_Lists_bonus.gif)
