@@ -1,4 +1,4 @@
-# PROG les 1: Herhaling Functions, classes en Arrays
+# PROG les 1: Herhaling Functions, Classes en Arrays
 
 Vorig schooljaar hebben jullie allemaal uitleg gehad over [functions](#functions), [classes](#classes) en [arrays](#arr).
 
@@ -6,7 +6,7 @@ Echter is het balangrijk om dit te herhalen zodat je er zeker van bent dat je di
 
 <a name = "functions"></a>
 
-## Functions
+## Functions, Methods, Parameters & return type
 
 Wat was ook alweer een function?
 
@@ -20,7 +20,7 @@ Wat is een **return value** en hoe kun je hiermee je functions gebruiken om ande
 
 Onderzoek nog eens deze termen en check of je ze nog kent. Zo niet vraag het nog eens even aan je klasgenoten of aan je docent. Het wordt nu tijd dat je ze goed kent.
 
-### Opdracht 1 Functions:
+### Opdracht 1 Functions, Methods, Parameters & return type
 
 Maak een function **CreateBall** waarmee je een 3d bol (prefab) met een rigidbody in de scene plaatst.
 
@@ -55,7 +55,7 @@ Geef je function nu een **Paramater** voor de kleur. En zorg dat je hiermee de k
     }
 ```
 
-zorg dat je in je update random een kleur genereert die je meegeeft aan de function CreateBall() als **Argument**
+zorg dat je in je update random een kleur genereert die je meegeeft aan de function CreateBall() als **Argument**. Een Color object bevat 4 eigenschappen: float red, float green, float blue en float alpha. Dit zijn de verschillende kleurkanalen van de pixels in je schem. alpha is de zichtbaarheid. Al deze waarden gaan van 0f tot 1f (0% tot 100%)
 
 ```
  Update(){
@@ -83,9 +83,9 @@ Laat zo elke bal op een andere random position binnen je scherm verschijnen.
 
 Maak een 2e function **DestroyBall** zorg dat je als argument een **Gameobject** mee kunt geven.
 
-Zorg dat de functie het gameobject vernietigt na 3 seconden.
+Zorg dat deze functie het meegegeven gameobject vernietigt na 3 seconden.
 
-Laat je CreateBall een referentie naar het gameobject returnen nadat deze is aangemaakt.
+Laat je **CreateBall** een referentie naar het gameobject (de bal) returnen nadat deze is aangemaakt.
 
 Geef na het aanmaken van de bal met CreateBall de referentie door als argument in de DestroyBall function zodat de bal na 3 seconden wordt verwijderd.
 
@@ -127,9 +127,9 @@ Dit is het eindresultaat:
 
 ![alt text](../src/01_01_balls.gif)
 
-Maak nu ook een functie voor het genereren van een random kleur en een functie voor het genereren van een random position en gebruik deze functies in je start en update methodes. Zodat je maar op 1 plek in de code je kleur en positie hoeft te randomizen.
+Zet de code voor het genereren van een random kleur en voor het genereren van een random position beiden in een aparte functie en gebruik deze functies in je start en update methodes. Zodoende hoef je maar op 1 plek in de code je kleur en positie te randomizen.
 
-Je Start em Update moeten er dan ongeveer zo uitzien:
+Je **Start** en **Update** moeten er dan ongeveer zo uitzien:
 
 ```
 void Start()
@@ -157,16 +157,20 @@ void Update()
 
 <a name = "classes"></a>
 
-## Classes
+## Class, Object, Constructor & Instantiate
 
 Wat is ook alweer een **Class**? en wat is dan ook alweer een **Instance** van een class?
 
-Is dit een vliegtuig? Nee
+Is dit een vliegtuig? ...
+
 ![alt text](../src/01_02_blueprint.jpg)
+Nee!
 
-Kan een blauwdruk vliegen? Nee
+Kan een blauwdruk vliegen? ...
+Nee!
 
-En als je met die blauwdruk nu eerst een vliegtuig maakt? Ja dan wel
+En als je met die blauwdruk nu eerst een vliegtuig maakt? ...
+Ja dan wel
 
 Dan heb je een **Instance** van de Vliegtuig Class gemaakt. Oftewel een Vliegtuig **Object**
 ![alt text](../src/01_03_class_vs_instance.png)
@@ -219,7 +223,7 @@ Met een ander script kun je nu van deze **Class** een **Object** maken (**Instan
     }
 ```
 
-Off meerdere objecten, zoveel als je maar wilt
+Of meerdere objecten, zoveel als je maar wilt
 
 ```
 public class Game:Monobehaviour{
@@ -254,12 +258,12 @@ Voor de consructor kun je ook net als bij alle functions **parameters** maken. J
 public class Plane
 {
     int capacity = 0;
-    Plane(int passengerCap){       //constructor
+    Plane(int passCap){       //constructor
         capacity = passCap;
         Debug.Log("Hallo ik ben een nieuw vliegtuig! waar "+capacity+ " mensen in kunnen.");
     }
 }
-public class Game:Monobehaviour{
+public class Game{
     void Start(){
         Plane jumbo = new Plane(400);
     }
@@ -274,14 +278,14 @@ Het instantieren van prefabs kun je zo doen:
 public class Game:Monobehaviour{
     public GameObject towerPrefab;
     void Start(){
-        Tower tower = Instantiate(towerPrefab);
+        GameObject tower = Instantiate(towerPrefab);
     }
 }
 
 
 ```
 
-### Opdracht 2 Class, Instantiate:
+### Opdracht 2 Class, Object, Constructor & Instantiate
 
 Maak een class **TowerSpawner** en zet deze op je Camera of een ander leeg gameobject in je scene.
 
@@ -310,7 +314,7 @@ Dit zou dus ongeveer het resultaat moeten zijn:
 
 <a name = "arr"></a>
 
-## Arrays en Lists
+## Array, List & Loops
 
 Ook het kunnen gebruiken van Arrays en Lists is een belangrijke skill om te hebben.
 Als je boodschappen moet doen schrijf je ook niet elk product op een apart briefje toch?
@@ -371,7 +375,7 @@ De **List** is wat dat betreft een stuk dynamischer en daar kun je **"at runtime
 Een List maak je zo:
 
 ```
-    public List<Enemy> enemies = new List<Enemy>();
+    public List<GameObject> enemies = new List<GameObject>();
     //enemies kun je via de inspector toevoegen
 
     CreateWave(int waveSize){
@@ -406,8 +410,10 @@ Laat de **EnemySpawner** elke seconde 3 enemies spawnen.
 
 Laat de **EnemySpawner** alle enemies verwijderen als je op de **"Q"-toets** drukt.
 
+![bonus result](../src/01_10_Lists_result.gif)
+
 ### Bonus:
 
-Verwijder 1 voor 1 alle enemies als je de **"X"-toets** indrukt.
+Verwijder 1 voor 1 alle enemies als je de **"X"-toets** indrukt. Je kunt hiervoor een [Coroutine](https://docs.unity3d.com/Manual/Coroutines.html) gebruiken.
 
 ![bonus result](../src/01_11_Lists_bonus.gif)
