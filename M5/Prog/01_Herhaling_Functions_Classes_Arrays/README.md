@@ -366,9 +366,9 @@ Er zijn ook [andere manieren](https://www.w3schools.com/cs/cs_arrays.php), bijvo
 
 ![array syntax](../src/01_09_array.png)
 
-Het voordeel van een Array of List is dat je in 1x logica kunt uitvoeren voor de inhoud van de gehele verzameling.
+Het voordeel van een Array of List is dat je in 1 keer logica kunt uitvoeren voor de inhoud van de gehele verzameling.
 
-Je hoeft dus niet meer voor elke enemy in je game code te schrijven om te kijken of hij wordt geraakt door een kogel. Je doet dat dan in 1X voor de gehele verzameling enemies. Hiervoor kun je bijvoorbeeld een [foreach](https://www.w3schools.com/cs/cs_foreach_loop.php) loop gebruiken.
+Je hoeft dus niet meer voor elke enemy in je game code te schrijven om te kijken of hij wordt geraakt door een kogel. Je doet dat dan in 1 keer voor de gehele verzameling enemies. Hiervoor kun je bijvoorbeeld een [foreach](https://www.w3schools.com/cs/cs_foreach_loop.php) loop gebruiken.
 
 ```
     public GameObject enemies[] = new GameObject[10];
@@ -418,17 +418,17 @@ De list bevat [nog veel meer handige methodes](https://learn.microsoft.com/en-us
 
 ### Opdracht 3 List en loop:
 
-Maak een **EnemySpawner** class en zet deze op een leeg game object in je scene.
+Maak een script met een **EnemySpawner** class en zet deze op een leeg game object in je scene.
 plaats dit gameobject op de locatie waar de enemies moeten spawnen.
 
-Maak een **Enemy** class en zet deze op de prefab van een enemy dit mag een rode kubus zijn.
+Maak een script met een **Enemy** class en zet deze op de prefab van een enemy dit mag een rode kubus zijn.
 Zorg er in de Update methode van je Enemy voor dat deze over de z-as van je camera wegloopt.
 
 Maak in je **EnemySpawner** een List aan voor je enemies.
 
 Gebruik de **Add** methode om je enemies aan de lijst toe te voegen. Gebruik **Instantiate** om je enemies te creeren. Gebruik de **Clear** methode om je lijst te legen. Gebruik **Destroy** om je enemies te verwijderen.
 
-Laat de **EnemySpawner** in 1X 100 enemies spawnen als je op **"W"-toets** drukt.
+Laat de **EnemySpawner** in 1 keer 100 enemies spawnen als je op **"W"-toets** drukt.
 
 Laat de **EnemySpawner** elke seconde 3 enemies spawnen.
 
@@ -441,11 +441,17 @@ Klaar met de opdracht?
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via educator._**
 
-### Bonus:
+### Bonus: Coroutine
 
 Verwijder 1 voor 1 alle enemies als je de **"X"-toets** indrukt. Je kunt hiervoor een [Coroutine](https://docs.unity3d.com/Manual/Coroutines.html) gebruiken.
 
 ![bonus result](../src/01_11_Lists_bonus.gif)
+
+### Bonus 2: Object Pooling
+
+Wat je wellicht ook is opgevallen is dat je bij het aanmaken van 100 enemies in 1 keer een flinke lag krijgt in je game. Dit komt omdat het instantieren erg zwaar is en dat doe je dus 100 keer in 1 frame. Dit kun je oplossen door gebruik te maken van [Object Pooling design pattern](https://learn.unity.com/tutorial/introduction-to-object-pooling#).
+
+Probeer dit voor de bonus opdracht ook te doen.
 
 Klaar met de opdracht?
 
