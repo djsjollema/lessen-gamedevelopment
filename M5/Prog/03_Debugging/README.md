@@ -20,15 +20,21 @@ Spreek binnen je team af waar de bugs vastgelegd worden en houd je daaraan. Een 
 
 1 van de simpelste tools om te debuggen is natuurlijk de console in Unity. Met het commando Debug.Log() hebben jullie al vaker gezocht naar de oorzaak en oplossing van een probleem in je game of code.
 
+### Debug Class
+
 Wist je dat er nog veel meer handige tools in de [Debug class](https://docs.unity3d.com/ScriptReference/Debug.html) zitten? Waaronder voor het geven van warnings of errors en het maken van **assertions** (testen van bepaalde voorwaarden).
 
 Je kunt in Unity zelfs gameobjecten die gelogd worden laten highlighten in de hierarchy.
+
+### Breakpoints
 
 Toch is het zo dat het best omslachtig kan zijn om steeds maar code aan je scripts te moeten toevoegen om te debuggen. Hierom geven alle fatsoenlijke code editors je de mogelijkheid om zogenaamde breakpoints toe te voegen.
 
 Met deze break points kun je snel alle informatie ophalen over states van je verschillende variabelen en gameobjecten. Dit kun je heel snel doen door een "breakpoint" naast een regel code te plaatsen. Unity pauzeert dat de game als je deze regel code hebt bereikt. Je kunt dan regel voor regel door de code uitvoeren en de states (waarden) van alle betrokken variabelen en objecten teruglezen. Ook de flow van je code wordt duidelijk omdat je er stap voor stap doorheen gaat.
 
 ![breakpoint](../src/03_03_breakpoint.png)
+
+### Voorbeelden
 
 In [deze PDF](Debugging.pdf) kun je voorbeelden zien van hoe je de een aantal Debug functies en Breakpoints kunt gebruiken met Unity en Visual Studio.
 [![pdf](../src/03_04_pdf.png)](Debugging.pdf)
