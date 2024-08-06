@@ -174,3 +174,8 @@ Zoek uit hoe je aan het Action Event data zoals bijvoorbeeld een integer mee kun
 Zorg dat elke pickup een andere score geeft dat via het event wordt meegegeven en zo in de UI bij de score wordt opgeteld.
 
 ![Het Resultaat](../src/02_03_result_bonus.gif)
+
+Klaar met de opdracht?
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via educator._**
