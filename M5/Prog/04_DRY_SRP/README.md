@@ -98,7 +98,9 @@ Op de volgende manieren kun je je code verbeteren op gebied van SRP:
 
 ### Opdracht 6: SRP
 
-Download dit project en probeer het script van de player op te delen in losse herbruikbare scripts volgens het SRP principe.
+Fork en clone [dit project](https://github.com/erwinhenraat/Space48/tree/main) en probeer het script: PlayerBehaviour.cs op te delen in losse scripts volgens het SRP principe.
+
+Zorg dat het prototype precies blijft werken zoals het deed.
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
@@ -107,9 +109,38 @@ Download dit project en probeer het script van de player op te delen in losse he
 
 ### Opdracht 7: DRY
 
-Download dit project en probeer zoveel mogelijk de herhaling van code uit alle scripts te halen.
+In de code voor de LaserBehaviour staat de volgende code:
 
-Doe dit door zoveel mogelijk van de bovenstaande technieken te gebruiken.
+```
+    void Update(){
+        transform.position = transform.position + transform.forward * moveSpeed * Time.deltaTime;
+    }
+
+```
+
+In de code voor de PlayerBehaviour staat:
+
+```
+    void Move() {
+        transform.position = transform.position + transform.forward * moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+
+    }
+```
+
+Beide scripts doen nagenoeg hetzelfde met als klein verschil de Input.GetAxis("Vertical") statement. Pas het script zodanig aan dat beide gameobjecten (het schip en de kogel) gebruik kunnen maken van hetzelfde script. Noem deze **"Movement.cs"**
+
+- **_Push je code naar github en maak een screen capture van je werkende prototype._**
+- **_Lever een link je code en je gifje in via Simulize._**
+
+### Bonus: extra feature
+
+Onderin het ShipBehaviour.cs script staan nog een aantal todo's
+werk 1 van de opties uit :
+
+- Optie 1 een HealthSysteem en enemies die op je schieten
+- Optie 2 een energy shield systeem
+
+Zorg dat de uitwerking voldoet aan SRP en DRY!
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
