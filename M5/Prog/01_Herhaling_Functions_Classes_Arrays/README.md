@@ -326,6 +326,8 @@ Neem [deze tutorial](https://gamedevbeginner.com/how-to-convert-the-mouse-positi
 Dit zou dus ongeveer het resultaat moeten zijn:
 ![resultaat bonus opdracht](../src/01_07_place_towers_at_location.gif)
 
+**Let op!** In de tutorial wordt er gesproken over een **Plane** dit is een wiskundige oneindig vlak en niet hetzelfde als het gameobject **Plane** met een platte vierkante mesh binnen unity.
+
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
