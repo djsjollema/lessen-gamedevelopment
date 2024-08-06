@@ -29,9 +29,9 @@ Bijvoorbeeld in je towerdefense game kun je een script voor het schieten met je 
 
 Code die SRP niet aanhoudt is herkenbaar aan grote classes en ook komt hier vaak het woord **"manager"** voor in de naam.
 
-De programmeur wist immers niet zo goed meer hoe alle verschillende functies van de class samengevast moesten worden.
+De programmeur wist immers niet zo goed meer hoe alle verschillende functies van de class samengevat moesten worden.
 
-Het goed toepassen van SRP zorgt ervoor dat je scripts ook mooi en makkelijk kunt hergebruiken op andere objecten.
+Het goed toepassen van SRP zorgt ervoor dat je scripts ook mooi leesbaar zijn. Verder zijn ze makkelijk te hergebruiken op andere objecten.
 
 Bijvoorbeeld een upgrade script dat werkt voor alle torens die dat zouden moeten kunnen. I.p.v voor elk type toren deze functionaliteit weer opnieuw te moeten programmeren.
 ![modular](../src/04_02_modular.png)
@@ -128,6 +128,77 @@ In de code voor de PlayerBehaviour staat:
 ```
 
 Beide scripts doen nagenoeg hetzelfde met als klein verschil de Input.GetAxis("Vertical") statement. Pas het script zodanig aan dat beide gameobjecten (het schip en de kogel) gebruik kunnen maken van hetzelfde script. Noem deze **"Movement.cs"**
+
+Zie jij zelf nog iets anders wat herhalend is en erg op elkaar lijkt????
+
+Scroll voor een hint!
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+Hint:
+
+```
+   IEnumerator Introduction() {
+       introductionField.enabled = true;
+       introductionField.text = "Welcome to Space 4 8. \n Move your ship with the arrows or WASD. \n Shoot with SPACE. \n Gather pickups and cycle with 'Left CTR'.  \n  Use pickups with 'E'.";
+       yield return new WaitForSeconds(5f);
+       introductionField.enabled = false;
+   }
+   IEnumerator ShowMessage(string message) {
+       messageField.enabled = true;
+       messageField.text = message;
+       yield return new WaitForSeconds(3f);
+       messageField.enabled = false;
+   }
+```
+
+Je introduction is ook gewoon een message!
+
+Maak de code herbruikbaar! zodat ook de introduction gebruik maakt van de ShowMessage functie.
+Zorg dat ook de tijd dat het bericht zichtbaar is voor alle bericvhten ingesteld kan worden.
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
