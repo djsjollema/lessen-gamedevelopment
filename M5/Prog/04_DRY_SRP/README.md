@@ -196,7 +196,7 @@ Scroll voor een hint!
 Je introduction is ook gewoon een message!
 
 Maak de code herbruikbaar! zodat ook de introduction gebruik maakt van de ShowMessage functie.
-Zorg dat ook de tijd dat het bericht zichtbaar is voor alle bericvhten ingesteld kan worden.
+Zorg dat ook de tijd dat het bericht zichtbaar is voor alle berichten ingesteld kan worden.
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
