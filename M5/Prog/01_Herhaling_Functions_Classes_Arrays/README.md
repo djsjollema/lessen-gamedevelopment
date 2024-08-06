@@ -160,7 +160,7 @@ void Update()
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**
 
 <a name = "classes"></a>
 
@@ -312,7 +312,7 @@ Laat de **TowerSpawner** class elke keer als je in het scherm klikt een toren In
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**
 
 ### Bonus:
 
@@ -332,7 +332,7 @@ Dit zou dus ongeveer het resultaat moeten zijn:
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**
 
 <a name = "arr"></a>
 
@@ -439,7 +439,7 @@ Laat de **EnemySpawner** alle enemies verwijderen als je op de **"Q"-toets** dru
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**
 
 ### Bonus: Coroutine
 
@@ -456,4 +456,4 @@ Probeer dit voor de bonus opdracht ook te doen.
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**

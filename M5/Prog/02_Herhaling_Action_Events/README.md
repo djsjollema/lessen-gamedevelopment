@@ -145,9 +145,9 @@ Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luis
     Enemy.OnEnemyDeath -= GetEnemyPoints;
 ```
 
-<a name = "opdracht1"></a>
+<a name = "opdracht4"></a>
 
-### Opdracht 1: Action Events
+### Opdracht 4: Action Events
 
 Maak op een canvas een gameobject genaamd "scoreboard" met een textfield (TMPro) component aan waar je score in gaat bijhouden.
 
@@ -166,7 +166,7 @@ Laat het **Scorebord** luisteren naar het bericht en een score van **50** punten
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**
 
 ### Bonus
 
@@ -178,4 +178,4 @@ Zorg dat elke pickup een andere score geeft dat via het event wordt meegegeven e
 Klaar met de opdracht?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via educator._**
+- **_Lever een link je code en je gifje in via Simulize._**
