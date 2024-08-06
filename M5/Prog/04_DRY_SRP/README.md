@@ -33,7 +33,7 @@ De programmeur wist immers niet zo goed meer hoe alle verschillende functies van
 
 Het goed toepassen van SRP zorgt ervoor dat je scripts ook mooi leesbaar zijn. Verder zijn ze makkelijk te hergebruiken op andere objecten.
 
-Bijvoorbeeld een upgrade script dat werkt voor alle torens die dat zouden moeten kunnen. I.p.v voor elk type toren deze functionaliteit weer opnieuw te moeten programmeren.
+Bijvoorbeeld een upgrade script dat werkt voor alle torens die dat zouden moeten kunnen. I.p.v voor elk type toren deze functionaliteit weer opnieuw te moeten programmeren. Enkel de verschillen tussen de torens moeten apart worden geprogrammeerd. De overeenkomsten maar 1 keer.
 ![modular](../src/04_02_modular.png)
 
 Het gebruik van SRP zal leiden tot losse herbruikbare scripts die een duidelijk herkenbare en afgeschermde functionaliteit hebben.
@@ -42,7 +42,7 @@ Het gebruik van SRP zal leiden tot losse herbruikbare scripts die een duidelijk 
 
 ## Don't Repeat Yourself
 
-Code moet compact en herbruikbaar zijn. OP het moment dat je stukken herhalende code schrijft wordt het later erg lastig om aan te passen. elke aanpassing zal dan op heel ververschillende plekken moeten worden doorgevoerd.
+Code moet compact en herbruikbaar zijn. Op het moment dat je stukken herhalende code schrijft wordt het later erg lastig om aan te passen. elke aanpassing zal dan op heel ververschillende plekken moeten worden doorgevoerd.
 
 Ook maakt herhaling je code gewoonweg lastig leesbaar. Herhalende code noemen me ook wel eens spaghetti code omdat de functionaliteit allemaal met elkaar verweven is en een aanpassing op de ene plek ook weer gevolgen heeft voor code op een andere plek. Het wordt dan al snel een soort speurtocht om kleine veranderingen te maken. Herkenbaar?!
 
@@ -102,6 +102,8 @@ Fork en clone [dit project](https://github.com/erwinhenraat/Space48/tree/main) e
 
 Zorg dat het prototype precies blijft werken zoals het deed.
 
+![demo](../src/04_09_demo.gif)
+
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
 
@@ -132,53 +134,49 @@ Beide scripts doen nagenoeg hetzelfde met als klein verschil de Input.GetAxis("V
 Zie jij zelf nog iets anders wat herhalend is en erg op elkaar lijkt????
 
 Scroll voor een hint!
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-Hint:
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+|\
+**Hint:**
 
 ```
    IEnumerator Introduction() {
