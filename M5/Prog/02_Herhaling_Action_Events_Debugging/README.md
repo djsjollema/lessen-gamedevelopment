@@ -67,13 +67,13 @@ Kortom genoeg reden om te zorgen dat je deze **dependancies** en **tight couplin
 
 ## Action Events
 
-Een goede manier om dependancies te voorkomen is het gebruiken van Events waarvan 1 soort event een **Action Event** is. Je hebt ook nog **Delegates** en **Unity Events** die je zou kunnen gebruiken. Waarbij **Delegates** eigenlijk de onderliggende basis vormt van de Action Events en Unity Events als voordeel hebben dat ze vanuit de inspector te koppelen zijn. Deze zijn dus makkelijk buiten de code om te gebruiken. We beperken ons nu echter tot de **Action Events**.
+Een goede manier om dependancies te voorkomen is het gebruiken van Events waarvan 1 soort event een **Action Event** is. Je hebt ook nog **Delegates** en **Unity Events** die je zou kunnen gebruiken. Waarbij **Delegates** eigenlijk de onderliggende basis vormt van de Action Events en Unity Events. Unity Events hebben als voordeel dat ze vanuit de inspector te koppelen zijn. Deze zijn dus makkelijk buiten de code om te gebruiken bijvoorbeeld door artists. We beperken ons nu echter tot de **Action Events**.
 
-Een Action Event moet je eigenlijk zien als een bericht wat je kunt versturen en waar elk script naar kan luisteren of niet.
+Een **Action Event** moet je eigenlijk zien als een bericht wat je kunt versturen en waar elk script naar kan luisteren of niet.
 
 Dus bijvoorbeeld je enemies weten zelf wanneer ze dood gaan. Dat kunnen ze in hun eigen Update controleren door hun eigen lives variabele te checken.
 
-Op het moment dat de enemy dood gaat kun je de enemy een signaal laten versturen. Zo'n signaal noemen we dus een Action Event en die moeten we eerst klaarzetten.
+Op het moment dat de enemy dood gaat kun je de enemy een signaal laten versturen. Zo'n signaal noemen we dus een **Action Event** en die moeten we eerst klaarzetten.
 
 ```
 Class Enemy:Monobehaviour{
@@ -88,7 +88,7 @@ Class Enemy:Monobehaviour{
 
 ```
 
-Het Action Event is zowel **public** als **static**. Static betekent dat deze variabele vanuit elk ander script direct te benaderen is via de class Enemy die niet geinstantieerd is. Echter kan er dus maar 1 versie van deze variabele bestaan ook al zijn er meer enemies. Hier wordt het dus ook gelijk duidelijk waarom het belangrijk is om Classes Uppercase te schrijven en variabelen lowercase.
+Het Action Event is zowel **public** als **static**. Static betekent dat deze variabele vanuit elk ander script direct te benaderen is via de class Enemy die niet geinstantieerd is. Echter kan er dus maar 1 versie van deze variabele bestaan ook al zijn er meer enemies. Hier wordt het dus ook gelijk duidelijk waarom het belangrijk is om Classes Uppercase te schrijven en variabelen lowercase. Zodat je static classes en instnces van classes dus makkelijk uit elkaar kunt houden.
 
 ```
     Enemy.OnEnemyDeath //zo benader je vanuit een ander script een static variabele
@@ -110,11 +110,11 @@ Class Enemy:Monobehaviour{
 ```
 
 _Sidenote:
-Eigenlijk is het technisch gezien zo dat er geen bericht verstuurd wordt maar dat er wordt gekeken of er functies opgeslagen zitten in het Action Event. Als je dit echt goed wil begrijpen moet je onderzoeken hoe [Delegates](https://gamedevbeginner.com/events-and-delegates-in-unity/) werken. Maar voor de begrijpelijkheid houden we even het idee van een bericht versturen vast._
+Eigenlijk is het technisch gezien zo dat er geen bericht verstuurd wordt maar dat er wordt gekeken of er functies opgeslagen zitten in het Action Event. Als je dit echt goed wil begrijpen moet je onderzoeken hoe [Delegates](https://gamedevbeginner.com/events-and-delegates-in-unity/) werken. Maar om het simpel te houden blijven we even bij het idee van een bericht dat verstuurd wordt._
 
 Er wordt een bericht gestuurd als er een enemy dood gaat maar niemand luistert daar nog naar.
 
-Om te zorgen dat andere scripts hier naar gaan luisteren gaan we ons in de Start methode van deze scripts "abboneren" op deze berichten. Dit doen we door een functie te maken die we met **+=** gaan toevoegen aan de Action. Let op dat je geen () achter de naam van de functie zet.
+Om te zorgen dat andere scripts hier naar gaan luisteren gaan we ons in de Start methode van deze scripts **"abboneren"** op deze berichten. Dit doen we door een functie te maken die we met **+=** gaan toevoegen aan de Action. Let op dat je geen () achter de naam van de functie zet.
 
 ```
 class Scoreboard:MonoBehaviour{
@@ -133,13 +133,13 @@ class Scoreboard:MonoBehaviour{
 
 Ik heb nu een script dat mijn score verhoogt als er een enemy dood gaat.
 
-Als ik geen enemies meer heb doet mijn Scoreboard script het nogsteeds prima. Het script wacht wel op een bericht wat nooit komt maar dat maakt niet uit.
+Als ik geen enemies meer heb doet mijn Scoreboard script het nog steeds prima. Het script wacht wel op een bericht wat nooit komt maar dat maakt niet uit.
 
 Ook al verwijder ik nu mijn Scoreboard uit mijn game zullen mijn enemies gewoon berichten blijven sturen als ze dood gaan. er is gewoon geen Scoreboard meer wat daar naar luistert en vervolgens iets doet.
 
 Je kunt zoveel scripts laten luisteren naar een Action Event als je wil en dat zal nooit een probleem opleveren.
 
-Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luiteren naar een event:
+Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luisteren naar een event:
 
 ```
     Enemy.OnEnemyDeath -= GetEnemyPoints;
@@ -147,9 +147,9 @@ Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luit
 
 <a name = "opdracht1"></a>
 
-### Opdracht 4 Action Events
+### Opdracht 1: Action Events
 
-Maak op een canvas een gameobject genaamd scoreboard met een textfield (TMPro) aan waar je score in gaat bijhouden.
+Maak op een canvas een gameobject genaamd "scoreboard" met een textfield (TMPro) component aan waar je score in gaat bijhouden.
 
 Hang aan je scoreboard een script met de classname **Scoreboard**.
 
