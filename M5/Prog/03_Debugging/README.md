@@ -47,9 +47,7 @@ In [deze PDF](Debugging.pdf) kun je voorbeelden zien van hoe je de een aantal De
 Noteer de oorzaken van deze 2 bugs gebruik notepad om dit in een .txt bestand te zetten.
 Lever je .txt bestand in op simulize
 
-<a name = "opdracht2"></a>
-
-### Opdracht 5B : Vastleggen van bugs
+### Opdracht 5B : Vastleggen van Mythe bugs
 
 Pak je project Mythe erbij en noteer minimaal 3 verschillende bugs. Zorg voor een duidelijke Omschrijving van:
 
@@ -60,8 +58,6 @@ Pak je project Mythe erbij en noteer minimaal 3 verschillende bugs. Zorg voor ee
 - welke vervolg acties nodig zijn.
 
 Doe dit door 3 nieuwe issues aan te maken op de repo van je Mythe project. Lever van elke gemaakte issue een screenshot in op simulize.
-
-<a name = "opdracht3"></a>
 
 ### Opdracht 5C : Breakpoints
 
