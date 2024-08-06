@@ -320,13 +320,14 @@ Zorg dat de toren op de plek komt waar je op de vloer klikt.
 
 Zet een plane in je scene en gebruik de **ScreenPointToRay** functie om te bepalen waar de toren moet komen als je op de plane klikt.
 
-Neem [deze tutorial](https://gamedevbeginner.com/how-to-convert-the-mouse-position-to-world-space-in-unity-2d-3d/#ray_to_plane) door om erachter te komen hoe je de aangeklikte positie op een plane kunt krijgen:
+Neem [deze tutorial](https://gamedevbeginner.com/how-to-convert-the-mouse-position-to-world-space-in-unity-2d-3d/#ray_to_plane) door om erachter te komen hoe je de aangeklikte positie op een **Plane** kunt krijgen:
+
+**Let op!** In de tutorial wordt er gesproken over een **Plane** dit is een [wiskundige oneindig vlak](https://docs.unity3d.com/ScriptReference/Plane.html) en niet hetzelfde als het gameobject **Plane** met een platte vierkante mesh binnen unity.
+
 [![How to get the mouse position in world space](../src/01_04_ScreenToRay_Tutorial.png)](https://gamedevbeginner.com/how-to-convert-the-mouse-position-to-world-space-in-unity-2d-3d/#ray_to_plane)
 
 Dit zou dus ongeveer het resultaat moeten zijn:
 ![resultaat bonus opdracht](../src/01_07_place_towers_at_location.gif)
-
-**Let op!** In de tutorial wordt er gesproken over een **Plane** dit is een wiskundige oneindig vlak en niet hetzelfde als het gameobject **Plane** met een platte vierkante mesh binnen unity.
 
 Klaar met de opdracht?
 
