@@ -169,6 +169,8 @@ public class Player : MonoBehaviour, IDamageable
 
 ```
 
+[Kijk ook nog even deze video](https://www.youtube.com/watch?v=Q-FExZS0Swo)
+
 ### Opdracht 9: Abstraction en Interfaces
 
 Werk verder aan het prototype van opdracht 8. Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als opdracht 8 straks stuk is.
