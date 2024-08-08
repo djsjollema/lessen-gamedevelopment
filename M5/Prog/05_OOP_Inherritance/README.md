@@ -112,7 +112,7 @@ public class CannonTower : Tower
 
     void Start()
     {
-        // Aanroep van de Start-methode van de basisklasse
+        // Aanroep van de Initialize methode van de basisklasse
         Initialize();
         Debug.Log("CannonTower has an explosion radius of: " + explosionRadius);
 
@@ -144,7 +144,7 @@ public class SniperTower : Tower
 
     void Start()
     {
-        // Aanroep van de Start-methode van de basisklasse
+        // Aanroep van de Initialize methode van de basisklasse
         Initialize();
         Debug.Log("SniperTower has a critical chance of: " + criticalChance);
 
@@ -171,7 +171,7 @@ Maak een **Brute** class die overerft van de **EnemyParent** class. Deze moet du
 
 Maak een **Elf** class die ook overerft van de **EnemyParent** class. De Elf heeft weinig levens maar loopt heel snel.
 
-De elf krijgt ook nog een functie dat hij om de 3 seconden 0.5 seconde onzichtbaar wordt. Noem deze **ToggleVisibility**. Je kunt het renderer component aan en uit zetten met `renderer.enabled = true; // of false; ` nadat je het renderer component hebt opgevreegd met: `Renderer renderer = GetComponent<Renderer>();` of `Renderer renderer = GetComponentInChildren<Renderer>();`
+De elf krijgt ook nog een functie dat hij om de 3 seconden 0.5 seconde onzichtbaar wordt. Noem deze **ToggleVisibility**. Je kunt het renderer component aan en uit zetten met `renderer.enabled = true; // of false; ` nadat je het renderer component hebt opgevraagd met: `Renderer renderer = GetComponent<Renderer>();` of `Renderer renderer = GetComponentInChildren<Renderer>();`
 
 Je enemies mogen gemaakt zijn met behulp van primitives en hoeven niet per se te animeren etc..
 Als je gebruik maakt van Mixamo en animaties voor je enemies geldt dat als **Bonusopdracht**
@@ -183,24 +183,21 @@ using UnityEngine;
 
 public class ShootFromCamera : MonoBehaviour
 {
-    public GameObject projectilePrefab;
+    public GameObject projectilePrefab; //vergeet geen prefab in te slepen via de inspector
     private Plane floor;
     void Start()
     {
         floor = new Plane(Vector3.up, 0);
     }
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-
             float dist;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (floor.Raycast(ray, out dist)) {
-
                 GameObject p = Instantiate(projectilePrefab, transform.position, transform.rotation);
-                Vector3 wPos = ray.GetPoint(dist);
-                p.transform.LookAt(wPos);
+                Vector3 tPos = ray.GetPoint(dist);
+                p.transform.LookAt(tPos);
                 p.AddComponent<MoveProj>();
             }
         }
@@ -208,9 +205,7 @@ public class ShootFromCamera : MonoBehaviour
 }
 public class MoveProj : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 20f;
-    // Start is called before the first frame update
-    // Update is called once per frame
+    private float moveSpeed = 20f;
     void Update()
     {
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
