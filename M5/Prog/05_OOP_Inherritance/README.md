@@ -199,6 +199,7 @@ public class ShootFromCamera : MonoBehaviour
                 Vector3 tPos = ray.GetPoint(dist);
                 p.transform.LookAt(tPos);
                 p.AddComponent<MoveProj>();
+                Destroy(p,5f);
             }
         }
     }
