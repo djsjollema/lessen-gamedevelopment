@@ -171,21 +171,27 @@ public class Player : MonoBehaviour, IDamageable
 
 ### Opdracht 9: Abstraction en Interfaces
 
-Werk verder aan het prototype van opdracht 8.
+Werk verder aan het prototype van opdracht 8. Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als opdracht 8 straks stuk is.
 
 Zorg naast de Classes **Brute** en **Elf** ook voor de class **Player**.
 
-Maak een nieuwe Abstracte class **Unit** ipv **EnemyParent** en zorg dat ze allemaal overerven van **Unit**.
+Maak een nieuwe Abstracte class **Unit** ipv **EnemyParent** en zorg dat ze allemaal overerven van **Unit**. **EnemyParent** kun je in deze branch weggooien als je de logica hebt overgezet.
 
-Maak de volgende interfaces: **IDamagable**, **IMovable** en zorg dat deze allemaal worden geimplementeerd en aangeroepen in de juiste klassen.
+Maak de volgende interfaces: **IDamagable**, **IMovable** en zorg dat deze allemaal worden geimplementeerd in alle klassen.
 
-Zorg dat de speler rond kan lopen over het veld met de pijltjestoetsen. Zorg dat de Elf en de Brute vanzelf naar rechts gaan. (zoals bij opdracht 8) Doe via de Methode **Move()** die je eerst definieert in de **IMovable** interface.
+Zorg dat de speler rond kan lopen over het veld met de pijltjestoetsen. Zorg dat de Elf en de Brute vanzelf naar rechts gaan. (zoals bij opdracht 8)
 
-Zorg ervoor dat alle units geraakt kunnen worden door de kogels die je vanaf de camera schiet. (zoals in opdracht 8). Gebruik hiervoor een methode **TakeDamage()** die je ook eerst definieert in de **IDamagable** Interface.
+Doe dit via implementatie van de in **IMovable** gedefinieerde methode **Move()**. Implementeer Move in **Player** en in **Unit**.
+
+Zorg ervoor dat alle units geraakt kunnen worden door de kogels die je vanaf de camera schiet. (zoals in opdracht 8).
+
+Gebruik hiervoor een methode **TakeDamage()** die je ook eerst definieert in de **IDamagable** Interface. Implementeer deze in **Unit**.
 
 Dit is ongeveer het resultaat:
 
 ![demo opdracht 9](../src/06_01_demo.gif)
+
+Net als bij opdracht 8 zijn animaties niet verplicht. Deze gelden als Bonus opdracht.
 
 Dubbelcheck goed of alle code in de juiste classes staat. is je code nog DRY?
 
