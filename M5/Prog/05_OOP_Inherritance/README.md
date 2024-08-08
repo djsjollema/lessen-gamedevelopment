@@ -158,6 +158,8 @@ Andere voor jullie bekende scope modifiers zijn: **private** en **public**.
 
 **Let op:** De **Start** en **Update** methoden van je base class worden niet meer automatisch uitgevoerd. Enkel de Start en Update van de child class. Je kunt wel een eigen methode definieren in je base class zoals in het voorbeeld **Initalize()** om die uit te voeren in de start methode van je child class.
 
+<a name = "opdracht8"></a>
+
 ### Opdracht 8: Inheritance
 
 Maak een **EnemyParent** class waarin je programmeert dat deze automatisch van links naar rechts loopt zolang het leven van de enemy niet op is. Zorg dat deze enemy levens verliest als ze door een projectiel worden geraakt.
@@ -219,6 +221,8 @@ Het Eindresultaat is dus iets als dit:
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
+
+<a name = "bonus"></a>
 
 ### Bonus: Animaties
 
