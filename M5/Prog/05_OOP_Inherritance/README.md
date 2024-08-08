@@ -32,16 +32,19 @@ OOP bevordert de modulariteit van de code door deze op te splitsen in afzonderli
 ### Herbruikbaarheid:
 
 Door gebruik te maken van klassen en objecten kunnen programmeurs code hergebruiken in verschillende delen van een programma of in andere projecten. Dit vermindert de hoeveelheid dubbele code en maakt het onderhoud eenvoudiger.
+
 ![re-use](../src/05_02_reuse.png)
 
 ### Flexibiliteit en Schaalbaarheid:
 
 OOP maakt gebruik van polymorfisme en overerving, waardoor objecten kunnen worden aangepast en uitgebreid zonder de bestaande code te veranderen. Dit zorgt voor een flexibele en schaalbare architectuur.
+
 ![extend](../src/05_03_extension.png)
 
 ### Beheersbaarheid:
 
 Softwareprojecten worden steeds complexer. OOP helpt bij het beheren van deze complexiteit door de data en de methoden die op die data opereren in één object te groeperen. Dit weerspiegelt vaak de manier waarop mensen de wereld zien en begrijpen, wat bijdraagt aan de begrijpelijkheid van de code.
+
 ![Data as reality](../src/05_04_data_as_reality.png)
 
 ### Onderhoudbaarheid:

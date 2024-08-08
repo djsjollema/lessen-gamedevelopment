@@ -194,7 +194,7 @@ Hoe herken je ze?
 
 ```
 
-Je kunt ook je eigen Class scrhijven. Elke script bevat een of meer Classes. De definitie van een class ziet er zo uit.
+Je kunt ook je eigen Class schrijven. Elke script bevat een of meer Classes. De definitie van een class ziet er zo uit.
 
 ```
 public class Plane
