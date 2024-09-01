@@ -1,57 +1,83 @@
-# 2-De commandline/terminal/powershell
+# 1 - Installeren en downloaden
 
-## Doelstelling
-kan zich binnen de command-prompt, powershell of terminal orienteren, mappen en bestanden aanmaken, bewerken en verwijderen
- 
-## Context
-# Waarom moet een softwaredeveloper leren omgaan met de commandprompt?
+# M1 SKIL
 
-## 1. Efficiëntie en Snelheid
+## Wat zijn skills?
+- **SKILL**: vaardigheid, grote bedrevenheid ergens in, vooral nodig voor de vervulling van een bepaalde functie, de uitvoering van een bepaald project of het beoefenen van een bepaald spel.
+- Tijdens deze lessen ga je jezelf de skills aanleren die nodig zijn om in een team software te kunnen ontwikkelen.
 
-- **Sneller Werken:** Veel taken kunnen sneller worden uitgevoerd via de commandprompt dan via grafische gebruikersinterfaces (GUI’s). Command-line commando’s kunnen repetitieve taken automatiseren en verkorten de tijd die nodig is voor bepaalde operaties.
-- **Batch Processing:** Met de commandprompt kunnen ontwikkelaars scripts schrijven om meerdere taken in één keer uit te voeren, wat tijd bespaart en fouten vermindert.
+## Leerdoelen M1 SKIL
 
-## 2. Automatisering
 
-- **Scripts en Automatisering:** Ontwikkelaars kunnen scripts schrijven in bash, Python of andere scriptingtalen om taken te automatiseren, zoals het bouwen, testen en implementeren van software. Dit verhoogt de productiviteit en zorgt voor consistente uitvoer van taken.
-- **Cron Jobs:** Commandprompt-kennis is cruciaal voor het opzetten van cron jobs (geplande taken) op servers, wat essentieel is voor automatisering en onderhoud van systemen.
+### Les 1: inrichten werkomgeving
 
-## 3. Toegang tot Krachtige Tools
+### Onderwerpen
+- ma-cloud
+- De ftp-client: FileZilla
+- Check: kun je op school printen?
 
-- **Gereedschappen en Hulpprogramma’s:** Veel ontwikkelaarstools en hulpprogramma’s, zoals Git, Docker, npm, en veel build-tools, zijn primair ontworpen voor gebruik via de commandprompt. De volledige functionaliteit van deze tools is vaak alleen beschikbaar via de CLI.
-- **Systeembeheer:** CLI biedt directe toegang tot systeemfuncties en configuraties die niet altijd beschikbaar zijn via GUI’s.
+### Inloggen op panel van ma-cloud
+#### Ma-cloud
+- Iedere student van het Mediacollege heeft een mogelijkheid tot publiceren op de schoolwebserver.
+- Je kunt jouw eigen webserver zien op het adres:
+- Hiervoor moet je jouw eigen studentennummer nemen. Iedere student heeft een ander studentennummer, dus daarom gebruiken wij even voor jouw eigen nummer de metasyntactische variabele `[studenten-id]`.
+- Dan kun je met behulp van een browser inloggen om de ma-cloud server.
 
-## 4. Serverbeheer
+of: https://[studenten-id].hosts1.ma-cloud.nl
+of: https://[studenten-id].hosts2.ma-cloud.nl
 
-- **Remote Servers:** Veel servers worden beheerd zonder grafische interface, vooral in cloudomgevingen. SSH en andere command line tools zijn essentieel voor het beheren van remote servers.
-- **Configuratie en Onderhoud:** Het beheren van serverconfiguraties en het uitvoeren van onderhoudstaken gebeurt vaak via de commandprompt.
 
-## 5. Versiebeheer
+### Voorbeeld ma-cloud
 
-- **Git:** Hoewel Git GUI-clients beschikbaar zijn, biedt de command line volledige controle over versiebeheer en is het vaak sneller en krachtiger voor geavanceerde operaties.
-- **Branching and Merging:** Complexe git-bewerkingen, zoals rebase en cherry-pick, worden meestal uitgevoerd via de commandprompt.
+### FTP client
+- FTP of File Transfer Protocol wordt gebruikt om bestanden via het internet te versturen. Bij deze opleiding gebruiken wij deze techniek om bestanden te publiceren op de ma-cloud-server.
+- De meeste studenten gebruiken als FTP-client de applicatie FileZilla.
 
-## 6. Flexibiliteit en Controle
+#### FileZilla
+##### FTP connectie met ma-cloud maken
+- Als je FileZilla opent zie je de volgende Graphical User Interface
 
-- **Diepe Toegang:** De commandprompt biedt een diepere toegang tot de besturingssysteemfuncties en stelt ontwikkelaars in staat om instellingen en configuraties te beheren die niet toegankelijk zijn via een GUI.
-- **Text Processing:** Tools zoals grep, sed, awk en andere command line utilities zijn krachtig voor het verwerken en manipuleren van tekstbestanden en logs.
+##### Hoe moet ik publiceren op ma-cloud?
+- Ruimte voor bestand maken
+- De File Explorer
+- In File Explorer een nieuw textbestand aanmaken
+- Tekst invoeren met Notepad
+- Remote server aanmaken
+- De Site Manager van FileZilla
+- Host1 of host2? Ma panel
+- Connectie met ma-cloud
+- Bestanden transfer
+- Bekijk het resultaat
 
-## 7. Probleemoplossing en Debugging
+### 'Find-Me' printen
+- Printen kan op het Mediacollege op alle locaties met behulp van het zogenaamde 'Find-Me' printen op alle multifunctionele Konica Minolta printers. 'Find-Me' betekent dat je opdrachten naar 1 printer (en 1 print wachtrij) gestuurd worden en deze dus op bijna alle printers af te drukken zijn. Om je aan te melden bij een printer heb je je studenten- / toegangspas nodig.
+- Op een multifunctional kan je printen, scannen en kopiëren.
+- Op alle locaties staan dezelfde multifunctionals van Konica. Deze worden onderhouden en voorzien van toner en papier. Gebruik is zelfservice. Er is betaald printen en er wordt afgerekend met de MA schoolpas. Om papier en milieu te besparen wordt er verwacht hier zuinig mee om te gaan. Om de multifunctional te gebruiken heb je de MA schoolpas nodig. Elke medewerker heeft een bepaald tegoed op de MA pas staan. Zonder pas kan er niet geprint worden. Studenten dienen een tegoed op de kaart te hebben en kunnen opwaarderen per PIN bij de receptie op bepaalde tijden.
 
-- **Logs en Diagnostiek:** Veel logbestanden en diagnostische informatie zijn alleen toegankelijk via de commandprompt. Het kunnen lezen en analyseren van logs is essentieel voor het oplossen van problemen.
-- **Netwerktools:** Command line tools zoals `ping`, `netstat`, `traceroute` en `curl` zijn essentieel voor het debuggen van netwerkproblemen.
+#### Printen met je MA pas
+- Het printen en kopiëren gaat via een tegoed op je Ma-pas. Het opwaarderen van het tegoed op je Ma-pas kan bij de Receptie.
+- Je tegoed wordt gekoppeld aan je Student-nummer. Het minimum bedrag is 1 euro en het maximum bedrag is 25 euro per opwaardering.
+- Nadat de printopdracht is gegeven kun je deze bij elke printer in het gebouw afdrukken met je MA pas.
 
-## 8. Leren en Opleiding
+#### Printer installeren
+- Kijk op de helpdesk website van Ma: [https://ma.topdesk.net/](https://ma.topdesk.net/)
+- Windows: [Printer installeren op Windows](https://ma.topdesk.net/tas/public/ssp/content/detail/knowledgeitem?unid=08bfed8786be4b509af99524f285095b)
+- Mac: [Printer installeren op Mac](https://ma.topdesk.net/tas/public/ssp/content/detail/knowledgeitem?unid=34da1499d6004d499d44741f6e70e310)
 
-- **Onderliggende Concepten:** Werken met de commandprompt helpt ontwikkelaars om de onderliggende concepten van besturingssystemen beter te begrijpen, zoals processen, bestandssystemen en netwerkconfiguraties.
-- **Basisvaardigheid:** Het beheersen van de commandprompt is een basisvaardigheid die van elke ontwikkelaar wordt verwacht, en is vaak een vereiste voor technische interviews en veel posities in de softwareontwikkeling.
+Installeer nu de printer volgens de instructies.
 
-## 9. Platformonafhankelijk
+#### Hoe koppel ik mijn Ma pas aan de printer?
+- Voor het gebruik van de nieuwe printers (Grotesk‐K‐A4A3) moet de Ma‐pas eenmalig opnieuw gekoppeld worden en moet de printer worden geïnstalleerd. Hieronder vind je de instructies.
 
-- **Werken op Verschillende Systemen:** Kennis van de commandprompt is nuttig op verschillende besturingssystemen zoals Linux, macOS, en zelfs Windows (via PowerShell of de Windows Subsystem for Linux). Dit maakt een ontwikkelaar flexibeler en aanpasbaar aan verschillende omgevingen.
+##### Pas koppelen aan printer
+1. Houd de Ma‐pas voor de kaartlezer.
+2. De melding: “Onbekende kaart. Wilt u deze kaart koppelen met uw gebruikersaccount” verschijnt.
+3. Kies “Ja”.
+4. Voer je Mediacollege gebruikersnaam en wachtwoord in en kies “Instellen”.
 
-## 10. Ondersteuning van Complexe Workflows
+Je pas is nu gekoppeld.
 
-- **DevOps en CI/CD:** Veel DevOps-tools en continuous integration/continuous deployment (CI/CD) pipelines vereisen kennis van de commandprompt om configuratiescripts en deploymentprocessen op te zetten en te onderhouden.
+### Laatste tip: Teams
+- De standaard layout van Teams maakt een team vinden wat lastig.
+- Zet Teams op lijstweergave, dat zoekt makkelijker.
 
-Kortom, het beheersen van de commandprompt biedt softwaredevelopers een breed scala aan voordelen die hun efficiëntie, probleemoplossend vermogen en professionele competenties aanzienlijk verbeteren. Het is een essentiële vaardigheid voor moderne softwareontwikkeling en systeembeheer.
