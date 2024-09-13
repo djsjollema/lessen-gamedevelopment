@@ -53,7 +53,15 @@ Geef je function nu een **Paramater** voor de kleur. En zorg dat je hiermee de k
 
         GameObject ball = Instantiate(prefab);
         Material material = ball.GetComponent<MeshRenderer>().material;
-        material.SetColor("_Color", c);
+
+         // voor CORE pipeline
+        mat.SetColor("_Color", c);
+
+        //Voor URP
+        if (mat.shader.name == "Universal Render Pipeline/Lit")
+        {
+            mat.SetColor("_BaseColor", c);
+        }
     }
 ```
 
