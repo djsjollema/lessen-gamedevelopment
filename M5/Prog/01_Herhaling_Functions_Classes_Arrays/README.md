@@ -96,7 +96,15 @@ Geef na het aanmaken van de bal met CreateBall de referentie door als argument i
 
         GameObject ball = Instantiate(prefab, position, Quaternion.identity);
         Material material = ball.GetComponent<MeshRenderer>().material;
+
+        // voor CORE pipeline
         mat.SetColor("_Color", c);
+
+        //Voor URP
+        if (mat.shader.name == "Universal Render Pipeline/Lit")
+        {
+            mat.SetColor("_BaseColor", c);
+        }
 
         ...
 

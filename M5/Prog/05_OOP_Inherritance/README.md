@@ -161,6 +161,8 @@ Andere voor jullie bekende scope modifiers zijn: **private** en **public**.
 
 **Let op:** De **Start** en **Update** methoden van je base class worden niet meer automatisch uitgevoerd. Enkel de Start en Update van de child class. Je kunt wel een eigen methode definieren in je base class zoals in het voorbeeld **Initalize()** om die uit te voeren in de start methode van je child class.
 
+[Kijk ook even deze video](https://www.youtube.com/watch?v=F7Wu6_uzD1I)
+
 <a name = "opdracht8"></a>
 
 ### Opdracht 8: Inheritance
