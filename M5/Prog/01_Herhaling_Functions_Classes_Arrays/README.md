@@ -321,6 +321,8 @@ Zorg voor een **Tower** class als script op je prefab. In de Start method van de
 
 Elke toren die je plaatst moet dus een andere size hebben.
 
+**Let op** dat je de kennis uit de vorige opdracht over het gebruiken van **parameters** en **return** values ook hier weer goed toepast!!
+
 Laat de **TowerSpawner** class elke keer als je in het scherm klikt een toren Instantieren op een willekeurige positie.
 
 ![place random towers](../src/01_05_place_towers.gif)
