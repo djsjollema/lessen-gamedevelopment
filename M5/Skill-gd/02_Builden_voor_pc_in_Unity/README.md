@@ -90,3 +90,23 @@ Dit is een heel ander systeem , sommige dingen werken vergekijbaar maar het zijn
 ### Quality
 
 Hier heb je een hoop opties om de kwaliteit versus de performance van je game te kunnen tweaken. Dit kun je doen door de verschillende kwaliteits niveas in te stellen te tweaken of zelfs nieuwe toe te voegen. Dit kan erg nuttig zijn als je bijvoorbeeld voor specifieke hardware specificaties wil gaan builden.
+
+# Opdracht
+
+In deze opdracht gaan jullie een build maken van je towerdefense game voor op de PC.
+
+Zorg ervoor dat je alle opties gebruikt om je game zo goed en mooi mogelijk af te werken:
+
+- Zorg voor een mooi afgewerkte splash screen
+- Een eigen game icon om de game mee op te starten
+- En een mooie bijpassende cursor.
+- Zorg ervoor dat de game goed runt op je eigen PC. Alle textures, sprites in de game moeten een Power of 2 hebben.
+- Zorg dat alle textures netjes in de map textures terug te vinden zijn in je project.
+
+## Inleveren
+
+Deze Build lever je in op je repo onder het kopje releases.
+
+Op simulise lever je een link in naar je release in je repo op github.
+
+Op simulise lever je ook een link in naar je textures map.
