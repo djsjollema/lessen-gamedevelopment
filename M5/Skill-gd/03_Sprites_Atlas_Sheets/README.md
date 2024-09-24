@@ -8,6 +8,9 @@ Hier vind je de officiele unity tutorial over het importeren van sprite sheets e
 
 ## Opdracht 1: Sprite Sheet animations
 
+Installeer de Sprite Editor via de package manager.
+![sprite editor](../src/03_05_spriteEditor.png)
+
 Download deze spritesheet:
 ![sprite sheet](../src/03_02_HeroKnight.png)
 
