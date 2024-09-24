@@ -11,7 +11,7 @@ Hier vind je de officiele unity tutorial over het importeren van sprite sheets e
 Download deze spritesheet:
 ![sprite sheet](../src/03_02_HeroKnight.png)
 
-Importeer deze in unity en maak hiervan 3 animaties
+Importeer deze in unity en maak hiervan 4 animaties
 
 - Idle
 - Walk
