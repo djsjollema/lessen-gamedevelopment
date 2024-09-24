@@ -3,8 +3,8 @@
 Hier kunnen jullie de de presentatie nog terugvinden:
 [Demo 2d Sprites integratie](../presentaties/2D%20Sprites%20&%20Integration.pdf)
 
-Hier vind je de officiele unity tutorial over het importeren van sprite sheets en creeeren van 2 animaties:
-[Importing & Animating sprite sheets](https://learn.unity.com/tutorial/introduction-to-sprite-animations#)
+Hier vind je de officiele unity tutorial over het importeren van sprite sheets en creeeren van animaties:
+[introduction-to-sprite-animations](https://learn.unity.com/tutorial/introduction-to-sprite-animations#)
 
 ## Opdracht 1: Sprite Sheet animations
 
