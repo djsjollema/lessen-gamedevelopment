@@ -146,3 +146,23 @@ Maak een particle system aan die deze material gebruikt als animatie.
 ![demo](../src/03_03_animated_particles.gif)
 
 Neem een gifje op van je geimplementeerde particle animatie en lever tevens de door jouw gebruikte spritesheet (png file) in. Lever beide in op simulise.
+
+## Opdracht 3 animatie van genesete sprites
+
+Ga naar [Craftpix.com](https://craftpix.net/freebies/) en zoek daar een leuke character uit.
+
+Zorg dat het een character is dat uit losse onderdelen bestaat.
+![character](../src/03_07_craftpix.png)
+
+importeer de sprites op de juiste manier en bouw het lichaam op in de hierarchy.
+
+Open het animation window en maak een nieuwe animation aan.
+
+Doe dit door op record te drukken en keyframes toe te voegen en te editen.
+![keyframe editing](../src/03_08_keyframes.png)
+
+Maak een leuke simpele idle of attack animatie. Voeg een animator controller toe aan het parent gameobject en voer de animatie uit.
+
+![sprite character](../src/03_06_animated_sprite_char.gif)
+
+Maak een screen capture van je animatie in playmode met daarbij de hierarchy in beeld. Lever deze video of gif in op simulise.
