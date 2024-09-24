@@ -9,7 +9,7 @@ Hier vind je de officiele unity tutorial over het importeren van sprite sheets e
 ## Opdracht 1: Sprite Sheet animations
 
 Download deze spritesheet:
-![sprite sheet](//src/03_02_HeroKnight.png)
+![sprite sheet](../src/03_02_HeroKnight.png)
 
 Importeer deze in unity en maak hiervan 3 animaties
 
