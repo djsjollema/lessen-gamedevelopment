@@ -114,6 +114,9 @@ Dus niet je build comitten en pushen in je repo. Zorg dat je alle files zipt en 
 Dus ook de mappen en dll's etc.
 ![alles zippen](../src/02_04_buildfiles.png)
 
+Publiceer je release op github
+![publish release](../src/02_05_publish_releases.png)
+
 Op simulise lever je een link in naar je release in je repo op github.
 
 Op simulise lever je ook een link in naar je textures map.
