@@ -105,7 +105,14 @@ Zorg ervoor dat je alle opties gebruikt om je game zo goed en mooi mogelijk af t
 
 ## Inleveren
 
-Deze Build lever je in op je repo onder het kopje releases.
+Deze Build lever je in (uploaden) op je repo onder het kopje releases op github.
+
+![realeases on github](../src/02_04_releases.png)
+
+Dus niet je build comitten en pushen in je repo. Zorg dat je alle files zipt en upload.
+
+Dus ook de mappen en dll's etc.
+![alles zippen](../src/02_04_buildfiles.png)
 
 Op simulise lever je een link in naar je release in je repo op github.
 

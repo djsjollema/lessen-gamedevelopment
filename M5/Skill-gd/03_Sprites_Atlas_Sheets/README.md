@@ -1,7 +1,9 @@
 # Sprites, Spritesheets, Animaties en Particles
 
 Hier kunnen jullie de de presentatie nog terugvinden:
-[Demo 2d Sprites integratie](../presentaties/2D%20Sprites%20&%20Integration.pdf)
+[PDF demo](../presentaties/2D%20Sprites%20&%20Integration.pdf)
+
+[Google presentation demo](https://docs.google.com/presentation/d/1vif3qAyVZhJ0wjgEypnqeK0Utk5LZ5_2O--Dn-b5vi0/edit?usp=sharing)
 
 Hier vind je de officiele unity tutorial over het importeren van sprite sheets en creeeren van animaties:
 [introduction-to-sprite-animations](https://learn.unity.com/tutorial/introduction-to-sprite-animations#)
@@ -147,7 +149,7 @@ Maak een particle system aan die deze material gebruikt als animatie.
 
 Neem een gifje op van je geimplementeerde particle animatie en lever tevens de door jouw gebruikte spritesheet (png file) in. Lever beide in op simulise.
 
-## Opdracht 3 animatie van genesete sprites
+## Opdracht 3 animatie van geneste sprites
 
 Ga naar [Craftpix.com](https://craftpix.net/freebies/) en zoek daar een leuke character uit.
 
