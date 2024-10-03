@@ -1,6 +1,11 @@
 # Playability en Re-playability
 
+[![unplay](../src/04_09_unplay.png)](https://youtu.be/z_ipP6Tc_eA?si=RXee_Z7tBHMFZQJt)
+
+
 In de context van gamedesign zijn de termen "playability" en "replayability" essentieel voor de evaluatie van de kwaliteit en aantrekkelijkheid van een game. Hoewel ze nauw verwant zijn, verwijzen ze naar verschillende aspecten van de game-ervaring.
+
+[![hardmode](../src/04_10_hardmode.png)](https://www.youtube.com/watch?v=h6gvJKY7DnA)
 
 ## Playability
 
