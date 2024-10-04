@@ -120,7 +120,7 @@ In de code voor de LaserBehaviour staat de volgende code:
 
 ```
 
-In de code voor de PlayerBehaviour staat:
+In de code voor de ShipBehaviour staat:
 
 ```
     void Move() {
