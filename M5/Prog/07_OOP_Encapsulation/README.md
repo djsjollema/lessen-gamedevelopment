@@ -36,7 +36,7 @@ Als een variabele beschikbaar moet zijn in een ander script dat via overerving e
 
 ## Internal
 
-Als een variabele beschikbaar moet zijn binnen de **Assembly**, dat zijn alle scripts die samen worden gecompiled naar 1 package. Standaard is dat je gehele Unity project maar je kunt ook aangepaste assemblies definieren in Unity. Dit betekent dat scripts die buiten jouw project gecompiled worden geen toegang hebben tot je variabelen en alle scripts binnen je project wel.
+Als een variabele beschikbaar moet zijn binnen de **Assembly** (Dynamic Link Library), dat zijn alle scripts die samen worden gecompiled naar 1 package. Standaard is dat je gehele Unity project maar je kunt ook aangepaste assemblies definieren in Unity. Dit betekent dat scripts die buiten jouw project gecompiled worden geen toegang hebben tot je variabelen en alle scripts binnen je project wel.
 
 ## Public
 
@@ -102,7 +102,7 @@ Alleen iets wegschrijven lukt dan dus wel.
 
 Getters en Setters gebruiken is een goede manier om waarden van variabelen dus op een gecontroleerde manier zo beperkt mogelijk beschikbaar te maken voor andere scripts.
 
-### Opdracht 1:
+### Opdracht 10, Encapsulation:
 
 Ga door je towerdefense project heen en zoek op hoeveel public variables je hebt gebruikt. Maak deze **allemaal** private. Als de variable vanuit een ander script beschikbaar moet zijn implementeer je er een **getter** en/of **setter** voor.
 
