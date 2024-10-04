@@ -28,7 +28,7 @@ Voeg alle animaties toe aan dezelfde controller.
 Maak in de controller de volgende parameters aan:
 
 - speed (float)
-- life (float)
+- life (integer)
 - attack (trigger)
 
 Voeg de noodzakelijke transitions toe en stel ze logisch in:
