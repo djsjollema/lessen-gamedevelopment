@@ -1,6 +1,6 @@
 # PROG les 7: OOP Encapsulation
 
-"Encapsulation", ook wel "inkapseling" in het nederlands, is een manier om je code te beschermen tegen manipulatie van buitenaf. Je kunt je vast voorstellen dat je een public value die overal vandaan aan te passen is kan leiden tot onverwachte resultaten, waarna het lastig is om te bepalen waardoor dat wordt veroorzaakt.
+**"Encapsulation"**, ook wel **"inkapseling"** in het nederlands, is een manier om je code te beschermen tegen manipulatie van buitenaf. Je kunt je vast voorstellen dat je een public value die overal vandaan aan te passen is kan leiden tot onverwachte resultaten, waarna het lastig is om te bepalen waardoor dat wordt veroorzaakt.
 
 Neem het volgende script in gedachten , wat op een player gameobject zit:
 
@@ -26,14 +26,33 @@ Veel succes met zoeken waar er een fout gemaakt is waar begin je met zoeken?
 
 Encapsulation betekent dat je je code afschermt om aangepast te worden en dat je deze alleen als het niet anders kan op een zo veilig mogelijke manier beschikbaar maakt.
 
+## Private
+
+Sowieso is de standaard **private**. Pas als een variabele echt beschikbaar moet zijn in een ander script kun je overwegen om hem niet private te maken.
+
+## Protected
+
+Als een variabele beschikbaar moet zijn in een ander script dat via overerving een child is van het script waar de variabele gedefinieerd is kun je hem **protected** maken. Alleen de child class kan dan de waarde van de variabele lezen en aanpassen.
+
+## Internal
+
+Als een variabele beschikbaar moet zijn binnen de **Assembly**, dat zijn alle scripts die samen worden gecompiled naar 1 package. Standaard is dat je gehele Unity project maar je kunt ook aangepaste assemblies definieren in Unity. Dit betekent dat scripts die buiten jouw project gecompiled worden geen toegang hebben tot je variabelen en alle scripts binnen je project wel.
+
+## Public
+
+Vergelijkbaar met het tatoeeren van je pincode op je voorhoofd ;) De waarden van je variabelen kunnen vanuit elk ander script gelezen en veranderd worden.
+
 ## Methods
 
-Bijvoorbeeld voor dit in een method(function) te doen zodat je kunt afdwingen dat het volgens een aantal regels gaat:
+Je kunt **private** variabelen ook beschikbaar maken via een method. Je kunt in de method afdwingen dat het lezen en/of schrijven van de waarden volgens een aantal regels gaat:
 
 ```
     class PlayerLife{
         private int life = 10;
-        public LoseLife(int amount){
+        public int GetLife(){
+            return life;
+        }
+        public void LoseLife(int amount){
             //Check of er geen vreemde hoeveelheid leven af gaat
             if(Mathf.ABS(amount) > 50)Debug.LogWarning("losing an extreme amount of life");
             //forceer dat er altijd wat af gaat en nooit per ongeluk iets bij komt
@@ -85,7 +104,7 @@ Getters en Setters gebruiken is een goede manier om waarden van variabelen dus o
 
 ### Opdracht 1:
 
-Ga door je towerdefense project heen en zoek op hoeveel public variables je hebt gebruikt. Vervang deze **allemaal** met een getter en/of setter.
+Ga door je towerdefense project heen en zoek op hoeveel public variables je hebt gebruikt. Maak deze **allemaal** private. Als de variable vanuit een ander script beschikbaar moet zijn implementeer je er een **getter** en/of **setter** voor.
 
 **Write only:**
 Als je vanuit een ander script alleen wegschrijft maak je er een **setter** van.
@@ -96,4 +115,40 @@ Als je vanuit een ander script alleen leest maak je er een **getter** van.
 **Read write:**
 En als je vanuit een ander script zowel leest als schrijft implementeer je de **getter** en de **setter**.
 
-Bedenk nu of er waarden zijn
+Bedenk nu ook of er variabelen zijn die problemen kunnen geven als ze een verkeerde waarde krijgen. Bijvoorbeeld negatieve waarden. Zorg er dan voor dat de waarden die niet negatief mogen zijn altijd positief gemaakt worden: Dit doe je in de bijhorende getters met `Mathf.ABS(value);`
+
+**Maak een dependancy lijst:**
+
+Maak een lijst (.pdf) met daarin geordend per script (zet de classnaam erboven) de naam van **elke** variabele die beschikbaar is vanuit een ander script. (dit noem je een **dependancy**)
+
+Zet daarbij het datatype en of deze read-only, write-only of beide is. De lijst komt er dus ongeveer zo uit te zien en bevat **alle** dependancies uit je project:
+
+```
+Depandancies
+
+class FireProjectile:
+int ammoLeft read & write
+float shootForce write only
+
+class TowerLife:
+int life read only
+
+class powerUp:
+float timeLeft read only
+
+class UI:
+int score read & write
+
+```
+
+### Eisen
+
+Voor alle variabelen in de lijst heb je getters en of setters geimplementeerd in je project.
+
+Er mogen in je project geen public variabelen meer zijn.
+
+### Inleveren
+
+Lever je dependancies lijst in als .pdf op Simulise.
+
+Lever op simulise een linkje in naar je Scripts map op je github repo.
