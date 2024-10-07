@@ -1,4 +1,4 @@
-# PROG les 7: OOP Encapsulation
+# PROG les 6: OOP Encapsulation
 
 **"Encapsulation"**, ook wel **"inkapseling"** in het nederlands, is een manier om je code te beschermen tegen manipulatie van buitenaf. Je kunt je vast voorstellen dat je een public value die overal vandaan aan te passen is kan leiden tot onverwachte resultaten, waarna het lastig is om te bepalen waardoor dat wordt veroorzaakt.
 
@@ -102,9 +102,19 @@ Alleen iets wegschrijven lukt dan dus wel.
 
 Getters en Setters gebruiken is een goede manier om waarden van variabelen dus op een gecontroleerde manier zo beperkt mogelijk beschikbaar te maken voor andere scripts.
 
+## Inspector
+
+Als je variabelen beschikbaar wil maken in de inspector doe je dat met een private variable en zet je er de `[SerializeField]` attribute voor. Dit zorgt ervoor dat je de variabele vanuit de inspector wel een waarde kunt geven maar deze niet vanuit een andere class kunt aanpassen. [Hier vind je meer informatie](https://www.renz.is/useful-unity-attributes-for-better-inspector-experience/) over wat je nog meer voor attributes hebt en wat je er nog meer mee kunt.
+
 ### Opdracht 10, Encapsulation:
 
-Ga door je towerdefense project heen en zoek op hoeveel public variables je hebt gebruikt. Maak deze **allemaal** private. Als de variable vanuit een ander script beschikbaar moet zijn implementeer je er een **getter** en/of **setter** voor.
+Ga door je Towerdefense project heen en zoek op hoeveel public variables je hebt gebruikt.
+
+Maak deze **allemaal** private!
+
+Als de variable vanuit een ander script beschikbaar moet zijn implementeer je er een **getter** en/of **setter** voor.
+
+Als je via de inspector een waarde aan de variabele moet geven dan gebruik je het **[SerializeField]** attribuut.
 
 **Write only:**
 Als je vanuit een ander script alleen wegschrijft maak je er een **setter** van.
@@ -115,7 +125,7 @@ Als je vanuit een ander script alleen leest maak je er een **getter** van.
 **Read write:**
 En als je vanuit een ander script zowel leest als schrijft implementeer je de **getter** en de **setter**.
 
-Bedenk nu ook of er variabelen zijn die problemen kunnen geven als ze een verkeerde waarde krijgen. Bijvoorbeeld negatieve waarden. Zorg er dan voor dat de waarden die niet negatief mogen zijn altijd positief gemaakt worden: Dit doe je in de bijhorende getters met `Mathf.ABS(value);`
+Bedenk nu ook of er variabelen zijn die problemen kunnen geven als ze een verkeerde waarde krijgen. Bijvoorbeeld negatieve waarden. Zorg er dan voor dat de waarden die niet negatief mogen zijn altijd positief gemaakt worden: Dit doe je in de bijhorende getters met `Mathf.ABS(value);` Dit is de "Absolute" functie die de waarde altijd postief maakt.
 
 **Maak een dependancy lijst:**
 

@@ -1,6 +1,6 @@
-# PROG les 6: OOP Abstraction
+# PROG les 7: OOP Abstraction
 
-Abstractie maakt complexe systemen eenvoudiger door onnodige details te verbergen en alleen de essentiële kenmerken te benadrukken.
+Abstractie maakt complexe systemen eenvoudiger door onnodige details te verbergen en alleen de essentiële onderdelen beschikbaar te maken.
 
 Met abstractie richt je je op wat een object doet in plaats van hoe het dat doet. Dit betekent dat je een algemene beschrijving geeft van een object of functie, zonder in te gaan op de specifieke implementatie.
 
@@ -14,7 +14,7 @@ In programmeertaal kan abstractie worden geïmplementeerd door middel van **abst
 
 ## Abstracte klassen
 
-Bij een abstracte klasse kun je methoden maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven. Bij een methode zonder implementatie zet je er abstract voor. Ook voor de naam van een abstracte class moet je het woordje abstract zetten.
+Bij een abstracte klasse kun je methoden (functions) maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven. Bij een methode zonder implementatie zet je er abstract voor. Ook voor de naam van een abstracte class moet je het woordje abstract zetten.
 
 Abstracte methoden moeten door hun child class verplicht worden geimplementeerd. Er moet dus een invulling voor komen.
 
@@ -79,7 +79,7 @@ Een interface is een soort sjabloon of contract dat bepaalt welke methoden of ei
 
 Door interfaces te gebruiken zorg je ervoor dat je classes zich allemaal aan dezelfde afspraken houden en je dus snel en zonder problemen nieuwe classes kunt koppelen die op dezelfde manier gebouwd zijn.
 
-De interface heeft geen implementatie (werkende code) en geeft dus alleen aan wat er in een class moet gebeuren. Dus een soort inhoudsopgave eigenlijk. Er mag dus geen werkende code in een interface worden gezet, zoals dat wel kan en mag in een abstracte class.
+De interface heeft geen implementatie (werkende code) en geeft dus alleen aan wat er in een class moet gebeuren. Als een contrect dus. Er mag dus geen werkende code in een interface worden gezet, zoals dat wel kan en mag in een abstracte class.
 
 Bij overerving kan een class alleen een child zijn van 1 andere class. Bij interfaces kun je er meerdere implementeren. Je er zoveel koppelen aan je class als gewenst.
 
@@ -92,7 +92,7 @@ public interface IMyInterface           //Om een interface gelijk te herkennen i
 {
     int Value { get; set; }             //een interface kan getters en setters (eigenschappen) afdwingen
     void MyMethod(int myValue);         //een interface kan methoden eventueel met parameters en return values afdwingen
-    event Action OnSomethingHappened;   //een interface kan events afdwingen
+    static event Action OnSomethingHappened;   //een interface kan events afdwingen
 }
 
 ```
@@ -141,24 +141,33 @@ Hier is een concreter voorbeeld van het gebruik van een interface:
 ```
 public interface IDamageable
 {
-    event Action OnDeath;
-    int Health { get; set; }
+    static event Action OnDeath;
+    int Health { get; }
     void TakeDamage(int amount);
 }
+
+```
+
+Via de bovenstaande interface dwing ik alle classes die deze interface gebruiken om 3 dingen te implementeren. Namenlijk
+
+1. Een Action genaamd **OnDeath** die moet worden verstuurd als het leven van het object op is.
+2. Een **getter** voor de variabele health waarmee een andere class de health variabele enkel kan uitlezen en niet wegschrijven.
+3. De methode **TakeDamage()** met als parameter de int amound die daar aan meegegeven moet worden. Uiteraard voor het verminderen van levens.
+
+De implementatie van het interface in een andere class gaat dan als volgt:
+
+```
 public class Player : MonoBehaviour, IDamageable
 {
     private int health;
-
-    //Implementatie van het event
+    //1:
     public static event Action OnDeath;
-
-    // Implementatie van de eigenschap
+    //2:
     public int Health
     {
         get { return health; }
-        set { health = value; }
     }
-    // Implementatie van de methode
+    // 3:
     public void TakeDamage(int amount)
     {
         health -= amount;
@@ -168,6 +177,12 @@ public class Player : MonoBehaviour, IDamageable
 }
 
 ```
+
+Als ik een onderdeel uit de interface niet implementeer zal ik een error krijgen.
+
+![interface error](../src/06_01_interface_error.png)
+
+Dit helpt mij dus om alle classes die dezelfde functionaliteit met elkaar delen op de zelfde manier te bouwen en te structureren.
 
 ### Opdracht 9: Abstraction en Interfaces
 
