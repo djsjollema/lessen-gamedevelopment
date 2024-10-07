@@ -106,7 +106,7 @@ Getters en Setters gebruiken is een goede manier om waarden van variabelen dus o
 
 Als je variabelen beschikbaar wil maken in de inspector doe je dat met een private variable en zet je er de `[SerializeField]` attribute voor. Dit zorgt ervoor dat je de variabele vanuit de inspector wel een waarde kunt geven maar deze niet vanuit een andere class kunt aanpassen. [Hier vind je meer informatie](https://www.renz.is/useful-unity-attributes-for-better-inspector-experience/) over wat je nog meer voor attributes hebt en wat je er nog meer mee kunt.
 
-### Opdracht 10, Encapsulation:
+### Opdracht 9, Encapsulation:
 
 Ga door je Towerdefense project heen en zoek op hoeveel public variables je hebt gebruikt.
 

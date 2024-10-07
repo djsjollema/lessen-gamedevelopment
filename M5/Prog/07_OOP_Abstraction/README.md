@@ -10,38 +10,42 @@ Je weet dat een auto kan rijden, stoppen en de snelheid kan aanpassen. Dit zijn 
 
 Details verborgen door abstractie: Hoe de motor werkt, hoe de remmen functioneren, en hoe de snelheid precies wordt aangepast, zijn details die verborgen blijven.
 
-In programmeertaal kan abstractie worden geïmplementeerd door middel van **abstracte klassen** of **interfaces**, die methoden definiëren zonder hun werking te specificeren. Hierdoor kunnen verschillende objecten dezelfde interface delen, maar hun eigen specifieke gedrag implementeren.
+In programmeertaal kan abstractie worden geïmplementeerd door middel van **abstracte klassen** of **interfaces**, die methoden definiëren zonder hun werking te specificeren. Hierdoor kunnen verschillende objecten dezelfde interface of abstracte class delen, maar hun eigen specifieke gedrag implementeren.
 
 ## Abstracte klassen
 
-Bij een abstracte klasse kun je methoden (functions) maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven. Bij een methode zonder implementatie zet je er abstract voor. Ook voor de naam van een abstracte class moet je het woordje abstract zetten.
+Bij een abstracte klasse kun je methoden maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven. Bij een methode zonder implementatie zet je er het keyword **abstract** voor in de definitie. Ook voor de naam van een abstracte class moet je het keyword **abstract** zetten.
 
-Abstracte methoden moeten door hun child class verplicht worden geimplementeerd. Er moet dus een invulling voor komen.
+Abstracte methoden moeten door hun child class verplicht worden geimplementeerd. Er moet dus een invulling voor komen met werkende code.
 
 Bij het maken van abstracte klassen is er dus ook sprake van overerving / inheritance.
 
-Een voorbeeld:
+Een voorbeeld van een abstracte class:
 
 ```
 using UnityEngine;
 
 public abstract class Animal : MonoBehaviour
 {
-    public string Name;
+    protected string Name;
 
-    // Een abstracte methode zonder implementatie
+    // Abstract dus zonder implementatie
     public abstract void MakeSound();
 
-    // Een niet-abstracte methode die door alle dieren wordt gedeeld
+    // Met implementatie
     public void Sleep()
     {
         Debug.Log(Name + " is sleeping.");
     }
 }
+```
 
+Een voorbeeld van een concrete child class die overerft van een abstracte class:
+
+```
 public class Dog : Animal
 {
-    // Implementatie van de abstracte methode
+    // Implementatie van de abstracte methode uit Animal
     public override void MakeSound()
     {
         Debug.Log(Name + " says: Woof!");
@@ -57,7 +61,7 @@ public class Dog : Animal
 
 public class Cat : Animal
 {
-    // Implementatie van de abstracte methode
+    // Implementatie van de abstracte methode uit Animal
     public override void MakeSound()
     {
         Debug.Log(Name + " says: Meow!");
@@ -184,31 +188,72 @@ Als ik een onderdeel uit de interface niet implementeer zal ik een error krijgen
 
 Dit helpt mij dus om alle classes die dezelfde functionaliteit met elkaar delen op de zelfde manier te bouwen en te structureren.
 
-### Opdracht 9: Abstraction en Interfaces
+### Opdracht 10: Abstraction via Interfaces
 
-Werk verder aan het prototype van opdracht 8. Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als opdracht 8 straks stuk is.
+Werk verder aan het prototype van [Opdracht 8: Inheritance](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/05_OOP_Inherritance#opdracht-8-inheritance). Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als opdracht 8 straks stuk is.
+
+![demo](../src/05_06_demo.gif)
 
 Zorg naast de Classes **Brute** en **Elf** ook voor de class **Player**.
 
-Maak een nieuwe Abstracte class **Unit** ipv **EnemyParent** en zorg dat ze allemaal overerven van **Unit**. **EnemyParent** kun je in deze branch weggooien als je de logica hebt overgezet.
+Maak een nieuwe class **Unit** ipv **EnemyParent**. Zorg dat Brute, Elf en Player allemaal overerven van **Unit**. **EnemyParent** kun je in deze branch weggooien als je de logica hebt overgezet.
 
-Maak de volgende interfaces: **IDamagable**, **IMovable** en zorg dat deze allemaal worden geimplementeerd in alle klassen.
+Maak de volgende interfaces: **IDamagable**, **IMovable** en zorg dat **Unit**, **Player**, **Brute** en **Elf** allemaal overerven van deze interfaces.
 
-Zorg dat de speler rond kan lopen over het veld met de pijltjestoetsen. Zorg dat de Elf en de Brute vanzelf naar rechts gaan. (zoals bij opdracht 8)
+```
+public class Unit : MonoBehaviour, IMovable, IDamagable
 
-Doe dit via implementatie van de in **IMovable** gedefinieerde methode **Move()**. Implementeer Move in **Player** en in **Unit**.
+public class Player : Unit, IMovable, IDamagable
 
-Zorg ervoor dat alle units geraakt kunnen worden door de kogels die je vanaf de camera schiet. (zoals in opdracht 8).
+public class Brute : Unit, IMovable, IDamagable
 
-Gebruik hiervoor een methode **TakeDamage()** die je ook eerst definieert in de **IDamagable** Interface. Implementeer deze in **Unit**.
+public class Elf : Unit, IMovable, IDamagable
+
+```
+
+```
+public interface IMovable
+{
+    void Move();
+}
+```
+
+```
+public interface IDamagable
+{
+    int Health { get; }
+    void TakeDamage();
+}
+```
+
+#### Rondlopen via IMovable
+
+Zorg dat de speler rond kan lopen over het veld met de pijltjestoetsen.
+
+```
+            transform.position += transform.forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+            transform.Rotate(Vector3.up*rotationSpeed*Time.deltaTime * Input.GetAxis("Horizontal"));
+```
+
+Zorg dat de Elf en de Brute vanzelf naar rechts gaan. (zoals bij opdracht 8)
+
+Implementeer de **Move()** methode in **Player** en in **Unit**. Brute en Elf hebben geen implementatie nodig omdat ze zich net zo moeten gedragen zoals in Unit.
+
+Voor **Player** implementeer je code in **Move()** waarmee je met de pijltjes of WASD kunt rondlopen.
+
+#### Doodgaan via IDamagable
+
+Zorg ervoor dat alle units geraakt kunnen worden en doodgaan door de kogels die je vanaf de camera schiet. (zoals in opdracht 8).
+
+Gebruik hiervoor een methode **TakeDamage()** die je ook eerst definieert in de **IDamagable** Interface. Implementeer deze enkel in **Unit**. Zowel Player als Brute en Elf gaan allemaal op dezelfde manier dood.
 
 Dit is ongeveer het resultaat:
 
-![demo opdracht 9](../src/06_01_demo.gif)
+![demo opdracht 10](../src/06_01_demo.gif)
 
 Net als bij opdracht 8 zijn animaties niet verplicht. Deze gelden als Bonus opdracht.
 
-Dubbelcheck goed of alle code in de juiste classes staat. is je code nog DRY?
+Dubbelcheck goed of alle code in de juiste classes staat. is je code nog DRY? Werkt alles zoals het moet?
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
