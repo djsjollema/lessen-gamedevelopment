@@ -180,4 +180,4 @@ MyClass <..> AnotherClass
 
 Alleen global variables (gedefinieerd in je class en niet lokaal in een functie) en dependancies en inheritance relaties verwerk je in je class diagram.
 
-push je readme in een mapje op je TD repo op github en lever een link in naar de readme
+push je readme in een mapje op je TD repo op github en lever een link in naar de readme via simulise. Lever ook een link in naar je Scripts folder op github waar alle classes ook terug te vinden zijn.

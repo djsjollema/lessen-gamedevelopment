@@ -2,19 +2,20 @@
 
 [![unplay](../src/04_09_unplay.png)](https://youtu.be/z_ipP6Tc_eA?si=RXee_Z7tBHMFZQJt)
 
-
 In de context van gamedesign zijn de termen "playability" en "replayability" essentieel voor de evaluatie van de kwaliteit en aantrekkelijkheid van een game. Hoewel ze nauw verwant zijn, verwijzen ze naar verschillende aspecten van de game-ervaring.
 
 [![hardmode](../src/04_10_hardmode.png)](https://www.youtube.com/watch?v=h6gvJKY7DnA)
 
 ## Playability
 
-![playable](../src/04_02_playability.png)
+![playable](../src/04_11_playable.png)
 
 Playability verwijst naar hoe goed een game gespeeld kan worden, oftewel hoe toegankelijk en plezierig de ervaring is voor de speler. Het omvat verschillende factoren, zoals:
 
 **Gebruiksvriendelijkheid**:
 Hoe gemakkelijk is de besturing van de game? Is het spel intuïtief en begrijpelijk, zelfs voor nieuwe spelers?
+
+![controls](../src/04_12_flight.jpg)
 
 **Balans en moeilijkheidsgraad**: Is het spel eerlijk en goed uitgebalanceerd, zonder te gemakkelijk of te moeilijk te zijn?
 
@@ -32,26 +33,28 @@ Een spel met een hoge "playability" is toegankelijk, soepel, en prettig om te sp
 
 ## Replayability
 
-![replayable](../src/04_01_replayability.png)
+![replayable](../src/04_12_classes.png)
 Replayability verwijst naar de mate waarin een game interessant blijft om meerdere keren te spelen, nadat het eenmaal is uitgespeeld. Het gaat om de langetermijnwaarde van een game en kan beïnvloed worden door verschillende factoren:
 
 **Wisselende verhaallijnen of uitkomsten**: Games met meerdere verhaallijnen, keuzes die de uitkomst beïnvloeden of verschillende eindes hebben vaak een hogere replayability.
 
-![stories](../src/04_08_choose_stories.png)
+![stories](../src/04_12_tech.png)
 
 **Dynamische content**: Denk aan procedureel gegenereerde levels, willekeurige gebeurtenissen, of uitdagingsmodi die elke keer een andere ervaring bieden.
-
+![procedural](../src/04_13_procedural.png)
 **Multiplayer en co-op**: Games die een sociale component hebben, zoals competitieve of samenwerkende multiplayer-modes, blijven vaak langer interessant om te spelen.
 
 ![compete](../src/04_07_compete.png)
 
 **Aanpasbaarheid**: De optie om met nieuwe strategieën, personages, of speelstijlen te experimenteren, kan ook bijdragen aan de replayability.
 
+![playstyle](../src/04_13_playstyle.png)
+
 Games met een hoge **"replayability"** blijven aantrekkelijk na de eerste keer spelen, omdat ze steeds weer nieuwe ervaringen of uitdagingen bieden.
 
 ## Opdracht 1:
 
-Bedenk zelf ook nog een factor die van invloed kan zijn op de **playability** of **replayability** van de game. Waarom vind jij deze factor zo belangrijk?
+Bedenk zelf ook nog een factor die van invloed kan zijn op de **playability** of **replayability** van een game. Waarom vind jij deze factor zo belangrijk?
 
 Zet dit in een readme.
 
@@ -82,7 +85,7 @@ Omschrijf in de readme wat er in de clip gebeurt en hoe dit de **re-playability*
 
 ## Opdracht 5:
 
-Kies 2 factoren voor **playability** of **re-playablity** uit die je wil doorvoeren in je towerdefense game. Omschrijf hoe je deze in je game wil gaan verwerken. Maak hierbij 2 kleine schetsjes die verduidelijken hoe deze factoren in je game moeten worden geintegreerd.
+Kies 2 factoren voor **playability** of **re-playablity** uit die je zou willen doorvoeren in je towerdefense game. Omschrijf hoe je deze in je game wil gaan verwerken. Maak hierbij 2 kleine schetsjes die verduidelijken hoe deze factoren in je game zouden moeten worden geintegreerd.
 
 Zet je schetsen en de uitleg in de readme.
 
