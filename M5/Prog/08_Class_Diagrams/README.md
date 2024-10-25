@@ -98,8 +98,9 @@ class IDamagable{
     TakeDamage()
 }
 class Unit{
-    # int health
-    + int Health
+    - int health
+    + ~~get/set~~int Health
+
     + Initialize()
     + OnCollisionEnter()
     + TakeDamage()

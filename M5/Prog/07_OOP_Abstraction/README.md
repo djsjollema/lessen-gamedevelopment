@@ -1,4 +1,6 @@
-# PROG les 7: OOP Abstraction
+# PROG les 7: OOP Abstraction en Polymorfisme
+
+## Abstraction
 
 Abstractie maakt complexe systemen eenvoudiger door onnodige details te verbergen en alleen de essentiële onderdelen beschikbaar te maken.
 
@@ -10,11 +12,55 @@ Je weet dat een auto kan rijden, stoppen en de snelheid kan aanpassen. Dit zijn 
 
 Details verborgen door abstractie: Hoe de motor werkt, hoe de remmen functioneren, en hoe de snelheid precies wordt aangepast, zijn details die verborgen blijven.
 
-In programmeertaal kan abstractie worden geïmplementeerd door middel van **abstracte klassen** of **interfaces**, die methoden definiëren zonder hun werking te specificeren. Hierdoor kunnen verschillende objecten dezelfde interface of abstracte class delen, maar hun eigen specifieke gedrag implementeren.
+## Polymorphism
+
+Polymorfisme betekent letterlijk "veelvormigheid". Het stelt verschillende objecten in staat om op dezelfde manier te reageren op dezelfde methode-aanroepen, ook al hebben ze verschillende implementaties van die methode. Polymorfisme werkt meestal in combinatie met overerving.
+
+Het doel van polymorfisme is om flexibele en uitbreidbare code te schrijven. Hierdoor kan je verschillende objecten, die afgeleide vormen zijn van een gemeenschappelijke basisklasse, op dezelfde manier behandelen, ongeacht hun specifieke type.
+
+Voorbeeld:
+Laten we in plaats van een Auto een Voertuig klasse gebruiken, deze heeft meerdere afgeleide klassen zoals Auto, Fiets en Bus. Elke klasse heeft een eigen implementatie van de Drive() methode, maar we kunnen ze allemaal als een Vehicle behandelen. Bijvoorbeeld door ze allemaal in een lijst met hetzelde type te zetten.
+
+```
+public abstract class Vehicle
+{
+    public abstract void Drive(); // Abstracte methode: geen implementatie hier
+}
+public class Car : Vehicle
+{
+    public override void Drive()
+    {
+        Debug.Log("De auto rijdt");
+    }
+}
+public class Bike : Vehicle
+{
+    public override void Drive()
+    {
+        Debug.Log("De fiets rijdt");
+    }
+}
+public class Bus : Vehicle
+{
+    public override void Drive()
+    {
+        Debug.Log("De bus rijdt");
+    }
+}
+```
+
+```
+public class Game:Monobehaviour{
+List<Vehicle> vehicles = new List<Vehicle> { new Car(), new Bike(), new Bus() };
+
+
+}
+
+```
 
 ## Abstracte klassen
 
-Bij een abstracte klasse kun je methoden maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven. Bij een methode zonder implementatie zet je er het keyword **abstract** voor in de definitie. Ook voor de naam van een abstracte class moet je het keyword **abstract** zetten.
+Bij een abstracte klasse kun je methoden maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven.
 
 Abstracte methoden moeten door hun child class verplicht worden geimplementeerd. Er moet dus een invulling voor komen met werkende code.
 
@@ -25,17 +71,17 @@ Een voorbeeld van een abstracte class:
 ```
 using UnityEngine;
 
-public abstract class Animal : MonoBehaviour
+public abstract class Unit : MonoBehaviour
 {
-    protected string Name;
+    protected string name;
 
     // Abstract dus zonder implementatie
-    public abstract void MakeSound();
+    public abstract void Attack();
 
     // Met implementatie
-    public void Sleep()
+    public void Move()
     {
-        Debug.Log(Name + " is sleeping.");
+        Debug.Log(name + " is moving.");
     }
 }
 ```
@@ -43,39 +89,31 @@ public abstract class Animal : MonoBehaviour
 Een voorbeeld van een concrete child class die overerft van een abstracte class:
 
 ```
-public class Dog : Animal
+public class Archer : Unit
 {
-    // Implementatie van de abstracte methode uit Animal
-    public override void MakeSound()
+    // Implementatie van de abstracte methode uit Unit
+    public override void Attack()
     {
-        Debug.Log(Name + " says: Woof!");
+        Debug.Log(name + " shoots arrows");
     }
 
     void Start()
     {
-        Name = "Buddy";
-        MakeSound();  // Output in de Console: Buddy says: Woof!
-        Sleep();      // Output in de Console: Buddy is sleeping.
+        name = "Hank";
+        Attack();       // Output in de Console: Hank shoots arrows
+        Move();         // Output in de Console: Hank is moving.
     }
 }
-
-public class Cat : Animal
-{
-    // Implementatie van de abstracte methode uit Animal
-    public override void MakeSound()
-    {
-        Debug.Log(Name + " says: Meow!");
-    }
-
-    void Start()
-    {
-        Name = "Whiskers";
-        MakeSound();  // Output in de Console: Whiskers says: Meow!
-        Sleep();      // Output in de Console: Whiskers is sleeping.
-    }
-}
-
 ```
+
+Let dus op dat een abstracte class en methode het keyword : **abstract** krijgt. Een methode die hier invulling aan geeft krijgt het keyword : **override**.
+
+De child class moet een implementatie maken voor de abstracte methode. Als ik een abstracte methode niet implementeer in een child class krijg ik een error:
+![error](../src/09_03_abstract_non_implement_error.png)
+
+Als ik zou proberen om de abstracte class te instantieren krijg ik ook een error:
+
+![error abstract instantiate](../src/09_02_abstract_error.png)
 
 ## Interfaces
 
@@ -83,7 +121,7 @@ Een interface is een soort sjabloon of contract dat bepaalt welke methoden of ei
 
 Door interfaces te gebruiken zorg je ervoor dat je classes zich allemaal aan dezelfde afspraken houden en je dus snel en zonder problemen nieuwe classes kunt koppelen die op dezelfde manier gebouwd zijn.
 
-De interface heeft geen implementatie (werkende code) en geeft dus alleen aan wat er in een class moet gebeuren. Als een contrect dus. Er mag dus geen werkende code in een interface worden gezet, zoals dat wel kan en mag in een abstracte class.
+De interface heeft geen implementatie (werkende code) en geeft dus alleen aan wat er in een class moet gebeuren. Als een contract dus. Er mag dus geen werkende code in een interface worden gezet, zoals dat wel kan en mag in een abstracte class.
 
 Bij overerving kan een class alleen een child zijn van 1 andere class. Bij interfaces kun je er meerdere implementeren. Je er zoveel koppelen aan je class als gewenst.
 
