@@ -244,7 +244,7 @@ public class Soldier : MonoBehaviour
 }
 ```
 
-**Opdracht 4**
+### Opdracht 17A: ??
 
 Maak nu ook de SwordFactory en de ShieldFactory af en geef je soldier via deze factories ook een zwaard en schild.
 
@@ -256,7 +256,7 @@ Contoleer dat de wapens niet rechtstreeks aan te maken zijn!
 
 ![alt text](../src/10_08_final_check_errors.png)
 
-**Opdracht 5**
+### Opdracht 17B: ??
 
 Pas je **WeaponFactory** script aan zodat deze als argument voor de methodes **_GetWeapon()_** en **_CreateWeapon()_** een string ontvangt met daarin het type wapen.
 
