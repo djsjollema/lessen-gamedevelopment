@@ -351,7 +351,7 @@ Als ik een onderdeel uit de interface niet implementeer zal ik een error krijgen
 
 Dit helpt mij dus om alle classes die dezelfde functionaliteit met elkaar delen op de zelfde manier te bouwen en te structureren.
 
-### Opdracht 10: Abstraction & Polymorphism via Interfaces
+### Opdracht 10: Polymorphisme via Interfaces
 
 Werk verder aan het prototype van [Opdracht 8: Inheritance](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/05_OOP_Inherritance#opdracht-8-inheritance). Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als de vorige opdracht straks stuk is.
 
