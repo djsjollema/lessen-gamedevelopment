@@ -80,6 +80,8 @@ public class Car : Vehicle
 
 ### Abstractie gebruiken
 
+![vehicles](../src/09_05_vehicles.png)
+
 Ons Voertuig heeft meerdere child klassen zoals Auto, Fiets en Bus maar mag zelf niets zijn. Voertuig is enkel een verzamelnaam.
 
 Niemand van jullie pakt "het voertuig" naar school, maar de trein, bus, auto en of de fiets.
