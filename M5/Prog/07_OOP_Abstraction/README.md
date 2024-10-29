@@ -1,5 +1,23 @@
 # PROG les 7: OOP Abstraction en Polymorfisme
 
+Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaak samen en worden veel door elkaar gebruikt. Ze dienen alleen beide een ander doel.
+
+### Doelen van Abstractie:
+
+![abstraction](../src/09_05_abstract.png)
+
+**Complexiteit verbergen:** Vereenvoudigt de interactie met een object door alleen essentiële functies te tonen en de interne details te verbergen.
+**Duidelijkheid:** Biedt een helder overzicht van wat een object kan doen zonder te onthullen hoe het werkt.
+**Herbruikbare structuur:** Zorgt voor een gestructureerde basis die door afgeleide klassen kan worden ingevuld, zodat ze specifieke details zelf kunnen implementeren.
+
+### Doelen van Polymorfisme:
+
+![polymorphism](../src/09_04_polymorph.png)
+
+**Uniformiteit:** Laat verschillende objecten dezelfde methoden gebruiken, zodat ze consistent behandeld kunnen worden, ongeacht hun specifieke type.
+**Flexibiliteit:** Maakt het eenvoudig om nieuwe objecten toe te voegen die op dezelfde manier werken zonder bestaande code aan te passen.
+**Dynamisch gedrag:** Biedt objecten de mogelijkheid om op unieke manieren te reageren op dezelfde methode-aanroep.
+
 ## Abstraction
 
 Abstractie maakt complexe systemen eenvoudiger door onnodige details te verbergen en alleen de essentiële onderdelen beschikbaar te maken.
@@ -14,51 +32,114 @@ Details verborgen door abstractie: Hoe de motor werkt, hoe de remmen functionere
 
 ## Polymorphism
 
-Polymorfisme betekent letterlijk "veelvormigheid". Het stelt verschillende objecten in staat om op dezelfde manier te reageren op dezelfde methode-aanroepen, ook al hebben ze verschillende implementaties van die methode. Polymorfisme werkt meestal in combinatie met overerving.
+Polymorfisme betekent letterlijk "veelvormigheid". Het stelt verschillende objecten in staat om op dezelfde manier te reageren op dezelfde methode-aanroepen, ook al hebben ze verschillende implementaties van die methode.
 
 Het doel van polymorfisme is om flexibele en uitbreidbare code te schrijven. Hierdoor kan je verschillende objecten, die afgeleide vormen zijn van een gemeenschappelijke basisklasse, op dezelfde manier behandelen, ongeacht hun specifieke type.
 
-Voorbeeld:
-Laten we in plaats van een Auto een Voertuig klasse gebruiken, deze heeft meerdere afgeleide klassen zoals Auto, Fiets en Bus. Elke klasse heeft een eigen implementatie van de Drive() methode, maar we kunnen ze allemaal als een Vehicle behandelen. Bijvoorbeeld door ze allemaal in een lijst met hetzelde type te zetten.
+## Het Verschil
+
+Bij Abstractie kun je de abstracte basis klasse niet instantieren, of hiervan een methode aanroepen. Bij Polymorfisme kun je dit allebei wel.
+
+Abstractie gebruikt de keywords **abstract** (parent class) en **override** (subclass).
+Polymorfisme gebruikt de keywords **virtual** (parent class) en **override** (subclass)
+
+### Abstractie voorbeeld:
 
 ```
 public abstract class Vehicle
 {
-    public abstract void Drive(); // Abstracte methode: geen implementatie hier
+    public abstract void Move(); // Abstracte methode: geen implementatie hier
 }
 public class Car : Vehicle
 {
-    public override void Drive()
+    public override void Move()
     {
-        Debug.Log("De auto rijdt");
+        Debug.Log("we rijden in een auto");
+    }
+}
+```
+
+### Polymorfisme voorbeeld:
+
+```
+public class Vehicle
+{
+    public virtual void Move(){
+        Debug.Log("we bewegen in een voertuig");
+    }
+}
+public class Car : Vehicle
+{
+    public override void Move()
+    {
+        Debug.Log("we rijden in een auto");
+        base.Move();//out:"We bewegen in een voertuig"
+    }
+}
+```
+
+### Abstractie gebruiken
+
+Ons Voertuig heeft meerdere child klassen zoals Auto, Fiets en Bus maar mag zelf niets zijn. Voertuig is enkel een verzamelnaam.
+
+Niemand van jullie pakt "het voertuig" naar school, maar de trein, bus, auto en of de fiets.
+
+Elke sub-klasse heeft een eigen implementatie van de Move()-methode maar Vehicle class niet.
+
+```
+public abstract class Vehicle
+{
+    public abstract void Move();
+}
+public class Car : Vehicle
+{
+    public override void Move()
+    {
+        Debug.Log("we rijden in een auto");
     }
 }
 public class Bike : Vehicle
 {
-    public override void Drive()
+    public override void Move()
     {
-        Debug.Log("De fiets rijdt");
+        Debug.Log("we rijden op de fiets");
     }
 }
 public class Bus : Vehicle
 {
-    public override void Drive()
+    public override void Move()
     {
-        Debug.Log("De bus rijdt");
+        Debug.Log("We rijden in de bus");
+    }
+}
+public class Train : Vehicle
+{
+    public override void Move()
+    {
+        Debug.Log("Tjoeke tjoeke!!");
     }
 }
 ```
 
+In het bovenstaande geval gebruiken we dus **Abstractie** om verschillende soorten object als gelijkwaardig behandelen. Ze zitten immers in de basis op dezelfe manier in elkaar. Ze bevatten in dit geval allemaal de methode Move().
+
+We kunnen nu alle subclasses als een Vehicle behandelen. Bijvoorbeeld door ze allemaal in een lijst met hetzelde type te zetten.
+
+Toch doen ze allemaal iets anders wanneer de methode **Move()** wordt aangeroepen.
+
 ```
 public class Game:Monobehaviour{
-List<Vehicle> vehicles = new List<Vehicle> { new Car(), new Bike(), new Bus() };
-
-
+List<Vehicle> vehicles;
+    void Start(){
+        vehicles = new List<Vehicle> { new Car(), new Train(), new Bike(), new Bus() };
+        foreach(Vehicle v in vehicles){
+            v.Move();
+        }
+    }
 }
-
 ```
 
-## Abstracte klassen
+## Met of zonder implementatie
 
 Bij een abstracte klasse kun je methoden maken met of zonder implementatie. Dit betekent dus dat je de methode werkende code geeft of niet. Als je een methode maakt zonder implementatie moet je die in de child klasse wel een implementatie geven.
 
@@ -66,7 +147,7 @@ Abstracte methoden moeten door hun child class verplicht worden geimplementeerd.
 
 Bij het maken van abstracte klassen is er dus ook sprake van overerving / inheritance.
 
-Een voorbeeld van een abstracte class:
+Abstarctie met en zonder implementatie:
 
 ```
 using UnityEngine;
@@ -86,7 +167,7 @@ public abstract class Unit : MonoBehaviour
 }
 ```
 
-Een voorbeeld van een concrete child class die overerft van een abstracte class:
+De child class erft over van een de abstracte class:
 
 ```
 public class Archer : Unit
@@ -106,35 +187,79 @@ public class Archer : Unit
 }
 ```
 
-Let dus op dat een abstracte class en methode het keyword : **abstract** krijgt. Een methode die hier invulling aan geeft krijgt het keyword : **override**.
+De child class **moet** een implementatie maken voor de abstracte methode. Als ik een abstracte methode niet implementeer in een child class krijg ik een error:
 
-De child class moet een implementatie maken voor de abstracte methode. Als ik een abstracte methode niet implementeer in een child class krijg ik een error:
 ![error](../src/09_03_abstract_non_implement_error.png)
 
 Als ik zou proberen om de abstracte class te instantieren krijg ik ook een error:
 
 ![error abstract instantiate](../src/09_02_abstract_error.png)
 
-## Interfaces
+## Polymorphisme en virtual
+
+Stel je een game voor met verschillende personages, zoals krijgers, magiërs en boogschutters. Elk personage kan op een andere manier "aanvallen". Slaan, Vuurballen gooien en pijlen schieten. Ze delen allemaal dezelfde actie: "Aanvallen".
+
+Voor elk type komt er dus een andere code-"implementatie" van de aanval.
+
+![attacks](../src/09_01_attacks.png)
+
+Om dit te doen gebruik je wederom overerving en de keywords **virtual** (in plaats van abstract) en **override**.
+
+```
+public class Character : MonoBehaviour
+{
+    public virtual void Attack()
+    {
+        Debug.Log("Character valt aan");
+    }
+
+}
+```
+
+Je baseclass / parent class heeft een methode die **virtual** is. En dus overschreven kan worden.
+
+```
+public class Warrior : Character
+{
+    public override void Attack()
+    {
+        Debug.Log("Krijger zwaait met een zwaard!");
+    }
+}
+```
+
+Net als bij abstraction gebruik je het **override** keyword om de daadwerkelijke implementatie van de code uit te voeren.
+
+```
+public class Mage : Character
+{
+    public override void Attack()
+    {
+        Debug.Log("Magiër werpt een vuurbal!");
+    }
+}
+```
+
+## Polymorfisme en Interfaces
 
 Een interface is een soort sjabloon of contract dat bepaalt welke methoden of eigenschappen een klasse moet implementeren, zonder dat het specificeert hoe die methoden of eigenschappen moeten worden geïmplementeerd.
 
 Door interfaces te gebruiken zorg je ervoor dat je classes zich allemaal aan dezelfde afspraken houden en je dus snel en zonder problemen nieuwe classes kunt koppelen die op dezelfde manier gebouwd zijn.
 
-De interface heeft geen implementatie (werkende code) en geeft dus alleen aan wat er in een class moet gebeuren. Als een contract dus. Er mag dus geen werkende code in een interface worden gezet, zoals dat wel kan en mag in een abstracte class.
+De interface heeft geen implementatie (werkende code) en geeft dus alleen aan wat er in een class moet gebeuren. Als een contract dus. Er mag dus geen werkende code in een interface worden gezet, zoals dat wel kan en mag in een class waarvan je overerft.
 
 Bij overerving kan een class alleen een child zijn van 1 andere class. Bij interfaces kun je er meerdere implementeren. Je er zoveel koppelen aan je class als gewenst.
 
-Interfaces kunnen worden gebruikt naast overerving. een class kan dus overerven van een base class en tegelijkertijd meerdere interfaces hebben.
+Interfaces kunnen worden gebruikt naast overerving. Een class kan dus overerven van een base class en tegelijkertijd meerdere interfaces hebben.
 
 Zo definieer je een interface:
 
 ```
-public interface IMyInterface           //Om een interface gelijk te herkennen is het handig om een "I" aan het begin van de naam te zetten.
+public interface IMyInterface                   //Om een interface gelijk te herkennen is het handig om een "I" aan het begin van de naam te zetten.
 {
-    int Value { get; set; }             //een interface kan getters en setters (eigenschappen) afdwingen
-    void MyMethod(int myValue);         //een interface kan methoden eventueel met parameters en return values afdwingen
-    static event Action OnSomethingHappened;   //een interface kan events afdwingen
+    int Value { get; set; }                     //een interface kan getters en setters (eigenschappen) afdwingen
+    void MyMethod(int myValue);                 //een interface kan methoden eventueel met parameters en return values afdwingen
+    static event Action OnSomethingHappened;    //een interface kan events afdwingen
 }
 
 ```
@@ -226,15 +351,15 @@ Als ik een onderdeel uit de interface niet implementeer zal ik een error krijgen
 
 Dit helpt mij dus om alle classes die dezelfde functionaliteit met elkaar delen op de zelfde manier te bouwen en te structureren.
 
-### Opdracht 10: Abstraction via Interfaces
+### Opdracht 10: Abstraction & Polymorphism via Interfaces
 
-Werk verder aan het prototype van [Opdracht 8: Inheritance](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/05_OOP_Inherritance#opdracht-8-inheritance). Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als opdracht 8 straks stuk is.
+Werk verder aan het prototype van [Opdracht 8: Inheritance](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/05_OOP_Inherritance#opdracht-8-inheritance). Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als de vorige opdracht straks stuk is.
 
 ![demo](../src/05_06_demo.gif)
 
 Zorg naast de Classes **Brute** en **Elf** ook voor de class **Player**.
 
-Maak een nieuwe class **Unit** ipv **EnemyParent**. Zorg dat Brute, Elf en Player allemaal overerven van **Unit**. **EnemyParent** kun je in deze branch weggooien als je de logica hebt overgezet.
+Hernoem de class **EnemyParent** naar **Unit**. Zorg dat Brute, Elf en Player allemaal overerven van **Unit**.
 
 Maak de volgende interfaces: **IDamagable**, **IMovable** en zorg dat **Unit**, **Player**, **Brute** en **Elf** allemaal overerven van deze interfaces.
 
