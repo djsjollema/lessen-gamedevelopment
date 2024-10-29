@@ -1,4 +1,4 @@
-# PROG les 8: Class Diagrams
+# PROG les 7: Class Diagrams
 
 In deze les gaan we het hebben over class diagrams. [neem deze presentatie door](ClassDiagrams.pdf).
 

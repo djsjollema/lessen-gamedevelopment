@@ -1,4 +1,4 @@
-# PROG les 7: OOP Abstraction en Polymorfisme
+# PROG les 8: OOP Abstraction en Polymorfisme
 
 Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaak samen en worden veel door elkaar gebruikt. Ze dienen alleen beide een ander doel.
 
