@@ -412,7 +412,54 @@ Zorg ervoor dat alle units geraakt kunnen worden en doodgaan door de kogels die 
 
 Gebruik hiervoor een methode **TakeDamage()** die je ook eerst definieert in de **IDamagable** Interface. Implementeer deze enkel in **Unit**. Zowel Player als Brute en Elf gaan allemaal op dezelfde manier dood.
 
-Dit is ongeveer het resultaat:
+Zo ziet je structuur er nu uit:
+
+```mermaid
+
+
+
+classDiagram
+
+    IMovable <|-- Unit
+
+    IDamagable <|-- Unit
+
+    Unit <|-- Player
+    Unit <|-- Elf
+    Unit <|-- Brute
+
+class IMovable{
+    <<interface>>
+    Move()
+}
+class IDamagable{
+    <<interface>>
+    TakeDamage()
+}
+class Unit{
+    - int health
+    + ~~get~~int Health
+
+    + Initialize()
+    + OnCollisionEnter()
+    + TakeDamage()
+    + Move()
+}
+
+class Elf{
+    - ToggleInvisibility()
+}
+class Player{
+    + Move()
+}
+
+```
+
+Dit zijn je bestanden:
+
+![files](../src/09_06_structure.png)
+
+Dit is ongeveer het werkende resultaat (met of zonder animaties):
 
 ![demo opdracht 10](../src/06_01_demo.gif)
 

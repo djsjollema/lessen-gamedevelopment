@@ -99,7 +99,7 @@ class IDamagable{
 }
 class Unit{
     - int health
-    + ~~get/set~~int Health
+    + ~~get~~int Health
 
     + Initialize()
     + OnCollisionEnter()
