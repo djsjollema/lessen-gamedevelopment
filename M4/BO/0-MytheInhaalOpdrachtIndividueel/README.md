@@ -1,15 +1,6 @@
-# Mythe Inhaalopdracht Individueel
+# Mythe herhalings opdracht Individueel
 
-Indien je een onvoldoende hebt gehaald voor Mythe of als je zelf twijfelt over je basiskennis van Unity en C#, kun je deze opdracht extra opdracht maken.
-
-Je kunt zo alsnog aan jezelf en ons bewijzen dat je over voldoende basisvaardigheden beschikt om toch in leerjaar 2 te starten.
-
-Voor deze opdracht staat een tijdsduur van 8 uur voor studenten die de basis beheersen. Maar indien je nog tegen problemen en vragen aanloopt kun je er dus ook langer over doen door eerder te beginnen.
-
-Op Woensdag 10 Juli Kun je op school ondersteunig krijgen bij het maken van deze opdracht en om 17:00 commit en push je de laatste versie en upload je een build op je github repo.
-
-De link naar de repo mail je naar
-[e.henraat@ma-web.nl](e.henraat@ma-web.nl)
+Met deze opdracht toon je aan dat je de unity basics die in leerjaar 1 zijn behandeld beheerst.
 
 Voor de opdracht mag je geen tutorials gebruiken. Je mag wel online bronnen zoals de unity manual raadplegen. Alle code moet je begrijpen en uit kunnen leggen. Je code base mag geen scripts en code bevatten die niets doen voor je game.
 

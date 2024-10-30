@@ -53,7 +53,15 @@ Geef je function nu een **Paramater** voor de kleur. En zorg dat je hiermee de k
 
         GameObject ball = Instantiate(prefab);
         Material material = ball.GetComponent<MeshRenderer>().material;
-        material.SetColor("_Color", c);
+
+         // voor CORE pipeline
+        mat.SetColor("_Color", c);
+
+        //Voor URP
+        if (mat.shader.name == "Universal Render Pipeline/Lit")
+        {
+            mat.SetColor("_BaseColor", c);
+        }
     }
 ```
 
@@ -96,7 +104,15 @@ Geef na het aanmaken van de bal met CreateBall de referentie door als argument i
 
         GameObject ball = Instantiate(prefab, position, Quaternion.identity);
         Material material = ball.GetComponent<MeshRenderer>().material;
+
+        // voor CORE pipeline
         mat.SetColor("_Color", c);
+
+        //Voor URP
+        if (mat.shader.name == "Universal Render Pipeline/Lit")
+        {
+            mat.SetColor("_BaseColor", c);
+        }
 
         ...
 
@@ -304,6 +320,8 @@ Maak ook een prefab van een toren (dit mag ook een cylinder zijn). Zorg dat de b
 Zorg voor een **Tower** class als script op je prefab. In de Start method van de **Tower** class geef je de toren een randomized Scale.
 
 Elke toren die je plaatst moet dus een andere size hebben.
+
+**Let op** dat je de kennis uit de vorige opdracht over het gebruiken van **parameters** en **return** values ook hier weer goed toepast!!
 
 Laat de **TowerSpawner** class elke keer als je in het scherm klikt een toren Instantieren op een willekeurige positie.
 
