@@ -121,7 +121,7 @@ summary
 
 ```
 
-Summaries kun je exporteren naar online documentatie met tools zoals [DoxyGen](https://www.doxygen.nl/download.html)
+Tip: _Summaries kun je exporteren naar online documentatie met tools zoals [DoxyGen](https://www.doxygen.nl/download.html)_
 
 **Best Practices:** Aanbevelingen om fouten te vermijden en de code efficiënter en leesbaarder te maken, zoals het vermijden van dubbele code of het gebruik van duidelijke en betekenisvolle functie- en variabele namen.
 
@@ -166,3 +166,9 @@ Ga door de codebase van je project heen en zorg dat je code voldoet aan deze Uni
 Denk zelf ook na over het gebruiken van comments. Wat wil jij zelf graag in de comments verwerken. Wat voor infomatie wil je wel in je comments hebben en wat niet en waarom? geef ook een voorbeeld van een goede en een voorbeeld van een slechte comment. Verwerk dit in een readme met de naam CommentingConvention.md
 
 Zorg dat je project (BO) gecomment is volgens je eigen Commenting Convention.
+
+Lever commit en push dit document en lever een link in naar de readme en een link naar de scripts folder van je project.
+
+### Bonus: DoxyGen
+
+Schrijf summaries voor al je classes en exporteer deze via DoxyGen.
