@@ -169,7 +169,7 @@ Denk zelf ook na over het gebruiken van comments. Wat wil jij zelf graag in de c
 
 Zorg dat de 3 classes ook gecomment zijn volgens je eigen Commenting Convention.
 
-Lever commit en push dit document en lever een link in naar de readme en een link naar de 3 scripts die aan de conventions voldoen.
+Commit en push de readme met de commenting conventions, lever de link in. Lever ook een link in naar de 3 scripts die aan de Unity code conventions voldoen.
 
 ### Bonus: DoxyGen
 
