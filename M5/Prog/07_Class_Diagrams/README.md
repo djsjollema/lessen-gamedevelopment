@@ -154,7 +154,7 @@ Hiervoor kun je de volgende syntax gebruiken:
 Title: Class Diagram Tower Defense
 ---
 
-//geef aan dat je een class diagrm wil maken
+//geef aan dat je een class diagram wil maken
 classDiagram
 
 //definieer je classes en bijhorende attributen en operaties

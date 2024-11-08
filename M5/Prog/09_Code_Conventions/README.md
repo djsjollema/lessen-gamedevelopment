@@ -1,12 +1,14 @@
 # PROG les 9: Code Conventions
 
-![construction](../src/00_construction.gif)
+![construction](../src/12_01_coding.gif)
 
 ## Waarom gebruik je code conventies?
 
 ### Leesbaarheid en Begrip
 
 Als je code schrijft volgens vastgestelde conventies, is het gemakkelijker voor anderen (inclusief jezelf!) om later te begrijpen wat de code doet. Je houden aan deze conventies zorgt ervoor dat je meteen ziet waar functies, variabelen en belangrijke blokken zich bevinden en wat ze doen.
+
+![spaghetti](../src/12_02_spaghetti_code.jpg)
 
 ### Samenwerking
 
@@ -161,14 +163,16 @@ Lees de volgende onderdelen uit de Unity code conventions goed door:
 
 ![read these](../src/12_code_conventions_Unity.png)
 
-Ga door de codebase van je project heen en zorg dat je code voldoet aan deze Unity code conventions.
+Ga door de codebase van je project heen en zorg dat je code voldoet aan al deze Unity code conventions. (Minimaal 3 classes)
 
 Denk zelf ook na over het gebruiken van comments. Wat wil jij zelf graag in de comments verwerken. Wat voor infomatie wil je wel in je comments hebben en wat niet en waarom? geef ook een voorbeeld van een goede en een voorbeeld van een slechte comment. Verwerk dit in een readme met de naam CommentingConvention.md
 
-Zorg dat je project (BO) gecomment is volgens je eigen Commenting Convention.
+Zorg dat de 3 classes ook gecomment zijn volgens je eigen Commenting Convention.
 
-Lever commit en push dit document en lever een link in naar de readme en een link naar de scripts folder van je project.
+Lever commit en push dit document en lever een link in naar de readme en een link naar de 3 scripts die aan de conventions voldoen.
 
 ### Bonus: DoxyGen
 
-Schrijf summaries voor al je classes en exporteer deze via DoxyGen.
+Schrijf voor deze 3 classes en bijhorende methods summaries en exporteer deze via DoxyGen.
+
+Omschrijf in de summaries de verantwoordelijkheid van de class en de wat de functions doen en hoe je ze aan kunt roepen.
