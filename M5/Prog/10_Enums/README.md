@@ -8,8 +8,6 @@ Een enum (afkorting van enumeration) is een speciaal gegevenstype in C# waarmee 
 
 Een enum definieert een lijst van constante waarden die je als een type kunt gebruiken. Elk element in een enum krijgt automatisch een integer-waarde toegewezen, beginnend vanaf 0, tenzij je zelf specifieke waarden toewijst. Omdat elk element in een enum een naam heeft, is het meteen duidelijk waarvoor het staat, wat bijdraagt aan de leesbaarheid van de code.
 
-## Voorbeeld:
-
 Stel dat je een spel hebt waarin de speler verschillende moeilijkheidsgraden kan kiezen: Easy, Medium, en Hard. Met een enum kun je deze moeilijkheidsgraden op een duidelijke en gestructureerde manier definiëren.
 
 ```
@@ -66,7 +64,7 @@ public class GameSettings : MonoBehaviour
 }
 ```
 
-Hierboven maak ik gebruik van een int weet je als programmeur niet wat 1 dan betekent. Is het "easy"?,"medium"?,"hard"?. Ook je weet niet wat de maximale difficulty kan zijn. Wat nu als ik 10 invul? Wat krijg ik dan voor difficulty? of krijg ik een error omdat er geen difficulty bestaat van 10?
+Hierboven maak ik gebruik van een integer. Hoe weet je als programmeur nu wat 1 betekent? Is het "easy"?,"medium"?,"hard"?. Ook je weet niet wat de maximale difficulty kan zijn. Wat nu als ik 10 invul? Wat krijg ik dan voor difficulty? of krijg ik een error omdat er geen difficulty bestaat van 10?
 
 Wat nu als ik een **String** gebruik?
 
@@ -89,7 +87,7 @@ public class GameSettings : MonoBehaviour
 }
 ```
 
-Zoals je wellicht ziet is dan de kans op een typo aanwezig. Moet ik nu "easy", "Easy" of "EASY" invullen? En welke moeilijkheidsgraden zijn er eigenlijk? Bestaat "Very Easy"? Hoe weet ik dat als developer? Moet ik ergens een lijst bijhouden met verschillende moeilijkheidsgraden?
+Zoals je wellicht al opviel is een typo zo gemaakt. Moet ik nu "easy", "Easy" of "EASY" invullen? En welke moeilijkheidsgraden zijn er eigenlijk? Bestaat "Very Easy"? Hoe weet ik dat als developer? Moet ik ergens een lijst bijhouden met verschillende moeilijkheidsgraden?
 
 ## Code Completion
 
@@ -99,6 +97,8 @@ Dankzij de code completion van je IDE zal deze altijd de verschillende opties/el
 
 ### Opdracht 14: Anti-Magic
 
-Zoek in je code base naar een magic number of string. Vervang deze met een enum waarin alle mogelijke waarden verwerkt zitten.
+![anti magic](../src/13_03_anti_magic.jpg)
+
+Zoek in je code base naar een magic number of string die eigenlijk maar een beperkte set van waarden zou moegen hebben. Vervang deze met een enum waarin alle mogelijke waarden verwerkt zitten.
 
 Lever een link in naar de code op github.
