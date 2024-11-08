@@ -126,7 +126,7 @@ Hier vind je de [Mermaid syntax](https://mermaid.js.org/syntax/classDiagram.html
 
 Je kunt ook de bron van deze readme bekijken om te zien hoe ik de bovenstaande schema's in mermaid heb gemaakt.
 
-VSCode heeft ook een handige Mermaid Preview extension. Het is ook zeker handig om die te installeren.
+VSCode heeft ook een handige Markdown Preview Mermaid Support extension. Het is ook zeker handig om die te installeren.
 
 ![mermaid preview](../src/08_01_mermaid_preview.png)
 
@@ -138,8 +138,8 @@ Hiermee kun je terwijl je bezig bent goed zien wat er gebeurt in je diagrammen.
 
 Maak een class diagram van alle code in je TD project.
 
-Installeer de mermaid preview extension voor VSCode
-![install](../src/08_03_mermaid_preview_3.png)
+Installeer de Markdown Preview Mermaid Support extension voor VSCode.
+
 Maak een markdown bestand genaamd ClassDiagramTD.md
 
 Gebruik mermaid om al je classes met inhoud en relaties in kaart te brengen.
