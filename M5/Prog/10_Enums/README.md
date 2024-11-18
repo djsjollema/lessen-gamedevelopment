@@ -99,6 +99,6 @@ Dankzij de code completion van je IDE zal deze altijd de verschillende opties/el
 
 ![anti magic](../src/13_03_anti_magic.jpg)
 
-Zoek in je code base naar een magic number of string die eigenlijk maar een beperkte set van waarden zou moegen hebben. Vervang deze met een enum waarin alle mogelijke waarden verwerkt zitten.
+Zoek in je code base naar een magic number of string die eigenlijk maar een beperkte set van waarden zou mogen hebben. Vervang deze met een enum waarin alle mogelijke waarden verwerkt zitten.
 
-Lever een link in naar de code op github.
+Lever een link in naar de code op github waar je de Enum gebruikt.
