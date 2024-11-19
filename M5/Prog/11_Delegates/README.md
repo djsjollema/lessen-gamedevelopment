@@ -137,6 +137,7 @@ Je kunt hiervoor natuurlijk een **if** of **switch** statement gebruiken om afha
                     damage = baseDamage * multiplier;
                     break;
             }
+            return damage;
         }
     }
     public enum WeaponType{
@@ -170,9 +171,10 @@ Om de opties voor de verschillende wapens en berekeningen uit te breiden moet ik
                 damage = baseDamage * multiplier;
                 break;
             case WeaponType.Whip:                               //NIEUW!
-                baseDamage * multiplier - armor;
+                damage = baseDamage * multiplier - armor;
                 break;
         }
+        return damage
     }
     public enum WeaponType{
         Sword,
