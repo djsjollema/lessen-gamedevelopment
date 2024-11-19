@@ -7,7 +7,9 @@ Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaa
 ![abstraction](../src/09_05_abstract.png)
 
 **Complexiteit verbergen:** Vereenvoudigt de interactie met een object door alleen essentiële functies te tonen en de interne details te verbergen.
+
 **Duidelijkheid:** Biedt een helder overzicht van wat een object kan doen zonder te onthullen hoe het werkt.
+
 **Herbruikbare structuur:** Zorgt voor een gestructureerde basis die door afgeleide klassen kan worden ingevuld, zodat ze specifieke details zelf kunnen implementeren.
 
 ### Doelen van Polymorfisme:
@@ -15,7 +17,9 @@ Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaa
 ![polymorphism](../src/09_04_polymorph.png)
 
 **Uniformiteit:** Laat verschillende objecten dezelfde methoden gebruiken, zodat ze consistent behandeld kunnen worden, ongeacht hun specifieke type.
+
 **Flexibiliteit:** Maakt het eenvoudig om nieuwe objecten toe te voegen die op dezelfde manier werken zonder bestaande code aan te passen.
+
 **Dynamisch gedrag:** Biedt objecten de mogelijkheid om op unieke manieren te reageren op dezelfde methode-aanroep.
 
 ## Abstraction
@@ -41,6 +45,7 @@ Het doel van polymorfisme is om flexibele en uitbreidbare code te schrijven. Hie
 Bij Abstractie kun je de abstracte basis klasse niet instantieren, of hiervan een methode aanroepen. Bij Polymorfisme kun je dit allebei wel.
 
 Abstractie gebruikt de keywords **abstract** (parent class) en **override** (subclass).
+
 Polymorfisme gebruikt de keywords **virtual** (parent class) en **override** (subclass)
 
 ### Abstractie voorbeeld:
