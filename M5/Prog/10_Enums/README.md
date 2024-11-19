@@ -101,4 +101,6 @@ Dankzij de code completion van je IDE zal deze altijd de verschillende opties/el
 
 Zoek in je code base naar een magic number of string die eigenlijk maar een beperkte set van waarden zou mogen hebben. Vervang deze met een enum waarin alle mogelijke waarden verwerkt zitten.
 
+Kun je geen magic number of string vinden? Denk dan alvast na over welke set vaste waarden je nodig denkt te gaan hebben later in je project en maak daar alvast een Enum voor.
+
 Lever een link in naar de code op github waar je de Enum gebruikt.
