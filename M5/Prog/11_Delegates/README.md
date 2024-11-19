@@ -174,7 +174,7 @@ Om de opties voor de verschillende wapens en berekeningen uit te breiden moet ik
                 damage = baseDamage * multiplier - armor;
                 break;
         }
-        return damage
+        return damage;
     }
     public enum WeaponType{
         Sword,
