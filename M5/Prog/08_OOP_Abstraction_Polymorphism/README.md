@@ -403,6 +403,8 @@ Dit helpt mij dus om alle classes die dezelfde functionaliteit met elkaar delen 
 
 Werk verder aan het prototype van [Opdracht 8: Inheritance](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/05_OOP_Inherritance#opdracht-8-inheritance). Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als de vorige opdracht straks stuk is.
 
+**Heb je opdracht 8 nog niet gedaan? Doe dat nu dan eerst!**
+
 ![demo](../src/05_06_demo.gif)
 
 Zorg naast de Classes **Brute** en **Elf** ook voor de class **Player**.
