@@ -1,6 +1,6 @@
 # PROG les 8: OOP Abstraction en Polymorfisme
 
-Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaak samen en worden veel door elkaar gebruikt. Ze dienen alleen beide een ander doel.
+Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaak samen en worden veel door elkaar gebruikt. Ze dienen alleen beiden andere specifieke doelen. Maar hebben ook als gemeenschappelijk doel dat het de code beter leesbaar, onderhoudbaar en uitbreidbaar maakt.
 
 ### Doelen van Abstractie:
 
@@ -10,25 +10,23 @@ Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaa
 
 **Duidelijkheid:** Biedt een helder overzicht van wat een object kan doen zonder te onthullen hoe het werkt.
 
-**Herbruikbare structuur:** Zorgt voor een gestructureerde basis die door afgeleide klassen kan worden ingevuld, zodat ze specifieke details zelf kunnen implementeren.
-
 ### Doelen van Polymorfisme:
 
 ![polymorphism](../src/09_04_polymorph.png)
 
-**Uniformiteit:** Laat verschillende objecten dezelfde methoden gebruiken, zodat ze consistent behandeld kunnen worden, ongeacht hun specifieke type.
+**Uniformiteit:** Laat verschillende objecten dezelfde methoden gebruiken, zodat ze consistent als overkoepelend type behandeld kunnen worden, ongeacht hun specifieke type.
 
-**Flexibiliteit:** Maakt het eenvoudig om nieuwe objecten toe te voegen die op dezelfde manier werken zonder bestaande code aan te passen.
+**Uitbreidbaar:** Maakt het eenvoudig om nieuwe objecten toe te voegen die op dezelfde manier werken zonder bestaande code aan te passen.
 
 **Dynamisch gedrag:** Biedt objecten de mogelijkheid om op unieke manieren te reageren op dezelfde methode-aanroep.
 
-## Abstraction
+## Deel 1: Abstraction
 
 Abstractie maakt complexe systemen eenvoudiger door onnodige details te verbergen en alleen de essentiële onderdelen beschikbaar te maken.
 
-Met abstractie richt je je op wat een object doet in plaats van hoe het dat doet. Dit betekent dat je een algemene beschrijving geeft van een object of functie, zonder in te gaan op de specifieke implementatie.
+Met abstractie richt je je op **wat** een object doet in plaats van **hoe** het dat doet. Dit betekent dat je een algemene beschrijving geeft van een object of functie, zonder in te gaan op de specifieke implementatie van functionerende code.
 
-Bijvoorbeeld: een Auto
+Bijvoorbeeld: een **Auto**
 
 Je weet dat een auto kan rijden, stoppen en de snelheid kan aanpassen. Dit zijn de essentiële functies van een auto.
 
@@ -36,13 +34,17 @@ Details verborgen door abstractie: Hoe de motor werkt, hoe de remmen functionere
 
 ## Polymorphism
 
-Polymorfisme betekent letterlijk "veelvormigheid". Het stelt verschillende objecten in staat om op dezelfde manier te reageren op dezelfde methode-aanroepen, ook al hebben ze verschillende implementaties van die methode.
+Polymorfisme betekent letterlijk "veelvormigheid". Het stelt verschillende objecten in staat om te reageren op dezelfde methode-aanroepen, ook al hebben ze verschillende implementaties van die methode. Denk aan het "Rijden" op een fiets of in een auto. Ze kunnen beiden rijden maar dit werkt wel heel anders.
 
 Het doel van polymorfisme is om flexibele en uitbreidbare code te schrijven. Hierdoor kan je verschillende objecten, die afgeleide vormen zijn van een gemeenschappelijke basisklasse, op dezelfde manier behandelen, ongeacht hun specifieke type.
 
 ## Het Verschil
 
-Bij Abstractie kun je de abstracte basis klasse niet instantieren, of hiervan een methode aanroepen. Bij Polymorfisme kun je dit allebei wel.
+Bij Abstractie en Polymorphisme maak je gebruik van overerving.
+
+Bij abstracte overerving kun je de abstracte basis klasse niet instantieren, of hiervan een methode aanroepen.
+
+Bij Polymorfisme kun je dit wel.
 
 Abstractie gebruikt de keywords **abstract** (parent class) en **override** (subclass).
 
@@ -51,17 +53,25 @@ Polymorfisme gebruikt de keywords **virtual** (parent class) en **override** (su
 ### Abstractie voorbeeld:
 
 ```
-public abstract class Vehicle
-{
-    public abstract void Move(); // Abstracte methode: geen implementatie hier
-}
-public class Car : Vehicle
-{
-    public override void Move()
+    public abstract class Vehicle
     {
-        Debug.Log("we rijden in een auto");
+        public abstract void Drive();
     }
-}
+    public class Car : Vehicle
+    {
+        public override void Drive()
+        {
+            Debug.Log("VROEM");
+        }
+    }
+    public class Game:MonoBehaviour
+    {
+        private void Start(){
+            Vehicle vehicle = new Vehicle();    //Mag niet!
+            Car car = new Car();                //Mag wel!
+        }
+    }
+
 ```
 
 ### Polymorfisme voorbeeld:
@@ -69,16 +79,23 @@ public class Car : Vehicle
 ```
 public class Vehicle
 {
-    public virtual void Move(){
-        Debug.Log("we bewegen in een voertuig");
+    public virtual void Drive(){
+        Debug.Log("we're driving something");
     }
 }
 public class Car : Vehicle
 {
-    public override void Move()
+    public override void Drive()
     {
-        Debug.Log("we rijden in een auto");
-        base.Move();//out:"We bewegen in een voertuig"
+        Debug.Log("VROEM");
+        base.Move();        //out:"we're driving something"
+    }
+}
+public class Game:MonoBehaviour
+{
+    private void Start(){
+        Vehicle vehicle = new Vehicle();    //Mag wel!
+        Car car = new Car();                //Mag wel!
     }
 }
 ```
@@ -91,7 +108,9 @@ Ons Voertuig heeft meerdere child klassen zoals Auto, Fiets en Bus maar mag zelf
 
 Niemand van jullie pakt "het voertuig" naar school, maar de trein, bus, auto en of de fiets.
 
-Elke sub-klasse heeft een eigen implementatie van de Move()-methode maar Vehicle class niet.
+Elke sub-klasse krijgt een eigen implementatie van de **Move()**-methode maar Vehicle class niet.
+
+Waarom past **Move** beter als methodenaam dan **Drive**?
 
 ```
 public abstract class Vehicle
@@ -128,14 +147,14 @@ public class Train : Vehicle
 }
 ```
 
-In het bovenstaande geval gebruiken we dus **Abstractie** om verschillende soorten object als gelijkwaardig behandelen. Ze zitten immers in de basis op dezelfe manier in elkaar. Ze bevatten in dit geval allemaal de methode Move().
+In het bovenstaande geval gebruiken we dus **Abstractie** om verschillende soorten objecten als gelijkwaardig behandelen. Ze zitten immers in de basis op dezelfe manier in elkaar. Ze bevatten in dit geval allemaal de methode Move().
 
 We kunnen nu alle subclasses als een Vehicle behandelen. Bijvoorbeeld door ze allemaal in een lijst met hetzelde type te zetten.
 
 Toch doen ze allemaal iets anders wanneer de methode **Move()** wordt aangeroepen.
 
 ```
-public class Game:Monobehaviour{
+public class Game:MonoBehaviour{
 List<Vehicle> vehicles;
     void Start(){
         vehicles = new List<Vehicle> { new Car(), new Train(), new Bike(), new Bus() };
@@ -152,9 +171,7 @@ Bij een abstracte klasse kun je methoden maken met of zonder implementatie. Dit 
 
 Abstracte methoden moeten door hun child class verplicht worden geimplementeerd. Er moet dus een invulling voor komen met werkende code.
 
-Bij het maken van abstracte klassen is er dus ook sprake van overerving / inheritance.
-
-Abstarctie met en zonder implementatie:
+Hier zie je een voorbeeld van abstarctie **met** en **zonder** implementatie:
 
 ```
 using UnityEngine;
@@ -172,11 +189,7 @@ public abstract class Unit : MonoBehaviour
         Debug.Log(name + " is moving.");
     }
 }
-```
 
-De child class erft over van een de abstracte class:
-
-```
 public class Archer : Unit
 {
     // Implementatie van de abstracte methode uit Unit
@@ -202,7 +215,35 @@ Als ik zou proberen om de abstracte class te instantieren krijg ik ook een error
 
 ![error abstract instantiate](../src/09_02_abstract_error.png)
 
-## Polymorphisme en virtual
+---
+
+### Oefening Abstraction
+
+Maak nu zelf de volgende classes:
+
+- Zoo : MonoBehariour
+- Animal
+- Bird
+- Dog
+- Elephant
+
+Welke van deze is de abstracte class?
+
+Maak een abstracte methode in de Abstracte class die **Move** heet. Deze mag geen implementatie hebben.
+
+Geef alle dieren een eigen implementatie van de `Move` methode. Bijvoorbeeld: `Debug.Log("Flaps it's wings")`
+
+Maak in de abstracte class ook een methode **Eat** die je de volgende implementatie geeft : `Debug.Log("Njam Njam");`
+
+Maak in de Zoo class alle dieren aan en zet ze in een List of Array die **animals** heet.
+
+Roep met een loop voor alle dieren de methode **Eat** en **Move** aan.
+
+Test je code door Zoo.cs aan de camera te hangen in unity.
+
+---
+
+## Deel 2: Polymorphisme en virtual
 
 Stel je een game voor met verschillende personages, zoals krijgers, magiërs en boogschutters. Elk personage kan op een andere manier "aanvallen". Slaan, Vuurballen gooien en pijlen schieten. Ze delen allemaal dezelfde actie: "Aanvallen".
 
@@ -400,9 +441,11 @@ public interface IDamagable
 
 Zorg dat de speler rond kan lopen over het veld met de pijltjestoetsen.
 
+Je mag hiervoor deze code gebruiken:
+
 ```
-            transform.position += transform.forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
-            transform.Rotate(Vector3.up*rotationSpeed*Time.deltaTime * Input.GetAxis("Horizontal"));
+transform.position += transform.forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+transform.Rotate(Vector3.up*rotationSpeed*Time.deltaTime * Input.GetAxis("Horizontal"));
 ```
 
 Zorg dat de Elf en de Brute vanzelf naar rechts gaan. (zoals bij opdracht 8)
