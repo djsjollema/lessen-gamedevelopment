@@ -1,7 +1,7 @@
 # Usertesting
 
 [![presentatie](../src/06_01_usertesting.png)](https://docs.google.com/presentation/d/1bFGPaPEHiF3K4KTIh4Isur3QX5jceIcK2RnvigN8fYA/edit#slide=id.p)
-[usertesting pdf](Usertesting.pdf)
+[usertesting pdf](../presentaties/Usertesting.pdf)
 
 Er is een verschil tussen je game testen en Usertesten!
 
