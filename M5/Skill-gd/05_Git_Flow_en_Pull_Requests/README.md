@@ -2,9 +2,9 @@
 
 Een Versiebeheerstrategie is een aanpak om wijzigingen in je code, of andere bestanden binnen je project, systematisch bij te houden en te beheren met behulp van een versiebeheer systeem (bijvoorbeeld Git).
 
-Door een voorafgedefinieerde strategie te gebruiken is het voor iedereen duidelijk wat de regels zijn en hoe deze strategie toegepast moet worden.
+Door een vooraf-gedefinieerde strategie te gebruiken is het voor iedereen duidelijk wat de regels zijn en hoe deze strategie toegepast moet worden.
 
-**Welke strategie hebben jullie tot nu toe gehanteerd voor jullie versiebeheer?**
+**Wat was tot nu toe je strategie voor het samen voeren van versiebeheer?**
 
 **Wat waren hiervan de voor en nadelen?**
 
@@ -35,7 +35,7 @@ Veelgebruikte versiebeheer strategieën in software development zijn:
 - Pull requests voor code review en samenwerking
 - Direct mergen naar main na goedkeuring
 - Minimale branching-overhead
-- Geschikt voor teams met continue integratie en delivery
+- Geschikt voor teams die snel moeten leveren
 
 ## Trunk Based Development:
 
@@ -43,14 +43,15 @@ Veelgebruikte versiebeheer strategieën in software development zijn:
 
 - Alle ontwikkelaars committen direct naar centrale main branch
 - Minimaal gebruik van branches
-- Sterke nadruk op continue integratie
+- Sterke nadruk op continue integratie en levering
 - Vereist sterke test automatisering
-- Geschikt voor teams met hoge vertrouwen en discipline
-- Hoge code kwaliteit
+- Geschikt voor teams met veel vertrouwen en discipline
+- Hoge code kwaliteit is vereist
+- Minder controle op elkaars werk
 
-**Welke van de bovenstaande strategieen is volgens jou het meest bruikbaar voor je Vertical Slice project?**
+**Welke van de bovenstaande strategieen is volgens jou het meest bruikbaar voor je Vertical Slice project en waarom?**
 
-## Workflow stappen:
+## Stappen binnen de GitHub Flow strategie:
 
 1. Voordat je een een nieuwe featuren gaat bouwen maak je hiervoor een nieuwe feature branch aan.
 
@@ -79,22 +80,69 @@ Veelgebruikte versiebeheer strategieën in software development zijn:
 5. Merge naar main branch
 
 - Na goedkeuring samenvoegen
-- Direct deployen naar de productie-omgeving
+- De verandering wodt direct geintegreerd in de productie-omgeving (Verwerken in final scene)
 
 **Heb je een beeld van alle bovenstaande stappen? Wat moet je met je team doen om deze uit te voeren? Welke tools en skills hebben jullie hiervoor nodig?**
 
-## Branches maken
+## Branches maken en mergen
 
-**wie weet hoe je een branch maakt?**
+**Wie weet hoe je een branch maakt? en deze ook weer merged?**
+
+![merge branches](../src/05_09_merge_branches.png)
+
+Oefen dit eventueel eerst door een oefen repository te maken. Daar wat testbranches te maken. Op verschillende branches te comitten en deze ook weer te mergen naar de main.
+
+Commands:
+
+`git branch` : check welke branches er zijn en waar je bent.
+`git branch [new name]` : maak een nieuwe branch aan.
+`git switch [branch name]` : ga naar deze branch.
+`git merge [branch to merge]` : pak de commits van de "branch to merge" en merge die in de branch waar je bent.
+`git branch -d [branch to delete]` : verwijder de branch nadat deze gemerged is.
+`git branch -D [branch to delete]` : verwijder de branch ook al is die niet gemerged.
+
+## Samen werken in 1 repo "Collaborators"
+
+Om samen te kunnen werken in 1 repo moet de eigenaar anderen toelaten als "collaborators":
+
+![samenwerken](../src/05_07_collaborators.png)
 
 ## Pull Requests
 
 **Wie weet wat een pull request is?**
 
-> > uitleg pull request video<<
+[![image](../src/05_04_pull_request_video.png)](https://youtu.be/FDXSgyDGmho?si=CLn64wiBumTkF0fm)
 
-- Maak eens een pull request
+## Afdingen van pull requests
 
-## Opdracht 6:
+Je kunt je collaborators dwingen om pull requests te maken voordat nieuwe branches gemerged kunnen worden:
 
-Maak een test
+![force pull request](../src/05_08_force_pull_request.png)
+
+Naast het samenvoegen van veranderingen is een pull request ook vooral bedoeld om te controleren of de code wel goed is. We zorgen er dus voor dat er bij elke pull request een code review word uitgevoerd.
+
+Dit kan gedaan worden door een teamgenoot of je kunt er ook voor kiezen om de beste developer, "lead" developer te maken die de taak heeft om alle pull requests te reviewen.
+
+![lead developer](../src/05_08_lead_dev.gif)
+
+## Opdracht 6: De test repo
+
+Maak evt. een test repo aan met je teamgenoten.
+Maak een paar nieuwe test branches aan, bijvoorbeeld:
+/testAddNewFiles
+/testAddImages
+/testRemoveFiles
+
+Verander de inhoud van het project in deze branches door er bestanden aan toe te voegen, aan te passen en te verwijdederen.
+Maak een pull request aan via github of github desktop
+![desktop vs github.com](../src/05_06_pull_requests_desktop_vs_github.png)
+
+Zorg dat je in deze pull request goed omschrijft wat er in die brnch gebeurd is.
+
+Laat iemand anders uit je team controleren of de veranderingen kloppen en de pull request goedkeuren en mergen.
+
+Maak nu zelf eens expres een merge conflict aan. Doe dit door op zowel de main branch als op de testbranch (die je wil mergen) in de zelfde file dezelfde regel aan te passen.
+
+Resolve nu ook het merge conflict op github of in je code editor.
+
+Lever de link naar je test repo in op Simulise.
