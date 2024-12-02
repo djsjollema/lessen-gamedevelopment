@@ -157,7 +157,7 @@ Toch doen ze allemaal iets anders wanneer de methode **Move()** wordt aangeroepe
 public class Game:MonoBehaviour{
 List<Vehicle> vehicles;
     void Start(){
-        vehicles = new List<Vehicle> { new Car(), new Train(), new Bike(), new Bus() };
+        vehicles = new List<Vehicle>() { new Car(), new Train(), new Bike(), new Bus() };
         foreach(Vehicle v in vehicles){
             v.Move();
         }
