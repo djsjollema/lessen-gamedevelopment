@@ -1,6 +1,6 @@
 ![img](https://image.api.playstation.com/vulcan/ap/rnd/202206/2809/waPttoYkdfwurJKxJYqY1SEf.jpg)
 
-# SDM3BO-arcade-mechanics Beroepsopdracht
+# M3 BO- arcade-mechanics Beroepsopdracht
 
 In deze beroepsopdracht leren jullie, met behulp van verschillende game development tools (voornamelijk binnen Unity) kleine losse game mechanics bouwen en programmeren. Deze game mechanics vormen de basis voor het verder uitbouwen van je eigen game mehanics tot een simpele game voor de beroepsopdracht.
 
@@ -42,7 +42,7 @@ Jullie hebben aantoonbaar de volgende Unity systemen gebruikt:
 
 ### Visual Technology:
 
-De game bevat een eigen gemaakte 3d model inclusief shader material unwap en texture (leer je in de SKIL les)
+De game bevat een eigen gemaakte 3d model inclusief shader, material, unwap en texture (leer je in de SKIL les)
 
 ### Game Design & Documentation:
 
@@ -50,7 +50,7 @@ Jullie hebben minimaal 1 mechanic op papier uitgewerkt. dmv een concrete omschri
 
 ### Technical Design & Documentation:
 
-Jullie omschrijven de grootste technische uitdaging waar je tenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost.
+Jullie omschrijven de grootste technische uitdaging waar je tegenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost.
 
 ### Functional Design & Documentation:
 
@@ -70,27 +70,33 @@ Jullie hebben aan het eind van elke BO blok beiden zelf gecommit op je eigen bra
 
 ## Deadlines:
 
-### vr 8 mrt:
+### week 3:
 
 1e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
 
-### vr. 15 mrt:
+![lever je werk in!]
+
+### week 4:
 
 - 2e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
 - Minimaal 1 mechanic op papier uitgewerkt. dmv een concrete omschrijving en een schets van wat de mechanic moet doen. Dit zet je op je **Readme**.
 
-### vr. 22 mrt:
+### week 5:
 
 3e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
 
-### vr. 29 mrt:
+### week 6:
 
 4 tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
 
-### Vr. 12 apr:
+### week 7:
 
 - 3 mechanics uitgewerkt tot een complete game. Met een gameloop, 3d art , animaties, particles, geluiden, prefabs
 - Omschrijving op je **Readme** van grootste technische uitdaging waar je tenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost.
+
+## Inleveren:
+
+Voor elke deadline maak je een duidelijke gif waarin je je mechanic volledig demonstreert. Deze gif upload je op je readme in je github project. Bij de gif geef je een korte duidelijke omschrijving van je mechanic en een of meerdere links naar de bijhorende scripts. De link naar je readme lever je in via simulise.
 
 ## Mechanic Tutorials
 
