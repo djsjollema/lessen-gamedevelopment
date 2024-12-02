@@ -74,7 +74,7 @@ Jullie hebben aan het eind van elke BO blok beiden zelf gecommit op je eigen bra
 
 1e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
 
-![lever je werk in!]
+[Lever je werk in!](README.md#inleveren)
 
 ### week 4:
 
