@@ -136,7 +136,7 @@ Om samen te kunnen werken in 1 repo moet de eigenaar anderen toelaten als "colla
 
 [![image](../src/05_15_pull_request_video.png)](https://youtu.be/FDXSgyDGmho?si=CLn64wiBumTkF0fm)
 
-## Afdingen van pull requests
+## Afdwingen van pull requests
 
 Je kunt je collaborators dwingen om pull requests te maken voordat nieuwe branches gemerged kunnen worden:
 
