@@ -72,37 +72,45 @@ Jullie hebben aan het eind van elke BO blok beiden zelf gecommit op je eigen bra
 
 ### week 3:
 
-1e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
+Maak de 1e tutorial of je eerste eigen mechanic af. Commit deze op je eigen branch op github. Werk de mechanic af met minimaal 3d art van assetstore of mixamo.
 
 [Lever je werk in!](README.md#inleveren)
 
 ### week 4:
 
-- 2e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
-- Minimaal 1 mechanic op papier uitgewerkt. dmv een concrete omschrijving en een schets van wat de mechanic moet doen. Dit zet je op je **Readme**.
+- Maak de 2e tutorial of je tweede eigen mechanic af. Commit deze op je eigen branch op github. Werk de mechanic af met minimaal 3d art van assetstore of mixamo.
+- Werk Minimaal 1 mechanic uit op papier. Doe dit d.m.v een concrete omschrijving en een schets van wat de mechanic moet doen. Zet de uitwerking van je ontwerp ook in je **Readme**.
+
+[Lever je werk in!](README.md#inleveren)
 
 ### week 5:
 
-3e tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
+Maak de 3e tutorial of je derde eigen mechanic af. Commit deze op je eigen branch op github. Werk de mechanic af met minimaal 3d art van assetstore of mixamo.
+
+[Lever je werk in!](README.md#inleveren)
 
 ### week 6:
 
-4 tutorial of eigen mechanic af? in eigen branches gecommit en op github? afgewerkt met minimaal 3d art van assetstore of mixamo.
+Maak de 4e tutorial of je vierde eigen mechanic af. Commit deze op je eigen branch op github. Werk de mechanic af met minimaal 3d art van assetstore of mixamo.
+
+[Lever je werk in!](README.md#inleveren)
 
 ### week 7:
 
-- 3 mechanics uitgewerkt tot een complete game. Met een gameloop, 3d art , animaties, particles, geluiden, prefabs
-- Omschrijving op je **Readme** van grootste technische uitdaging waar je tenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost.
+- Zorg dat je minimaal 3 uitgewerkte mechanics samenvoegt tot een complete game. Zorg voor een complete gameloop, 3d art , animaties, particles, geluiden en prefabs.
+- Maak een omschrijving op je **Readme** van grootste technische uitdaging waar je tegenaan bent gelopen en hoe je dit uiteindelijk hebt opgelost.
+
+[Lever je werk in!](README.md#inleveren)
 
 ## Inleveren:
 
-Voor elke deadline maak je een duidelijke gif waarin je je mechanic volledig demonstreert. Deze gif upload je op je readme in je github project. Bij de gif geef je een korte duidelijke omschrijving van je mechanic en een of meerdere links naar de bijhorende scripts. De link naar je readme lever je in via simulise.
+Voor elke bovenstaande deadline maak je een duidelijke gif waarin je je mechanic volledig demonstreert. Deze gif upload je op je readme in je github project. Bij de gif geef je een korte duidelijke omschrijving van je mechanic en een of meerdere links naar de bijhorende scripts. De link naar je readme lever je in via simulise.
 
 ## Mechanic Tutorials
 
 ### Tutorial 0
 
-[Ontwikkelomgeving opzetten en simpele **_jump_** mechanic](https://github.com/erwinhenraat//M3BO-Arcade-Mechanics/tree/master/tutorial_0)
+[Ontwikkelomgeving opzetten en simpele **jump** mechanic](https://github.com/erwinhenraat//M3BO-Arcade-Mechanics/tree/master/tutorial_0)
 
 ### Tutorial 1
 
