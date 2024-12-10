@@ -59,7 +59,7 @@ push je testplan naar github en lever de link in op simulise.
 
 Bekijk [deze testfootage](https://mediacollegeamsterdam.sharepoint.com/:v:/t/SDGAexamen20232024-Team04/ETJcz7JhjexJnvKJqYKNjwIBXuUmyo0jx-43sThkjXpJcQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=WPQe6j).
 
-Kies een stuk van 5 minuten uit en noteer "observaties" wat zie je allemaal gebeuren? wat wordt er gezegd? wat doen mensen?.
+Kies een stuk van 5 minuten uit waar er getest wordt en noteer "observaties"; wat zie je allemaal gebeuren? wat wordt er gezegd? wat doen mensen?.
 
 Probeer niet gelijk te concluderen wat het betekent. Schrijf het gewoon op.
 
