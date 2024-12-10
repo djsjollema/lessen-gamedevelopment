@@ -57,7 +57,7 @@ push je testplan naar github en lever de link in op simulise.
 
 ## Opdracht 8 Analyse van test footage
 
-Bekijk [deze testfootage](https://mediacollegeamsterdam.sharepoint.com/teams/SDGAexamen20232024-Team04/_layouts/15/stream.aspx?id=%2Fteams%2FSDGAexamen20232024%2DTeam04%2FGedeelde%20documenten%2FTeam%2004%20%2D%20Paladin%2FAlgemeen%2FPaladin%2FUserstests%2F21%2D05%2D2024%2FUsertest%20Derailed%20Deliveries%2021%2D05%2D2024%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3bc6ce06%2Da64e%2D475f%2Da13d%2D027faa36da1b).
+Bekijk [deze testfootage](https://mediacollegeamsterdam.sharepoint.com/:v:/t/SDGAexamen20232024-Team04/ETJcz7JhjexJnvKJqYKNjwIBPzi3sO9RjZ7m_kCK5ioasQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=nSk6L8).
 
 Kies een stuk van 5 minuten uit en noteer "observaties" wat zie je allemaal gebeuren? wat wordt er gezegd? wat doen mensen?.
 
