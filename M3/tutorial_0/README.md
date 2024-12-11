@@ -1,6 +1,6 @@
 # Tutorial 0:
 
-**Let op deze tutorial is enkel ter voorbereiding. Het telt niet mee voor de af te tekenen tutorials!**
+**Let op deze tutorial is enkel ter voorbereiding. Het telt niet mee voor de af te tekenen mechanics!**
 
 **Ontwikkelomgeving opzetten en simpele jump mechanic**
 
