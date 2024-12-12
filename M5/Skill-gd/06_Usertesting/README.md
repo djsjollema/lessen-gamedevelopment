@@ -55,13 +55,57 @@ Schrijf een testplan (testplan.md) voor je VS game en beantwoord daarin de volge
 
 push je testplan naar github en lever de link in op simulise.
 
+## Waarnemen versus Interpreteren
+
+![interpretatie](../src/06_03_interpretation2.png)
+
+![boxes](../src/06_04_boxes.png)
+
+**"De speler kan niet zien wat er op de doos staat!"**
+
+**Is dat een observatie/waarneming of interpretatie/conclusie?**
+
+Hoe weet je dat de speler niet kan zien wat er op de doos staat?
+
+Observaties / waarnemingen:
+
+"De speler zegt : "Wat staat er op de doos!?"
+"De speler heeft doos QW gepakt terwijl hij in dit level QK zou moeten pakken."
+
+Interpretatie / conclusie:
+
+A:
+"De speler kan niet goed genoeg zien welke code er op de doos staat."
+
+B:
+"De codes lijken soms te veel op elkaar."
+
+**Welke interpretatie klopt?**
+
+Verbeterpunt / actie:
+
+A:
+"De code op de doos moet een duidelijker lettertype krijgen."
+"De code op de doos moet groter worden."
+
+B:
+"Verschillende codes mogen nooit met dezelfde letter beginnen en eindigen."
+
+**Welke actie is nu de beste oplossing?**
+
+Afhankelijk van je eigen analyse van deze observaties kun je dus andere interpretaties krijgen die leiden tot andere acties.
+
+Daarom is het belangrijk om zoveel mogelijke neutrale observaties te verzamelen waar geen interpretaties of conclusies in zitten. En pas later met elkaar de beste interpretaties en acties te bepalen.
+
 ## Opdracht 8 Analyse van test footage
 
 Bekijk [deze testfootage](https://mediacollegeamsterdam.sharepoint.com/:v:/t/SDGAexamen20232024-Team04/ETJcz7JhjexJnvKJqYKNjwIBXuUmyo0jx-43sThkjXpJcQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=WPQe6j).
 
-Kies een stuk van 5 minuten uit waar er getest wordt en noteer "observaties"; wat zie je allemaal gebeuren? wat wordt er gezegd? wat doen mensen?.
+Kies een stuk van 5 minuten uit waar er getest wordt en noteer "observaties / waarningen"; wat zie je allemaal gebeuren? wat wordt er gezegd? wat doen mensen?.
 
 Probeer niet gelijk te concluderen wat het betekent. Schrijf het gewoon op.
+
+**Wat is het verschil tussen een observatie/waarnemen en een conclusie/interpreteren??!?!**
 
 Pas als je 5 minuten aan observaties hebt opgeschreven ga je met elkaar overleggen over wat deze observaties kunnen betekenen met betrekking tot:
 
