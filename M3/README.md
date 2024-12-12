@@ -2,27 +2,27 @@
 
 # M3 BO- arcade-mechanics Beroepsopdracht
 
-In deze beroepsopdracht leren jullie, met behulp van verschillende game development tools (voornamelijk binnen Unity) kleine losse game mechanics bouwen en programmeren. Deze game mechanics vormen de basis van je eigen eerste simpele game.
+In deze beroepsopdracht leren jullie, met behulp van verschillende game development tools (voornamelijk binnen Unity) kleine losse game mechanics bouwen en programmeren. Deze game mechanics vormen de basis van je eerste eigen simpele game.
 
-Tijdens de BO lessen zal er volop ruimte zijn voor jullie om aan de opdracht te werken en hier vragen over te stellen.
+Tijdens de **BO** en **FLEX** lessen zal er volop ruimte zijn om aan de opdracht te werken, vragen te stellen en hulp te krijgen. Tijdens de **SKIL** lessen ga je je verder verdiepen in versiebeheer en leren je eigen 3d art assets te maken. Deze moeten bruikbaar zijn binnen je game. Bij **PROG** leer je programmeren in **C#** en **Unity**.
 
 De beroepsopdracht doe je in 2 tallen.
 
-Elke losse mechanic wordt door jullie gepushed naar jullie repository en ingeleverd in simulise.
+Elke losse mechanic wordt door jullie gepushed naar jullie repository en de link ingeleverd in simulise.
 
 Elke mechanic ontwikkelen jullie in een aparte branch.
 
-De mechanics kun je maken door middel van het volgen van de onderstaande tutorials , maar dat hoeft niet. Je mag ook zelf een hele andere manier bedenken om een mechanic te bouwen.
+De mechanics kun je maken door middel van het volgen van de onderstaande [**tutorials**](#tutorial-0) , maar dat hoeft niet. Je mag ook zelf andere bronnen zoeken of een eigen manier bedenken om een mechanic te bouwen.
 
-Je moet samen minimaal 4 mechanics hebben uitgewerkt tot een prototype.
+Je moet samen in totaal minimaal 4 mechanics uitwerken tot losse prototypes.
 
-Minimaal 3 van deze verschillende mechanics verwerk je tot een "kleine game".
+Minimaal 3 van deze verschillende mechanics voeg je vervolgens samen en verwewrkt je tot een leuke kleine game.
 
-Zorg ervoor dat je alle mechanics zo mooi mogelijk afwerkt door gebruik te maken van 3d assets, visuele effecten en geluiden.
+Zorg ervoor dat je alle mechanics en de game zo mooi mogelijk afwerkt door gebruik te maken van 3d assets, visuele effecten en geluiden.
 
-Deze assets kun je uit de unity assetstore halen maar er moeten ook eigen gemaakte 3d assets in verwerkt zijn.
+Deze assets kun je uit de unity assetstore halen maar er moeten ook eigen gemaakte 3d assets uit de **SKIL** lessen in verwerkt zijn.
 
-Naast de voorgestelde mechanics uit de lijst mag je ook zelf eigen mechanics verzinnen. Doe dit echter wel in overleg met de docent. De mechanics moeten wel uitgebreid en uitdagend genoeg zijn en ook weer niet te complex of te moeilijk.
+Naast de voorgestelde mechanics uit de [lijst](#game-development) mag je ook zelf eigen mechanics verzinnen. Doe dit echter wel in overleg met de docent. De mechanics moeten wel uitgebreid en uitdagend genoeg zijn en ook weer niet te complex of te moeilijk.
 
 ## Beoordeling
 
@@ -53,28 +53,29 @@ Jullie hebben aantoonbaar de volgende Unity systemen gebruikt:
 - Eigen scripts
 - De package manager
 - De skybox vervangen
+- De URP renderpipeline gebruikt
 
 ### Visual Technology:
 
-De game bevat een eigen gemaakte 3d model inclusief shader, material, unwap en texture (leer je in de SKIL les)
+De game bevat een eigen gemaakte 3d model inclusief shader, material, unwrap en texture (leer je in de SKIL lessen)
 
 ### Functional Design & Documentation:
 
-Jullie hebben alle mechanics op papier uitgewerkt. D.m.v een concrete omschrijving en een schets van wat de mechanic moet doen.
+Jullie hebben voor alle mechanics een design uitgewerkt. D.m.v een concrete omschrijving en een schets van wat de mechanic moet doen. Dit verwerk je in de readme van jullie repository.
 
 ### Technical Design & Documentation:
 
-Jullie omschrijven de grootste technische uitdaging waar je tegenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost.
+Jullie omschrijven de grootste technische uitdaging waar je tegenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost. Ook dit verwerken jullie in de readme van jullie repository.
 
 ### Professionaliseren:
 
-Jullie hebben regelmatig vragen gesteld en om hulp gevraagd. Jullie houden je aan de tussentijdse deadlines voor de mechanics.
+Jullie hebben tijdens de BO en Flex lessen regelmatig vragen gesteld en om hulp gevraagd. Jullie hebben je aan de tussentijdse deadlines van het project gehouden.
 
 ### Versiebeheer:
 
-Jullie hebben aan het eind van elke BO les je werk gecommit op de juiste branch in een gezamenlijke repository, zo toon je aan wat je elke BO les hebt gedaan.
+Jullie hebben aan het eind van elke werkdag je gemaakte werk gecommit op de juiste branch in een gezamenlijke repository, zo toon je aan wat je elke dag hebt gedaan.
 
-Je gebruikt goede inhoudelijke commit messages die duidelijk aangeven wat er is gebeurd.
+Je gebruikt goede inhoudelijke commit messages die duidelijk aangeven wat er die dag allemaal is gedaan.
 
 ## Deadlines:
 
@@ -139,40 +140,40 @@ Je werk is ingeleverd:
 
 ### Tutorial 0
 
-[Ontwikkelomgeving opzetten en simpele **jump** mechanic](https://github.com/erwinhenraat//M3BO-Arcade-Mechanics/tree/master/tutorial_0)
+[Ontwikkelomgeving opzetten en simpele **jump** mechanic](./tutorial_0/README.md)
 
 ### Tutorial 1
 
-[**_mixamo.com_** placeholder animaties aansturen](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_1)
+[**_mixamo.com_** placeholder animaties aansturen](./tutorial_1/README.md)
 
 ### Tutorial 2
 
-[Beweging en besturing van gameobjecten](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_2)
+[Beweging en besturing van gameobjecten](./tutorial_2/README.md)
 
 [Video tutorial rondlopen en draaien](https://www.youtube.com/watch?v=8mukeQPGyV8)
 
 ### Tutorial 3
 
-[Springen op platforms (& traps)](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_3)
+[Springen op platforms (& traps)](./tutorial_3/README.md)
 
 ### Tutorial 4
 
-[Verzamelen van pickups en score bijhouden](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_4)
+[Verzamelen van pickups en score bijhouden](./tutorial_4/README.md)
 
 ### Tutorial 5
 
-[Schieten van kogels en vernietigen van obstakels](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_5)
+[Schieten van kogels en vernietigen van obstakels](./tutorial_5/README.md)
 
 ### Tutorial 6
 
-[Bijhouden van levens en creeeren van vijanden](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_6)
+[Bijhouden van levens en creeeren van vijanden](./tutorial_6/README.md)
 
 ### Tutorial 7
 
-[Verdieping in het springen](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_7)
+[Verdieping in het springen](./tutorial_7/README.md)
 
 [Video tutorial springen met een aanpasbare gravity scale](https://youtu.be/Q35KLFQgL6c)
 
 ### Tutorial 8
 
-[Maak een exploding trap](https://github.com/erwinhenraat/M3BO-Arcade-Mechanics/tree/master/tutorial_8)
+[Maak een exploding trap](./tutorial_8/README.md)
