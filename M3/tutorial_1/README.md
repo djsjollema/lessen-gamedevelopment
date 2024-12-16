@@ -1,4 +1,4 @@
-# Tutorial 1
+# Tutorial 1: Animaties aansturen
 
 **Mixamo.com placeholder animaties aansturen**
 
@@ -21,7 +21,8 @@ Als je vast zit vraag je om hulp!
 
 ![Mixamo](../tutorial_gfx/mixamo.png)
 
-- **_Optioneel_** [kun je deze tutorial volgen](https://youtu.be/8Pk7FI629O8)
+Volg deze video tutorial!:
+[![Volg deze video tutorial!](../tutorial_gfx/1_mixamo_video.png)](https://www.youtube.com/watch?v=8Pk7FI629O8)
 
 ### 2. Selecteer een character
 
@@ -75,7 +76,7 @@ Als je vast zit vraag je om hulp!
 ### 10. Maak code om de animatie aan te roepen
 
 - Hang een nieuw script als component aan je character
-- Gebruik de methode [Animator.SetTrigger("value")](https://docs.unity3d.com/ScriptReference/Animator.SetTrigger.html)
+- Gebruik de methode [SetTrigger()](https://docs.unity3d.com/ScriptReference/Animator.SetTrigger.html) van het Animator component.
 
 ### 11. Zorg dat er standaard een idle animatie afspeelt en dat je character iets anders doet als je op een knop drukt.
 

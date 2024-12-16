@@ -1,4 +1,4 @@
-# Tutorial 2
+# Tutorial 2 Bewegen en besturen.
 
 **Beweging en besturing van gameobjecten**
 
@@ -25,7 +25,9 @@ Als je vast zit vraag je om hulp!
 
 ![Run](../tutorial_gfx/Run.gif)
 
-### 2. Sla de animaties op in je "Character" folder
+Download de **idle met skin** en de rest zonder.
+
+### 2. Sla de .FBX files op in je "Character" folder
 
 ![Idle Walk](../tutorial_gfx/idleWalk.png)
 
@@ -43,7 +45,7 @@ Als je vast zit vraag je om hulp!
 
 ![Player](../tutorial_gfx/player.png)
 
-### 5. Sleep je "Idle" animatie incl. model in je lege Player gameobject
+### 5. Sleep je "Idle" FBX in je lege Player gameobject
 
 ![Player Drag](../tutorial_gfx/playerDrag.png)
 
@@ -82,6 +84,7 @@ Als je vast zit vraag je om hulp!
 - Zorg dat de capsule collider de juiste maat en positie heeft
 - Zet ze op je **Player** gameobject en niet op je model
 - Zorg dat de capsule niet kan roteren op de x en z as zodat ie niet om kan vallen
+- Vink ook **Is Kinematc** aan! Zodat de player niet wordt gemanipuleerd door het physics systeem. (wat tot onverwachte resultaten kan leiden)
 
 ### 15. Roteer je model 180 graden op de y as
 
@@ -182,7 +185,7 @@ void Update()
 
 ```
 
-Check in de **Input Manager** (via edit > project settings) welke toetsen van invloed zijn op **_Input.GetAxis("vertical");_**
+Check in de **Input Manager** (via edit > project settings) welke toetsen van invloed zijn op **Input.GetAxis("Vertical");**
 
 ![Input Manager](../tutorial_gfx/inputManager.png)
 
@@ -197,6 +200,7 @@ Check in de **Input Manager** (via edit > project settings) welke toetsen van in
 
 ```
     transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime, 0));
+                    //           x,               y,                                         z
 }
 ```
 
