@@ -8,6 +8,8 @@ Tijdens de **BO** en **FLEX** lessen zal er volop ruimte zijn om aan de opdracht
 
 De beroepsopdracht doe je in 2 tallen.
 
+![2 tal](./tutorial_gfx/00_BO_2tal.png)
+
 Elke losse mechanic wordt door jullie gepushed naar jullie repository en de link ingeleverd in simulise.
 
 Elke mechanic ontwikkelen jullie in een aparte branch.
@@ -16,13 +18,19 @@ De mechanics kun je maken door middel van het volgen van de onderstaande [**tuto
 
 Je moet samen in totaal minimaal 4 mechanics uitwerken tot losse prototypes.
 
-Minimaal 3 van deze verschillende mechanics voeg je vervolgens samen en verwewrkt je tot een leuke kleine game.
+Minimaal 3 van deze verschillende mechanics voeg je vervolgens samen en verwerk je tot een leuke kleine game.
+
+![mix](./tutorial_gfx/00_BO_mix.png)
 
 Zorg ervoor dat je alle mechanics en de game zo mooi mogelijk afwerkt door gebruik te maken van 3d assets, visuele effecten en geluiden.
 
 Deze assets kun je uit de unity assetstore halen maar er moeten ook eigen gemaakte 3d assets uit de **SKIL** lessen in verwerkt zijn.
 
+![assetstore](./tutorial_gfx/00_BO_assets.png)
+
 Naast de voorgestelde mechanics uit de [lijst](#game-development) mag je ook zelf eigen mechanics verzinnen. Doe dit echter wel in overleg met de docent. De mechanics moeten wel uitgebreid en uitdagend genoeg zijn en ook weer niet te complex of te moeilijk.
+
+![design](./tutorial_gfx/00_BO_design.png)
 
 ## Beoordeling
 
@@ -78,6 +86,8 @@ Jullie hebben aan het eind van elke werkdag je gemaakte werk gecommit op de juis
 Je gebruikt goede inhoudelijke commit messages die duidelijk aangeven wat er die dag allemaal is gedaan.
 
 ## Deadlines:
+
+![deadline](./tutorial_gfx/00_BO_deadline.png)
 
 ### Vijdag 7 maart (week 3) voor 18:00:
 
@@ -138,22 +148,30 @@ Je werk is ingeleverd:
 
 ## Mechanic Tutorials
 
+![tutorials](./tutorial_gfx/00_BO_tutorial.png)
+
 ### Tutorial 0
 
-[Ontwikkelomgeving opzetten en simpele **jump** mechanic](./tutorial_0/README.md)
+![simple launch](./tutorial_gfx/0_result.gif)
+
+[Ontwikkelomgeving opzetten en simpele **launch** mechanic](./tutorial_0/README.md)
 
 ### Tutorial 1
+
+![Animation](./tutorial_gfx/Animation.gif)
 
 [**_mixamo.com_** placeholder animaties aansturen](./tutorial_1/README.md)
 
 ### Tutorial 2
 
+![Walk Animation](./tutorial_gfx/WalkAnimation.gif)
 [Beweging en besturing van gameobjecten](./tutorial_2/README.md)
 
 [Video tutorial rondlopen en draaien](https://www.youtube.com/watch?v=8mukeQPGyV8)
 
 ### Tutorial 3
 
+![Test](./tutorial_gfx/test.gif)
 [Springen op platforms (& traps)](./tutorial_3/README.md)
 
 ### Tutorial 4
