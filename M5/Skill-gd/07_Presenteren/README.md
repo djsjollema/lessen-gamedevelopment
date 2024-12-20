@@ -4,6 +4,8 @@
 
 Als gamedeveloper wil je je werk zo mooi en duidelijk mogelijk kunnen presenteren. Vaak kun je je werk goed presenteren door een gifje of een video te maken van je gameplay en hier nog een goede omschrijving aan toe te voegen.
 
+![dungeons](../src/07_trailer.gif)
+
 Toch komt het ook voor dat je bezig bent met systemen die werken op de achtergrond van je game en dus niet perse heel duidelijk te zien zijn in een gifje. Denk bijvoorbeeld aan een algoitme om op een ingewikkelde manier een score of experience punten uit te rekenen. Of een systeem dat ervoor zorgt dat er geen lag optreed als er veel objecten in een keer gespawned moeten worden bijvorbeeld in een bullet-hell game. (object pooling)
 
 Alleen een stuk code laten zien is hierbij vaak niet genoeg. Niet iedereen zal deze code snel kunnen begrijpen. Uiteraard ligt dit natuurlijk ook aan hoe netjes en duidelijk je de code hebt geschreven.
@@ -210,7 +212,7 @@ Maak een **Class Diagram** van de complete Vertical Slice codebase inclusief all
 
 Voeg ook alle classes en relaties toe die je nog nodig denkt te hebben. Je levert dus een class diagram op van je code zoals die eruit ziet als de Vertical slice game klaar is. Uiteraard hoeft dit aan het einde van het project niet foutloos te zijn. Het gaat erom dat je een goede inschatting probeert te maken.
 
-### Opdrachtr 11 B2:
+### Opdracht 11 B2:
 
 Onderzoek zelf de syntax (regels) van het **Activity Diagram**. Breng de gameplay binnen je vertical slice zo volledig mogelijk in kaart met behulp van een Activity Diagram. Probeer het gedrag van je gehele vertical slice systeem te vatten zoals het moet werken als het straks klaar is. Zorg dat je in het activity diagram ook **"swimlanes"** gebruikt voor de verschillende entiteiten in je game. Denk aan spelers, enemies, bosses, UI, etc... Wat moeten die allemaal doen? In welke volgorde? Onder welke voorwaarden? Wanneer is het afgelopen? Zorg dus ook dat je activity diagram een begin en eind heeft.
 
