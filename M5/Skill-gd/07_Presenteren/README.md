@@ -1,5 +1,7 @@
 # Visueel Presenteren van werk
 
+---
+
 ## Visual sheets
 
 Als gamedeveloper wil je je werk zo mooi en duidelijk mogelijk kunnen presenteren. Vaak kun je je werk goed presenteren door een gifje of een video te maken van je gameplay en hier nog een goede omschrijving aan toe te voegen.
@@ -84,6 +86,8 @@ Verwerk dit tot een mooi, overzichtelijk en leesbaar geheel.
 Zet je visual sheet in een readme op github en lever de link in op Simulise.
 
 Tip gebruik deze code om images in je readme weer te geven: `![omschrijving image](url die verwijst naar image) `
+
+---
 
 ## Technical design en UML
 
