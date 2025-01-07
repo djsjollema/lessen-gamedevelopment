@@ -4,7 +4,7 @@
 
 In deze beroepsopdracht leren jullie, met behulp van verschillende game development tools (voornamelijk binnen Unity) kleine losse game mechanics bouwen en programmeren. Deze game mechanics vormen de basis van je eerste eigen simpele game.
 
-Tijdens de **BO** en **FLEX** lessen zal er volop ruimte zijn om aan de opdracht te werken, vragen te stellen en hulp te krijgen. Tijdens de **SKIL** lessen ga je je verder verdiepen in versiebeheer en leren je eigen 3d art assets te maken. Deze moeten bruikbaar zijn binnen je game. Bij **PROG** leer je programmeren in **C#** en **Unity**.
+Tijdens de **BO** en **FLEX** lessen zal er volop ruimte zijn om aan de opdracht te werken, vragen te stellen en hulp te krijgen. Tijdens de **SKIL** lessen leer je over game gerelateerde wiskunde en eigen 3d art assets te maken. Deze moeten bruikbaar zijn binnen je game. Bij **PROG** leer je programmeren in **C#** en **Unity**.
 
 De beroepsopdracht doe je in 2 tallen.
 
