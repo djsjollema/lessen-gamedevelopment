@@ -14,7 +14,11 @@ Elke losse mechanic wordt door jullie gepushed naar jullie repository en de link
 
 Elke mechanic ontwikkelen jullie in een aparte branch.
 
-De mechanics kun je maken door middel van het volgen van de onderstaande [**tutorials**](#tutorial-0) , maar dat hoeft niet. Je mag ook zelf andere bronnen zoeken of een eigen manier bedenken om een mechanic te bouwen.
+De mechanics kun je maken door middel van het volgen van de onderstaande [**tutorials**](#tutorial-0).
+
+Al deze tutorials voer je sowieso individueel een keer uit en lever je in op een repo "**Arcade_Mechanics_Tutorials**". De link naar deze repo lever je op via [deze opdracht op simulise](https://ma.simulise.com/school/assignment/87e524b0-a421-4b26-ae12-7496326ad035/view).
+
+Je mag ook zelf andere bronnen zoeken of een eigen manier bedenken om een mechanic te bouwen.
 
 Je moet samen in totaal minimaal 4 mechanics uitwerken tot losse prototypes.
 
@@ -145,6 +149,7 @@ Je werk is ingeleverd:
 - Plaats een onschrijving van jullie grootste technische uitdaging en de door jullie gebruikte oplossing. Ondersteun deze technische oplossing met visueel materiaal zoals screenshots.
 - Zet een build van je game onder releases.
 - Lever de link naar je repo in op Simulise.
+- Ook lever je op simulise de link in naar je uitgewerkte tutorials.
 
 ## Mechanic Tutorials
 
