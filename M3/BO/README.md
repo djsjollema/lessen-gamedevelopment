@@ -42,11 +42,14 @@ Je wordt voor je Beroepsopdracht beoordeeld op de volgende punten:
 
 ### Game Development:
 
+_"Je gaat samenwerken met andere developers om gezamenlijk tot een speelbare game te komen en leert de belangrijkste disciplines kennen."_
+
 - Jullie hebben samen minimaal 4 mechanics uitgewerkt en succesvol ingeleverd.
-- De code in jullie prototype bevat minimaal een Array, List of andere vorm van een "collection"
+
 - Jullie game bevat minimaal 3 van de volgende mechancs:
+
   - Lopen of rennen (geanimeerd character 3rd person)
-  - Shieten en vernietigen van obstakels / enemies (kogels en impact zijn mooi afgewerkt met effecten en geluiden)
+  - Schieten en vernietigen van obstakels / enemies (kogels en impact zijn mooi afgewerkt met effecten en geluiden)
   - Lekker springen (geanimeerd en niet "floaty")
   - Enemies schieten op de speler (netjes afgewerkt met animaties en effecten)
   - Mooi afgewerkt scoresysteem incl. UI waarbij er dmv effecten aandacht wordt getrokken naar het scorebord
@@ -54,7 +57,11 @@ Je wordt voor je Beroepsopdracht beoordeeld op de volgende punten:
   - Powerups/Pickups systeem waarbij er items opgepakt kunnen worden die zichtbaar een buff voor de speler opleveren. Inclusief effecten op de pickup en om de buff aan te tonen.
   - Timing systeem, waarbij er een UI is met een timer en de speler binnen de tijd een doel moet bereiken. Incl. effecten als de tijd bijna op is en op is. Het systeem moet spanning creeren.
 
+- De game bevat een eigen gemaakte 3d model inclusief shader, material, unwrap en texture (leer je in de SKIL lessen)
+
 ### Game Engines:
+
+_"Je gaat diverse tools ontdekken en toepassen welke game engines aanbieden."_
 
 Jullie hebben aantoonbaar de volgende Unity systemen gebruikt:
 
@@ -67,23 +74,15 @@ Jullie hebben aantoonbaar de volgende Unity systemen gebruikt:
 - De skybox vervangen
 - De URP renderpipeline gebruikt
 
-### Visual Technology:
-
-De game bevat een eigen gemaakte 3d model inclusief shader, material, unwrap en texture (leer je in de SKIL lessen)
-
-### Functional Design & Documentation:
-
-Jullie hebben voor alle mechanics een design uitgewerkt. D.m.v een concrete omschrijving en een schets van wat de mechanic moet doen. Dit verwerk je in de readme van jullie repository.
-
-### Technical Design & Documentation:
-
-Jullie omschrijven de grootste technische uitdaging waar je tegenenaan bent gelopen en stap voor stap hoe je dit uiteindelijk hebt opgelost. Ook dit verwerken jullie in de readme van jullie repository.
-
 ### Professionaliseren:
 
-Jullie hebben tijdens de BO en Flex lessen regelmatig vragen gesteld en om hulp gevraagd. Jullie hebben je aan de tussentijdse deadlines van het project gehouden.
+_je leert niet te werken voor cijfers, maar voor je eigen leerontwikkeling en snapt hoe je schoolopdrachten effectief kunt inzetten om jezelf als developer te verbeteren. Je leert je werk visueel maken. en snapt hoe je dit toe moet passen voor al je toekomstige projecten._
+
+Jullie hebben tijdens de BO en Flex lessen regelmatig vragen gesteld en om hulp gevraagd. Jullie hebben je aan de tussentijdse deadlines van het project gehouden , het werk op tijd ingeleverd en de eisen van het werk gehanteerd.
 
 ### Versiebeheer:
+
+_"Je kunt git instellen zodat je versiebeheer systeem om kan gaan met game engines."_
 
 Jullie hebben aan het eind van elke werkdag je gemaakte werk gecommit op de juiste branch in een gezamenlijke repository, zo toon je aan wat je elke dag hebt gedaan.
 
@@ -93,14 +92,14 @@ Je gebruikt goede inhoudelijke commit messages die duidelijk aangeven wat er die
 
 ![deadline](./tutorial_gfx/00_BO_deadline.png)
 
-### Vijdag 7 maart (week 3) voor 18:00:
+### Donderdag 6 maart (week 3) voor 18:00:
 
 Jullie eerste mechanic is af en afgewerkt met 3d art, effecten en geluid.
 
 Je werk is ingeleverd:
 
 - Merge de mechanic op jullie main branch op github.
-- Zet een gifje van je mechanic op je readme met daarbij je design
+- Zet een gifje van je mechanic op je README met daarbij je design
 - Zet een build van je mechanic onder releases.
 - Lever de link naar je repo in op Simulise.
 
@@ -111,7 +110,7 @@ Jullie tweede mechanic is af en afgewerkt met 3d art, effecten en geluid.
 Je werk is ingeleverd:
 
 - Merge de mechanic op jullie main branch op github.
-- Zet een gifje van je mechanic op je readme met daarbij je design
+- Zet een gifje van je mechanic op je README met daarbij je design
 - Zet een build van je mechanic onder releases.
 - Lever de link naar je repo in op Simulise.
 
@@ -122,7 +121,7 @@ Jullie derde mechanic is af en afgewerkt met 3d art, effecten en geluid.
 Je werk is ingeleverd:
 
 - Merge de mechanic op jullie main branch op github.
-- Zet een gifje van je mechanic op je readme met daarbij je design
+- Zet een gifje van je mechanic op je README met daarbij je design
 - Zet een build van je mechanic onder releases.
 - Lever de link naar je repo in op Simulise.
 
@@ -133,7 +132,7 @@ Jullie vierde mechanic is af en afgewerkt met 3d art, effecten en geluid.
 Je werk is ingeleverd:
 
 - Merge de mechanic op jullie main branch op github.
-- Zet een gifje van je mechanic op je readme met daarbij je design
+- Zet een gifje van je mechanic op je README met daarbij je design
 - Zet een build van je mechanic onder releases.
 - Lever de link naar je repo in op Simulise.
 
@@ -145,13 +144,12 @@ De game bevat een voledige gameplay loop. Dit betekent dat je kunt verliezen, .e
 Je werk is ingeleverd:
 
 - Commit de game op jullie main branch op github.
-- Zet een gifje van je complete game op je readme.
-- Plaats een onschrijving van jullie grootste technische uitdaging en de door jullie gebruikte oplossing. Ondersteun deze technische oplossing met visueel materiaal zoals screenshots.
+- Zet een gifje van je complete game op je README.
+- Plaats een omschrijving van jullie grootste technische uitdaging en de door jullie gebruikte oplossing. Ondersteun deze technische oplossing met visueel materiaal zoals screenshots.
 - Zet een build van je game onder releases.
 - Lever de link naar je repo in op Simulise.
-- Ook lever je op simulise de link in naar je uitgewerkte tutorials.
 
-## Mechanic Tutorials
+## PROG Tutorials: Game Mechanics
 
 ![tutorials](./tutorial_gfx/00_BO_tutorial.png)
 
