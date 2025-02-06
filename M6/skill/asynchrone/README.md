@@ -96,9 +96,9 @@ De **ABC-formule** kan worden toegepast in situaties waarin een **kwadratische v
 ## **Stap 1: De algemene vorm van de vergelijking**
 De kwadratische bewegingsvergelijking in de natuurkunde wordt vaak gebruikt in **vrije val of verticale beweging**, en heeft de vorm:
 
-\[
+$$
 s = V_{\text{begin}} t + \frac{1}{2} a t^2
-\]
+$$
 
 waarbij:
 - \( s \) de verplaatsing is,
@@ -108,42 +108,42 @@ waarbij:
 
 Om dit in de standaardvorm van een kwadratische vergelijking te zetten:
 
-\[
+$$
 -0.5 g t^2 + V_{\text{begin}} t - s = 0
-\]
+$$
 
 Hieruit volgt:
 
-\[
+$$
 a = -0.5 g, \quad b = V_{\text{begin}}, \quad c = -s
-\]
+$$
 
 ---
 
 ## **Stap 2: Toepassen van de ABC-formule**
 De **ABC-formule** luidt:
 
-\[
+$$
 t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]
+$$
 
 Nu vullen we \( a = -0.5 g \), \( b = V_{\text{begin}} \) en \( c = -s \) in:
 
-\[
+$$
 t = \frac{-V_{\text{begin}} \pm \sqrt{V_{\text{begin}}^2 - 4(-0.5 g)(-s)}}{2(-0.5 g)}
-\]
+$$
 
 Dit vereenvoudigt tot:
 
-\[
+$$
 t = \frac{-V_{\text{begin}} \pm \sqrt{V_{\text{begin}}^2 - 2gs}}{-g}
-\]
+$$
 
 Omdat er een **negatieve deling** is in de noemer, kunnen we alles omdraaien:
 
-\[
+$$
 t = \frac{V_{\text{begin}} \pm \sqrt{V_{\text{begin}}^2 - 2gs}}{g}
-\]
+$$
 
 ---
 
@@ -164,31 +164,31 @@ Stel dat:
 
 Dan wordt:
 
-\[
+$$
 t = \frac{20 \pm \sqrt{20^2 - 2(9.81)(15)}}{9.81}
-\]
+$$
 
-\[
+$$
 t = \frac{20 \pm \sqrt{400 - 294.3}}{9.81}
-\]
+$$
 
-\[
+$$
 t = \frac{20 \pm \sqrt{105.7}}{9.81}
-\]
+$$
 
-\[
+$$
 t = \frac{20 \pm 10.28}{9.81}
-\]
+$$
 
 Nu berekenen we de twee tijden:
 
-\[
+$$
 t_1 = \frac{20 + 10.28}{9.81} = \frac{30.28}{9.81} \approx 3.09 \text{ s}
-\]
+$$
 
-\[
+$$
 t_2 = \frac{20 - 10.28}{9.81} = \frac{9.72}{9.81} \approx 0.99 \text{ s}
-\]
+$$
 
 Dus het object is op \( s = 15 \) meter zowel bij **0.99 s** (opgaande beweging) als bij **3.09 s** (terugkomend).
 
