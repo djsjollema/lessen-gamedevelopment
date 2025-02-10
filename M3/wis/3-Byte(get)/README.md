@@ -24,9 +24,8 @@ Hier is een lesplan gebaseerd op jouw originele code, zonder enige wijzigingen. 
 
 ---
 
-## **📌 Deel 2: Analyse van de Code (15 min)**
-
-Bekijk de volgende code:
+## **📌 Deel 2: eindproduct Byte**
+- Maak een GameObject met als naam Byte met als waarden een array van Bits een integer met als naam value
 
 ```csharp
 public class Byte : MonoBehaviour
@@ -41,18 +40,28 @@ public class Byte : MonoBehaviour
 
     private void BinToDec()
     {
-        value = 0;
-        if (bits[0].state) value += 1;  // 2^0 = 1
-        if (bits[1].state) value += 2;  // 2^1 = 2
-        if (bits[2].state) value += 4;  // 2^2 = 4
-        if (bits[3].state) value += 8;  // 2^3 = 8
-        if (bits[4].state) value += 16; // 2^4 = 16
-        if (bits[5].state) value += 32; // 2^5 = 32
-        if (bits[6].state) value += 64; // 2^6 = 64
-        if (bits[7].state) value += 128;// 2^7 = 128
+        //
     }
 }
 ```
+- De Byte.bits[]-array bestaat uit 8 Bits
+  - Maak een Array met als naam bits die bestaat uit 8 Bit-objecten
+  - Importeer 8 Bit-objecten uit de vorige les
+  - Neem voor bits[0] het meest rechter Bit, en plaats het volgende Bit links van de eerste
+  - Doe dit voor alle Bit-objecten
+
+| Plaats | 7   | 6   | 5  | 4  | 3  | 2  | 1  | 0 |
+|--------|----|----|----|----|----|----|----|----|
+| Value | 128 | 64 | 32 | 16 | 8 | 4 | 2  | 1 |
+
+- Maak een functie waarbij de Array value van de Byte op nul wordt gezet 
+- vervolgens van plaats 0 tot en met plaats 7 wordt gecontroleerd wat de aarde van de bits[i].state true is of niet. 
+- Als de Bit true is, tel je de waarde uit de tabel bij de value van de Byte op
+
+
+
+![byte voorbeeld](images/byte.gif)
+
 
 ---
 
@@ -92,9 +101,10 @@ public class Byte : MonoBehaviour
 ## **📌 Deel 5: Afronding en Bespreking (5 min)**
 
 🎯 **Bespreek met de studenten:**
-1. Hoe werkt de conversie tussen binair en decimaal in deze code?
-2. Waarom zou je dit in games of software gebruiken?
-3. Hoe zou je deze code uitbreiden naar een **16-bit of 32-bit systeem**?
+1. Maak in de map **Prefabs** een map aan met als naam Byte en plaats daar het GameObject en het script van de Byte-class in
+2. Hoe werkt de conversie tussen binair en decimaal in deze code? 
+3. Waarom zou je dit in games of software gebruiken?
+4. Hoe zou je deze code uitbreiden naar een **16-bit of 32-bit systeem**?
 
 ✅ **Leerdoelen Behaald?**  
 - ✅ Studenten begrijpen hoe een byte werkt.  

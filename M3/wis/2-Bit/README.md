@@ -116,7 +116,14 @@ private void OnMouseUp()
 
 ---
 
-### **5. Uitbreiding en Verdieping (15-20 min)**
+### **5. Afwerking**
+- Als de Bit volledig werkt, maak je een nieuwe folder in de map **Prefabs** met als naam **Bit** en daar plaats je zowel het gameobject als het script Bits in, zodat wij dit object bij de komende opdrachten kunnen hergebruiken
+- Push de laatste versie naar jouw online respository op github
+- lever de link naar deze commit in jouw repo in bij Simulise 
+
+---
+
+### **6. Uitbreiding en Verdieping (15-20 min)**
 **Geef studenten uitdagingen om hun kennis te testen en te verdiepen:**
 1. **Meer bits toevoegen:**  
    - Maak een **grid van bits** en laat ze onafhankelijk werken.
