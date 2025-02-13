@@ -12,7 +12,7 @@
 
 Voer de onderstaande stappen uit en laat in de volgende les zien hoe ver je bent gekomen.
 
-Als je klaar bent laat je het ook zien.
+Als je klaar bent lever je het in en laat je het ook zien aan je docent (BO/FLEX/PROG).
 
 Als je vast zit vraag je om hulp!
 
@@ -154,4 +154,4 @@ Iets op het scherm zetten wat er nog niet is noemen we **"instantieren"** hiervo
 
 Voila!
 
-### Commit naar je eigen branch en push je werk. Laat je Unity scene, je code en je repository zien aan de docent!
+### Commit en push je werk naar je eigen branch op github. Laat je Unity scene, je code en je repository zien aan de docent en lever een link in op simulise (lesplan : GD1.3 - PROG; Programmeren).
