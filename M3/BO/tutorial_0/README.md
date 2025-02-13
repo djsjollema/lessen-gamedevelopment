@@ -47,7 +47,7 @@ Als je nog geen Unity en Unity Hub hebt geinstalleerd kun je dit nu doen.
 - Installeer de **_Markdown Editor (64-bit)_** Extension
   ![markdown](https://user-images.githubusercontent.com/1262745/216987147-a79b5572-6b4d-472e-9f77-259bb7d7b8c4.png)
 
-### 5. Clone de repo vanuit MS Visual Studio
+### 5. Clone de repo
 
 Doe dit met github Desktop:
 ![clone](https://user-images.githubusercontent.com/1262745/216944643-6c447b9f-e305-4dda-a3aa-47179c79d11b.png)
