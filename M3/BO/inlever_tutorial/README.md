@@ -35,7 +35,7 @@ Sla je gif op door op **"save"** te drukken.
 
 ![saving](..//tutorial_gfx/inleveren_06.png)
 
-Maak in repository voor alle tutorials een mapje aan: "tutorial 0", "tutorial 1" etc..
+Maak in je repository voor alle tutorials een mapje aan: "tutorial 0", "tutorial 1" etc..
 
 Maak in alle mappen een nieuwe file README.md aan. Dit kun je met elke code editor doen.
 
@@ -43,17 +43,13 @@ In de readme.md file zet je als titel "Tutorial 0" of "Tutorial 1" etc.
 
 Een titel kun je maken door er `#` voor te zetten.
 
-# Titel
-
 Onder de titel zet je in een subtitel "door ..." met je naam en je klas.
 
 Een subtitel kun je maken met `##`, `###`, `####` enzovoort.
 
-## subtitel
+# Tutorial 2
 
-### sub-subtitel
-
-#### sub-sub-sub
+### Door: Erwin Henraat, Docent GD
 
 Omschrijf je wat je hebt gemaakt en wat er dus gebeurt.
 
@@ -72,7 +68,7 @@ of in een andere map:
 
 ![demo](../tutorial_gfx/inleveren_gif_demo.gif)
 
-test je readme door in visual studio een vieuwer extension te installeren.
+Test je readme door in je code editor een markdown preview extension te installeren.
 
 Bijvoorbeeld de "markdown preview enhanced" extension voor VSCode.
 ![inleveren 7](../tutorial_gfx/inleveren_07.png)
@@ -87,4 +83,11 @@ De MS Visual studio extension opent automatisch een preview als je een readme fi
 
 Add, Commit en Push nu je README.md file en je gifje naar je repo op github.
 
-Ga naar de readme op github en kopieer de url uit de adresbalk. Deze link lever je vervolgens in op simulise.
+Ga naar de readme op github.
+
+![inleveren](../tutorial_gfx/inleveren_10.png)
+Voor de titel staat een "anchor" (icoontje van een link) als je daar op drukt scrollt de browser naar deze titel.
+
+![inleveren](../tutorial_gfx/inleveren_11.png)
+
+kopieer nu de url uit de adresbalk van je browser. Deze link lever je vervolgens in op simulise.

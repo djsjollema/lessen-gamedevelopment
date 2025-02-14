@@ -149,6 +149,10 @@ Je werk is ingeleverd:
 - Zet een build van je game onder releases.
 - Lever de link naar je repo in op Simulise.
 
+## Inleveren van je werk
+
+Check [hier de tutorial](inlever_tutorial/README.md) over hoe je je werk in moet leveren met een gifje op een readme.
+
 ## PROG Tutorials: Game Mechanics
 
 ![tutorials](./tutorial_gfx/00_BO_tutorial.png)
