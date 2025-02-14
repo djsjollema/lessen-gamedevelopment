@@ -15,7 +15,7 @@
 
 Voer de onderstaande stappen uit en laat in de volgende les zien hoe ver je bent gekomen.
 
-Als je klaar bent laat je het ook zien.
+Als je klaar bent lever je het in en laat je het ook zien aan je docent (BO/FLEX/PROG).
 
 Als je vast zit vraag je om hulp!
 
@@ -239,7 +239,9 @@ _Wat zou er gebeuren als je de enemy een trigger zou geven?_
 - Test je game!
 - Werkt het niet? Check of je tags goed zijn
 
-### Commit en push je werk naar je eigen branch. Laat je Unity scene, je code en je repository zien aan de docent!
+### Commit en push je werk naar je eigen branch op github. Laat je Unity scene, je code en je repository zien aan de docent en lever een link in op simulise (lesplan : GD1.3 - PROG; Programmeren).
+
+[uitleg over inleveren](../inlever_tutorial/README.md)
 
 ### Bonus: Controleer de ingevoerde tag en geef zelf een error
 
@@ -284,3 +286,5 @@ Je kunt te verwachten foutjes opvangen en jezelf, of andere developers die met j
         Debug.LogError("TargetTag:" + targetTag + " for `KillOnHit` @ " + gameObject.name + " not found!");
    }
 ```
+
+[uitleg over inleveren](../inlever_tutorial/README.md)

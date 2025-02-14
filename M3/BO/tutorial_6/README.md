@@ -17,7 +17,7 @@
 
 Voer de onderstaande stappen uit en laat in de volgende les zien hoe ver je bent gekomen.
 
-Als je klaar bent laat je het ook zien.
+Als je klaar bent lever je het in en laat je het ook zien aan je docent (BO/FLEX/PROG).
 
 Als je vast zit vraag je om hulp!
 
@@ -368,4 +368,6 @@ Ook zal je waarschijnlijk in de inspector goed moeten checken of alle variabelen
 
 - Test je game!
 
-### Commit en push je werk naar je eigen branch. Laat je Unity scene, je code en je repository zien aan de docent!
+### Commit en push je werk naar je eigen branch op github. Laat je Unity scene, je code en je repository zien aan de docent en lever een link in op simulise (lesplan : GD1.3 - PROG; Programmeren).
+
+[uitleg over inleveren](../inlever_tutorial/README.md)
