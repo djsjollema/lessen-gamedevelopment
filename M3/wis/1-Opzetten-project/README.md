@@ -92,3 +92,47 @@ Alle opdrachten moeten worden uitgevoerd in een aparte scene met als naam van de
 ---
 
 ✅ **Je Unity 2D-project is nu correct opgezet met versiebeheer!**
+
+## ps moet git-repository in de unity-folder, of kun je beter een git repository maken met daarin een map met een unity project?
+
+Het is meestal beter om **de Git-repository in de hoofdmap van het Unity-project** te plaatsen, oftewel: de Git-repository in de map van het Unity-project te zetten. Dit heeft de volgende voordelen:
+
+### **Aanbevolen structuur:**
+```
+/MyUnityProject/  <-- Dit is de Git-repository
+  |-- Assets/
+  |-- Packages/
+  |-- ProjectSettings/
+  |-- .git/
+  |-- .gitignore
+```
+
+### **Voordelen van deze aanpak:**
+1. **Eenvoudige versiebeheer**  
+   - Unity’s standaard projectstructuur wordt goed ondersteund door Git.
+   - Je kunt direct je `.gitignore` instellen op basis van Unity’s aanbevolen lijst om onnodige bestanden uit Git te houden.
+
+2. **Minder complexe paden**  
+   - Als je een aparte map voor de repository maakt en daarbinnen Unity zet, kan het onnodig complexe paden en configuraties opleveren.
+
+3. **Minder risico op per ongeluk bestanden buiten het project op te slaan**  
+   - Als je de Git-repository in een bovenliggende map plaatst, bestaat de kans dat je per ongeluk bestanden commit die niet bij het Unity-project horen.
+
+4. **Beter samenwerken met andere tools**  
+   - CI/CD-tools, Unity Collaborate en andere Unity-integraties werken beter als je het project in de root van de repository hebt.
+
+### **Wanneer een andere aanpak nuttig kan zijn?**
+De enige situatie waarin je de repository boven het Unity-project zou kunnen plaatsen, is als je meerdere projecten binnen dezelfde repo beheert. Dan krijg je bijvoorbeeld zoiets als:
+
+```
+/MyGitRepo/
+  |-- UnityProject1/
+  |-- UnityProject2/
+  |-- README.md
+  |-- .gitignore
+  |-- .git/
+```
+
+Maar als je alleen één Unity-project hebt, is het veel handiger om de repo **direct in de Unity-projectmap** te zetten.
+
+Wil je nog een `.gitignore`-bestand voor Unity? Dan kan ik er een genereren! 🚀
