@@ -113,3 +113,5 @@ De spring hoogte is niet 100% nauwkeurig maar de afwijking is wel consistent en 
 Test je game!
 
 ### Commit en push je werk naar je eigen branch op github. Laat je Unity scene, je code en je repository zien aan de docent en lever een link in op simulise (lesplan : GD1.3 - PROG; Programmeren).
+
+[uitleg over inleveren](../inlever_tutorial/README.md)

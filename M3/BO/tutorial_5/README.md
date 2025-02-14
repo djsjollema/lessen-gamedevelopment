@@ -241,6 +241,8 @@ _Wat zou er gebeuren als je de enemy een trigger zou geven?_
 
 ### Commit en push je werk naar je eigen branch op github. Laat je Unity scene, je code en je repository zien aan de docent en lever een link in op simulise (lesplan : GD1.3 - PROG; Programmeren).
 
+[uitleg over inleveren](../inlever_tutorial/README.md)
+
 ### Bonus: Controleer de ingevoerde tag en geef zelf een error
 
 Typ foutjes zijn zo gemaakt en als je in je **targetTag** een verkeerde tag schrijft die niet bestaat werkt je code niet.
@@ -284,3 +286,5 @@ Je kunt te verwachten foutjes opvangen en jezelf, of andere developers die met j
         Debug.LogError("TargetTag:" + targetTag + " for `KillOnHit` @ " + gameObject.name + " not found!");
    }
 ```
+
+[uitleg over inleveren](../inlever_tutorial/README.md)

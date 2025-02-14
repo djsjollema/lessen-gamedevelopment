@@ -215,3 +215,5 @@ Check in de **Input Manager** (via edit > project settings) welke toetsen van in
 ![Movearound](../tutorial_gfx/movearound.gif)
 
 ### Commit en push je werk naar je eigen branch op github. Laat je Unity scene, je code en je repository zien aan de docent en lever een link in op simulise (lesplan : GD1.3 - PROG; Programmeren).
+
+[uitleg over inleveren](../inlever_tutorial/README.md)
