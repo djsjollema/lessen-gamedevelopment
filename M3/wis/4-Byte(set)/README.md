@@ -1,52 +1,51 @@
 Hier is een **Mermaid flowchart** die het proces van de `SetValue(int value)` methode visualiseert.
 
-```markdown
 ```mermaid
-graph TD;
-    A[Start] --> B[Set this.value = value]
-    B --> C[Set tempValue = value]
-
-    C --> D{tempValue > 128?}
-    D -- Yes --> E[Set bits[7].state = true]
-    E --> F[tempValue -= 128]
-    F --> G{tempValue > 64?}
+flowchart TD
+    A("Start public void SetValue(int value)") --> B("Set this.value = value")
+    B --> C("Set tempValue = value")
+    
+    C --> D{"tempValue > 128?"}
+    D -- Yes --> E("Set bits[7].state = true")
+    E --> F("Subtract 128: tempValue -= 128")
+    F --> G{"tempValue > 64?"}
     D -- No --> G
 
-    G -- Yes --> H[Set bits[6].state = true]
-    H --> I[tempValue -= 64]
-    I --> J{tempValue > 32?}
+    G -- Yes --> H("Set bits[6].state = true")
+    H --> I("Subtract 64: tempValue -= 64")
+    I --> J{"tempValue > 32?"}
     G -- No --> J
 
-    J -- Yes --> K[Set bits[5].state = true]
-    K --> L[tempValue -= 32]
-    L --> M{tempValue > 16?}
+    J -- Yes --> K("Set bits[5].state = true")
+    K --> L("Subtract 32: tempValue -= 32")
+    L --> M{"tempValue > 16?"}
     J -- No --> M
 
-    M -- Yes --> N[Set bits[4].state = true]
-    N --> O[tempValue -= 16]
-    O --> P{tempValue > 8?}
+    M -- Yes --> N("Set bits[4].state = true")
+    N --> O("Subtract 16: tempValue -= 16")
+    O --> P{"tempValue > 8?"}
     M -- No --> P
 
-    P -- Yes --> Q[Set bits[3].state = true]
-    Q --> R[tempValue -= 8]
-    R --> S{tempValue > 4?}
+    P -- Yes --> Q("Set bits[3].state = true")
+    Q --> R("Subtract 8: tempValue -= 8")
+    R --> S{"tempValue > 4?"}
     P -- No --> S
 
-    S -- Yes --> T[Set bits[2].state = true]
-    T --> U[tempValue -= 4]
-    U --> V{tempValue > 2?}
+    S -- Yes --> T("Set bits[2].state = true")
+    T --> U("Subtract 4: tempValue -= 4")
+    U --> V{"tempValue > 2?"}
     S -- No --> V
 
-    V -- Yes --> W[Set bits[1].state = true]
-    W --> X[tempValue -= 2]
-    X --> Y{tempValue > 1?}
+    V -- Yes --> W("Set bits[1].state = true")
+    W --> X("Subtract 2: tempValue -= 2")
+    X --> Y{"tempValue > 1?"}
     V -- No --> Y
 
-    Y -- Yes --> Z[Set bits[0].state = true]
-    Z --> AA[tempValue -= 1]
-    AA --> BB[End]
-    Y -- No --> BB
-```
+    Y -- Yes --> Z("Set bits[0].state = true")
+    Z --> AA("Subtract 1: tempValue -= 1")
+    AA --> AB("End")
+    Y -- No --> AB
+
 ```
 
 ### 📌 **Uitleg van de flowchart:**
