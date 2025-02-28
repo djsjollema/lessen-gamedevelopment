@@ -68,6 +68,15 @@ of in een andere map:
 
 ![demo](../tutorial_gfx/inleveren_gif_demo.gif)
 
+Zet ook een linkje of linkjes naar je scripts in de readme die horen bij de mechanics.
+
+Dus bijvoorbeeld:
+
+**Gebkruikte scripts:**
+
+- [Movement script](Movement.cs)
+- [Shoot script](Shoot.cs)
+
 Test je readme door in je code editor een markdown preview extension te installeren.
 
 Bijvoorbeeld de "markdown preview enhanced" extension voor VSCode.

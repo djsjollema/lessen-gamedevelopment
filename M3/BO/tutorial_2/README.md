@@ -61,7 +61,7 @@ Download de **idle met skin** en de rest zonder.
 
 ![Idleto Walk](../tutorial_gfx/idletoWalk.png)
 
-### 9. Maak 3 triggers "Walk", "Idle" en "WalkR"
+### 9. Maak 3 triggers "Walk", "Idle" en "WalkR"(R=reverse)
 
 ### 10. Voeg de juiste conditions toe aan je transitions
 
@@ -70,6 +70,8 @@ Download de **idle met skin** en de rest zonder.
 ![Trigger Setup](../tutorial_gfx/triggerSetup.png)
 
 ### 12. dupliceer de walk animation in de animator en zet de Speed op -1
+
+Zo gaat dezelfde animatie achterstevoren afspelen
 
 ![Duplicate](../tutorial_gfx/duplicate.png)
 
@@ -86,9 +88,10 @@ Download de **idle met skin** en de rest zonder.
 - Zorg dat de capsule niet kan roteren op de x en z as zodat ie niet om kan vallen
 - Vink ook **Is Kinematc** aan! Zodat de player niet wordt gemanipuleerd door het physics systeem. (wat tot onverwachte resultaten kan leiden)
 
-### 15. Roteer je model 180 graden op de y as
+### 15. Roteer je model evt 180 graden op de y as
 
 ![Rotate](../tutorial_gfx/rotate.png)
+Zodat je player van de camera af kijkt. Als dit al zo is hoeft dat niet.
 
 ### 16. Maak een Script met de naam Animate en plaats deze op je model
 
@@ -144,16 +147,19 @@ void Update()
 
 ![Walktest](../tutorial_gfx/walktest.gif)
 
-### 18. Maak nu een BasicMove script en zet deze op je player
+### 18. Maak nu een MoveBasic script en zet deze op je player
 
 ![Basic Move](../tutorial_gfx/basicMove.png)
 
 ### 19. Maak een variabele voor je beweeg snelheid en rotatie snelheid
 
+Door `[SerializeField]` voor de variabelen te zetten worden ze beschikbaar in de inspector.
+
+Omdat het floats zijn zet je een f achter het nummer.
+
 ```
 public class MoveBasic : MonoBehaviour
 {
-//Maak 2 variabelen beschikbaar in de inspector
     [SerializeField]private float speed = 50f;
     [SerializeField]private float rotSpeed = 50f;
 ```
