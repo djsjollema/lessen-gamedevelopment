@@ -1,50 +1,84 @@
-Hier is een **Mermaid flowchart** die het proces van de `SetValue(int value)` methode visualiseert.
+# Byte (set)
+## **Uitbreiding Byte**  
+**Benodigdheden:** 
+Je moet voor deze opdracht hebben:
+- een ```Class Bit``` met een boolean eigenschap ```code``` state
+- een ```Class Byte``` met een array van 8 Bits en een eigenschap ```value```  
+
+**Leerdoelen:**  
+✅ Studenten breiden de **Byte** in Unity uit met een functie die value een waarde kan geven  
+✅ Studenten leren hoe een decimaal getal kan worden geconverteerd in een binair getal. 
+
+## Voorbereiding ##
+1. Maak in Unity een nieuwe 2D scene aan met als naam ```SetByte```
+2. Plaats een **Empty Gameobject** in de hierarchy met als naam ```SetByte```  
+3. Maak in de map Scripts een nieuw script aan met als naam ```SetByte``` en koppel dit aan het gameObject met dezelfde naam
+4.  Plaats in het gameObject setByte een instatie van de Prefab Byte
+![SetByte](images/SetByte.png)
+5. Gebruik vervolgens onderstaande script voor het GameObject SetByte
+
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SetByte : MonoBehaviour
+{
+    [SerializeField] Byte myByte;
+    [SerializeField] int myValue;
+
+    void Update()
+    {
+        myByte.SetValue(myValue);     
+    }
+}
+```
+
+## De opdracht 
+De Prefab Byte ziet er momenteel alsvolgt uit
+```mermaid
+classDiagram
+
+    class Byte {
+        - Bit[8] bits
+        - int value
+
+        + BinToDec() // van bin naar dec
+    }
+```
+Wij gaan de class Byte uitbreiden met een publieke funcie  ``` SetValue(int newValue) ```, zodat wij de byte een decimale waarde kunnen geven, deze waarde kunnen omrekenen naar de binaire waarde en Bits deze binaire waarde aangeven. 
+
 
 ```mermaid
-flowchart TD
-    A("Start public void SetValue(int value)") --> B("Set this.value = value")
-    B --> C("Set tempValue = value")
+classDiagram
+
+    class Byte {
+        - Bit[8] bits
+        - int value
+
+        + BinToDec() // van bin naar dec
+        + SetValue(int value) // van dec naar bin
+    }
+```
+
+De stappen die moeten worden uitgevoerd zijn volgens de flowchart
+
+```mermaid
+graph TD;
+    A(Start SetValue) --> B{Clamp value to 0-255}
+    B -->|Yes| C(Set value)
     
-    C --> D{"tempValue > 128?"}
-    D -- Yes --> E("Set bits[7].state = true")
-    E --> F("Subtract 128: tempValue -= 128")
-    F --> G{"tempValue > 64?"}
-    D -- No --> G
-
-    G -- Yes --> H("Set bits[6].state = true")
-    H --> I("Subtract 64: tempValue -= 64")
-    I --> J{"tempValue > 32?"}
-    G -- No --> J
-
-    J -- Yes --> K("Set bits[5].state = true")
-    K --> L("Subtract 32: tempValue -= 32")
-    L --> M{"tempValue > 16?"}
-    J -- No --> M
-
-    M -- Yes --> N("Set bits[4].state = true")
-    N --> O("Subtract 16: tempValue -= 16")
-    O --> P{"tempValue > 8?"}
-    M -- No --> P
-
-    P -- Yes --> Q("Set bits[3].state = true")
-    Q --> R("Subtract 8: tempValue -= 8")
-    R --> S{"tempValue > 4?"}
-    P -- No --> S
-
-    S -- Yes --> T("Set bits[2].state = true")
-    T --> U("Subtract 4: tempValue -= 4")
-    U --> V{"tempValue > 2?"}
-    S -- No --> V
-
-    V -- Yes --> W("Set bits[1].state = true")
-    W --> X("Subtract 2: tempValue -= 2")
-    X --> Y{"tempValue > 1?"}
-    V -- No --> Y
-
-    Y -- Yes --> Z("Set bits[0].state = true")
-    Z --> AA("Subtract 1: tempValue -= 1")
-    AA --> AB("End")
-    Y -- No --> AB
+    C --> D[Do for the bits op positie 7 to 0]
+    D --> E{Check if newValue >= 2^positie}
+    E -->|Yes| F[set bit position i and newValue = newValue - 2^i]
+    E -->|No| G[Set bit state to false]
+    
+    F --> H[positie i--] --> I[Next bit]
+    G --> H
+    
+    I -->|More bits?| D
+    I -->|No| J(End SetValue)
 
 ```
 
@@ -57,3 +91,10 @@ flowchart TD
 6. **Einde van de methode**.
 
 🎯 **Doel:** Dit diagram helpt studenten **visueel** begrijpen hoe `SetValue(int value)` de binaire representatie instelt. Wil je nog extra verduidelijkingen of aanpassingen? 🚀
+
+## extra verdieping (optioneel)
+Maak met een eenvoudige Spawner die op willekeurige tijden de Byte een willekeurige waarde tussen de 0 en 255 geeft
+
+![voorbeeld random byte](images/randomByte.gif)
+
+Geef de Byte een geluidseffect mee, waarbij de bits worden afgegaan en er bij State==true een ander geluid klinkt ("bliep") als bij de State==false ("blap")
