@@ -2,7 +2,7 @@
 ## **Uitbreiding Byte**  
 **Benodigdheden:** 
 Je moet voor deze opdracht hebben:
-- een ```Class Bit``` met een boolean eigenschap ```code``` state
+- een ```Class Bit``` met een boolean eigenschap ```state``` 
 - een ```Class Byte``` met een array van 8 Bits en een eigenschap ```value```  
 
 **Leerdoelen:**  
