@@ -33,20 +33,6 @@ public class SetByte : MonoBehaviour
         myByte.SetValue(myValue);     
     }
 
-        private void BinToDec()
-    {
-        value = 0;
-        if (bits[0].state) value += 1;  // 2^0 = 1
-        if (bits[1].state) value += 2;  // 2^1 = 2
-        if (bits[2].state) value += 4;  // 2^2 = 4
-        if (bits[3].state) value += 8;  // 2^3 = 8
-        if (bits[4].state) value += 16; // 2^4 = 16
-        if (bits[5].state) value += 32; // 2^5 = 32
-        if (bits[6].state) value += 64; // 2^6 = 64
-        if (bits[7].state) value += 128;// 2^7 = 128
-    }
-
-
     public void SetValue(myValue){
         // hier ga je jouw script schrijven
     }
