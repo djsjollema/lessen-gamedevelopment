@@ -62,39 +62,88 @@ classDiagram
     }
 ```
 
-De stappen die moeten worden uitgevoerd zijn volgens de flowchart
+## van decimaal naar binair
 
+### **Instructie: Hoe zet je een getal (tot 255) om in een binair getal?**
+
+Een getal omzetten naar binair betekent dat je het schrijft in een systeem met alleen de cijfers **0 en 1**. Dit doe je door het getal steeds door **2** te delen en de rest te noteren.
+
+#### **Stap-voor-stap methode:**
+1. **Schrijf het getal op.**
+2. **Deel het getal door 2.** Noteer de **rest** (0 of 1). Dit wordt het **laatste** binaire cijfer.
+3. **Neem de uitkomst (quotiënt) en deel opnieuw door 2.** Noteer de rest.
+4. **Herhaal stap 3 totdat het quotiënt 0 is.**
+5. **Lees de binaire cijfers van onder naar boven.** Dit is het binaire getal.
+
+#### **Voorbeeld: Zet 13 om naar binair**
+1. **13 ÷ 2** → **quotiënt =** 6, **rest =** 1
+2. **6 ÷ 2** → **quotiënt =** 3, **rest =** 0
+3. **3 ÷ 2** → **quotiënt =** 1, **rest =** 1
+4. **1 ÷ 2** → **quotiënt =** 0, **rest =** 1 (stoppen hier)
+
+**Van onder naar boven lezen:**
+👉 **13 in binair is 1101**
+
+---
+** de flowchart
+
+Nu kunnen wij dit  algoritme omzetten in een flowchart
 ```mermaid
-graph TD;
-    A(Start SetValue) --> B{Clamp value to 0-255}
-    B -->|Yes| C(Set value)
-    
-    C --> D[Do for the bits op positie 7 to 0]
-    D --> E{Check if newValue >= 2^positie}
-    E -->|Yes| F[set bit position i and newValue = newValue - 2^i]
-    E -->|No| G[Set bit state to false]
-    
-    F --> H[positie i--] --> I[Next bit]
-    G --> H
-    
-    I -->|More bits?| D
-    I -->|No| J(End SetValue)
+graph TD
+    A[Start: Neem een getal N] --> B{Is N > 0?}
+    B -- Ja --> C[Deel N door 2]
+    C --> D[Noteer de rest 0 of 1]
+    D --> E[Update N: N = N ÷ 2 afronden naar beneden]
+    E --> B
+    B -- Nee --> F[Lees alle resten van onder naar boven]
+    F --> G[Uitvoer: Binaire representatie]
+    G --> H[Stop]
+```
+## het script
 
+Nu kunnen wij de functie ontwikkelen
+
+``` csharp
+ public void SetValue(int newValue)
+ {
+
+     if (newValue > 255)
+     {
+         newValue = 255;
+     }
+
+     this.value = newValue;
+
+    // voeg hier het algoritme toe
+
+ }
 ```
 
-### 📌 **Uitleg van de flowchart:**
-1. **Start van de methode** en initialisatie van `this.value` en `tempValue`.
-2. Controle of `tempValue` groter is dan een bepaalde macht van 2 (`128, 64, 32, ..., 1`).
-3. **Indien `true`**, zet de corresponderende bit op `true` en verminder `tempValue`.
-4. **Indien `false`**, ga verder naar de volgende controle.
-5. Herhaal dit proces voor alle 8 bits.
-6. **Einde van de methode**.
+### **Oefeningen: Zet de volgende getallen om in binair**
+1. **25 → ?**
+2. **54 → ?**
+3. **100 → ?**
+4. **200 → ?**
+5. **255 → ?**
+
+Probeer ze zelf op te lossen en controleer je antwoorden! 🚀💡
+
 
 🎯 **Doel:** Dit diagram helpt studenten **visueel** begrijpen hoe `SetValue(int value)` de binaire representatie instelt. Wil je nog extra verduidelijkingen of aanpassingen? 🚀
 
 ## extra verdieping (optioneel)
-Maak met een eenvoudige Spawner die op willekeurige tijden de Byte een willekeurige waarde tussen de 0 en 255 geeft
+Maak met een eenvoudige **spawner** die op willekeurige tijden de Byte een willekeurige waarde tussen de 0 en 255 geeft
+
+``` csharp
+if (Random.Range(0f, 1f) < 0.01f) {
+    // maak een willekeurig geheel getal
+    //  tussen 0 en 255 en
+    //set de value van de Byte met dit getal
+}
+```
 
 ![voorbeeld random byte](images/randomByte.gif)
 
-Geef de Byte een geluidseffect mee, waarbij de bits worden afgegaan en er bij State==true een ander geluid klinkt ("bliep") als bij de State==false ("blap")
+Andere mogelijke uitbreiding: Geef de Byte een geluidseffect mee, waarbij de bits worden afgegaan en er bij true ("bliep") als bij false ("blap")
+
+Of bedenk zelf een uitbreiding
