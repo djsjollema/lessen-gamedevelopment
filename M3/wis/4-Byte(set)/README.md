@@ -32,6 +32,10 @@ public class SetByte : MonoBehaviour
     {
         myByte.SetValue(myValue);     
     }
+
+    public void SetValue(myValue){
+        // hier ga je jouw script schrijven
+    }
 }
 ```
 
