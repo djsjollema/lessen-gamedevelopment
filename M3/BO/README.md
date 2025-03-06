@@ -26,7 +26,7 @@ Minimaal 3 van deze verschillende mechanics voeg je vervolgens samen en verwerk 
 
 ![mix](./tutorial_gfx/00_BO_mix.png)
 
-Zorg ervoor dat je alle mechanics en de game zo mooi mogelijk afwerkt door gebruik te maken van 3d assets, visuele effecten en geluiden.
+Zorg ervoor dat je alle mechanics en de game zo mooi mogelijk afwerkt door gebruik te maken van 3d assets, visuele effecten en geluiden. **Tip:** [Hier kun je rechtenvrije geluiden vinden](https://freesound.org/)
 
 Deze assets kun je uit de unity assetstore halen maar er moeten ook eigen gemaakte 3d assets uit de **SKIL** lessen in verwerkt zijn.
 
