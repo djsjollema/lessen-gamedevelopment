@@ -89,9 +89,24 @@ Deze functie ziet er alsvolgt uit:
 
 De nulpunten zijn t = 0.44 seconden en t = 1.36 seconden
 
+## de animatie
+
+![Jump Anim](images/jumpAnim.png)
+
+
 de animatie van de sprong duurt 12 frames = 0.750 seconden
 
-Dus de animatie-snelheid = 0.551
+![jumpTime](images/JumpTime.png)
+
+
+
+## de animation speed
+
+$$ animation.speed = \frac{animationTime}{jumpTime}$$
+
+Dus:
+
+$$ animation.speed =  \frac{0.75}{1.36} = 0.551 $$
 
 ![voorbeeld](images/asym_jump.gif)
 
