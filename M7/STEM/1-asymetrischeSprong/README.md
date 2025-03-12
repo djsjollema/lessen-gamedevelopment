@@ -11,11 +11,11 @@ Met deze functie kunnen de nulpunten worden gevonden met een **quadratic equatio
 $$ at^2 + bt + c = 0$$
 
 
-De nulpunten van deze functie kan je vinden met de **quadratic formula**
+Nu kunnen wij bepalen op welke tijdstippen de sprong de t-as snijdt en de functie f(t) dus nul wordt. Deze nulpunten kan je vinden met de **quadratic formula**
 
-$$ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+$$ t_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
-Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht, beginsnelheid en beginhoogte in te vullen. De eindhoogte moet wel nul blijven
+Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht (g) , beginsnelheid($`v_b`$) en hoogte waarop de sprong begint ($`h_0`$) in te vullen. De eindhoogte moet wel nul worden, dus de sprong moet eindigen op f(t) = 0
 
 | Variabele | Waarde  |
 |-----------|--------|
