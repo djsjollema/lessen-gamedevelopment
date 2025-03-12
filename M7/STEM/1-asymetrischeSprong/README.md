@@ -18,12 +18,13 @@ Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht, be
 
 | Variabele | Waarde  |
 |-----------|--------|
-| a         | $`\frac{1}{2}g `$ |
+| a         | $`\-frac{1}{2}g `$ |
 | b         | $`v_b`$    |
 | c         | $`h_0 `$    |
 
 
 Zo luidt de formule om de duur van de sprong te bepalen:
+
 $$ f(t) = -\frac{1}{2} g t^2 + v_0 t + h_0 $$
 
 ## de quadratic-class in C#
