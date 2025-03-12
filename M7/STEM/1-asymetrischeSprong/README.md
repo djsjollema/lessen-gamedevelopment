@@ -80,6 +80,7 @@ Een sprong in Unity met als parameter
 | $` h_0 `$  | $` -3 m `$ |
 
 Deze in de formule voor de sprong invullen:
+
 $$ f(t) = -\frac{10}{2} t^2 + 9 t - 3 $$
 
 Deze functie ziet er alsvolgt uit:
