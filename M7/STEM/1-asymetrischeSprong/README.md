@@ -79,6 +79,8 @@ Een sprong in Unity met als parameter
 | $` v_b `$  | $` 9 \frac{m}{s} `$ |
 | $` h_0 `$  | $` -3 m `$ |
 
+Deze in de formule voor de sprong invullen:
+$$ f(t) = -\frac{10}{2} t^2 + 9 t - 3 $$
 
 Deze functie ziet er alsvolgt uit:
 ![parabool](images/parabool.png)
