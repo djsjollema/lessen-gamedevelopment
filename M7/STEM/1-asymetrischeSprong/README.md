@@ -16,11 +16,12 @@ $$ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht, beginsnelheid en beginhoogte in te vullen. De eindhoogte moet wel nul blijven
 
-$$ \left\{\begin{matrix}
- a &= -\frac{1}{2} g  \\
- b &= v_b  \\
- c &= h_0  \\
-\end{matrix}\right.$$
+| Variabele | Waarde  |
+|-----------|--------|
+| a         | $`\frac{1}{2}g `$ |
+| b         | $`v_b`$    |
+| c         | $`h_0 `$    |
+
 
 Zo luidt de formule om de duur van de sprong te bepalen:
 $$ f(t) = -\frac{1}{2} g t^2 + v_0 t + h_0 $$
