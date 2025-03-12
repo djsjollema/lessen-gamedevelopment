@@ -18,7 +18,7 @@ Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht, be
 
 | Variabele | Waarde  |
 |-----------|--------|
-| a         | $`\-frac{1}{2}g `$ |
+| a         | $` - \frac{1}{2}g `$ |
 | b         | $`v_b`$    |
 | c         | $`h_0 `$    |
 
