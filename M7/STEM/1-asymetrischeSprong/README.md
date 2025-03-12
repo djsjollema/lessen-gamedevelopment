@@ -2,16 +2,16 @@
 
 # Quadratic function
 
-Een quadratic function zit er in het algemeen zo uit:
+Een **quadratic function** zit er in het algemeen zo uit:
 
 $$ f(t) = at^2 + bt +c $$
 
-Met deze functie kunnen de nulpunten worden gevonden met een quadratic equation
+Met deze functie kunnen de nulpunten worden gevonden met een **quadratic equation**
 
 $$ at^2 + bt + c = 0$$
 
 
-De nulpunten van deze functie kan je vinden met de quadratic formula
+De nulpunten van deze functie kan je vinden met de **quadratic formula**
 
 $$ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
