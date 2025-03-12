@@ -3,6 +3,7 @@
 # Quadratic function
 
 Een quadratic function zit er in het algemeen zo uit:
+
 $$ f(t) = at^2 + bt +c $$
 
 Met deze functie kunnen de nulpunten worden gevonden met een quadratic equation
