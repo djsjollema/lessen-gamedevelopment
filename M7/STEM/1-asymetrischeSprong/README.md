@@ -85,5 +85,5 @@ de animatie van de sprong duurt 12 frames = 0.750 seconden
 
 Dus de animatie-snelheid = 0.551
 
-![voorbeeld](/images/asym_jump.gif)
+![voorbeeld](images/asym_jump.gif)
 
