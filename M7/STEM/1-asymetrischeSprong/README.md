@@ -71,10 +71,14 @@ public class QuadraticFunction
 Gebruik een spritesheet om een sprong in unity uit te voeren. Je mag zelf de zwaartekracht, beginsnelnheid en beginhoogte instellen.
 
 ## voorbeeld
-Een sprong in Unity met als parameters
-$$ g = -10 \frac{m}{s^2} $$
-$$v_b = 9  \frac{m}{s}$$
-$$ h_0 = -3 m$$
+Een sprong in Unity met als parameter
+
+| Parameter  | Waarde |
+|------------|----------------|
+| $` g `$    | $` -10 \frac{m}{s^2} `$ |
+| $` v_b `$  | $` 9 \frac{m}{s} `$ |
+| $` h_0 `$  | $` -3 m `$ |
+
 
 Deze functie ziet er alsvolgt uit:
 ![parabool](images/parabool.png)
