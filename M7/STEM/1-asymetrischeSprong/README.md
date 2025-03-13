@@ -15,13 +15,13 @@ Nu kunnen wij bepalen op welke tijdstippen de sprong de t-as snijdt en de functi
 
 $$ t_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
-Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht (g) , beginsnelheid($`v_b`$) en hoogte waarop de sprong begint ($`h_0`$) in te vullen. De eindhoogte moet wel nul worden, dus de sprong moet eindigen op f(t) = 0
+Bij een sprong kunnen wij de duur van de sprong vinden door de zwaartekracht (g) , beginsnelheid($`v_0`$) en hoogte waarop de sprong begint ($`h_0`$) in te vullen. De eindhoogte moet wel nul worden, dus de sprong moet eindigen op f(t) = 0
 
-| Variabele | Waarde  |
-|-----------|--------|
-| a         | $` - \frac{1}{2}g `$ |
-| b         | $`v_b`$    |
-| c         | $`h_0 `$    |
+| parameter | waarde  | betekenis |
+|-----------|--------|--------|
+| a         | $` - \frac{1}{2}g `$ |zwaartekracht
+| b         | $`v_0`$    | beginsnelheid
+| c         | $`h_0 `$    | beginhoogte
 
 
 Zo luidt de formule om de duur van de sprong te bepalen:
@@ -77,7 +77,7 @@ Een sprong in Unity met als parameter
 | Parameter  | Waarde |
 |------------|----------------|
 | $` g `$    | $` -10 \frac{m}{s^2} `$ |
-| $` v_b `$  | $` 9 \frac{m}{s} `$ |
+| $` v_0 `$  | $` 9 \frac{m}{s} `$ |
 | $` h_0 `$  | $` -3 m `$ |
 
 Deze in de formule voor de sprong invullen:
@@ -87,7 +87,9 @@ $$ f(t) = -\frac{10}{2} t^2 + 9 t - 3 $$
 Deze functie ziet er alsvolgt uit:
 ![parabool](images/parabool.png)
 
-De nulpunten zijn t = 0.44 seconden en t = 1.36 seconden
+De nulpunten zijn t = 0.44 seconden en t = 1.36 seconden. 
+
+Dit zijn dus de snijpunten van de sprong met de lijn y=0. Bij de hoogste waarde van t is de sprong afgelopen. De sprong duurt dus 1.36 seconden
 
 ## de animatie
 
