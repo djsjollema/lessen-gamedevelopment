@@ -112,3 +112,54 @@ $$ animation.speed =  \frac{0.75}{1.36} = 0.551 $$
 
 ![voorbeeld](images/asym_jump.gif)
 
+## het script
+
+```mermaid
+
+classDiagram
+    class AsymJump {
+        - float vb
+        - float g
+        - float deltaH
+        - States myState
+        - Animator animator
+        - Vector3 velocity
+        - Vector3 acceleration
+        - float t
+        - float tmax
+        - QuadraticFunction f
+        - Vector3 startPos
+        + void Start()
+        + void Update()
+    }
+    
+    class States {
+        <<enumeration>>
+        wait
+        jump
+        finished
+    }
+
+    class Animator {
+        + float speed
+    }
+
+    class Vector3 {
+        + float x
+        + float y
+        + float z
+    }
+
+    class QuadraticFunction {
+        + float a
+        + float b
+        + float c
+        + Vector2 findZero()
+    }
+
+    AsymJump --> States
+    AsymJump --> Animator
+    AsymJump --> Vector3
+    AsymJump --> QuadraticFunction
+
+```
