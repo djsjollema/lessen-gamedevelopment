@@ -40,7 +40,9 @@ Bijvoorbeeld:
 Om duidelijk te maken welk talstelsel wordt gebruikt, worden er bij binaire (tweetallige) getallen meestal een B gezet, bij decimale (10 tallig) getallen een D en bij Hexadecimale getallen voor het getal een **x**
 
 Decimale waarde 
+
 $$ 10101100_B = xCA $$
+
 $$ xAC = A*16 + C = \\ 10 * 16 + 12 = \\ 160 + 12 = 172_d$$
 
 ## het gebruik van hexadecimale getallen
