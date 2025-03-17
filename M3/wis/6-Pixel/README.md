@@ -50,7 +50,13 @@ Bij developers wordt Hex gebruikt voor het aangeven van kleuren. Kleuren worden 
 
 <image src="images/rgb.png" width="300">
 
-Er is een Byte beschikbaar voor Rood, een Byte voor Groen en een Byte voor blauw. Een byte wordt geconvereerd in 2 Hex-getallen, dus een kleur wordt uitgedrukt in een Hex-getal van 6 cijfers. Meestal wordt er voor de duidelijkheid nog een hashtag of hekje voor geplaatst. 
+- Er is een Byte beschikbaar voor **Rood** (RR), 
+- een Byte voor **Groen** (GG) en
+- een Byte voor **Blauw** (BB). 
+
+Een byte wordt geconvereerd in 2 Hex-getallen, dus een kleur wordt uitgedrukt in een Hex-getal van 6 cijfers (RRGGBB).
+
+Meestal wordt er voor de duidelijkheid nog een hashtag of hekje voor geplaatst, dus **#RRGGBB** 
 
 ## de opdracht
 
@@ -62,8 +68,6 @@ Er is een Byte beschikbaar voor Rood, een Byte voor Groen en een Byte voor blauw
   - ByteG
   - ByteB
 - en plaats een sprite met als naam Pixel in MyPixel
-
-
 
 Breidt de preFab Byte uit met publieke functie GetHex, die de waarde van de byte weergeeft als een Hexadecimaal getal (met altijd twee cijfers)
 
