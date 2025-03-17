@@ -63,7 +63,7 @@ Er is een Byte beschikbaar voor Rood, een Byte voor Groen en een Byte voor blauw
   - ByteB
 - en plaats een sprite met als naam Pixel in MyPixel
 
-![myPixel](images/myPixel.png)
+![myPixel](images/myPixel.png){width=300px}
 
 Breidt de preFab Byte uit met publieke functie GetHex, die de waarde van de byte weergeeft als een Hexadecimaal getal (met altijd twee cijfers)
 
