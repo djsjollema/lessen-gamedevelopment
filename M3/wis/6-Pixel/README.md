@@ -48,6 +48,8 @@ $$ xAC = A*16 + C = \\ 10 * 16 + 12 = \\ 160 + 12 = 172_d$$
 ## het gebruik van hexadecimale getallen
 Bij developers wordt Hex gebruikt voor het aangeven van kleuren. Kleuren worden op een beeldscherm gemaakt door de basiskleuren Rood, Groen en Blauw (RGB) met elkaar te mengen. 
 
+![rgb-model](images/rgb.png)
+
 Er is een Byte beschikbaar voor Rood, een Byte voor Groen en een Byte voor blauw. Een byte wordt geconvereerd in 2 Hex-getallen, dus een kleur wordt uitgedrukt in een Hex-getal van 6 cijfers. Meestal wordt er voor de duidelijkheid nog een hashtag of hekje voor geplaatst. 
 
 ## de opdracht
