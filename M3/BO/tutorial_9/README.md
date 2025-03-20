@@ -1,13 +1,13 @@
 # Tutorial 9 (optioneel):
 
-**Speel geluid of muziek af in je game**
+**Vuur een kogel af met geluid**
 
 ## Leerdoelen:
 
 - Jullie leren werken met audio in Unity
 - Jullie kunnen audio bewerken met een simpel audio pakket (Audacity)
 - Jullie kunnen rechtenvrije audio vinden op Freesound.org
-- Jullie kunnen gelud aansturen met script
+- Jullie kunnen geluid aansturen met script
 
 ## Stappenplan:
 
