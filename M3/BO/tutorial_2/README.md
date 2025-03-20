@@ -205,8 +205,17 @@ Check in de **Input Manager** (via edit > project settings) welke toetsen van in
 ### 24. Zorg ook voor de rotatie van je speler op basis van de input
 
 ```
+
+
     transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime, 0));
-                    //           x,               y,                                         z
+
+    // 0 graden draaien over de x - as
+    // 0 graden draaien over de z - as
+    // aantal graden over de y - as is opgebouwd uit:
+    //  - Input.GetAxis("Horizontal") waarde tussen -1 (links) en 1 (rechts). Als je geen toets indrukt is het 0
+    // rotSpeed is je rotatie snelheid die je in de inspector instelt
+    // Time.deltaTime is de tijd dat het geduurd heeft om het frame te renderen. Dit zorgt ervoor dat de snelheid op elke framerate hetzelfde is.
+
 }
 ```
 
