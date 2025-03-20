@@ -202,3 +202,7 @@ Check [hier de tutorial](inlever_tutorial/README.md) over hoe je je werk in moet
 ### Tutorial 8
 
 [Maak een exploding trap](./tutorial_8/README.md)
+
+### Tutorial 10
+
+[Menu op de canvas (optioneel)](./tutorial_10/README.MD)
