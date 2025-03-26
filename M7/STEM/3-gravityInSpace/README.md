@@ -35,9 +35,6 @@ Samen draaien ze rond een gemeenschappelijk zwaartepunt.
 
 ---
 
-## beginsel van de kinematica
-
-Als er geen krachten werkzaam zijn, noemen wij de bewegingsleer de kinematica
 
 # 🧭 Beginselen van de Kinematica en Dynamica
 
@@ -75,9 +72,11 @@ het object krijgt daardoor, afhankelijk van de massa van het object, een versnel
 
 $$ \vec{F} = m \vec{a} $$
 
-of in ons geval, als je uitgaat van de kracht 
+of in ons geval, als je begint bij de kracht en de versnelling wil weten 
 
  $$ \vec{a} =\frac{1}{m} \vec{F} $$
+
+**De versnelling is in de zelfde richting als de kracht!**
 
 Door de versnelling krijgt het object een (andere) snelheid
 
@@ -94,6 +93,13 @@ Door de versnelling krijgt het object een (andere) snelheid
 
 
 ---
+
+## simulatie zwaartekracht in de ruimte
+
+De aarde en maan hebben beide een massa en oefenen beide een (aantrekkings)kracht op elkaar uit. Voor het gemak plaatsen wij de aarde even stil en laten we alleen de maan bewegen. 
+
+De maan heeft een willekeurige beginsnelheid en wordt aangetrokken in de richting van de aarde
+
 
 
 ![aarde maan systeem](images/aardeMaan.gif)
