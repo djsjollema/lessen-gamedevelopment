@@ -102,6 +102,4 @@ De maan heeft een willekeurige beginsnelheid en wordt aangetrokken in de richtin
 
 
 
-![aarde maan systeem](images/aardeMaan.gif)
-
-
+![Unity aarde maan](images/aardeMaanUnity.gif)
