@@ -205,7 +205,7 @@ Zeker! Hieronder vind je een duidelijke uitleg in **Markdown** over hoe je een p
 
 ---
 
-```markdown
+
 # 🧱 Hoe instantieer je een prefab (`MyPixel`) in Unity
 
 In Unity gebruik je `Instantiate()` om een **prefab** (zoals `MyPixel`) in je scène te plaatsen via een script.
