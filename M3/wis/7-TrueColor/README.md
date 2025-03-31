@@ -1,6 +1,20 @@
-# TrueColor
+# TrueColors
+
+## De opdracht
+* Maak een prefab MyPixel, van een square sprite
+* zorg dat de MyPixel een willekeurige kleur kan krijgen
+* plaats de pixels in een array schermvullend op het speelveld via een 2D gridmapping
+* update via een index de array dat de pixel per frame een nieuwe kleur krijgt
+
+Het eindresultaat:
+
+![Color bitmap](images/colorbitmap.gif)
+
 
 ## De SpriteRenderer
+
+<img src="images/SpriteRenderer.png">
+
 De `SpriteRenderer` is een **component** in Unity die gebruikt wordt om **2D-afbeeldingen (sprites)** zichtbaar te maken in je spelwereld.
 
 ---
@@ -14,7 +28,7 @@ De `SpriteRenderer` is een **component** in Unity die gebruikt wordt om **2D-afb
 
 ---
 
-<img src="images/SpriteRenderer.png">
+
 
 ## 🧱 Voorbeeld in de Editor
 
@@ -167,7 +181,6 @@ public class GeefKleurViaRGB : MonoBehaviour
 7. plaats de instanties van MyPixel in een array met als naam **pixels**
 8. laat in de game-loop de index oplopen geef de pixel een willekeurige kleur
 
-![Color bitmap](images/colorbitmap.gif)
 
 
 ``` csharp
