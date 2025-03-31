@@ -1,10 +1,18 @@
 # TrueColors
 
-## De opdracht
-* Maak een prefab MyPixel, van een square sprite
-* zorg dat de MyPixel een willekeurige kleur kan krijgen
-* plaats de pixels in een array schermvullend op het speelveld via een 2D gridmapping
-* update via een index de array dat de pixel per frame een nieuwe kleur krijgt
+# opdracht Pixel prefab
+
+1. maak een nieuwe scene met als naam MyPixel
+2. plaats een square sprite met naam MyPixel in de hierarchy en maak hiervan een prefab met dezelfde naam
+   1. maak script met dezelfde naam en koppel dit
+   2. plaats de MyPixel in de Assets/prefab-folder
+3. Verwijder de MyPixel uit de hierarchy
+4. plaats een Empty Gameobject in de hierarchy met als naam **TrueColor**
+   1. maak een script met dezelfde naam en koppel dit aan het script
+5. definieer via een ``` [SerializeField]``` een MyPixel variabele met als naam myPixel en laat deze verwijzen naar de prefab MyPixel
+6. instantieer deze pixel met een 2D gridmapping naar het scherm en maak de gridmap beeldvullend
+7. plaats de instanties van MyPixel in een array met als naam **pixels**
+8. laat in de game-loop de index oplopen geef de pixel een willekeurige kleur
 
 Het eindresultaat:
 
@@ -167,19 +175,6 @@ public class GeefKleurViaRGB : MonoBehaviour
     }
 }
 ```
-# opdracht Pixel prefab
-
-1. maak een nieuwe scene met als naam MyPixel
-2. plaats een square sprite met naam MyPixel in de hierarchy en maak hiervan een prefab met dezelfde naam
-   1. maak script met dezelfde naam en koppel dit
-   2. plaats de MyPixel in de Assets/prefab-folder
-3. Verwijder de MyPixel uit de hierarchy
-4. plaats een Empty Gameobject in de hierarchy met als naam **TrueColor**
-   1. maak een script met dezelfde naam en koppel dit aan het script
-5. definieer via een [SerializeField] een MyPixel variabele met als naam myPixel en laat deze verwijzen naar de prefab MyPixel
-6. instantieer deze pixel met een 2D gridmapping naar het scherm
-7. plaats de instanties van MyPixel in een array met als naam **pixels**
-8. laat in de game-loop de index oplopen geef de pixel een willekeurige kleur
 
 
 
