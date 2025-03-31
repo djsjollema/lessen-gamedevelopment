@@ -201,6 +201,73 @@ public class MyPixel : MonoBehaviour
 }
 ```
 
+Zeker! Hieronder vind je een duidelijke uitleg in **Markdown** over hoe je een prefab genaamd `MyPixel` kunt **instantiëren** in Unity via een script:
+
+---
+
+```markdown
+# 🧱 Hoe instantieer je een prefab (`MyPixel`) in Unity
+
+In Unity gebruik je `Instantiate()` om een **prefab** (zoals `MyPixel`) in je scène te plaatsen via een script.
+
+---
+
+## 📦 Stap 1: Zorg dat je prefab een veld is in je script
+
+In je script definieer je een `public GameObject` voor de prefab:
+
+```csharp
+public class PixelSpawner : MonoBehaviour
+{
+    public MyPixel myPixel; // Sleep de prefab hierin via de Inspector
+
+    void Start()
+    {
+        Instantiate(myPixel);
+    }
+}
+```
+
+> 🔄 Sleep in de **Inspector** de prefab `MyPixel` naar het script-veld op je GameObject.
+
+---
+
+## 🎯 Instantiëren op een specifieke positie
+
+Je kunt de prefab plaatsen op een bepaalde locatie met rotatie:
+
+```csharp
+Vector3 spawnPositie = new Vector3(0, 0, 0);
+Quaternion rotatie = Quaternion.identity;
+
+Instantiate(MyPixel, spawnPositie, rotatie);
+```
+
+---
+
+## 🧬 Instantieer en sla het object op
+
+Als je in een array van MyPixel[] met als naam een object wil instantieren en een willekeurige kleur geven (als de prefab MyPixel een publieke eigenschap color heeft):
+
+```csharp
+MyPixel  pixels[i] = Instantiate(MyPixel, spawnPositie, rotatie);
+pixels[i].color = new Color(r,g,b);
+```
+
+---
+
+## ✅ Samenvatting
+
+| Actie                                | Code voorbeeld                                 |
+|-------------------------------------|------------------------------------------------|
+| Prefab simpel instantiëren          | ```Instantiate(MyPixel);```                        |
+| Instantiëren met positie en rotatie | ```Instantiate(MyPixel, positie, rotatie);```      |
+| Referentie bewaren                  | ```MyPixel  array[i] = Instantiate(MyPixel);```         |
+
+---
+
+> 📝 Zorg dat je prefab in je **Resources** of in de **Scene/Project** staat en correct is toegekend in de **Inspector**.
+
 
 
 
