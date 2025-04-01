@@ -41,6 +41,8 @@ Maak een Unity-scène met een speler (een simpele cube) en een script genaamd `P
 
 - Test in Unity: druk op spatie om munten toe te voegen en kijk of je wint bij 50.
 
+![example](gfx/example_01.gif)
+
 3. **Uitbreiding (20 min)**
 
    - Maak `score` en `coins` public en bekijk ze in de Inspector.
