@@ -46,6 +46,7 @@ Als je vast zit vraag je om hulp!
 ![Bullet Prefab](../tutorial_gfx/bulletPrefab.png)
 
 - Zorg voor een leuk particle system om je bullet wat vuur te geven
+  _Als je het lastig vind om met particles te werken hoeft het niet per se en mag je ze standaard laten._
 
 ![Bullet Particles Loop](../tutorial_gfx/bulletParticlesLoop.gif)
 
@@ -90,19 +91,19 @@ _Let op: voor het springen heb je de spatie waarschijnlijk al gebruikt!_
     GameObject ob = Instantiate(prefab);
 ```
 
-- geef het geplaatste gameObject (kogel) dezelfde positie als de speler
-
-```
-    ob.transform.position = transform.position;
-```
-
 - geef het geplaatste gameObject dezelfde rotatie als de speler
 
 ```
     ob.transform.rotation = transform.rotation;
 ```
 
-- Zorg dat het geplaatste gameObject na een tijd vanzelf verdwijnt uit de scene met de [**Destroy()**](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) Methode
+- geef het geplaatste gameObject (kogel) een positie vlak voor de speler
+
+```
+    ob.transform.position = transform.position + transform.forward;
+```
+
+- Zorg dat het geplaatste gameObject (bullet) na een tijd vanzelf verdwijnt uit de scene met de [**Destroy()**](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) Methode
 
 ```
     Destroy(ob,3f);
@@ -116,13 +117,20 @@ _Let op: voor het springen heb je de spatie waarschijnlijk al gebruikt!_
 
 ![Make Move Bullet](../tutorial_gfx/makeMoveBullet.png)
 
-- Zorg voor een public varabele voor de **speed**
+- Zorg voor een public variabele voor de **speed**
 
 ```
     public float speed = 500f;
 ```
 
 - Sla de **rigidboby** op in een variabele als de game **Start**
+
+```
+    RigidBody rb;
+    void Start(){
+        rb = GetComponent<RigidBody>();
+    }
+```
 
 - Update de velocity van de bullet in de **[FixedUpdate](https://stackoverflow.com/questions/34447682/what-is-the-difference-between-update-fixedupdate-in-unity) Methode**
 
@@ -156,12 +164,19 @@ Dit script kunnen we (**her**)gebruiken om de **vijand** te laten exploderen als
 
 - Maak een **public** **GameObject** waarin je de prefab van het explosie effect kunt toevoegen
 
+- Voer als targetTag "Enemy" in bij de bullet in de inspector.
+
+Maak een nieuwe prefab met de naam **exposion** aan in je project window (rightclick > create > prefab) en hang daar in de inspector een particle system aan.
+
+![prefab effect](../tutorial_gfx/05_particle_effect_prefab.png)
+
+- Maak in je **kill on hit** script ook een referentie naar de prefab van je explosie effect.
+
 ```
     public GameObject effect;
 ```
 
-- Voer als targetTag "Enemy" in bij de bullet
-- Sleep hier de explosion prefab in de **effect** variabele
+- Sleep hier een zelfgemaakt explosion prefab in via de inspector.
 
 ![Bulletsettings](../tutorial_gfx/bulletsettings.png)
 
