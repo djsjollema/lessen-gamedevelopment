@@ -45,8 +45,9 @@ Open het script op je eigen niveau en voer de opdracht uit met de instructies in
 
 3. **Uitbreiding (15 min)**
    - Plaats een blok in je scene (dummy)
-   - Maak een schript dat levens voor de dummy bijhoud (-1 bij elke hit)
    - Zorg dat de speler kogels af kan vuren die vanzelf achter de dummy aangaan. (homing missles)
+   - Beweeg de dummy heen en weer over het veld.
+   - Gebruik dezelfde technieken die je in de opdracht al hebt gebruikt.
 
 ![example 06_2](gfx/example_06_2.gif)
 
@@ -65,7 +66,7 @@ Lever de link naar je readme in via de opdracht op simulise.
 - Volgt de volger de speler via `Lerp`?
 - beweegt de volger weer terug met een vaste snelheid?
 - Worden `Distance` of `magnitude`, en `normalized` correct gebruikt?
-- Is er ook nog een homing missle?
+- Is er ook nog een homing missle en een dummy die heen en weer gaat?
 
 ---
 

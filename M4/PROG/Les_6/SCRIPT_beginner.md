@@ -26,14 +26,14 @@ public class PlayerMove : MonoBehaviour
 using UnityEngine;
 public class FollowAndReturn : MonoBehaviour
 {
-    public float returnSpeed = 5f;       // Lerp-snelheid percentage van de afstand
-    public Transform target;            // Doel (sleep in Inspector)
+    public float returnSpeed = 5f;       // Snelheid waarmee de follower terug gaat naar het startpunt
+    public Transform target;            // Doel om the achtervolgen (sleep in Inspector)
     private Vector3 startPosition;      // Startpositie van het volger object
-    private bool isResetting = ...;   // Schakelaar voor resetten
+    private bool isResetting = ...;   // Schakelaar voor resetten / terugkeren naar het startpunt.
 
     void Start()
     {
-        // Sla de startpositie op van dit object op
+        // Sla de startpositie van dit object op
         startPosition = ...;
     }
     void Update()
@@ -44,7 +44,7 @@ public class FollowAndReturn : MonoBehaviour
     }
     private void FollowTarget()
     {
-        // Bebruik de Lerp(a,b,c) methode om van de huidige positie (a) naar het doel (b) te bewegen. Doe dit met een percentage (c) van de afstand 0.1f is 10%
+        // Gebruik de Lerp(a,b,c) methode om van de huidige positie (a) naar het doel (b) te bewegen. Doe dit met een percentage (c) van de afstand 0.1f is 10%
         transform.position = Vector3.Lerp(..., ..., ...);
 
         // Bereken de afstand tussen de volger en de target (de speler). Doe dit met Vector3.Distance(a,b)
