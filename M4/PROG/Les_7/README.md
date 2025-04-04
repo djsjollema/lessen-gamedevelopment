@@ -95,14 +95,22 @@ Lever de link naar je readme in via de opdracht op simulise.
   ```
 
 - **PlayerMove.cs**:
-  ```csharp
-  public ScoreManager scoreManager;
-  void OnTriggerEnter(Collider other)
-  {
-      if (other.name == "Coin")
-      {
-          scoreManager.AddScore(10);
-          Destroy(other.gameObject);
-      }
-  }
-  ```
+
+```csharp
+
+public class PlayerMove{
+    public float speed = 5f;
+    public ScoreManager scoreManager;
+    private void Update(){
+        transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Coin")
+        {
+            scoreManager.AddScore(10);
+            Destroy(other.gameObject);
+        }
+    }
+}
+```
