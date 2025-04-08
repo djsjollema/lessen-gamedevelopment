@@ -2,13 +2,10 @@
 
 ## opdracht
 
-Maak in Unity van onderstaande spritesheet animatie van een rennende man
+Maak in Unity van een spritesheet animatie van een rennende man. Je mag, voor extra waardering, natuurlijk ook zelf een spritesheet maken of zoeken
 
 ---
-
-
 <img src="images/runningMan.gif">
-
 ---
 
 # 🎮 Unity Tutorial: Animatie maken van een Spritesheet
