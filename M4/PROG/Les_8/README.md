@@ -1,32 +1,30 @@
-# GD M4 PROG Les 8:
+# GD M4 PROG Les 8: Coroutines
 
 #### Doel
 
-Studenten leren hoe ze Unity’s UI met TextMeshPro gebruiken om informatie zoals score weer te geven. Na de les kunnen ze een score-UI updaten via code met `TMP_Text`.
+Studenten leren hoe ze `Coroutines` in Unity gebruiken voor tijdgebaseerde acties als alternatief voor `Update()`. Na de les kunnen ze een vijandspawn-systeem maken met vertragingen.
 
 #### Werkvorm
 
 Klassiekale instructie en een demo in de les. Daarna verwerken met behulp van de volgende opdracht.
 
-### Opdracht 7: "Muntenscore met TMP" (1,5 uur)
+### Opdracht 8: "Vijandgolf" (1,5 uur)
 
 #### Doel
 
-Maak een scène met een speler die munten verzamelt en een UI-score bijhoudt met `TMP_Text`.
+Maak een scène waarin vijanden in golven spawnen met `Coroutines`.
 
 #### Opdrachtbeschrijving
 
-Maak een scène met een speler, een munt, en een UI-tekst (TextMeshPro) die de score toont. Update de score bij muntcontact.
+Maak een scène met een spawnpoint. Spawn 5 vijanden met een wachttijd van 2 seconden tussen elke spawn, gebruikmakend van een coroutine.
 
 #### Stappen
 
 1. **Setup (15 min)**
 
-   - Nieuwe scène: speler-cube, munt-cube (trigger), Canvas met TextMeshPro - Text (bovenaan scherm).
-   - Zorg dat de Coin een Rigidbody component en collider heeft.
-   - Zorg dat de Rigidbody is ingesteld op **"Is Kinematic"**.
-   - Zorg dat je Player een collider heeft die is ingesteld op **"Is Trigger"**.
-   - Maak scripts `ScoreManager.cs` (op leeg GameObject) en `PlayerMove.cs` (op speler).
+   - Nieuwe scène: spawnpoint (leeg GameObject), vijand-prefab (cube).
+   - Geef de prefab een Rigidbody
+   - Maak script `SpawnManager.cs` en attach aan spawnpoint.
 
 2. **Script schrijven (60 min)**
 
@@ -37,13 +35,16 @@ Open het script op je eigen niveau en voer de opdracht uit met de instructies in
 [beginner script](SCRIPT_beginner.md)
 [gevorderde script](SCRIPT_gevorderd.md)
 
-![example 07](gfx/example_07.gif)
+![example 08](gfx/example_08.gif)
 
-- Test: Beweeg speler naar munt, score stijgt in UI.
+- Test: Vijanden spawnen om de 2 seconden op een rij.
 
 3. **Uitbreiding (15 min)**
 
-   - Zorg dat je per munt de punten die hij oplevert in kan stellen in de inspector.
+   - Voeg een tweede golf toe na 5 seconden met `yield return new WaitForSeconds(5f)` na de eerste loop.
+   - Zorg dat de 2e rij recht achter de eerste spawnt.
+
+   ![example 08](gfx/example_08_2.gif)
 
 4. **Inleveren**
    Lever de opdracht in door een readme te maken met daarin de volgende onderdelen verwerkt:
@@ -56,6 +57,6 @@ Lever de link naar je readme in via de opdracht op simulise.
 
 #### Beoordeling
 
-- Toont UI de score met `TMP_Text`?
-- Stijgt score bij muntcontact?
-- Wordt de munt verwijderd?
+- Spawnen vijanden met een coroutine?
+- Is er een wachttijd van 2 seconden?
+- Werkt de golf correct?
