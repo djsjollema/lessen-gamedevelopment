@@ -52,4 +52,12 @@ Deze programmeer basisvaardigheden gaan we nu herhalen en specifiek toepassen bi
 - **Focus op Distance en Magnitude**: De studenten kennen deze 2 manieren om een afstand tussen 2 punten of de lengte van een vector op te meten. Ze kunnen dit toepassen.
 - **Focus op Normalizen van een vector**: De studenten begrijpen wat normalizen is en dat het gebruikt kan worden in stappen van 1 met een vaste snelheid te kunnen bewegen.
 
+#### 7. UI met TextMeshPro
+
+Studenten leren hoe ze Unity’s UI met TextMeshPro gebruiken om informatie zoals score weer te geven. Na de les kunnen ze een score-UI updaten via code met `TMP_Text`.
+
+#### 8. Coroutines
+
+Studenten leren hoe ze `Coroutines` in Unity gebruiken voor tijdgebaseerde acties als alternatief voor `Update()`. Na de les kunnen ze een vijandspawn-systeem maken met vertragingen.
+
 ---
