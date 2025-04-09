@@ -44,7 +44,7 @@ Als je vast zit vraag je om hulp!
   - **KillOnHit.cs** Script
   - **EnemyShootingBehaviour.cs** Script (nog te maken!)
 
-- Je gameobject met de animator bevat de volegden components:
+- Je gameobject met de animator bevat de volgende components:
   - Animator
   - Audio Source (Aanval Sound)
   - **TriggerAnimation.cs** Script (nog te maken)
