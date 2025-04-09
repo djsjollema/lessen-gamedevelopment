@@ -17,10 +17,11 @@
       }
 
       //Zorg dat de methode AddScore vanaf een ander script aangeroepen kan worden en dat je daar een aantal punten aan mee kunt geven.
-      ... void AddScore(int points)
+      ... void AddScore(...)
       {
-          score += points;
-          scoreText.text = "Score: " + score;
+          score += ...; //Verhoog de score met het meegegeven aantal punten
+
+          scoreText.text = "Score: " + ...;// Voeg je nieuwe score toe aan het textveld.
       }
   }
   ```
@@ -29,18 +30,23 @@
 
 ```csharp
 
-public class PlayerMove{
+public class PlayerMove : Monobehaviour{
     public float speed = 5f;
-    public ScoreManager scoreManager;
+    public ScoreManager scoreManager;//Maak een variabele aan van het Type ScoreManager en sleep het object waar dit script op zit in het veldje
+
     private void Update(){
-        transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
+        //Zorg dat de speler vloeiend heen en weer kan lopen met pijltjes en A en D
+        transform.Translate(... * ... * Input.GetAxis(...) * ...);
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Coin")
+        //Als de naam van het gameobject dat je raakt "Coin" is moet je de code uitvoeren
+        if (other.gameObject.name == ...)
         {
-            scoreManager.AddScore(10);
-            Destroy(other.gameObject);
+            //Voeg 10 punten toe aan je scorebord met de methode AddScore van je ScoreManager script.
+            scoreManager....(...);
+            //Vernietig het gameobject van de geraakte coin
+            Destroy(...);
         }
     }
 }

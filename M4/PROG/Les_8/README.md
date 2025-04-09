@@ -1,4 +1,4 @@
-# GD M4 PROG Les 7: UI met TextMeshPro (35 minuten)
+# GD M4 PROG Les 8:
 
 #### Doel
 
