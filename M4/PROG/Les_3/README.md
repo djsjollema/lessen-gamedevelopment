@@ -25,7 +25,7 @@ Maak een scène met een speler (cube) die beweegt met pijltjestoetsen, twee munt
    - Nieuwe scène:
      - Speler-cube op `(0, 0, 0)` met `Rigidbody` en `Collider`.
      - Vloer-plane met `Collider`.
-     - Twee munt-cubes op `(2, 0, 0)` en `(0, 0, 2)` met `Collider`, `Is Trigger` aan.
+     - Twee munt-cubes op `(-2, 0, 0)` en `(2, 0, 0)` met `Collider`, `Is Trigger` aan.
    - Maak script `GameManager.cs` en attach aan speler.
 
 2. **Script schrijven (60 min)**
@@ -46,6 +46,10 @@ Open het script op je eigen niveau en voer de opdracht uit met de instructies in
    - Maak `speed` en `timeLeft` `public` en pas aan in Inspector.
    - Voeg een derde munt toe op `(2, 0, 2)` en test.
    - Gebruik `CompareTag` en tag munten als "Coin".
+   - Plaats 4 muren om het veld waar je niet doorheen kunt lopen.
+   - Zet de camera goed zodat het hele speelveld goed zichtbaar is.
+
+![example 03_2](gfx/example_03_2.gif)
 
 4. **Inleveren**
    Lever de opdracht in door een readme te maken met daarin de volgende onderdelen verwerkt:
@@ -61,4 +65,3 @@ Lever de link naar je readme in via de opdracht op simulise.
 - Beweegt de speler met pijltjestoetsen (`Vector3`, `Time.deltaTime`)?
 - Stijgt de score bij muntcontact (`OnTriggerEnter`)?
 - Telt de timer af en verschijnt "Game Over" bij 0?
-- (Gevorderd): Gebruikt het tags en `normalized` beweging?
