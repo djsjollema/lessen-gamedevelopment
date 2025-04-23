@@ -30,19 +30,7 @@ In periode 4 gaan jullie, eerstejaars gamedevelopers en game artists, samenwerke
 
 ## Planning
 
-Het project loopt over **10 weken**, met een duidelijke structuur:
-
-- **Briefing**: Dinsdag 22 April.
-- **Meivakantie**: Doe onderzoek naar jullie gekozen gamegenre door games te spelen en inspiratie op te doen.
-- **Start**: Dinsdag 6 mei (week na de meivakantie).
-- **Sprints**:
-  - **Week 1**: Sprint 0 (1 week) - Concept, planning en eerste opzet.
-  - **Week 2 t/m 7**: 4 sprints van 2 weken - Ontwikkeling van de game.
-- **Week 5**: Tussenpresentatie - Laat zien hoe ver jullie zijn.
-- **Week 9**: Eindpresentatie - Presenteer jullie complete game.
-- **Week 10**: Mythe Markt - Toon jullie game aan anderen (details volgen).
-
-![planning](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTc4ZHo2eWtlc3V0cHpqbmtjbGUxcXdvOGFjeDU3Nmc3OGtkZ2pscCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/usz0fqhUiVxSs6IUKB/giphy.gif)
+Link naar de planning ....[]()
 
 ---
 
@@ -97,6 +85,10 @@ Kies een genre dat jullie allemaal aanspreekt, want dit bepaalt de richting van 
 ![crushit](https://media.giphy.com/media/WLoP3evji3xvyyOCNW/giphy.gif?cid=790b76111fzp3s3422wvbcpk7kyhskrcbsfy8g53t90djnx4&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
 ---
+
+## Leerdoelen
+
+In simulise vind je de leerdoelen terug in de rubrix onder de opdracht **GD - M4 - BO;Eindbeoordeling Mythe**
 
 ## Vragen?
 
