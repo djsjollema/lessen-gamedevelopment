@@ -40,13 +40,16 @@ Maak een Unity-scène met een speler (een simpele cube) en een script genaamd `P
    [gevorderde script](SCRIPT_gevorderd.md)
 
 - Test in Unity: druk op spatie om munten toe te voegen en kijk of je wint bij 50.
+
+![example](gfx/example_01.gif)
+
 - Let Op!!
 
 Als je Unity 6 gebruikt dan werk het oude input systeem niet meer en krijg je door `Input.GetKeyDown(Keycode.Space)` een error. Om dit op te lossen moet je je project overschakelen naar het oude input systeem.
 
-Ga naar Edit > Player Settings >
+Ga naar **Edit > Player Settings > Player > Active Input Handling** en stel deze in op **Old** of **Both**
 
-![example](gfx/example_01.gif)
+![input system](gfx/input_system.png)
 
 3. **Uitbreiding (20 min)**
 
