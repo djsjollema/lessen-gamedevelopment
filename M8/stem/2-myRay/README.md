@@ -72,3 +72,53 @@ Om de te testen gebruiken wij twee dragable objects: eentje die  de support- of 
 
 In de Ray op het scherm te renderen onderzoek je de afmetingen van het scherm en bepaal je het meest nabije punt op de lijn, bepaal je de lijn-parameter en teken je met een LineRenderer de lijn. 
 
+
+
+## tips
+
+Probeer deze class zelf te ontwikkelen. Als dit niet lukt kun je dit voorbeeld gebruiken
+
+````csharp
+using UnityEngine;
+
+public class VectorRay
+{
+    public Vector3 supportVector;
+    public Vector3 directionVector;
+    public float lineParameter;
+
+    public VectorRay(Vector3 supportVector, Vector3 directionVector)
+    {
+        this.supportVector = supportVector;
+        this.directionVector = directionVector.normalized;
+    }
+
+    public Vector3 getPoint(float t)
+    {
+        return supportVector + directionVector * t;
+    }
+
+    public Vector3 getBorderPoint(Vector2 min, Vector2 max)
+    {
+        float tx = float.MaxValue;
+        float ty = float.MaxValue;
+
+        if (Mathf.Abs(directionVector.x) > 0.0001f)
+        {
+            tx = directionVector.x > 0 ?
+                 (max.x - supportVector.x) / directionVector.x :
+                 (min.x - supportVector.x) / directionVector.x;
+        }
+
+        if (Mathf.Abs(directionVector.y) > 0.0001f)
+        {
+            ty = directionVector.y > 0 ?
+                 (max.y - supportVector.y) / directionVector.y :
+                 (min.y - supportVector.y) / directionVector.y;
+        }
+
+        return getPoint(Mathf.Min(tx, ty));
+    }
+}
+
+````
