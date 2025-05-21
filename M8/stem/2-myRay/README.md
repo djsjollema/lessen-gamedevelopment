@@ -20,48 +20,43 @@ In de vectoriële vorm wordt een lijn in de ruimte of in het vlak vaak beschreve
 De vergelijking van een lijn `l` door een punt **A** met een richtingsvector **r** is:
 
 
-$$ l: \vec{x} = \vec{a} + \lambda \vec{}r $$
+$$ l(s): \vec{x} = \vec{a} + s \vec{r} $$
 
 Waarbij:
 - **x** een willekeurig punt op de lijn is,
 - **a** de steunvector is (bijvoorbeeld **a** = (x₀, y₀, z₀)),
 - **r** de richting(vector) is (bijvoorbeeld **r** = (r₁, r₂, r₃)),
-- λ ∈ ℝ is een parameter die alle punten op de lijn doorloopt.
+- s ∈ ℝ is een parameter (de lijnparameter) die alle punten op de lijn doorloopt.
 
-## 2. Voorbeeld in 2D
+## voorbeeld van een punt op de lijn vinden
 
-Stel we hebben het punt A(2, 3) als steunpunt, en een richtingsvector **r** = (4, 1).
+Neem een steunvector en en richtingsvector en een waarde voor t, bijvoorbeeld
 
-Dan is de lijnvergelijking:
-
-$$ \vec{x}(\lambda) = \begin{bmatrix}
-2 \\
-3 
-\end{bmatrix} + \lambda \begin{bmatrix}
-    4 \\
+$$ \vec{a} = \begin{bmatrix}
+1 \\
+2
+\end{bmatrix} $$
+$$ 
+\vec{r} = \begin{bmatrix}
+    3 \\
     1
 \end{bmatrix}$$
 
+$$s = 3$$
 
 
-Of uitgeschreven als parametervergelijkingen:
+dan 
 
-```
-x = 2 + 4λ  
-y = 3 + λ
-```
-
-Voor een "gewone" school-wiskunde vergelijking in de vorm van y = ax + b kunnen x uitdrukken als vorm van λ
-
-$$ x = 2 + 4 \lambda \\  \lambda =\frac{x -2}{4}  $$
-
-Dit invullen in y = 3 + λ
-
-$$ y = 3 + \frac{x -2}{4} \\ y = 3 + \frac{x}{4} + \frac{-2}{4}$$
-
-Dus:
-
-$$ y = \frac{1}{4}x + 2 \frac{1}{2} $$
+$$ \vec{x} = \vec{a} + s \vec{r} \\
+\vec{x} = \begin{bmatrix}
+    1\\
+    2 
+\end{bmatrix} + 3 \begin{bmatrix}
+    3 \\ 1
+\end{bmatrix} = \begin{bmatrix}
+    10 \\ 5
+\end{bmatrix}
+$$
 
 
 ## Class MyRay
@@ -72,3 +67,4 @@ Om de te testen gebruiken wij twee dragable objects: eentje die  de support- of 
 <img src="images/RayClass.gif">
 
 In de Ray op het scherm te renderen onderzoek je de afmetingen van het scherm en bepaal je het meest nabije punt op de lijn, bepaal je de lijn-parameter en teken je met een LineRenderer de lijn. 
+
