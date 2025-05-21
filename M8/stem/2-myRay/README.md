@@ -47,14 +47,18 @@ $$s = 3$$
 
 dan 
 
-$$ \vec{x} = \vec{a} + s \vec{r} \\
+$$ \vec{x} = \vec{a} + s \vec{r} $$
+
+$$
 \vec{x} = \begin{bmatrix}
     1\\
     2 
 \end{bmatrix} + 3 \begin{bmatrix}
-    3 \\ 1
+    3 \\ 
+    1
 \end{bmatrix} = \begin{bmatrix}
-    10 \\ 5
+    10 \\ 
+    5
 \end{bmatrix}
 $$
 
