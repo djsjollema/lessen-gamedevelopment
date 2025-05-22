@@ -39,7 +39,9 @@ $$ \vec{ab}  = \begin{pmatrix}
     -4 \\
     0
 \end{pmatrix}
-=
+$$
+
+$$ \vec{ab} =
 \begin{pmatrix}
     6 \\
     6 \\ 
