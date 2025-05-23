@@ -80,10 +80,33 @@ Test dit in Unity
 distance = differenceVectorAB.magnitude;
 Debug.Log(distance);
 ````
-## de snelheid
+## normaliseren
+Het normaliseren is het instellen van een norm voor een vector. Deze norm is 1. Dat wil zeggen dat een genormaliseerde vector altijd een lengte 1 heeft.
+
+Je kunt een Vector normaliseren door het te vermenigvuldigen met **1/lengte-van-de vector**. In de wiskunde:
+
+$$ \vec{n} = \frac{1}{||\vec{v}||} \vec{v} $$
+
+Als we de differencevector vermenigvuldigen met 1/lengte krijgen we
+in ons geval
+
+$$ \vec{v} = \frac{1}{\sqrt{72}}  \cdot \vec{ab} \approx  \frac{1}{8.485}
+\begin{pmatrix}
+    6 \\
+    6 \\ 
+    0
+\end{pmatrix} = 
+\begin{pmatrix}
+    0.709 \\
+    0.709 \\ 
+    0
+\end{pmatrix}$$
+
+
 Zet de player naar de positie van gameObject A. Je kan nu van de verschilvector een direction of richting maken (een vector met lengte 1 die alleen de richting aangeeft) met de eigenschap  **.normalized**
 ````csharp
 direction = differenceVectorAB.normalized; 
+Debug.Log(direction);
 ````
 
 om de player van A naar B te laten bewegen:
