@@ -74,9 +74,7 @@ $$\text{uvs} =  \begin{pmatrix}
     0.5 \\
     1\\
 \end{pmatrix}
-
 \begin{pmatrix}
     1 \\
     0\\
-\end{pmatrix}
- $$
+\end{pmatrix}$$
