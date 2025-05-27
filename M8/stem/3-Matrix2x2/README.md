@@ -46,14 +46,12 @@ $$\text{vertices} = \begin{pmatrix}
     0 \\
     0\\
     0
-\end{pmatrix} ,
-
+\end{pmatrix},
 \begin{pmatrix}
     0.5 \\
     1\\
     0
-\end{pmatrix} ,
-
+\end{pmatrix},
 \begin{pmatrix}
     1 \\
     0\\
