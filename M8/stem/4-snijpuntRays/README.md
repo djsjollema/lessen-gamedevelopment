@@ -13,9 +13,39 @@ Plaats twee Rays in een 2d Scene. Voeg een Circle-sprite toe. Bepaal het snijpun
 
 Je kan een matrix gebruiken om bijvoorbeeld het snijpunt van twee rays te vinden. Dit kan op verschillende manieren, maar in dit geval gebruiken wij de regel van Cramer. 
 
-Als we twee rays gebruiken, gebruiken wij de zogenaamde Vectorlijn, die bestaan uit een SupportVector (S) en een richtingVector (D). 
+Als we twee rays gebruiken, gebruiken wij de zogenaamde Vectorlijn, die bestaan uit een SupportVector (S) en een richtingVector (D). Een punt op de vectorlijn kun je vinden met de vectorlijn:
 
-In een vorige les heb je een class gemaakt om een 2x2 vector op te stellen. Deze gaan we nu uitbreiden met een nieuwe methode: het berekenen van de determinant (zie voor meer informatie:
+$$ \vec{P}(t) = \vec{S} + t \vec{D} $$
+
+
+In een vorige les heb je een class gemaakt om een 2x2 vector op te stellen. Met deze matrix kun je linaire transformaties uitvoeren
+$$ M\vec{v} = \vec{r}
+$$
+dit kan je uitschrijven als:
+
+$$ \begin{bmatrix}
+    a & b \\
+    c & d
+\end{bmatrix} 
+\begin{bmatrix}
+    v_x \\
+    v_y
+\end{bmatrix} = 
+\begin{bmatrix}
+    r_x \\
+    r_y
+\end{bmatrix} 
+$$
+
+De projectie van de Matrix kun je vinden met:
+
+$$ r_x = a v_x + b v_y$$
+
+en 
+
+$$ r_y = c v_x + d v_y$$
+
+Deze gaan we nu uitbreiden met een nieuwe methode: het berekenen van de determinant (zie voor meer informatie:
 <a href="https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=6" target="_blank" > The determinant | Chapter 6, Essence of linear algebra</a>)
 
 Bij een matrix 
@@ -25,7 +55,7 @@ $$ \begin{bmatrix}
     c & d
 \end{bmatrix} $$
 
-Bereken je de determinant met:
+De determinant van een Matrix is een getal. Bereken je de determinant met:
 
 $$ a\cdot d - b \cdot c$$
 
