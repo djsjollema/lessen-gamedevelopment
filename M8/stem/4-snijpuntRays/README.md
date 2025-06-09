@@ -26,6 +26,7 @@ $$ \begin{bmatrix}
 \end{bmatrix} $$
 
 Bereken je de determinant met:
+
 $$ a\cdot d - b \cdot c$$
 
 Dus dan kunnen wij onze class Matrix2x2 uitbreiden met de methode Determinant. De Determinant() is een float die aangeeft hoeveel een matrix-transformatie vergroot of verkleint:
