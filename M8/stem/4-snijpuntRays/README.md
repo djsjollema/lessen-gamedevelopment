@@ -7,7 +7,7 @@ Plaats twee Rays in een 2d Scene. Voeg een Circle-sprite toe. Bepaal het snijpun
 
 ## Video
 
-<a href="https://www.youtube.com/watch?v=jBsC34PxzoM&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=12" target="blank">Cramer's rule, explained geometrically | Chapter 12, Essence of linear algebra</a>
+<a href="https://www.youtube.com/watch?v=jBsC34PxzoM&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=12" target="_blank">Cramer's rule, explained geometrically | Chapter 12, Essence of linear algebra</a>
 
 ## uitleg
 
@@ -16,7 +16,7 @@ Je kan een matrix gebruiken om bijvoorbeeld het snijpunt van twee rays te vinden
 Als we twee rays gebruiken, gebruiken wij de zogenaamde Vectorlijn, die bestaan uit een SupportVector (S) en een richtingVector (D). 
 
 In een vorige les heb je een class gemaakt om een 2x2 vector op te stellen. Deze gaan we nu uitbreiden met een nieuwe methode: het berekenen van de determinant (zie voor meer informatie:
-<a href="https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=6" target="blank" > The determinant | Chapter 6, Essence of linear algebra</a>)
+<a href="https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=6" target="_blank" > The determinant | Chapter 6, Essence of linear algebra</a>)
 
 Bij een matrix 
 
