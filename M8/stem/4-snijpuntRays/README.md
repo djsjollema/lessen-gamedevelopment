@@ -1,4 +1,4 @@
-# Berekenen van een snijpunt van Rays
+# Bepalen van het snijpunt van twee rays
 
 ## Opdracht
 
@@ -19,8 +19,10 @@ $$ \vec{P}(t) = \vec{S} + t \vec{D} $$
 
 
 In een vorige les heb je een class gemaakt om een 2x2 vector op te stellen. Met deze matrix kun je linaire transformaties uitvoeren
+
 $$ M\vec{v} = \vec{r}
 $$
+
 dit kan je uitschrijven als:
 
 $$ \begin{bmatrix}
