@@ -146,13 +146,20 @@ d_1.y & d_2.y
 \end{bmatrix}
 $$
 
-Met de Regel van Cramer (zie video) kunnen wij de lijn-parameters t₁ en t₂ vinden:
+Alleen als de Rays niet evenwijdig zijn of over elkaar heenvallen, kun je de regel van Cramer gebruiken om het snijpunt te vinden. Je kunt eenvoudig controleren of de lijnen evenwijdig zijn door de Determinant van de matrix te berekenen
 
-$$ t_1 = \frac{\begin{bmatrix}
+$$\textbf{als: } Det\begin{bmatrix} 
+d_1.x & d_2.x \\
+d_1.y & d_2.y 
+\end{bmatrix} \neq 0 $$
+
+Kun je de Regel van Cramer (zie video) toepassen om de lijn-parameters t₁ en t₂ vinden:
+
+$$ t_1 = \frac{Det\begin{bmatrix}
 s_2.x - s_1.x& d_2.x \\
 s_2.y - s_1.y & d_2.y 
 \end{bmatrix} 
-}{\begin{bmatrix}
+}{Det \begin{bmatrix}
 d_1.x & d_2.x \\
 d_1.y & d_2.y 
 \end{bmatrix} 
@@ -161,11 +168,11 @@ $$
 
 en 
 
-$$ t_2 = \frac{\begin{bmatrix}
+$$ t_2 = \frac{Det\begin{bmatrix}
 d_1.x & s_2.x - s_1.x \\
  d_1.y & s_2.y - s_1.y  
 \end{bmatrix} 
-}{\begin{bmatrix}
+}{Det\begin{bmatrix}
 d_1.x & d_2.x \\
 d_1.y & d_2.y 
 \end{bmatrix} 
