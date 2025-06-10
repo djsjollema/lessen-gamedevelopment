@@ -50,18 +50,15 @@ $$ r_y = c v_x + d v_y$$
 Deze gaan we nu uitbreiden met een nieuwe methode: het berekenen van de determinant (zie voor meer informatie:
 <a href="https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=6" target="_blank" > The determinant | Chapter 6, Essence of linear algebra</a>)
 
-Bij een matrix 
+De determinant van een Matrix is een getal. Bereken je de determinant met:
 
 $$ Det \begin{bmatrix}
     a & b \\
     c & d
-\end{bmatrix} $$
+\end{bmatrix} = a\cdot d - b \cdot c$$
 
-De determinant van een Matrix is een getal. Bereken je de determinant met:
 
-$$ a\cdot d - b \cdot c$$
-
-Dus dan kunnen wij onze class Matrix2x2 uitbreiden met de methode Determinant. De Determinant() is een float die aangeeft hoeveel een matrix-transformatie vergroot of verkleint:
+Dus dan kunnen wij onze class Matrix2x2 uitbreiden met de methode om de determinant te berekenen. De Determinant() is een float die aangeeft hoeveel een matrix-transformatie vergroot of verkleint:
 
 ````csharp
 public class Matrix2x2
