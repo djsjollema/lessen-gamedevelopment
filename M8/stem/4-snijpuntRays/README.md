@@ -52,7 +52,7 @@ Deze gaan we nu uitbreiden met een nieuwe methode: het berekenen van de determin
 
 Bij een matrix 
 
-$$ \begin{bmatrix}
+$$ Det \begin{bmatrix}
     a & b \\
     c & d
 \end{bmatrix} $$
