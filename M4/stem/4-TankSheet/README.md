@@ -55,14 +55,9 @@ private float acceleration = 0.1f;
 
 ```csharp
 float vertical = Input.GetAxis("Vertical");
-speed += vertical * acceleration;
+speed += vertical;
 ```
 
-3. Voeg dit toe onderaan `Update()`:
-
-```csharp
-speed = Mathf.Clamp(speed, 0.1f, 10f);
-```
 
 ✅ **Test opnieuw**. Je kunt nu gas geven en afremmen!
 
@@ -90,6 +85,9 @@ transform.position = pos;
 
 ✅ **Test** door de tank buiten beeld te sturen – hij moet aan de andere kant terugkomen.
 ---
+
+# Stap 5
+ontwerp en bedenk hoe je een Bullet met de tank kan afschieten. Probeer het zoveel mogelijk met jouw huidige kennis te proberen, dus zonder AI en tutorials.
 
 ## 📢 Reflectie
 Beantwoord voor jezelf (of bespreek klassikaal):
