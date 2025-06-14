@@ -28,13 +28,18 @@ Vector3 velocity;
 Vector3 direction;
 float speed;
 ````
+
 <img src="images/GoRight.gif">
 
 
 ## 🔹 Stap 2: Sturen
 **Doel:** De tank kan draaien met de pijltjes of A/D
 
-1. Probeer de tank te sturen met de toetsen. Let op hoe `transform.right` bepaalt waar hij naartoe rijdt.
+1. Probeer de tank te sturen met de toetsen. De Vector3 `transform.right` wijst naar de voorkant van de sprite, dus als de `Vector3 direction` dezelfde kant uitwijst, rijdt de tank vooruit.
+
+<img src="images/transform_forward.png">
+
+
 
 📌 **Tips:** 
 - gebruik ```` float horizontal = Input.GetAxis("Horizontal"); ````
@@ -46,12 +51,7 @@ float speed;
 ## 🔹 Stap 3: Versnellen en vertragen
 **Doel:** De tank versnelt en vertraagt met pijltjes omhoog/omlaag of W/S
 
-1. Voeg bovenin deze regel toe:
-```csharp
-private float acceleration = 0.1f;
-```
-
-2. Pas je `Update()` aan:
+1. Pas je `Update()` aan:
 
 ```csharp
 float vertical = Input.GetAxis("Vertical");
