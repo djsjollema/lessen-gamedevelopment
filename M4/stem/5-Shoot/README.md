@@ -57,13 +57,17 @@ public Vector3 Direction
 }
 ````
 
-10. Voeg in de Shoot-functie de **direction** toe
+10. Voeg in de Shoot-functie de **direction** toe. 
+
+De ````direction```` van de Bullet is hetzelfde als de ````transform.right```` (voorkant van de sprite) en dat is het zelfde als ````direction```` van de tank. We kunnen via de Setter nu de InstanceOfBullet dezelfde ````direction```` meegeven
+
+<img src="images/bulletDirection.png" width="50%">
 
 ````C#
  InstanceOfBullet.Direction = direction; 
 ````
 
-11. geef de PreFab Bullet een trailRenderer, waarbij de Alpha van 1 naar 0 verloopt
+11.  geef de PreFab Bullet een trail renderer, waarbij de Alpha van 1 naar 0 verloopt en eventueel een geluid.
 
 # eindproduct
 <img src="images/EindProduct.gif">
