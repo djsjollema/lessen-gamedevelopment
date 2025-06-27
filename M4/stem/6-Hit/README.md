@@ -4,7 +4,13 @@ Voor deze opdracht moet je beschikken over
 1. een bestuurbare tank: <a href="https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M4/stem/4-TankSheet">Les 1.4 Tanksheet</a>
 2. Een Bullet-factory pattern: <a href="https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M4/stem/5-Shoot">Les 1.5 Shoot</a>
 
+ALs je deze opdrachten (nog) niet gemaakt hebt, kun je deze Repository gebruiken
+<a href="https://github.com/djsjollema/1.4skill-a.git" target="_blank">Tank- en shootrepository</a>
+
 # Opdracht
+
+Om een Enemy te maken, moet je alle lessen die je hiervoor hebt gehad nog een keer herhalen. Er zijn wel een paar nieuwe onderdelen, zoals bewegen naar een Random plaats en een hit-variabele
+
 1. Gebruik de spritesheet om een animatie van een EnemyTank te maken. 
    - Zorg dat de voorkant van de EnemyTank naar rechts wijst
    - Maak en Enemy van vergelijkbare grootte als de Tank
