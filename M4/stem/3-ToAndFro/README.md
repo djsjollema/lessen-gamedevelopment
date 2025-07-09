@@ -103,7 +103,7 @@ $$ \vec{v} = \frac{1}{\sqrt{72}}  \cdot \vec{ab} \approx  \frac{1}{8.485}
 \end{pmatrix}$$
 
 
-Zet de player naar de positie van gameObject A. Je kan nu van de verschilvector een direction of richting maken (een vector met lengte 1 die alleen de richting aangeeft) met de eigenschap  **.normalized**
+Zet de player naar de positie van gameObject A. Je kan nu van de verschilvector een direction of richting maken (een vector met lengte 1 die alleen de richting aangeeft) met de eigenschap  **.normalized** Controleer dit!
 ````csharp
 direction = differenceVectorAB.normalized; 
 Debug.Log(direction);
