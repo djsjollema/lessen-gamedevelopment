@@ -94,3 +94,11 @@ Jullie moeten elke les minimaal 1 oefening uitvoeren die gaat over de behandelde
 ### Aantekeningen
 
 Daarnaast is het ook een opdracht om een Gamedevelopment notitie boek te maken. Dit is een readme waarin je je aantekeningen zet van de behandelde stof uit de les in je eigen woorden zodat jij het zelf later weer begrijpt.
+
+## Inleveren werk
+
+De opdrachten moeten jullie inleveren via een zogenaamde README.md file op Github.
+
+In week 4 leren jullie bij de **SKILL-GitHub** lessen meer over hoe je README bestanden opmaakt en hier beeld materiaal in verwerkt.
+
+Voor alle opdrachten geldt dat je een titel met de opdracht plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
