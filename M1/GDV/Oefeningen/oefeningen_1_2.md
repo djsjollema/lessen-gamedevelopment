@@ -7,7 +7,7 @@ Kies **minimaal 1 oefening** die past bij jouw niveau en interesse.
 ### Niveaus:
 
 - ⭐ **Beginner** - Je eerste keer programmeren
-  - [Oefening 1B: Spotify Playlist Generator](#Oefening-1B:-Spotify-Playlist-Generator)
+  - [Oefening 1B: Spotify Playlist Generator](oefeningen_1_2.md#oefening-1b-spotify-playlist-generator-)
   - [Oefening 2B: Instagram Story Creator]
   - [Oefening 3B: Minecraft Crafting Recipe]
 - ⭐⭐ **Starter** - Je begrijpt de basis al een beetje
