@@ -422,6 +422,306 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
+## Les2.2 Oefening 5S: Color Changer ⭐⭐
+
+**Thema:** Visual Effects
+
+### Wat Ga Je Maken?
+
+Een kleuren veranderaar waar je met toetsen de kleur van het GameObject kunt veranderen en het object reageert op de kleurwisselingen!
+
+### Opdracht:
+
+1. Maak een nieuw script: `ColorChanger`
+2. Sleep het script op een Capsule GameObject
+3. Gebruik variabelen en input:
+
+```csharp
+public class ColorChanger : MonoBehaviour
+{
+    // Kleur variabelen
+    public string huidigeKleur = "Wit";
+    public int aantalKleurWisselingen = 0;
+
+    // Visuele effecten
+    private Vector3 startPositie;
+    private Vector3 startSchaal;
+
+    void Start()
+    {
+        startPositie = transform.position;
+        startSchaal = transform.localScale;
+
+        Debug.Log("=== COLOR CHANGER ===");
+        Debug.Log("Start kleur: " + huidigeKleur);
+        Debug.Log("=== CONTROLS ===");
+        Debug.Log("Druk op R = Rood");
+        Debug.Log("Druk op G = Groen");
+        Debug.Log("Druk op B = Blauw");
+        Debug.Log("Druk op Y = Geel");
+        Debug.Log("Druk op W = Wit");
+        Debug.Log("Druk op I = Info");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetComponent<Renderer>().material.color = Color.red;
+            huidigeKleur = "Rood";
+            aantalKleurWisselingen = aantalKleurWisselingen + 1;
+            Debug.Log("Kleur veranderd naar: " + huidigeKleur);
+
+            // Beweeg naar links bij rood
+            transform.position = startPositie + Vector3.left * 2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            GetComponent<Renderer>().material.color = Color.green;
+            huidigeKleur = "Groen";
+            aantalKleurWisselingen = aantalKleurWisselingen + 1;
+            Debug.Log("Kleur veranderd naar: " + huidigeKleur);
+
+            // Beweeg omhoog bij groen
+            transform.position = startPositie + Vector3.up * 2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            GetComponent<Renderer>().material.color = Color.blue;
+            huidigeKleur = "Blauw";
+            aantalKleurWisselingen = aantalKleurWisselingen + 1;
+            Debug.Log("Kleur veranderd naar: " + huidigeKleur);
+
+            // Beweeg naar rechts bij blauw
+            transform.position = startPositie + Vector3.right * 2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            GetComponent<Renderer>().material.color = Color.yellow;
+            huidigeKleur = "Geel";
+            aantalKleurWisselingen = aantalKleurWisselingen + 1;
+            Debug.Log("Kleur veranderd naar: " + huidigeKleur);
+
+            // Word groter bij geel
+            transform.localScale = startSchaal * 1.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            GetComponent<Renderer>().material.color = Color.white;
+            huidigeKleur = "Wit";
+            Debug.Log("Kleur veranderd naar: " + huidigeKleur);
+
+            // Reset positie en schaal bij wit
+            transform.position = startPositie;
+            transform.localScale = startSchaal;
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("=== INFO ===");
+            Debug.Log("Huidige kleur: " + huidigeKleur);
+            Debug.Log("Aantal kleurwisselingen: " + aantalKleurWisselingen);
+            Debug.Log("Positie: " + transform.position);
+            Debug.Log("Schaal: " + transform.localScale);
+        }
+    }
+}
+```
+
+### Toevoegingen aan de code:
+
+- Voeg meer kleuren toe (paars, oranje, zwart) met eigen bewegingen
+- Laat het object draaien als je een bepaalde kleur kiest
+- Voeg een "regenboog" modus toe die alle kleuren doorloopt
+- Zorg dat je na 10 kleurwisselingen een bonus krijgt (extra groot worden)
+
+### Inlever Vereisten:
+
+Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
+
+[Zie voorbeeld format](../README.md#Voorbeeld-README-Opdracht-Format)
+
+---
+
+## Les2.2 Oefening 6S: Power Collector ⭐⭐
+
+**Thema:** Collection System
+
+### Wat Ga Je Maken?
+
+Een power collector waar je energie kunt verzamelen en uitgeven, en het GameObject reageert op je energie level!
+
+### Opdracht:
+
+1. Maak een nieuw script: `PowerCollector`
+2. Sleep het script op een GameObject naar keuze
+3. Gebruik variabelen en input:
+
+```csharp
+public class PowerCollector : MonoBehaviour
+{
+    // Power variabelen
+    public int energie = 50;
+    public int maxEnergie = 100;
+    public string collectorNaam = "Power Collector";
+
+    // Visual feedback variabelen
+    private Vector3 startPositie;
+    private Vector3 startSchaal;
+
+    void Start()
+    {
+        startPositie = transform.position;
+        startSchaal = transform.localScale;
+
+        UpdateVisuals();
+
+        Debug.Log("=== POWER COLLECTOR ===");
+        Debug.Log("Collector: " + collectorNaam);
+        Debug.Log("Start energie: " + energie + "/" + maxEnergie);
+        Debug.Log("=== CONTROLS ===");
+        Debug.Log("Druk op E = Verzamel energie (+10)");
+        Debug.Log("Druk op Q = Gebruik energie (-5)");
+        Debug.Log("Druk op F = Fire power! (-20)");
+        Debug.Log("Druk op R = Reset energie");
+        Debug.Log("Druk op I = Info");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            energie = energie + 10;
+            if (energie > maxEnergie) energie = maxEnergie; // Niet hoger dan maximum
+
+            Debug.Log("Energie verzameld! Huidige energie: " + energie);
+            UpdateVisuals();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (energie >= 5)
+            {
+                energie = energie - 5;
+                Debug.Log("Energie gebruikt! Huidige energie: " + energie);
+                UpdateVisuals();
+            }
+            else
+            {
+                Debug.Log("Onvoldoende energie!");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (energie >= 20)
+            {
+                energie = energie - 20;
+                Debug.Log("FIRE POWER! Energie: " + energie);
+
+                // Special fire effect - spring omhoog en draai
+                transform.position = startPositie + Vector3.up * 3;
+                transform.Rotate(0, 180, 0);
+
+                UpdateVisuals();
+            }
+            else
+            {
+                Debug.Log("Onvoldoende energie voor Fire Power! (20 nodig)");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            energie = 50; // Reset naar start waarde
+            Debug.Log("Energie gereset naar: " + energie);
+
+            // Reset positie en rotatie
+            transform.position = startPositie;
+            transform.rotation = Quaternion.identity;
+
+            UpdateVisuals();
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("=== POWER INFO ===");
+            Debug.Log("Collector: " + collectorNaam);
+            Debug.Log("Energie: " + energie + "/" + maxEnergie);
+
+            // Bereken percentage
+            float percentage = (energie * 100.0f) / maxEnergie;
+            Debug.Log("Energie percentage: " + percentage + "%");
+
+            // Status bepalen
+            if (energie > 80)
+            {
+                Debug.Log("Status: HOGE ENERGIE!");
+            }
+            else if (energie > 40)
+            {
+                Debug.Log("Status: Gemiddelde energie");
+            }
+            else
+            {
+                Debug.Log("Status: Lage energie - verzamel meer!");
+            }
+        }
+
+        // Langzaam terugkeren naar start positie
+        transform.position = Vector3.Lerp(transform.position, startPositie, Time.deltaTime * 2.0f);
+    }
+
+    void UpdateVisuals()
+    {
+        // Verander grootte gebaseerd op energie level
+        float schaalFactor = 0.5f + (energie / 100.0f); // Tussen 0.5 en 1.5
+        transform.localScale = startSchaal * schaalFactor;
+
+        // Verander kleur gebaseerd op energie level
+        Renderer objectRenderer = GetComponent<Renderer>();
+        if (objectRenderer != null)
+        {
+            if (energie > 80)
+            {
+                objectRenderer.material.color = Color.green; // Hoge energie = groen
+            }
+            else if (energie > 40)
+            {
+                objectRenderer.material.color = Color.yellow; // Gemiddeld = geel
+            }
+            else if (energie > 20)
+            {
+                objectRenderer.material.color = Color.red; // Laag = rood
+            }
+            else
+            {
+                objectRenderer.material.color = Color.black; // Zeer laag = zwart
+            }
+        }
+    }
+}
+```
+
+### Toevoegingen aan de code:
+
+- Voeg een "super power" toe die 50 energie kost maar een spectaculair effect geeft
+- Maak energie die automatisch langzaam afneemt over tijd
+- Voeg verschillende power-ups toe (kleine +5, grote +25)
+- Laat het object automatisch draaien als de energie vol is
+
+### Inlever Vereisten:
+
+Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
+
+[Zie voorbeeld format](../README.md#Voorbeeld-README-Opdracht-Format)
+
+---
+
 ## Les2.2 Oefening 7G: Multi Control Object ⭐⭐⭐
 
 **Thema:** Combined Controls
@@ -598,267 +898,6 @@ public class MultiController : MonoBehaviour
 - Voeg geluid effecten toe (Debug.Log verschillende geluiden)
 - Maak presets (T-toets zet alles op een vooraf ingestelde configuratie)
 - Voeg een "random" modus toe die alles willekeurig verandert
-
-### Inlever Vereisten:
-
-Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
-
-[Zie voorbeeld format](../README.md#Voorbeeld-README-Opdracht-Format)
-transform.position += Vector3.right _ snelheid _ Time.deltaTime;
-heeftBewogen = true;
-}
-
-        // Statistieken bijwerken
-        if (heeftBewogen)
-        {
-            float bewegingsAfstand = Vector3.Distance(oudePositie, transform.position);
-            totalAfstand += bewegingsAfstand;
-            aantalBewegingen++;
-        }
-
-        // Info tonen
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Vector3 huidigePositie = transform.position;
-            float afstandVanStart = Vector3.Distance(startPositie, huidigePositie);
-
-            Debug.Log("=== MOVEMENT INFO ===");
-            Debug.Log("Speler: " + spelerNaam);
-            Debug.Log("Huidige positie: " + huidigePositie);
-            Debug.Log("Totale afstand gelopen: " + totalAfstand.ToString("F1"));
-            Debug.Log("Afstand van start: " + afstandVanStart.ToString("F1"));
-            Debug.Log("Aantal bewegings-frames: " + aantalBewegingen);
-        }
-    }
-
-}
-
-````
-
-### Toevoegingen aan de code:
-
-- Voeg sprint functie toe (Shift = sneller)
-- Tel tijd dat speler stil staat vs beweegt
-- Voeg Y-as beweging toe (Q/E voor omhoog/omlaag)
-
-### Inlever Vereisten:
-
-Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
-
-[Zie voorbeeld format](../README.md#Voorbeeld-README-Opdracht-Format)
-
----
-
-## Les2.2 Oefening 7G: Interactive Game Stats Dashboard ⭐⭐⭐
-
-**Thema:** Advanced Game Statistics
-
-### Wat Ga Je Maken?
-
-Een interactief dashboard dat real-time game statistieken bijhoudt en reageert op verschillende inputs!
-
-### Opdracht:
-
-1. Maak een nieuw script: `GameStatsDashboard`
-2. Gebruik complexe variabelen en input voor een volledig dashboard:
-
-```csharp
-public class GameStatsDashboard : MonoBehaviour
-{
-    [Header("Speler Info")]
-    public string spelerNaam = "Pro Player";
-    public int spelerLevel = 1;
-    public float ervaring = 0.0f;
-    public float ervaringNodig = 100.0f;
-
-    [Header("Game Stats")]
-    public int score = 0;
-    public int levens = 3;
-    public float speelTijd = 0.0f;
-    public bool gameActief = true;
-
-    [Header("Performance Tracking")]
-    private int aantalActions = 0;
-    private int aantalJumps = 0;
-    private int aantalAttacks = 0;
-    private float laatsteActionTijd = 0.0f;
-    private float snelsteAction = float.MaxValue;
-
-    void Start()
-    {
-        Debug.Log("=== GAME STATS DASHBOARD ===");
-        Debug.Log("Speler: " + spelerNaam + " (Level " + spelerLevel + ")");
-        Debug.Log("=== CONTROLS ===");
-        Debug.Log("SPACE = Jump | X = Attack | + = Score | - = Damage");
-        Debug.Log("L = Level Up | R = Reset Stats | I = Info");
-        ToonDashboard();
-    }
-
-    void Update()
-    {
-        if (gameActief)
-        {
-            speelTijd += Time.deltaTime;
-
-            // Input handling met performance tracking
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                PerformAction("Jump");
-                aantalJumps++;
-                Debug.Log("💫 Jump! (Totaal: " + aantalJumps + ")");
-            }
-
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                PerformAction("Attack");
-                aantalAttacks++;
-                score += 10;
-                Debug.Log("⚔️ Attack! Score: " + score);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.Equals))
-            {
-                score += 50;
-                ervaring += 25.0f;
-                CheckLevelUp();
-                Debug.Log("🎯 Bonus Score! Total: " + score);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Minus))
-            {
-                levens--;
-                Debug.Log("💔 Damage taken! Levens: " + levens);
-                if (levens <= 0)
-                {
-                    GameOver();
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                LevelUp();
-            }
-
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                ToonDashboard();
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                ResetStats();
-            }
-        }
-
-        // Game restart
-        if (!gameActief && Input.GetKeyDown(KeyCode.Return))
-        {
-            RestartGame();
-        }
-    }
-
-    void PerformAction(string actionType)
-    {
-        aantalActions++;
-        float huidigeTijd = Time.time;
-
-        if (laatsteActionTijd > 0)
-        {
-            float tijdTussenActions = huidigeTijd - laatsteActionTijd;
-            if (tijdTussenActions < snelsteAction)
-            {
-                snelsteAction = tijdTussenActions;
-            }
-        }
-
-        laatsteActionTijd = huidigeTijd;
-    }
-
-    void CheckLevelUp()
-    {
-        if (ervaring >= ervaringNodig)
-        {
-            LevelUp();
-        }
-    }
-
-    void LevelUp()
-    {
-        spelerLevel++;
-        ervaring = 0.0f;
-        ervaringNodig += 50.0f; // Meer ervaring nodig per level
-        levens++; // Bonus leven bij level up
-
-        Debug.Log("🌟 LEVEL UP! Nieuw level: " + spelerLevel);
-        Debug.Log("✨ Bonus leven gekregen! Levens: " + levens);
-    }
-
-    void ToonDashboard()
-    {
-        float ervaringPercentage = (ervaring / ervaringNodig) * 100.0f;
-        float actionsPerMinuut = (aantalActions / (speelTijd / 60.0f));
-
-        Debug.Log("=== DASHBOARD UPDATE ===");
-        Debug.Log("👤 " + spelerNaam + " | Level: " + spelerLevel);
-        Debug.Log("🎯 Score: " + score + " | ❤️ Levens: " + levens);
-        Debug.Log("⭐ Ervaring: " + ervaring.ToString("F0") + "/" + ervaringNodig + " (" + ervaringPercentage.ToString("F1") + "%)");
-        Debug.Log("⏱️ Speeltijd: " + speelTijd.ToString("F1") + " seconden");
-        Debug.Log("🏃 Jumps: " + aantalJumps + " | ⚔️ Attacks: " + aantalAttacks);
-        Debug.Log("📊 Actions/minuut: " + actionsPerMinuut.ToString("F1"));
-        if (snelsteAction < float.MaxValue)
-        {
-            Debug.Log("⚡ Snelste action: " + snelsteAction.ToString("F2") + " sec");
-        }
-    }
-
-    void GameOver()
-    {
-        gameActief = false;
-        float finalAPM = (aantalActions / (speelTijd / 60.0f));
-
-        Debug.Log("=== GAME OVER ===");
-        Debug.Log("💀 " + spelerNaam + " is verslagen!");
-        Debug.Log("📊 Final Score: " + score);
-        Debug.Log("⏱️ Overlevingstijd: " + speelTijd.ToString("F1") + " seconden");
-        Debug.Log("🎯 Level bereikt: " + spelerLevel);
-        Debug.Log("📈 Actions per minuut: " + finalAPM.ToString("F1"));
-        Debug.Log("🔄 Druk ENTER om opnieuw te beginnen");
-    }
-
-    void ResetStats()
-    {
-        score = 0;
-        ervaring = 0.0f;
-        aantalActions = 0;
-        aantalJumps = 0;
-        aantalAttacks = 0;
-        speelTijd = 0.0f;
-        snelsteAction = float.MaxValue;
-        laatsteActionTijd = 0.0f;
-
-        Debug.Log("🔄 Stats gereset!");
-        ToonDashboard();
-    }
-
-    void RestartGame()
-    {
-        gameActief = true;
-        levens = 3;
-        spelerLevel = 1;
-        ervaringNodig = 100.0f;
-        ResetStats();
-
-        Debug.Log("🎮 Game herstart! Veel succes " + spelerNaam + "!");
-    }
-}
-````
-
-### Toevoegingen aan de code:
-
-- Voeg achievements systeem toe (bijv. "100 jumps")
-- Maak een high score systeem
-- Voeg power-ups toe die tijdelijk stats veranderen
-- Bereken efficiency scores (score per seconde, etc.)
 
 ### Inlever Vereisten:
 
