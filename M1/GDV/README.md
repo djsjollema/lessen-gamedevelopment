@@ -37,7 +37,7 @@ Deze Unity game development cursus bestaat uit **8 weken** met telkens **2 lesse
 ### Week 2: GameObjects en Beweging
 
 - **Les 2.1**: Scenes, GameObjects en componenten begrijpen + scriptmatige beweging met deltaTime
-- **Les 2.2**: Werken met datatypes en variabelen + input verwerken via toetsenbord
+- **Les 2.2**: Werken met datatypes en variabelen, input verwerken via toetsenbord en simpele if statement.
 
 ### Week 3: Physics Systemen
 
