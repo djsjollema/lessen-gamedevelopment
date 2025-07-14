@@ -3,6 +3,7 @@
 ## 🎯 Wat Ga Je Leren?
 
 In deze les maak je kennis met Unity en leer je:
+
 - 🌟 Wat Unity precies is en waarom het zo populair is
 - 💾 Hoe je Unity installeert en je eerste project maakt
 - 🗂️ De Unity interface begrijpen (alle vensters en knoppen)
@@ -16,6 +17,7 @@ In deze les maak je kennis met Unity en leer je:
 ### 🎮 Unity in Het Kort
 
 Unity is zoals **LEGO voor games**! Het is een programma waarmee je:
+
 - 🎲 2D en 3D games kunt maken
 - 📱 Games kunt maken voor telefoon, computer, PlayStation, Xbox en meer
 - 🎨 Mooie graphics en animaties kunt toevoegen
@@ -25,6 +27,7 @@ Unity is zoals **LEGO voor games**! Het is een programma waarmee je:
 ### 🏆 Waarom is Unity zo Populair?
 
 **Grote games gemaakt met Unity:**
+
 - 🏙️ Cities: Skylines
 - 🎮 Cuphead
 - 🧙‍♂️ Hearthstone
@@ -32,6 +35,7 @@ Unity is zoals **LEGO voor games**! Het is een programma waarmee je:
 - 🔫 Call of Duty: Mobile
 
 **Voordelen van Unity:**
+
 - ✅ **Gratis** om te gebruiken (voor studenten en kleine bedrijven)
 - ✅ **Beginnersvriendelijk** - je hoeft geen expert te zijn
 - ✅ **Veel platforms** - één game, overal spelen
@@ -118,11 +122,13 @@ Wanneer Unity opent, zie je verschillende vensters. Dit noemen we de **"Interfac
 ### 1. 📋 Hierarchy Window (Linksboven)
 
 **Wat is dit?**
+
 - Een **lijst van alle objecten** in je huidige scene
 - Zoals een inhoudsopgave van je level
 - Hier zie je alles wat in je game zit
 
 **Wat zie je standaard?**
+
 - 📷 **Main Camera** - De camera waarmee spelers je game zien
 - ☀️ **Directional Light** - Zonlicht dat alles verlicht
 
@@ -131,11 +137,13 @@ Wanneer Unity opent, zie je verschillende vensters. Dit noemen we de **"Interfac
 ### 2. 🎮 Scene View (Midden-links)
 
 **Wat is dit?**
+
 - Je **werkplek** waar je je game bouwt
 - Hier plaats je objecten, beweeg je dingen rond, en ontwerp je levels
 - Zoals een 3D versie van Paint, maar dan voor games
 
 **🛠️ Navigatie:**
+
 - **Rechtermuisknop + slepen** = Rondkijken
 - **Scrollwiel** = In- en uitzoomen
 - **Middelste muisknop + slepen** = Verplaatsen
@@ -143,6 +151,7 @@ Wanneer Unity opent, zie je verschillende vensters. Dit noemen we de **"Interfac
 ### 3. 🕹️ Game View (Midden-rechts, vaak verstopt achter Scene View)
 
 **Wat is dit?**
+
 - Hier zie je **precies wat de speler ziet**
 - Wanneer je op **Play** drukt, zie je hier je game in actie
 - Dit is het eindresultaat
@@ -152,6 +161,7 @@ Wanneer Unity opent, zie je verschillende vensters. Dit noemen we de **"Interfac
 ### 4. 🔍 Inspector Window (Rechtsboven)
 
 **Wat is dit?**
+
 - Toont **alle details** van het geselecteerde object
 - Hier verander je eigenschappen zoals kleur, grootte, positie
 - Hier voeg je **components** toe (functies aan objecten)
@@ -161,6 +171,7 @@ Wanneer Unity opent, zie je verschillende vensters. Dit noemen we de **"Interfac
 ### 5. 📁 Project Window (Onderaan)
 
 **Wat is dit?**
+
 - Je **bestandenverkenner** binnen Unity
 - Hier staan alle assets: afbeeldingen, geluiden, scripts, 3D modellen
 - Organiseer hier al je game-materiaal
@@ -172,8 +183,9 @@ Wanneer Unity opent, zie je verschillende vensters. Dit noemen we de **"Interfac
 ### Wat is een GameObject?
 
 Een **GameObject** is alles wat in je game kan bestaan:
+
 - 🏃‍♂️ De speler
-- 👾 Vijanden  
+- 👾 Vijanden
 - 🧱 Muren
 - 💎 Verzamelobjecten
 - 🌳 Bomen
@@ -190,14 +202,16 @@ Een **GameObject** is alles wat in je game kan bestaan:
 ### 🎮 Experimenteren met je Kubus
 
 #### Selecteren en Verplaatsen
+
 1. **Klik** op je kubus in de Scene of Hierarchy
 2. Je ziet **gekleurde pijlen** (Gizmos) verschijnen:
    - 🔴 **Rode pijl** = X-as (links/rechts)
-   - 🟢 **Groene pijl** = Y-as (omhoog/omlaag)  
+   - 🟢 **Groene pijl** = Y-as (omhoog/omlaag)
    - 🔵 **Blauwe pijl** = Z-as (vooruit/achteruit)
 3. **Sleep** aan de pijlen om je kubus te verplaatsen
 
 #### Tools Gebruiken
+
 In de linkerbovenhoek zie je **tools** (of druk Q, W, E, R):
 
 - **🖐️ Hand Tool (Q)** - Navigeren door de scene
@@ -206,14 +220,17 @@ In de linkerbovenhoek zie je **tools** (of druk Q, W, E, R):
 - **📐 Scale Tool (R)** - Objecten groter/kleiner maken
 
 #### Inspector Properties
+
 Met je kubus geselecteerd, kijk naar de **Inspector**:
 
 **🎯 Transform Component:**
+
 - **Position** - Waar staat het object? (X, Y, Z coördinaten)
 - **Rotation** - Hoe is het object gedraaid? (in graden)
 - **Scale** - Hoe groot is het object? (1 = normaal, 2 = dubbel zo groot)
 
 **🎨 Probeer dit:**
+
 - Zet Position Y op **5** → kubus zweeft in de lucht!
 - Zet Rotation Y op **45** → kubus draait scheef!
 - Zet Scale X op **3** → kubus wordt breed!
@@ -227,10 +244,11 @@ Met je kubus geselecteerd, kijk naar de **Inspector**:
 Stel je voor dat je kamer één grote chaos is - je vindt nooit iets terug! Hetzelfde geldt voor Unity projecten.
 
 **🏠 Een goed georganiseerd project:**
+
 ```
 Assets/
 ├── 📁 Scripts/          (Al je code)
-├── 📁 Materials/        (Kleuren en textures)  
+├── 📁 Materials/        (Kleuren en textures)
 ├── 📁 Textures/         (Afbeeldingen)
 ├── 📁 Audio/            (Geluiden en muziek)
 ├── 📁 Prefabs/          (Herbruikbare objecten)
@@ -248,12 +266,14 @@ Assets/
 ### 🎯 Naamgeving Tips
 
 ✅ **Goede namen:**
+
 - `PlayerScript`
-- `EnemyTexture` 
+- `EnemyTexture`
 - `JumpSound`
 - `Level1Scene`
 
 ❌ **Slechte namen:**
+
 - `Script1`
 - `Untitled`
 - `asdf`
@@ -296,8 +316,9 @@ Maak verschillende objecten (Hierarchy → 3D Object):
 ### Wat is een Scene?
 
 Een **Scene** is zoals een **level** of **scherm** in je game:
+
 - 🏠 **Hoofdmenu** = Scene 1
-- 🌳 **Level 1** = Scene 2  
+- 🌳 **Level 1** = Scene 2
 - 🏰 **Level 2** = Scene 3
 - 🏆 **Game Over scherm** = Scene 4
 
@@ -320,7 +341,7 @@ Een **Scene** is zoals een **level** of **scherm** in je game:
 ### ✅ Checklist
 
 - [ ] Je weet wat Unity is en waarom het gebruikt wordt
-- [ ] Je hebt Unity Hub en Unity Editor geïnstalleerd  
+- [ ] Je hebt Unity Hub en Unity Editor geïnstalleerd
 - [ ] Je kunt een nieuw project aanmaken
 - [ ] Je kent alle belangrijke vensters (Hierarchy, Scene, Inspector, Project)
 - [ ] Je kunt GameObjects maken en manipuleren
@@ -337,21 +358,27 @@ In Les 1.2 gaan we onze eerste code schrijven! Dan leren we hoe we Unity objecte
 ## 🤔 Veelgestelde Vragen
 
 ### Q: Unity laadt heel langtraag, is dat normaal?
+
 **A:** Ja! Unity heeft veel functionaliteit en moet alles inladen. De eerste keer duurt het langer.
 
 ### Q: Ik zie verschillende kleuren in mijn Scene, wat betekent dat?
-**A:** 
+
+**A:**
+
 - 🔴 **Rood** = X-as (links/rechts)
 - 🟢 **Groen** = Y-as (omhoog/omlaag)
 - 🔵 **Blauw** = Z-as (vooruit/achteruit)
 
 ### Q: Mijn object is verdwenen, hoe vind ik het terug?
-**A:** 
+
+**A:**
+
 1. Selecteer het object in de Hierarchy
 2. Druk **F** om erop in te zoomen
 3. Of dubbelklik op het object in de Hierarchy
 
 ### Q: Kan ik de interface aanpassen?
+
 **A:** Ja! Sleep vensters rond, verander de grootte, of kies een andere layout via **Window → Layouts**.
 
 ---
@@ -361,6 +388,7 @@ In Les 1.2 gaan we onze eerste code schrijven! Dan leren we hoe we Unity objecte
 Voor wie meer wil proberen:
 
 ### 🏠 Bouw een Huisje
+
 1. **Plane** voor de grond
 2. **Cube** voor de muren (scale omhoog voor hoogte)
 3. **Pyramid** voor het dak (3D Object → kan je niet vinden? Gebruik een Cube en draai het)
@@ -368,6 +396,7 @@ Voor wie meer wil proberen:
 5. Plaats alles mooi ten opzichte van elkaar
 
 ### 🎨 Experimenteer met Kleuren
+
 1. Selecteer een object
 2. Kijk in de Inspector naar **Material**
 3. Klik op het kleurvakje naast **Albedo**

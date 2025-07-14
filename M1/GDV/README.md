@@ -102,3 +102,27 @@ De opdrachten moeten jullie inleveren via een zogenaamde README.md file op Githu
 In week 4 leren jullie bij de **SKILL-GitHub** lessen meer over hoe je README bestanden opmaakt en hier beeld materiaal in verwerkt.
 
 Voor alle opdrachten geldt dat je een titel met de opdracht plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
+
+## Voorbeeld README Opdracht Format
+
+```markdown
+# Opdracht 1.2: Spotify Playlist Generator
+
+## Beschrijving
+
+Ik heb een script gemaakt dat mijn favoriete muziekliedjes toont in de console, net zoals een Spotify playlist. Het script gebruikt Debug.Log() om verschillende liedjes met artiesten te tonen.
+
+## Wat ik heb geleerd
+
+- Hoe ik Debug.Log() gebruik om berichten te tonen
+- Hoe ik een script maak en aan een GameObject koppel
+- Basis structuur van een Unity C# script
+
+## Demo
+
+![Spotify Playlist Demo](link-naar-je-gif.gif)
+
+## Code
+
+[Link naar SpotifyPlaylist.cs](link-naar-je-script)
+```
