@@ -8,18 +8,18 @@ Kies **minimaal 1 oefening** die past bij jouw niveau en interesse.
 
 - ⭐ **Beginner** - Je eerste keer programmeren
 
-  - [Oefening 1B: Spotify Playlist Generator](#oefening-1b-spotify-playlist-generator-)
-  - [Oefening 2B: Instagram Story Creator](#oefening-2b-instagram-story-creator-)
-  - [Oefening 3B: Minecraft Crafting Recipe](#oefening-3b-minecraft-crafting-recipe-)
+  - [Les1.2 Oefening 1B: Spotify Playlist Generator](#les12-oefening-1b-spotify-playlist-generator-)
+  - [Les1.2 Oefening 2B: Instagram Story Creator](#les12-oefening-2b-instagram-story-creator-)
+  - [Les1.2 Oefening 3B: Minecraft Crafting Recipe](#les12-oefening-3b-minecraft-crafting-recipe-)
 
 - ⭐⭐ **Starter** - Je begrijpt de basis al een beetje
 
-  - [Oefening 4S: YouTube Channel Stats](#oefening-4s-youtube-channel-stats-)
-  - [Oefening 5S: TikTok Viral Calculator](#oefening-5s-tiktok-viral-calculator-)
-  - [Oefening 6S: Gaming Setup Configurator](#oefening-6s-gaming-setup-configurator-)
+  - [Les1.2 Oefening 4S: YouTube Channel Stats](#les12-oefening-4s-youtube-channel-stats-)
+  - [Les1.2 Oefening 5S: TikTok Viral Calculator](#les12-oefening-5s-tiktok-viral-calculator-)
+  - [Les1.2 Oefening 6S: Gaming Setup Configurator](#les12-oefening-6s-gaming-setup-configurator-)
 
 - ⭐⭐⭐ **Gevorderd** - Je wilt meer uitdaging
-  - [Oefening 7G: Social Media Dashboard](#oefening-7g-social-media-dashboard-)
+  - [Les1.2 Oefening 7G: Social Media Dashboard](#les12-oefening-7g-social-media-dashboard-)
 
 ---
 
@@ -40,7 +40,7 @@ Kies **minimaal 1 oefening** die past bij jouw niveau en interesse.
 
 ---
 
-## Oefening 1B: Spotify Playlist Generator ⭐
+## Les1.2 Oefening 1B: Spotify Playlist Generator ⭐
 
 **Thema:** Muziek en Streaming
 
@@ -75,6 +75,10 @@ void Start()
 - Tel hoeveel liedjes je hebt (gebruik cijfers in je berichten)
 - Maak 2 verschillende playlists voor verschillende stemmingen
 
+### Voorbeeld eindresultaat:
+
+![eindresultaat](../gfx/1_2_eindresultaat_1b.gif)
+
 ### Inlever Vereisten:
 
 Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
@@ -83,7 +87,7 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
-## Oefening 2B: Instagram Story Creator ⭐
+## Les1.2 Oefening 2B: Instagram Story Creator ⭐
 
 **Thema:** Social Media en Content Creation
 
@@ -129,7 +133,7 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
-## Oefening 3B: Minecraft Crafting Recipe ⭐
+## Les1.2 Oefening 3B: Minecraft Crafting Recipe ⭐
 
 **Thema:** Gaming en Crafting
 
@@ -179,7 +183,7 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
-## Oefening 4S: YouTube Channel Stats ⭐⭐
+## Les1.2 Oefening 4S: YouTube Channel Stats ⭐⭐
 
 **Thema:** Content Creation en Influencers
 
@@ -190,7 +194,8 @@ Een script dat de statistieken van jouw droomkanaal toont, inclusief simpele ber
 ### Opdracht:
 
 1. Maak een nieuw script: `YouTubeChannelStats`
-2. Gebruik basale rekenkunde in je berichten:
+2. Gebruik comments om je code netjes te organiseren:
+3. Gebruik basale rekenkunde in je berichten:
 
 ```csharp
 void Start()
@@ -236,7 +241,7 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
-## Oefening 5S: TikTok Viral Calculator ⭐⭐
+## Les1.2 Oefening 5S: TikTok Viral Calculator ⭐⭐
 
 **Thema:** Korte Video Content en Trends
 
@@ -248,6 +253,7 @@ Een script dat berekent hoe viral jouw TikTok video kan gaan, met trending hasht
 
 1. Maak een nieuw script: `TikTokViralCalculator`
 2. Gebruik comments om je code netjes te organiseren:
+3. Gebruik basale rekenkunde in je berichten:
 
 ```csharp
 void Start()
@@ -313,7 +319,7 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
-## Oefening 6S: Gaming Setup Configurator ⭐⭐
+## Les1.2 Oefening 6S: Gaming Setup Configurator ⭐⭐
 
 **Thema:** Gaming Hardware
 
@@ -324,7 +330,8 @@ Een script dat jouw ultieme gaming setup beschrijft, inclusief berekeningen van 
 ### Opdracht:
 
 1. Maak een nieuw script: `GamingSetup`
-2. Gebruik comments om je code te organiseren:
+2. Gebruik comments om je code netjes te organiseren:
+3. Gebruik basale rekenkunde in je berichten:
 
 ```csharp
 void Start()
@@ -365,7 +372,7 @@ Verwerk je opdracht in je README. Deze bevat de titel van de opdracht, een korte
 
 ---
 
-## Oefening 7G: Social Media Dashboard ⭐⭐⭐
+## Les1.2 Oefening 7G: Social Media Dashboard ⭐⭐⭐
 
 **Thema:** Social Media en Influencers
 
@@ -376,7 +383,9 @@ Een dashboard dat verschillende social media statistieken toont, met realtime up
 ### Opdracht:
 
 1. Maak een nieuw script: `SocialMediaDashboard`
-2. Gebruik zowel `Start()` als `Update()`:
+2. Gebruik comments om je code netjes te organiseren:
+3. Gebruik basale rekenkunde in je berichten:
+4. Gebruik zowel `Start()` als `Update()`:
 
 ```csharp
 void Start()

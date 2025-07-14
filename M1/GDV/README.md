@@ -106,7 +106,7 @@ Voor alle opdrachten geldt dat je een titel met de opdracht plaatst. Een korte o
 ## Voorbeeld README Opdracht Format
 
 ```markdown
-# Opdracht 1.2: Spotify Playlist Generator
+# Les1.2 Oefening 1B: Spotify Playlist Generator
 
 ## Beschrijving
 
@@ -120,7 +120,7 @@ Ik heb een script gemaakt dat mijn favoriete muziekliedjes toont in de console, 
 
 ## Demo
 
-![Spotify Playlist Demo](link-naar-je-gif.gif)
+![Spotify Playlist Demo](link-naar-je-gifje)
 
 ## Code
 
