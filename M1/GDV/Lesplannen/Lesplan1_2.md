@@ -253,11 +253,9 @@ Wijs 4 hoeken/plekken in de klas aan:
 - Focus op 1 Beginner oefening
 - Docent geeft extra 1-op-1 begeleiding
 - Buddy-system met ervaren student
-- Stap-voor-stap checklist gebruiken
 
 ### <span style="color: #000000;">Voor Leerlingen met Leerproblemen:</span>
 
-- Visuele stappenplan uitprinten
 - Extra screenshots van verwachte resultaten
 - Meer tijd voor basis Debug.Log() oefening
 - Pauzeer regelmatig voor vragen
@@ -285,7 +283,10 @@ Wijs 4 hoeken/plekken in de klas aan:
 
 ### <span style="color: #000000;">Script opent niet</span>
 
-**Oplossing:** Unity Hub → Installs → Add modules → Visual Studio
+**Oplossing:**
+
+- VS installer → Modify → Unity Gamedevelopment
+- Unity → preferences → external tools → Visual Studio Community\*
 
 ### <span style="color: #000000;">Debug.Log() niet zichtbaar</span>
 
@@ -299,7 +300,7 @@ Wijs 4 hoeken/plekken in de klas aan:
 
 **Oplossing:** Terug naar basis, samen 1 regel schrijven
 
-### <span style="color: #000000;">Studenten zijn klaar te vroeg</span>
+### <span style="color: #000000;">Studenten zijn te vroeg klaar</span>
 
 **Oplossing:** Extra oefeningen, experimenteren, anderen helpen
 
