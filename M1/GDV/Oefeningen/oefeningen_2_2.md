@@ -9,14 +9,14 @@ Kies **minimaal 1 oefening** die past bij jouw niveau en interesse.
 - ⭐ **Beginner** - Je eerste keer met variabelen
 
   - [Les2.2 Oefening 1B: Level Counter](#les22-oefening-1b-level-counter-)
-  - [Les2.2 Oefening 2B: Score Tracker](#les22-oefening-2b-score-tracker-)
-  - [Les2.2 Oefening 3B: Color Changer](#les22-oefening-3b-color-changer-)
+  - [Les2.2 Oefening 2B: Simple Mover](#les22-oefening-2b-simple-mover-)
+  - [Les2.2 Oefening 3B: Size Controller](#les22-oefening-3b-size-controller-)
 
 - ⭐⭐ **Starter** - Je begrijpt variabelen en wilt input
 
-  - [Les2.2 Oefening 4S: Simple Mover](#les22-oefening-4s-simple-mover-)
-  - [Les2.2 Oefening 5S: Size Controller](#les22-oefening-5s-size-controller-)
-  - [Les2.2 Oefening 6S: Spinner](#les22-oefening-6s-spinner-)
+  - [Les2.2 Oefening 4S: Spinner](#les22-oefening-4s-spinner-)
+  - [Les2.2 Oefening 5S: Color Changer](#les22-oefening-5s-color-changer-)
+  - [Les2.2 Oefening 6S: Power Collector](#les22-oefening-6s-power-collector-)
 
 - ⭐⭐⭐ **Gevorderd** - Je wilt uitdaging met complexe variabelen
   - [Les2.2 Oefening 7G: Multi Control Object](#les22-oefening-7g-multi-control-object-)
