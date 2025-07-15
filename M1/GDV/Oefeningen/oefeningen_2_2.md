@@ -119,8 +119,6 @@ public class LevelCounter : MonoBehaviour
 - Zorg dat je kubus harder draait naarmate je meer experience hebt
 - Zorg dat je meer experience krijgt naar mate je in een hoger level komt
 - Laat je experience zien als je op info drukt
-- Zorg dat je experience betaalt om naar een hoger level te gaan
-- als je onvoldoende experience hebt kun je niet naar een hoger level
 
 ### Inlever Vereisten:
 
@@ -171,7 +169,7 @@ public class SimpleMover : MonoBehaviour
         Vector3 oudePositie = transform.position;
 
         // WASD movement
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.position + Vector3.forward;
         }
@@ -214,8 +212,6 @@ public class SimpleMover : MonoBehaviour
 - Voeg Q/E toe voor omhoog/omlaag bewegen
 - Maak een variabele voor de snelheid die je in kunt stellen in de inspector
 - Maak het object 2x sneller met wanneer je Shift inhoud
-- Tel het aantal keer dat je een stap hebt gezet en voeg dit toe aan je info
-- Zorg dat het spel afgelopen is als je 20 stappen hebt gezet
 
 ### Inlever Vereisten:
 
@@ -236,7 +232,7 @@ Een grootte controller waar je een GameObject groter en kleiner kunt maken met t
 ### Opdracht:
 
 1. Maak een nieuw script: `SizeController`
-2. Sleep het script op een GameObject naar keuze
+2. Sleep het script op een Cube
 3. Gebruik variabelen en input:
 
 ```csharp
@@ -309,7 +305,7 @@ public class SizeController : MonoBehaviour
 
 - Voeg maximum en minimum grootte toe
 - Roteer het object met de pijltjes (links en rechts)
-- Verplaats het object om hoog en omlaag met de pijltjes (omhoog en omlaag)
+- Verplaats het object omhoog en omlaag met de pijltjes (omhoog en omlaag)
 
 ### Inlever Vereisten:
 
@@ -409,7 +405,7 @@ public class Spinner : MonoBehaviour
 
 - Voeg sneller/langzamer draaien toe met toetsen (UP en Down)
 - Zorg voor een minimum en maximum draaisnelheid
-- Wissel de as waarover het object draait als je op de spatie drukt
+- Wissel de as waarover het object draait als je op de ENTER drukt
 - Zorg dat je bij de info ook ziet op welke as je draait
 - Tel hoeveel volledige rondes (360 graden) het object heeft gemaakt
 - Laat bij info zien hoeveel rondjes je hebt gedraaid
@@ -433,7 +429,7 @@ Een kleuren veranderaar waar je met toetsen de kleur van het GameObject kunt ver
 ### Opdracht:
 
 1. Maak een nieuw script: `ColorChanger`
-2. Sleep het script op een Capsule GameObject
+2. Sleep het script op een GameObject
 3. Gebruik variabelen en input:
 
 ```csharp
@@ -534,10 +530,11 @@ public class ColorChanger : MonoBehaviour
 
 ### Toevoegingen aan de code:
 
-- Voeg meer kleuren toe (paars, oranje, zwart) met eigen bewegingen
-- Laat het object draaien als je een bepaalde kleur kiest
+- Voeg meer kleuren toe (paars, oranje, zwart)
+- Maak het object groter elke keer als je van kleur wisselt
 - Voeg een "regenboog" modus toe die alle kleuren doorloopt
-- Zorg dat je na 10 kleurwisselingen een bonus krijgt (extra groot worden)
+- Zorg dat het blokje blijft roteren in regenboog modus
+- Zorg dat je na 10x kleuren wisselen in de regenboog modus gaat
 
 ### Inlever Vereisten:
 
@@ -709,10 +706,14 @@ public class PowerCollector : MonoBehaviour
 
 ### Toevoegingen aan de code:
 
-- Voeg een "super power" toe die 50 energie kost maar een spectaculair effect geeft
-- Maak energie die automatisch langzaam afneemt over tijd
-- Voeg verschillende power-ups toe (kleine +5, grote +25)
+- Voeg een "super power" toe die 50 energie kost
+- Zorg dat de energie automatisch langzaam afneemt over tijd
 - Laat het object automatisch draaien als de energie vol is
+- krimp het object naar een scale van 0.01f als de energy op is
+
+#### Bonus:
+
+- Door de "super power" moet het object rood knipperen en pulseren (groot klein)
 
 ### Inlever Vereisten:
 
@@ -895,7 +896,7 @@ public class MultiController : MonoBehaviour
 
 ### Toevoegingen aan de code:
 
-- Voeg geluid effecten toe (Debug.Log verschillende geluiden)
+- Pas de code aan zodat deze werkt met Input.GetAxis()
 - Maak presets (T-toets zet alles op een vooraf ingestelde configuratie)
 - Voeg een "random" modus toe die alles willekeurig verandert
 

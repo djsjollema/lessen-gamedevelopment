@@ -228,12 +228,12 @@ void Update()
     // Controleer WASD toetsen
     if (Input.GetKey(KeyCode.W))
     {
-        Debug.Log("W toets - Vooruit!");
+        Debug.Log("W toets - Omhoog!");
     }
 
     if (Input.GetKey(KeyCode.S))
     {
-        Debug.Log("S toets - Achteruit!");
+        Debug.Log("S toets - Omlaag!");
     }
 
     if (Input.GetKey(KeyCode.A))
@@ -280,6 +280,38 @@ void Update()
 
 ![input](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm5henp0eW5wcTg2bDNldXJwdXF4em8zdWs2OTViZDFkNWIyZm12ZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iwUVhMe4KBKuNAzoN7/giphy.gif)
 
+### Input.GetAxis() - Vloeiende Beweging
+
+Naast individuele toetsen controleren, heeft Unity ook een handige manier om beweging af te handelen met **Input.GetAxis()**:
+
+```csharp
+void Update()
+{
+    // Horizontale beweging (A/D toetsen of pijltjes links/rechts)
+    float horizontaal = Input.GetAxis("Horizontal");
+
+    // Verticale beweging (W/S toetsen of pijltjes omhoog/omlaag)
+    float verticaal = Input.GetAxis("Vertical");
+
+    Debug.Log("Horizontaal: " + horizontaal);
+    Debug.Log("Verticaal: " + verticaal);
+}
+```
+
+**Wat gebeurt er:**
+
+- `Input.GetAxis("Horizontal")` geeft een waarde tussen **-1** en **1**
+- **-1** = links (A toets of pijl links)
+- **0** = geen input
+- **1** = rechts (D toets of pijl rechts)
+
+**Voordelen van GetAxis():**
+
+- Werkt automatisch met WASD én pijltjestoetsen
+- Geeft vloeiende waarden (niet alleen 0 of 1)
+- Makkelijker om gamepad controllers later toe te voegen
+  ![Joystick](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHVmcDNoMW4yNzJlNjZ0ZGM4a2JzYW1oMHhsOWh5eWNxeTIwdWpoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SzhKkh9TrDtuKoZg1F/giphy.gif)
+
 ### Active Input Handling
 
 Unity heeft 2 manieren om de input van gebruikers te registreren en te verweken. Het **oude** inputsysteem (**Input Manager**) en het **nieuwe** input systeem (**Input System Package**).
@@ -321,12 +353,12 @@ public class SimpleMovement : MonoBehaviour
         // Input controleren en positie aanpassen
         if (Input.GetKey(KeyCode.W))
         {
-            positie.z = positie.z + snelheid * Time.deltaTime; // Vooruit
+            positie.y = positie.y + snelheid * Time.deltaTime; // Omhoog
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            positie.z = positie.z - snelheid * Time.deltaTime; // Achteruit
+            positie.y = positie.y - snelheid * Time.deltaTime; // Omlaag
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -347,15 +379,17 @@ public class SimpleMovement : MonoBehaviour
 
 ### Stap 2: Het Testen
 
-1. **Maak een GameObject** (bijvoorbeeld een Cube: GameObject → 3D Object → Cube)
-2. **Sleep het script** op de Cube
+1. **Maak een 2D GameObject** (GameObject → 2D Object → Sprite)
+2. **Sleep het script** op de Sprite
 3. **Druk op Play** en test de WASD toetsen!
 
 ### Wat Gebeurt Er?
 
 - `transform.position` → De positie van je GameObject
 - `Time.deltaTime` → Zorgt voor vloeiende beweging (onafhankelijk van framerate)
-- `Vector3` → Een 3D positie (x, y, z coördinaten)
+- `Vector3` → Een 3D positie (x, y, z coördinaten) - ook voor 2D bruikbaar!
+- **Y-as** → Voor 2D games is dit omhoog/omlaag beweging
+- **X-as** → Voor 2D games is dit links/rechts beweging
 
 ---
 
