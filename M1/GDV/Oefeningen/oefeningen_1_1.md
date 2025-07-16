@@ -10,7 +10,7 @@ Voor alle oefeningen geldt dat je een titel met de opdracht plaatst. Een korte o
 
 [gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
 
-## Oefening 1A: Primitive Building Challenge
+## Oefening 1.1A: Primitive Building Challenge
 
 ### Doel
 
@@ -50,7 +50,7 @@ Bouw een huis met alleen basis GameObjects (cubes, spheres, cylinders).
 
 ---
 
-## Oefening 1B: Gaming Setup Diorama
+## Oefening 1.1B: Gaming Setup Diorama
 
 ### Doel
 
@@ -93,7 +93,7 @@ Bouw een gaming kamer scene met meubels en gaming gear.
 
 ---
 
-## Oefening 1C: Retro Arcade Machine Builder
+## Oefening 1.1C: Retro Arcade Machine Builder
 
 ### Doel
 

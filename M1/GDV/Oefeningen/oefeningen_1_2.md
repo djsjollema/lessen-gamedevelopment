@@ -10,7 +10,7 @@ Voor alle oefeningen geldt dat je een titel met de opdracht plaatst. Een korte o
 
 [gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
 
-## Oefening 2A: Personal Gaming Profile Generator
+## Oefening 1.2A: Personal Gaming Profile Generator
 
 ### Doel
 
@@ -59,7 +59,7 @@ void Start()
 
 ---
 
-## Oefening 2B: Discord Bot Simulator
+## Oefening 1.2B: Discord Bot Simulator
 
 ### Doel
 
@@ -122,7 +122,7 @@ void Start()
 
 ---
 
-## Oefening 2C: YouTube Video Logger
+## Oefening 1.2C: YouTube Video Logger
 
 ### Doel
 

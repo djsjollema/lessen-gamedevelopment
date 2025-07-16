@@ -10,7 +10,7 @@ Voor alle oefeningen geldt dat je een titel met de opdracht plaatst. Een korte o
 
 [gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
 
-## Oefening 3A: Interactive Gaming Museum
+## Oefening 1.3A: Interactive Gaming Museum
 
 ### Doel
 
@@ -320,7 +320,7 @@ Bouw een museum scene met gaming artifacts die informatie tonen via scripts.
 
 ---
 
-## Oefening 3B: Esports Tournament Setup
+## Oefening 1.3B: Esports Tournament Setup
 
 ### Doel
 
@@ -431,7 +431,7 @@ Maak een tournament venue met gaming setups die tournament informatie broadcaste
 
 ---
 
-## Oefening 3C: Gaming Café Manager
+## Oefening 1.3C: Gaming Café Manager
 
 ### Doel
 
