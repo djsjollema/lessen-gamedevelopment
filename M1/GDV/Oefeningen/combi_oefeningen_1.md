@@ -1,4 +1,4 @@
-# Gecombineerde Oefeningen Les 1: Unity Interface & Scripting
+# Combi Oefeningen Les 1: Unity Interface & Scripting
 
 Kies 1 van de volgende oefeningen en voer die uit. Je mag er ook meer maken als je dat leuk vind en daar ook tijd voor over hebt.
 
