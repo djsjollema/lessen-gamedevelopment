@@ -1,5 +1,15 @@
 # Oefeningen Les 1.2: C# Scripting Basics
 
+Kies 1 van de volgende oefeningen en voer die uit. Je mag er ook meer maken als je dat leuk vind en daar ook tijd voor over hebt.
+
+## Inleveren werk
+
+De oefeningen moeten jullie inleveren via een zogenaamde README.md file op Github.
+
+Voor alle oefeningen geldt dat je een titel met de opdracht plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
+
+[gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
+
 ## Oefening 2A: Personal Gaming Profile Generator
 
 ### Doel

@@ -8,6 +8,8 @@ De oefeningen moeten jullie inleveren via een zogenaamde README.md file op Githu
 
 Voor alle oefeningen geldt dat je een titel met de opdracht plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
 
+[gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
+
 ## Oefening 1A: Primitive Building Challenge
 
 ### Doel
