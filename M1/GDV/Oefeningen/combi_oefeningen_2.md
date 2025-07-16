@@ -58,7 +58,7 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("🏎️ RACING GAME STARTED 🏎️");
+        Debug.Log("RACING GAME STARTED");
         Debug.Log("Driver: " + driverName);
         Debug.Log("Controls: WASD = Drive, Space = Brake, Shift = Nitro");
         Debug.Log("Press I for car info, R to reset");
@@ -272,7 +272,7 @@ public class NPCPatroller : MonoBehaviour
             Debug.LogWarning(npcName + " has no patrol points!");
         }
 
-        Debug.Log("🤖 " + npcName + " reporting for duty!");
+        Debug.Log("Robot " + npcName + " reporting for duty!");
         Debug.Log("Type: " + npcType);
     }
 
@@ -594,13 +594,13 @@ public class MovingObstacle : MonoBehaviour
 
             if (isDeadly)
             {
-                Debug.Log("💀 " + obstacleName + " hit player! (Hit #" + playerHits + ")");
+                Debug.Log(obstacleName + " hit player! (Hit #" + playerHits + ")");
                 // Reset player or decrease health
                 other.transform.position = Vector3.zero;
             }
             else
             {
-                Debug.Log("⚠️ " + obstacleName + " bumped player (Hit #" + playerHits + ")");
+                Debug.Log(obstacleName + " bumped player (Hit #" + playerHits + ")");
             }
         }
     }
@@ -655,7 +655,7 @@ public class CourseManager : MonoBehaviour
             player.position = startPoint.position;
         }
 
-        Debug.Log("🏁 Welcome to: " + courseName);
+        Debug.Log("Welcome to: " + courseName);
         Debug.Log("Difficulty: " + difficulty + "/5");
         Debug.Log("Press SPACE to start the course!");
         Debug.Log("Press O for obstacle info, C for course info");
@@ -694,7 +694,7 @@ public class CourseManager : MonoBehaviour
     {
         courseStarted = true;
         courseTime = 0.0f;
-        Debug.Log("🏃‍♂️ Course started! Good luck!");
+        Debug.Log("Course started! Good luck!");
     }
 
     void CheckFinish()
@@ -716,17 +716,17 @@ public class CourseManager : MonoBehaviour
         if (courseTime < bestTime)
         {
             bestTime = courseTime;
-            Debug.Log("🏆 NEW BEST TIME: " + bestTime.ToString("F2") + " seconds!");
+            Debug.Log("NEW BEST TIME: " + bestTime.ToString("F2") + " seconds!");
         }
 
-        Debug.Log("✅ Course completed in " + courseTime.ToString("F2") + " seconds!");
+        Debug.Log("Course completed in " + courseTime.ToString("F2") + " seconds!");
         Debug.Log("Deaths: " + totalDeaths);
     }
 
     public void PlayerDied() // Called from other scripts
     {
         totalDeaths++;
-        Debug.Log("💀 Player died! (Death #" + totalDeaths + ")");
+        Debug.Log("Player died! (Death #" + totalDeaths + ")");
 
         if (player != null)
         {
