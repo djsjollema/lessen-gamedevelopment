@@ -47,7 +47,7 @@ Deze Unity game development cursus bestaat uit **8 weken** met telkens **2 lesse
 ### Week 4: Interactie en Detectie
 
 - **Les 4.1**: Colliders, triggers en tags gebruiken
-- **Les 4.2**: Botsingen afvangen met code (OnTriggerEnter2D / OnCollisionEnter2D)
+- **Les 4.2**: Botsingen afvangen met code (OnTriggerEnter & OnCollisionEnter)
 
 ### Week 5: Logica en Beslissingen
 
@@ -66,7 +66,7 @@ Deze Unity game development cursus bestaat uit **8 weken** met telkens **2 lesse
 
 ### Week 8: Afronding
 
-- **Les 8.1**: Opdrachten afronden of mini-project verder uitwerken
+- **Les 8.1**: Oefeningen en aantekeningen afronden of mini-project verder uitwerken
 - **Les 8.2**: Laatste afronding en voorbereiding op herkansing
 
 ## Leeruitkomsten
