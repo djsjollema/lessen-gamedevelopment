@@ -246,6 +246,26 @@ Probeer deze objecten toe te voegen:
 
 ## ![controls](../gfx/1_1_controls.png)
 
+### Local vs Global Transform Modes
+
+In de Scene View zie je bovenin een toggle knop tussen **Local** en **Global**. Dit bepaalt hoe Unity je GameObjects manipuleert:
+
+![Local vs Global](../gfx/1_1_local_global.png)
+
+#### Global Mode
+
+- **Wereldcoördinaten** - alles relatief aan de scene
+- **X-as** wijst altijd naar rechts (rood)
+- **Y-as** wijst altijd omhoog (groen)
+- **Z-as** wijst altijd vooruit (blauw)
+- Handig voor: Objecten precies plaatsen in de wereld
+
+#### Local Mode
+
+- **Object coördinaten** - relatief aan het object zelf
+- **Assen draaien mee** met je GameObject
+- Handig voor: Objecten ten opzichte van zichzelf bewegen
+
 ## Wat Zijn Scenes?
 
 ### Scene = Een Level

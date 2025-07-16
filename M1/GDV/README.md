@@ -1,6 +1,6 @@
-# Inleiding tot Unity Game Development
+# Overzicht lessen Game Development GDV
 
-## Wat is Unity?
+## Werken met Unity?
 
 Unity is een krachtige, cross-platform game engine en ontwikkelomgeving waarmee je relatief makkelijk en snel 2D en 3D games kunt maken. Unity werd oorspronkelijk gelanceerd in 2005 en is uitgegroeid tot een van de meest populaire game engines in de industrie, gebruikt door zowel indie-ontwikkelaars als grote studio's.
 
@@ -83,25 +83,29 @@ Na het voltooien van deze lessenreeks kun je:
 - Loops gebruiken voor herhalende acties
 - Een eenvoudig maar compleet spel prototype maken
 
-## Opdrachten
+## Oefeningen
 
 De sleutel tot succes met Unity en C# is het doen van zo veel mogelijk oefeningen en het opbouwen van termen kennis waarmee je later makkelijker kunt zoeken naar oplossingen.
 
 ### Kiezen oefeningen
 
-Jullie moeten elke les minimaal 1 oefening uitvoeren die gaat over de behandelde stof. Je krijgt hierbij wel zelf de keuze om een oefening te kiezen die past bij je niveau en interesse. Dit zijn dus 2 oefeningen per week.
+Jullie krijgen elk GDV lesblok (2 uur) na de uitleg zelf de keuze uit een aantal oefeningen om te doen. Doe deze oefening direct en probeer deze voor het einde van de les af te hebben. Elke week is er ook huiswerk en moet je ook een combinatie oefening voor die week doen. Hierbij wordt de stof uit beide lesblokken samengevoegd tot 1 oefening. Ook hier heb je zelf de keuze welke je doet.
+
+### Hulp vragen
+
+De belangrijkste reden om tijdens de lesblokken aan de oefeningen te werken is dat je dan makkelijk vragen kunt stellen. Ook is de stof dan nog vers. Het verwerken in een oefening helpt om de kennis vast te leggen in je hoofd. Kom je ergens niet uit of begrijp je iets niet uit de opdracht steek je hand op en vraag het dan gelijk.
 
 ### Aantekeningen
 
-Daarnaast is het ook een opdracht om een Gamedevelopment notitie boek te maken. Dit is een readme waarin je je aantekeningen zet van de behandelde stof uit de les in je eigen woorden zodat jij het zelf later weer begrijpt.
+Naast het opletten in de les en het doen van de oefeningen is het ook een opdracht om een development notitie boek te maken. Dit is een readme waarin je je aantekeningen zet van de behandelde stof uit de les in je eigen woorden zodat jij het zelf later weer begrijpt. Deze reamde lever je aan het einde van de periode in op simulise.
 
 ## Inleveren werk
 
-De opdrachten moeten jullie inleveren via een zogenaamde README.md file op Github.
+De oefeningen moeten jullie inleveren via een zogenaamde README.md file op Github.
 
-In week 4 leren jullie bij de **SKILL-GitHub** lessen meer over hoe je README bestanden opmaakt en hier beeld materiaal in verwerkt.
+In week 4 leren jullie bij de **SKILL-GitHub** lessen meer over hoe je README bestanden opmaakt en hier beeld materiaal in verwerkt. Tot die tijd volstaat het om de oefeningen aan de docent te laten zien.
 
-Voor alle opdrachten geldt dat je een titel met de opdracht plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
+Voor alle oefeningen geldt dat je een titel plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
 
 ## Voorbeeld README Opdracht Format
 
