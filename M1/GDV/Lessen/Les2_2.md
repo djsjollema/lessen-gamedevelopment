@@ -178,6 +178,70 @@ void Start()
 
 ---
 
+## Assignment en Rekenkundige Operatoren
+
+### Assignment Operator (=)
+
+De **assignment operator** `=` gebruik je om waarden toe te kennen aan variabelen:
+
+```csharp
+void Start()
+{
+    int leven = 100;        // Eerste waarde toekennen
+    leven = 75;             // Nieuwe waarde toekennen
+    leven = leven - 25;     // Berekening met huidige waarde
+    Debug.Log("Leven: " + leven);
+}
+```
+
+**Belangrijk:** `=` betekent **"ken toe"**, niet **"is gelijk aan"**!
+
+### Rekenkundige Operatoren
+
+```csharp
+void Start()
+{
+    int a = 10, b = 3;
+    Debug.Log("Som: " + (a + b));        // 13
+    Debug.Log("Verschil: " + (a - b));   // 7
+    Debug.Log("Product: " + (a * b));    // 30
+    Debug.Log("Deling: " + (a / b));     // 3 (integer levert heel afgerond getal op!)
+    Debug.Log("Rest: " + (a % b));       // 1 (modulo)
+}
+```
+
+**Operatoren:** `+` `-` `*` `/` `%` (modulo = rest bij deling)
+
+### Kortere Schrijfwijzen
+
+```csharp
+void Start()
+{
+    int score = 100;
+    score += 50;    // score = score + 50
+    score -= 25;    // score = score - 25
+    score *= 2;     // score = score * 2
+    score /= 5;     // score = score / 5
+
+    score++;        // score = score + 1
+    score--;        // score = score - 1
+
+    Debug.Log("Eindresultaat: " + score);
+}
+```
+
+### Integer vs Float Deling
+
+```csharp
+void Start()
+{
+    Debug.Log("Int deling: " + (10 / 3));        // 3 (geen komma!)
+    Debug.Log("Float deling: " + (10.0f / 3.0f)); // 3.333333
+}
+```
+
+---
+
 ## Input van Toetsenbord
 
 Nu gaan we kijken hoe je kunt reageren op toetsenbordinvoer. Dit doen we in de `Update()` functie omdat we elke frame willen controleren of er een toets wordt ingedrukt.
@@ -211,6 +275,41 @@ if (hetRegent == true)
 ```
 
 ![Rain](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM29td2U0cnZsa2ZxZnJzNXV3aXU2dWd3c3N0ODh1OWNmaDdwemFpaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WoqIEpOqZIRQHrtbQ5/giphy.gif)
+
+### Vergelijkingsoperators
+
+Vaak wil je niet alleen controleren of iets **waar** of **onwaar** is, maar ook **vergelijken** met getallen:
+
+```csharp
+int leven = 50;
+
+// Groter dan
+if (leven > 0)
+{
+    Debug.Log("Speler leeft nog!");
+}
+// Kleiner dan
+if (leven < 20)
+{
+    Debug.Log("Weinig leven over!");
+}
+// Kleiner dan of gelijk aan
+if (leven <= 10)
+{
+    Debug.Log("Kritiek laag leven!");
+}
+
+```
+
+**De belangrijkste vergelijkingsoperators:**
+
+- `>` → groter dan
+- `<` → kleiner dan
+- `>=` → groter dan of gelijk aan
+- `<=` → kleiner dan of gelijk aan
+- `==` → gelijk aan (LET OP: dubbele = !)
+
+**Belangrijk:** Gebruik altijd `==` om te vergelijken, niet `=`. Een enkele `=` is voor het **toekennen** van waarden!
 
 ### Input.GetKey() - Toets Ingedrukt Houden
 

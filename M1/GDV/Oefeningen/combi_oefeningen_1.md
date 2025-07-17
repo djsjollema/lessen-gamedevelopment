@@ -254,7 +254,7 @@ Bouw een museum scene met gaming artifacts die informatie tonen via scripts.
    }
    ```
 
-#### Deel 5: Setup Instructions
+#### Deel 5: Setup Instructions (Bonus , Niet verplicht!)
 
 10. **Museum setup voor interactivity:**
 
@@ -272,51 +272,6 @@ Bouw een museum scene met gaming artifacts die informatie tonen via scripts.
     - Test de **detectionRange** (3.0f is meestal goed)
 
 ![resultaat](../gfx/1_2_RESULT_game_museum.gif)
-
-#### Deel 6: Advanced Features (Extra Uitdaging)
-
-11. **Voeg visual feedback toe** `ExhibitGlow.cs`:
-
-    ```csharp
-    public class ExhibitGlow : MonoBehaviour
-    {
-        /*
-        Visual feedback when player approaches
-        Changes exhibit color when in range
-        */
-
-        private Renderer objectRenderer;
-        private Color originalColor;
-        public Color highlightColor = Color.yellow;
-
-        void Start()
-        {
-            objectRenderer = GetComponent<Renderer>();
-            originalColor = objectRenderer.material.color;
-        }
-
-        public void OnPlayerNear()
-        {
-            objectRenderer.material.color = highlightColor;
-            Debug.Log(gameObject.name + " is glowing!");
-        }
-
-        public void OnPlayerFar()
-        {
-            objectRenderer.material.color = originalColor;
-        }
-    }
-    ```
-
-### Bonus Uitdagingen
-
-- **Voeg meer gaming tijdperken toe:** NES, PlayStation, Xbox
-- **Maak thematische secties:** Handhelds, Consoles, PC Gaming
-- **Voeg beveiligings camera's toe** (extra cubes met scripts)
-- **Simuleer museum openingstijden** met tijd-gebaseerde berichten
-- **Voeg UI teksten toe** in plaats van alleen Console berichten
-- **Maak een "museum map"** die toont waar je bent
-- **Voeg achtergrond muziek toe** per museum sectie
 
 ---
 
