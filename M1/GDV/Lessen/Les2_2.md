@@ -422,7 +422,6 @@ Wij maken voor deze lessen dus voorlopig nog gebruik van het oude input systeem.
 Unity 6 stelt standaard het nieuwe input systeem in voor gebruik. Dus om het oude systeem te kunnen gebruiken moeten wij dat zelf even instellen:
 
 Edit → Project Settings → Player → Other Settings → Active Input Handling → **Input Manager (Old) / Both**
-![Active Input Handling](../gfx/2_2_active_input_handling.png)
 
 Als je de wijziging hebt gemaakt start unity opnieuw op en kun je het oude input systeem gebruiken.
 
@@ -630,4 +629,5 @@ In Les 3.1 gaan we physics toevoegen aan onze GameObjects. Dan krijgen we echte 
 - Vergeten aanhalingstekens rond strings
 - Verkeerde datatype gebruiken
 
+---
 ---

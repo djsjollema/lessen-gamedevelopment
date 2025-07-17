@@ -41,7 +41,7 @@ In Les 3.1 heb je Colliders leren kennen voor **physics botsingen**. Maar Collid
 1. **Maak een Cube** (GameObject → 3D Object → Cube)
 2. **Selecteer de Cube** in de Hierarchy
 3. **Kijk naar de Box Collider** in de Inspector
-4. **Vink "Is Trigger" aan** ✅
+4. **Vink "Is Trigger" aan**
 
 ![trigger setup](../gfx/4_1_trigger_setup.png)
 
@@ -142,7 +142,7 @@ Een Rigidbody component geeft een GameObject physics eigenschappen. Voor trigger
 2. Hernoem naar **"Coin"**
 3. Geef tag **"Pickup"**
 4. Ga naar **Sphere Collider** in Inspector
-5. **Vink "Is Trigger" aan** ✅
+5. **Vink "Is Trigger" aan**
 
 **Stap 3: Test de Setup**
 
@@ -278,11 +278,11 @@ Via **Project Settings → Physics → Settings** kun je bepalen welke layers me
 
 **Checklist:**
 
-1. ✅ Is "Is Trigger" aangevinkt?
-2. ✅ Heeft één object een Rigidbody?
-3. ✅ Zijn beide objecten actief (not disabled)?
-4. ✅ Overlappen de colliders daadwerkelijk?
-5. ✅ Staat het script op het juiste object?
+1. Is "Is Trigger" aangevinkt?
+2. Heeft één object een Rigidbody?
+3. Zijn beide objecten actief (not disabled)?
+4. Overlappen de colliders daadwerkelijk?
+5. Staat het script op het juiste object?
 
 ### "Objects vallen door de grond"
 

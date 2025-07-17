@@ -86,7 +86,7 @@ void DoJump()
 
 ---
 
-### 💡 Functies vs Methods
+### Functies vs Methods
 
 **Functies** die beschikbaar worden gemaakt voor andere scripts (met het keyword `public`) noem je **Methods**.
 
@@ -494,7 +494,7 @@ public class GameLogic : MonoBehaviour
 
 ## Function Naming Best Practices
 
-### Goede Function Namen ✅
+### Goede Function Namen - Goed
 
 ```csharp
 // Verbs (werkwoorden) voor acties
@@ -518,7 +518,7 @@ float CalculateDistance()
 int CalculateScore()
 ```
 
-### Slechte Function Namen ❌
+### Slechte Function Namen - Slecht
 
 ```csharp
 void DoStuff()        // Te vaag
@@ -552,13 +552,13 @@ public class ScopeExample : MonoBehaviour
         // localHealth kan NIET in ShowScore() gebruikt worden!
     }
     void AddScore(int amount){
-        globalScore += amount;  // ✅ Werkt - globalScore = global & amount = local
+        globalScore += amount;  // Werkt - globalScore = global & amount = local
     }
     void ShowScore()
     {
-        Debug.Log("Score: " + globalScore);     // ✅ Werkt - global variabele
-        Debug.Log(localHealth);                 // ❌ FOUT! localHealth bestaat hier niet
-        Debug.Log(amount);                      // ❌ FOUT! amount bestaat hier niet
+        Debug.Log("Score: " + globalScore);     //  Werkt - global variabele
+        Debug.Log(localHealth);                 //  FOUT! localHealth bestaat hier niet
+        Debug.Log(amount);                      //  FOUT! amount bestaat hier niet
     }
 
 
@@ -567,9 +567,9 @@ public class ScopeExample : MonoBehaviour
 
 **Simpele regel:**
 
-- **Global** (gemaakt buiten functies) → Overal bruikbaar `globalScore`
-- **Local** (gemaakt binnen functies) → Alleen in die functie `localHealth`
-- **Parameters** (gemaakt binnen functies) → Alleen in die functie `amount`
+- **Global** (gemaakt buiten functies) - Overal bruikbaar `globalScore`
+- **Local** (gemaakt binnen functies) - Alleen in die functie `localHealth`
+- **Parameters** (gemaakt binnen functies) - Alleen in die functie `amount`
 
 ---
 

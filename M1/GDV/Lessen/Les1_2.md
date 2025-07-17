@@ -189,7 +189,7 @@ void Start()
 
 **Gefeliciteerd!** Je hebt je eerste code geschreven!
 
-### 🧪 Experimenten
+### Experimenten
 
 Probeer deze verschillende berichten:
 
@@ -258,7 +258,7 @@ void Start()
 
 ### Comment Tips
 
-✅ **Goede comments:**
+**Goede comments:**
 
 ```csharp
 // Controleer of de speler springt
@@ -266,7 +266,7 @@ void Start()
 // Sla de highscore op
 ```
 
-❌ **Slechte comments:**
+**Slechte comments:**
 
 ```csharp
 // Debug.Log uitvoeren

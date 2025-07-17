@@ -90,11 +90,11 @@ Selecteer je kubus en kijk naar het **Rigidbody component** in de Inspector:
 - **Use Gravity**: Of zwaartekracht werkt (meestal true)
 - **Is Kinematic**: Of het object reageert op physics (false = reageert wel)
 
-**🧪 Experimenten:**
+**Experimenten:**
 
-- Zet Mass op 10 → object valt zwaarder
-- Zet Drag op 5 → object valt langzamer
-- Zet Use Gravity uit → object valt niet meer
+- Zet Mass op 10 - object valt zwaarder
+- Zet Drag op 5 - object valt langzamer
+- Zet Use Gravity uit - object valt niet meer
 
 ---
 
@@ -123,7 +123,7 @@ Selecteer je kubus en kijk naar het **Rigidbody component** in de Inspector:
 - **Material**: Physics materiaal (hoe stuiterig/glad)
 - **Size/Radius**: Afmetingen van de collider
 
-**💡 Tip:** Als meerdere objecten een rigidbody hebben hebben ze invloed op elkaars bewegingen.
+**Tip:** Als meerdere objecten een rigidbody hebben hebben ze invloed op elkaars bewegingen.
 
 ![rigidbodies](../gfx/3_1_cube_ball_roll.gif)
 
@@ -260,7 +260,7 @@ public class BallController : MonoBehaviour
 2. **Sleep het Physics Material** naar het **Material veld** in de Collider
 3. **Test het effect** in Play Mode
 
-**🧪 Experimenten:**
+**Experimenten:**
 
 - Maak een super stuiterige bal (Bounciness 1.0)
 - Maak een ijsglad oppervlak (Friction 0.0)
@@ -270,7 +270,7 @@ public class BallController : MonoBehaviour
 
 ## Physics Best Practices
 
-### Do's ✅
+### Do's - Goed
 
 ```csharp
 // Gebruik FixedUpdate voor physics code
@@ -289,7 +289,7 @@ if (rb != null)
 rb.AddForce(Vector3.forward * thrust);
 ```
 
-### Don'ts ❌
+### Don'ts - Slecht
 
 ```csharp
 // Verander niet handmatig position van physics objecten

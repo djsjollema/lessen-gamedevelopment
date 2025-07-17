@@ -774,7 +774,7 @@ Debug.Log(playerLevel >= 10 ? "Expert Player!" : "Beginner Player");
 Color healthColor = health > 20 ? Color.green : Color.red;
 ```
 
-**💡 Tip:** Gebruik ternary voor simpele beslissingen. Voor complexere logica zijn gewone if-statements duidelijker!
+**Tip:** Gebruik ternary voor simpele beslissingen. Voor complexere logica zijn gewone if-statements duidelijker!
 
 ### Early Returns - Inverteren
 

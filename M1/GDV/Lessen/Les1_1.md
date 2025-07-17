@@ -57,7 +57,7 @@ Unity wordt gebruikt voor bekende games zoals:
    - **Android Build Support** (optioneel voor mobiele games)
    - **WebGL Build Support** (optioneel voor browser games)
 
-**💡 Tip:** LTS versies zijn stabieler en worden langer ondersteund!
+**Tip:** LTS versies zijn stabieler en worden langer ondersteund!
 
 ---
 
@@ -222,19 +222,13 @@ Dus de components die op een gameobject zitten bepalen de mogelijkheden en gedra
 - **Rotation**: Draai de cube
 - **Scale**: Maak de cube groter of kleiner
 
-**Experiment:**
+**Wauw!** Je kubus valt nu naar beneden door zwaartekracht!
+
+**Experimenten:**
 
 - Zet Position X op 2
-- Zet Scale Y op 3
 - Zet Rotation Z op 45
-
-### Stap 3: Meer GameObjects Toevoegen
-
-Probeer deze objecten toe te voegen:
-
-- **Sphere** (bol)
-- **Cylinder** (cilinder)
-- **Plane** (vlak oppervlak)
+- Zet Scale Y op 3
 
 **Tips:**
 
@@ -289,7 +283,7 @@ Een **Scene** is zoals een **level** in je game:
 
 1. **Dubbelklik op een scene in je project window**
 
-**💡 Tip:** Je kunt meerdere scenes hebben en ertussen schakelen!
+**Tip:** Je kunt meerdere scenes hebben en ertussen schakelen!
 
 ---
 
@@ -353,7 +347,7 @@ Assets/
 
 ### Belangrijke Waarschuwing!
 
-**⚠️ LET OP:** Alle veranderingen die je maakt tijdens Play Mode gaan verloren wanneer je stopt!
+**LET OP:** Alle veranderingen die je maakt tijdens Play Mode gaan verloren wanneer je stopt!
 
 **Tip:** Verander de playmode tint zodat je het altijd duidelijk ziet wanneer Unity op playmode staat.
 
@@ -379,7 +373,7 @@ De **Main Camera** bepaalt wat de speler ziet:
 2. Verander de **Position** in de Inspector
 3. Druk op **Play** om het effect te zien
 
-**🧪 Experiment:**
+**Experiment:**
 
 - Zet de camera hoger (Y = 5)
 - Laat de camera naar beneden kijken (Rotation X = 45)

@@ -56,8 +56,8 @@ Deze Unity game development cursus bestaat uit **8 weken** met telkens **2 lesse
 
 ### Week 6: Collecties en Herhaling
 
-- **Les 6.1**: Introductie lijsten in C#
-- **Les 6.2**: For- en foreach-loops gebruiken
+- **Les 6.1**: Introductie lijsten in C# - List<> maken, items toevoegen/verwijderen, door lijsten itereren
+- **Les 6.2**: For- en foreach-loops gebruiken - geavanceerde loops, nested loops, loop control
 
 ### Week 7: Evaluatie en Inhaal
 

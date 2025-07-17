@@ -1,4 +1,4 @@
-# Les 4.2: Botsingen Afvangen met Code
+# Les 4.2: Collisions Afvangen met Code
 
 ## Wat Ga Je Leren?
 
@@ -168,7 +168,7 @@ public class CollisionHandler : MonoBehaviour
 
 ## Praktische Voorbeelden
 
-### 1. Pickup Item System (met Functies uit Les 3.2)
+### 1. Pickup Item System (met OnTriggerEnter)
 
 ```csharp
 public class PickupItem : MonoBehaviour
@@ -217,51 +217,7 @@ public class PickupItem : MonoBehaviour
 }
 ```
 
-### 2. Checkpoint System
-
-```csharp
-public class Checkpoint : MonoBehaviour
-{
-    public Vector3 respawnPosition;
-    private bool isActivated = false;
-
-    void Start()
-    {
-        respawnPosition = transform.position;
-        GetComponent<Collider>().isTrigger = true;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player") && !isActivated)
-        {
-            ActivateCheckpoint();
-        }
-    }
-
-    // Functie om checkpoint te activeren (Les 3.2 organisatie!)
-    void ActivateCheckpoint()
-    {
-        isActivated = true;
-        Debug.Log("Checkpoint activated!");
-
-        // Verander kleur naar groen
-        ChangeColor(Color.green);
-    }
-
-    // Herbruikbare functie voor kleur veranderen
-    void ChangeColor(Color newColor)
-    {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.material.color = newColor;
-        }
-    }
-}
-```
-
-### 3. Damage Zone (met OnTriggerStay)
+### 2. Damage Zone (met OnTriggerStay)
 
 ```csharp
 public class DamageZone : MonoBehaviour
@@ -326,77 +282,7 @@ public class DamageZone : MonoBehaviour
 }
 ```
 
-### 4. Auto Door System (met Physics)
-
-```csharp
-public class AutoDoor : MonoBehaviour
-{
-    public float openSpeed = 2.0f;
-    private Vector3 closedPosition;
-    private Vector3 openPosition;
-    private bool isPlayerNear = false;
-
-    void Start()
-    {
-        closedPosition = transform.position;
-        openPosition = closedPosition + Vector3.up * 3.0f; // 3 units omhoog
-
-        GetComponent<Collider>().isTrigger = true;
-    }
-
-    void Update()
-    {
-        MoveDoor();
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            OpenDoor();
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            CloseDoor();
-        }
-    }
-
-    // Functie om deur te openen
-    void OpenDoor()
-    {
-        isPlayerNear = true;
-        Debug.Log("Door opening...");
-    }
-
-    // Functie om deur te sluiten
-    void CloseDoor()
-    {
-        isPlayerNear = false;
-        Debug.Log("Door closing...");
-    }
-
-    // Functie om deur te bewegen (gebruikt Les 2.1 kennis!)
-    void MoveDoor()
-    {
-        Vector3 targetPosition;
-        if(isPlayerNear)
-        {
-            targetPosition = openPosition;
-        }
-        else
-        {
-            targetPosition = closedPosition;
-        }
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, openSpeed * Time.deltaTime);
-    }
-}
-```
-
-### 5. Bouncing Ball (Physics Collision)
+### 3. Bouncing Ball (met OnCollisionEnter)
 
 ```csharp
 public class BouncingBall : MonoBehaviour
@@ -445,182 +331,21 @@ public class BouncingBall : MonoBehaviour
 
 ---
 
-## Combineer Input met Collisions (Les 2.2 + 4.2)
-
-### Player Controller met Collision Detection
-
-```csharp
-public class PlayerController : MonoBehaviour
-{
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-    private Rigidbody rb;
-    private bool isGrounded = false;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    void Update()
-    {
-        HandleMovement(); // Les 2.2 input kennis
-        HandleJumping();
-    }
-
-    // Beweging met input (Les 2.2)
-    void HandleMovement()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(horizontal, 0, vertical);
-        rb.AddForce(movement * moveSpeed);
-    }
-
-    // Springen met collision check
-    void HandleJumping()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            Jump();
-        }
-    }
-
-    // Collision detection voor grond check
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-            Debug.Log("Player landed!");
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-            Debug.Log("Player left ground!");
-        }
-    }
-
-    // Jump functie (Les 3.2 organisatie)
-    void Jump()
-    {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        Debug.Log("Player jumped!");
-    }
-}
-```
-
----
-
 ## Tag Comparison Best Practices
 
 ### CompareTag() - De Betere Methode (Herhaling Les 4.1)
 
 ```csharp
-// ✅ Goed - gebruikt CompareTag()
+// Goed - gebruikt CompareTag()
 if (other.gameObject.CompareTag("Player"))
 {
     Debug.Log("Player detected!");
 }
 
-// ❌ Minder goed - string vergelijking
+// Minder goed - string vergelijking
 if (other.gameObject.tag == "Player")
 {
     Debug.Log("Player detected!");
-}
-```
-
----
-
-## Debugging Collisions en Triggers
-
-### Debug Script
-
-```csharp
-public class CollisionDebugger : MonoBehaviour
-{
-    void OnTriggerEnter(Collider other)
-    {
-        LogTriggerInfo("TRIGGER ENTER", other);
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        LogTriggerInfo("TRIGGER EXIT", other);
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        LogCollisionInfo("COLLISION ENTER", collision);
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        LogCollisionInfo("COLLISION EXIT", collision);
-    }
-
-    // Functie voor trigger debug info
-    void LogTriggerInfo(string eventType, Collider other)
-    {
-        Debug.Log("=== " + eventType + " ===");
-        Debug.Log("This object: " + gameObject.name);
-        Debug.Log("Other object: " + other.gameObject.name);
-        Debug.Log("Other tag: " + other.gameObject.tag);
-        Debug.Log("Has Rigidbody: " + (other.GetComponent<Rigidbody>() != null));
-    }
-
-    // Functie voor collision debug info
-    void LogCollisionInfo(string eventType, Collision collision)
-    {
-        Debug.Log("=== " + eventType + " ===");
-        Debug.Log("This object: " + gameObject.name);
-        Debug.Log("Other object: " + collision.gameObject.name);
-        Debug.Log("Impact force: " + collision.relativeVelocity.magnitude);
-    }
-}
-```
-
-### Veelvoorkomende Problemen en Oplossingen
-
-**❌ OnTriggerEnter werkt niet:**
-
-```csharp
-// Checklist functie
-void CheckTriggerSetup()
-{
-    Debug.Log("=== TRIGGER SETUP CHECK ===");
-
-    Collider col = GetComponent<Collider>();
-    Debug.Log("Has Collider: " + (col != null));
-    Debug.Log("Is Trigger: " + (col != null ? col.isTrigger : false));
-
-    Rigidbody rb = GetComponent<Rigidbody>();
-    Debug.Log("Has Rigidbody: " + (rb != null));
-
-    Debug.Log("GameObject active: " + gameObject.activeInHierarchy);
-}
-```
-
-**❌ OnCollisionEnter werkt niet:**
-
-```csharp
-// Checklist functie voor collisions
-void CheckCollisionSetup()
-{
-    Debug.Log("=== COLLISION SETUP CHECK ===");
-
-    Collider col = GetComponent<Collider>();
-    Debug.Log("Has Collider: " + (col != null));
-    Debug.Log("Is NOT Trigger: " + (col != null ? !col.isTrigger : false));
-
-    Rigidbody rb = GetComponent<Rigidbody>();
-    Debug.Log("Has Rigidbody: " + (rb != null));
-    Debug.Log("Is NOT Kinematic: " + (rb != null ? !rb.isKinematic : false));
 }
 ```
 
