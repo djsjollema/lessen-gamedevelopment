@@ -22,8 +22,6 @@ Je schets moet minimaal bevatten:
 - De UI-elementen: waar zie je geld, wave-teller, levens, start-knop en pauze.  
 - Een duidelijke legenda (bijv. kleurtjes of symbolen om torens, vijanden en UI aan te duiden).  
 
-Voeg je schets in met bijvoorbeeld:  
-![Schets van mijn level](schets.png)
 
 ## 4. Torens
 **Toren 1:** Naam, bereik, schade, unieke eigenschap.  
