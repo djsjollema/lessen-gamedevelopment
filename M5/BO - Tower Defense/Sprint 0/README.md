@@ -92,6 +92,7 @@ Risico:
 Oplossing:
 Acceptatie:
 
+
 ### 11.2 Doel kiezen en schieten
 Keuze:
 Risico:
