@@ -64,6 +64,17 @@ Testen. Bugfixes. Kleine verbeteringen volgens het actieplan. Geen nieuwe featur
 2. De coach keurt het plan goed of vraagt om aanpassing. Daarna volgen studenten hun eigen planning.
 3. Haalt een student een sprintresultaat niet, dan schuift de inhoud door. Er komen geen nieuwe features bij totdat het resultaat is behaald.
 
+
+## Toelichting coachgesprekken en sprintcyclus
+
+De coachgesprekken vinden plaats volgens de planning die is opgesteld in Excel.  
+Iedereen volgt dezelfde sprintcyclus: een sprint start op maandag en eindigt op vrijdag.  
+Vrijdag is de sprintdeadline: je hebt je sprintresultaten op GitHub staan (commit & README bijgewerkt) en je Trello is up-to-date.  
+Het coachgesprek kan op een ander moment in de week plaatsvinden, maar dat verandert niets aan de sprintcyclus.  
+
+Naast je eigen coach kun je ook altijd bij andere docenten terecht met vragen of feedback.
+
+
 ## Minimale eisen aan de game
 1. Vijanden volgen automatisch een pad naar de basis.
 2. Torens zijn plaatsbaar op geldige plekken. Torens kiezen zelf doelen en doen schade of effect.
