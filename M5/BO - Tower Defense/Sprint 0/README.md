@@ -1,4 +1,4 @@
-# Sprint 0 - Game Design Startplan : Tower Defense
+# Sprint 0 - Game Design Document : Tower Defense
 Naam:
 
 Klas:
