@@ -14,8 +14,6 @@ Beschrijf in één of twee zinnen wat jouw game onderscheidt van een standaard t
 ## 3. Schets van je level en UI
 Maak een schets op papier of digitaal en voeg deze afbeelding toe aan je repository. Voeg in deze sectie de afbeelding in.
 
-![Schets van mijn level](schets.png)
-
 Je schets bevat minimaal:
 1. Het pad waar de vijanden over lopen met beginpunt en eindpunt.
 2. De plaatsen waar torens gebouwd kunnen worden.
