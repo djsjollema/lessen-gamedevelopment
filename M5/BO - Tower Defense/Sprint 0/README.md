@@ -1,10 +1,13 @@
 # Sprint 0 Startplan Tower Defense
 Naam:
+
 Klas:
+
 Datum:
 
 ## 1. Titel en elevator pitch
 Titel:
+
 Elevator pitch, maximaal twee zinnen:
 Beschrijf kort wat jouw game is en waarom het leuk is om te spelen.
 
@@ -33,11 +36,15 @@ Eventuele extra vijanden:
 
 ## 6. Gameplay loop
 Beschrijf in drie tot vijf stappen wat de speler steeds doet.
-- 1.
-- 2.
-- 3.
-- 4.
-- 5.
+1.
+
+2.
+
+3.
+
+4.
+
+5.
 
 ## 7. Progressie
 Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
@@ -50,11 +57,11 @@ Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterk
 - Probleem 2:
 - Impact:
 - Oplossing:
-- 
+  
 - Probleem 3:
 - Impact:
 - Oplossing:
-- 
+  
 ## 9. Planning per sprint en mechanics
 Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke element.
 
