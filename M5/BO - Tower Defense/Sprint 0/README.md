@@ -54,22 +54,17 @@ Beschrijf in drie tot vijf stappen wat de speler steeds doet.
 Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
 
 ## 8. Risico’s en oplossingen volgens PIO
-Probleem 1:
-Impact:
-Oplossing:
+- Probleem 1:
+- Impact:
+- Oplossing:
 
+-Probleem 2:
+- Impact:
+- Oplossing:
 
-
-Probleem 2:
-Impact:
-Oplossing:
-
-  
-Probleem 3:
-
-Impact:
-
-Oplossing:
+- Probleem 3:
+- Impact:
+- Oplossing:
   
 ## 9. Planning per sprint en mechanics
 Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke element.
