@@ -9,7 +9,7 @@ Iedere student bouwt in Unity een complete maar eenvoudige tower defense met Ã©Ã
 ## Werkwijze en oplevering
 ## Werkwijze en oplevering
 1. In Sprint 0 werk je je Game Design Document en je Technisch Ontwerp uit. Zet beide vindbaar in je README op GitHub. De GitHub link lever je in via Simulise.
-2. De coach geeft groen licht voor de start van Sprint 1 na beoordeling van je Game Design Document en je Technisch Ontwerp in je README.
+2. De coach geeft groen licht voor de start van Sprint 1 na beoordeling van je Game Design Document en Technisch Ontwerp in je README.
 3. Na groen licht richt je een Trello in met alle mechanics en verdeel je die per sprint volgens je GDD. Voeg de Trello link toe in je README onder Trello en planning.
 4. Aan het einde van elke sprint demonstreer je in de editor de werkende versie aan je coach. Deze versie bevat de mechanics die in je Trello voor die sprint gepland staan en die correct werken. Je levert geen build in.
 5. Inleveren: alles staat op je GitHub projectpagina in de README. De GitHub link lever je in via Simulise.
