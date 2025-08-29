@@ -57,30 +57,16 @@ Oplossing:
 
 ## 9. Planning per sprint en mechanics
 Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke element.
+
 Sprint 1 mechanics:
-1.
-2.
-3.
 
 Sprint 2 mechanics:
-1.
-2.
-3.
 
 Sprint 3 mechanics:
-1.
-2.
-3.
 
 Sprint 4 mechanics:
-1.
-2.
-3.
 
 Sprint 5 mechanics:
-1.
-2.
-3.
 
 ## 10. Inspiratie
 Noem een bestaande tower defense game die jou inspireert en wat je daarvan meeneemt of juist vermijdt.
