@@ -33,28 +33,28 @@ Eventuele extra vijanden:
 
 ## 6. Gameplay loop
 Beschrijf in drie tot vijf stappen wat de speler steeds doet.
-1.
-2.
-3.
-4.
-5.
+- 1.
+- 2.
+- 3.
+- 4.
+- 5.
 
 ## 7. Progressie
 Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
 
 ## 8. Risico’s en oplossingen volgens PIO
-Probleem 1:
-Impact:
-Oplossing:
+- Probleem 1:
+- Impact:
+- Oplossing:
 
-Probleem 2:
-Impact:
-Oplossing:
-
-Probleem 3:
-Impact:
-Oplossing:
-
+- Probleem 2:
+- Impact:
+- Oplossing:
+- 
+- Probleem 3:
+- Impact:
+- Oplossing:
+- 
 ## 9. Planning per sprint en mechanics
 Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke element.
 
@@ -67,6 +67,7 @@ Sprint 3 mechanics:
 Sprint 4 mechanics:
 
 Sprint 5 mechanics:
+
 
 ## 10. Inspiratie
 Noem een bestaande tower defense game die jou inspireert en wat je daarvan meeneemt of juist vermijdt.
@@ -87,32 +88,33 @@ Tien vijanden lopen van start naar de goal zonder vastlopers en verbruiken elk �
 Alle tien vijanden bereiken achtereenvolgens elk waypoint binnen één seconde na elkaar.
 
 ### 11.1 Vijandbeweging over het pad
-Keuze:
-Risico:
-Oplossing:
-Acceptatie:
+- Keuze:
+- Risico:
+- Oplossing:
+- Acceptatie:
 
 
 ### 11.2 Doel kiezen en schieten
-Keuze:
-Risico:
-Oplossing:
-Acceptatie:
+- Keuze:
+- Risico:
+- Oplossing:
+- Acceptatie:
 
 ### 11.3 Waves en spawnen
-Keuze:
-Risico:
-Oplossing:
-Acceptatie:
+- Keuze:
+- Risico:
+- Oplossing:
+- Acceptatie:
 
+  
 ### 11.4 Economie en levens
-Keuze:
-Risico:
-Oplossing:
-Acceptatie:
+- Keuze:
+- Risico:
+- Oplossing:
+- Acceptatie:
 
 ### 11.5 UI basis
-Keuze:
-Risico:
-Oplossing:
-Acceptatie:
+- Keuze:
+- Risico:
+- Oplossing:
+- Acceptatie:
