@@ -23,13 +23,32 @@ Iedere student bouwt in Unity een complete maar eenvoudige tower defense met é�
 10. Vrijdag 31 oktober 2025. Release. Oplevering werkende versie, planning en Technisch Ontwerp.
 11. Maandag 3, woensdag 5 en vrijdag 7 november 2025. CGI sessies.
 
-## Wat doen we per sprint
-1. Sprint 0. Game Design Document en Technisch Ontwerp uitwerken en laten goedkeuren. Daarna Trello inrichten met mechanics per sprint.
-2. Sprint 1. Core opzetten. Pad en vijandbeweging. Eén toren plaatsen en laten schieten. Verliesconditie. Demo aan coach.
-3. Sprint 2. Core uitbreiden. Tweede toren, minimaal twee vijandtypes, waves met startknop, basis van de economie. Demo aan coach.
-4. Sprint 3. Upgrades en basis UI. Geld, levens en wave teller. Pauze en herstart. Demo aan coach.
-5. Sprint 4. Jouw unieke twist of unieke feature zichtbaar en speelbaar. Eerste balans van de eerste vijf waves. Demo aan coach.
-6. Sprint 5.Feature complete. Alle geplande mechanics werken samen. Geen nieuwe features. Maak een geprioriteerde buglijst en een kort actieplan voor de fine tune week. Demo aan coach.
+## Milestones en planning door student
+
+1. Jij plant zelf in Trello welke mechanics je per sprint oplevert. Je verdeelt alle mechanics uit je GDD over Sprint 1 tot en met Sprint 5.
+2. Aan het einde van elke sprint demonstreer je een werkende versie aan je coach. Je levert geen build in.
+3. Onderstaande milestones gelden als gate per sprint. Hoe jij ze haalt, bepaal je zelf.
+
+### Sprint 1 gate
+1. Er is een werkende kern die je planning rechtvaardigt. De speler kan iets doen en dat heeft zichtbaar effect.
+2. Je Trello toont de geplande mechanics voor Sprint 2.
+
+### Sprint 2 gate
+1. De kern is uitgebreid met een tweede systeem of variatie, bijvoorbeeld een extra mechanic of een tweede vijand of toren.
+2. Je laat voortgang zien in balans of speltempo.
+
+### Sprint 3 gate
+1. De game geeft duidelijke feedback. Basis UI is zichtbaar en nuttig.
+2. Pauzeren of herstarten is mogelijk.
+
+### Sprint 4 gate
+1. Alleen als je core stabiel is. Je mag jouw unieke twist of unieke feature als bonus laten zien.
+2. De eerste vijf rondes voelen logisch in moeilijkheid.
+
+### Sprint 5 gate
+1. Feature complete voor de core. Alles wat je voor de core hebt gepland werkt samen.
+2. Er is een geprioriteerde buglijst en een kort actieplan voor de fine tune week.
+
 
 ## Fine tune week
 Testen. Bugfixes. Kleine verbeteringen volgens het actieplan. Geen nieuwe features.
