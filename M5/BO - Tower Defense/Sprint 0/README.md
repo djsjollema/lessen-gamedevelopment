@@ -68,7 +68,7 @@ Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterk
 - Oplossing:
   
 ## 9. Planning per sprint en mechanics
-Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke element.
+Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke feature.
 
 Sprint 1 mechanics:
 
