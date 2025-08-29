@@ -92,9 +92,9 @@ Selecteer je kubus en kijk naar het **Rigidbody component** in de Inspector:
 
 **Experimenten:**
 
-- Zet Mass op 10 - object valt zwaarder
-- Zet Drag op 5 - object valt langzamer
-- Zet Use Gravity uit - object valt niet meer
+- Zet Mass op 10 → object valt zwaarder
+- Zet Drag op 5 → object valt langzamer
+- Zet Use Gravity uit → object valt niet meer
 
 ---
 

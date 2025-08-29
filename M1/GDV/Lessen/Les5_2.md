@@ -507,10 +507,14 @@ Schrijf ook op wat je niet hebt begrepen uit deze les. Dan kun je hier later nog
 
 Bewaar al je aantekeningen goed! Deze moet je aan het einde van de periode inleveren.
 
+![notes](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHhzdzZzbHQzYWgyNG1mZDRhdW05dWIwMDI2b2xoNWtkMWN0ODl2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7GUB9ExWUxjiSrKw/giphy.gif)
+
 ## Oefeningen uitvoeren
 
 Doe nu minimaal 1 oefening naar keuze voor les 5.2
 De oefeningen vind je [hier](../Oefeningen/oefeningen_5_2.md) terug
+
+![exercise](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZXRrc3QwYWV1Ym5oY2FrZnF5YWxnaW9heTRsNnZzdnpnMmRxeXM1ZiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/x1BVziEYuKBd1aVZRz/giphy.gif)
 
 ## Wat Heb Je Geleerd?
 
@@ -691,10 +695,14 @@ Schrijf ook op wat je niet hebt begrepen uit deze les. Dan kun je hier later nog
 
 Bewaar al je aantekeningen goed! Deze moet je aan het einde van de periode inleveren.
 
+![notes](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHhzdzZzbHQzYWgyNG1mZDRhdW05dWIwMDI2b2xoNWtkMWN0ODl2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7GUB9ExWUxjiSrKw/giphy.gif)
+
 ## Oefeningen uitvoeren
 
 Doe nu minimaal 1 oefening naar keuze voor les 5.2
 De oefeningen vind je [hier](../Oefeningen/oefeningen_5_2.md) terug
+
+![exercise](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZXRrc3QwYWV1Ym5oY2FrZnF5YWxnaW9heTRsNnZzdnpnMmRxeXM1ZiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/x1BVziEYuKBd1aVZRz/giphy.gif)
 
 ## Wat Heb Je Geleerd?
 
@@ -738,3 +746,4 @@ In Les 6.1 gaan we lijsten en arrays leren! Dan kunnen we meerdere objecten tege
 **A:** Technisch wel, maar meestal wil je één centrale GameManager. Gebruik Singleton pattern voor complexere projecten.
 
 ---
+```
