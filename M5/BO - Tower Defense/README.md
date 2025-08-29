@@ -49,9 +49,15 @@ Iedere student bouwt in Unity een complete maar eenvoudige tower defense met Ã©Ã
 1. Feature complete voor de core. Alles wat je voor de core hebt gepland werkt samen.
 2. Er is een geprioriteerde buglijst en een kort actieplan voor de fine tune week.
 
-
 ## Fine tune week
 Testen. Bugfixes. Kleine verbeteringen volgens het actieplan. Geen nieuwe features.
+
+
+## Praktische werkafspraken
+
+1. In Sprint 0 levert de student naast het Game Design Document en het Technisch Ontwerp ook een Trello op met per sprint drie geplande mechanics en per mechanic een korte teststap.
+2. De coach keurt het plan goed of vraagt om aanpassing. Daarna volgen studenten hun eigen planning.
+3. Haalt een student een gate niet, dan schuift de inhoud door. Er komen geen nieuwe features bij totdat de gate is gehaald.
 
 ## Minimale eisen aan de game
 1. Vijanden volgen automatisch een pad naar de basis.
