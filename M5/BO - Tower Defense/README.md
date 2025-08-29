@@ -29,47 +29,49 @@ Iedere student bouwt in Unity een complete maar eenvoudige tower defense met é�
 10. Vrijdag 31 oktober 2025. Release. Oplevering werkende versie, planning en Technisch Ontwerp.
 11. Maandag 3, woensdag 5 en vrijdag 7 november 2025. CGI sessies.
 
+
 ## Milestones en planning door student
 
 1. Jij plant zelf in Trello welke mechanics je per sprint oplevert. Je verdeelt alle mechanics uit je GDD over Sprint 1 tot en met Sprint 5.
 2. Aan het einde van elke sprint demonstreer je een werkende versie aan je coach. Je levert geen build in.
-3. Onderstaande milestones gelden als gate per sprint. Hoe jij ze haalt, bepaal je zelf.
+3. Onderstaande resultaten gelden per sprint. Hoe jij ze haalt, bepaal je zelf.
 
-### Sprint 1 gate
+### Sprint 1 moet laten zien dat…
 1. Er is een werkende kern die je planning rechtvaardigt. De speler kan iets doen en dat heeft zichtbaar effect.
 2. Je Trello toont de geplande mechanics voor Sprint 2.
 
-### Sprint 2 gate
+### Sprint 2 moet laten zien dat…
 1. De kern is uitgebreid met een tweede systeem of variatie, bijvoorbeeld een extra mechanic of een tweede vijand of toren.
 2. Je laat voortgang zien in balans of speltempo.
 
-### Sprint 3 gate
+### Sprint 3 moet laten zien dat…
 1. De game geeft duidelijke feedback. Basis UI is zichtbaar en nuttig.
 2. Pauzeren of herstarten is mogelijk.
 
-### Sprint 4 gate
+### Sprint 4 moet laten zien dat…
 1. Alleen als je core stabiel is. Je mag jouw unieke twist of unieke feature als bonus laten zien.
 2. De eerste vijf rondes voelen logisch in moeilijkheid.
 
-### Sprint 5 gate
-1. Feature complete voor de core. Alles wat je voor de core hebt gepland werkt samen.
+### Sprint 5 moet laten zien dat…
+1. De core is feature complete. Alles wat je voor de core hebt gepland werkt samen.
 2. Er is een geprioriteerde buglijst en een kort actieplan voor de fine tune week.
 
 ## Fine tune week
 Testen. Bugfixes. Kleine verbeteringen volgens het actieplan. Geen nieuwe features.
 
-
 ## Praktische werkafspraken
-
 1. In Sprint 0 levert de student naast het Game Design Document en het Technisch Ontwerp ook een Trello op met per sprint drie geplande mechanics en per mechanic een korte teststap.
 2. De coach keurt het plan goed of vraagt om aanpassing. Daarna volgen studenten hun eigen planning.
-3. Haalt een student een gate niet, dan schuift de inhoud door. Er komen geen nieuwe features bij totdat de gate is gehaald.
+3. Haalt een student een sprintresultaat niet, dan schuift de inhoud door. Er komen geen nieuwe features bij totdat het resultaat is behaald.
 
 ## Minimale eisen aan de game
 1. Vijanden volgen automatisch een pad naar de basis.
 2. Torens zijn plaatsbaar op geldige plekken. Torens kiezen zelf doelen en doen schade of effect.
-3. Waves worden zwaarder en speler kan nieuwe wave starten.
+3. Waves worden zwaarder en de speler kan een nieuwe wave starten via de UI.
 4. Geld verdienen en uitgeven aan torens en upgrades.
 5. Basis verliest levenspunten als vijanden doorlopen.
 6. Simpele UI voor geld, waves, levens, start en pauze.
 7. Eén duidelijke unieke twist of unieke feature die merkbaar invloed heeft op de manier van spelen.
+8. De game is speelbaar zonder crashes of blocking bugs (minimaal vijf waves kunnen gespeeld worden).
+9. Mechanics die klaar zijn werken betrouwbaar en zijn getest.
+10. Code bouwt zonder errors of ontbrekende references en is ingeleverd via GitHub.
