@@ -55,16 +55,13 @@ Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterk
 
 ## 8. Risico’s en oplossingen volgens PIO
 Probleem 1:
-
 Impact:
-
 Oplossing:
 
 
+
 Probleem 2:
-
 Impact:
-
 Oplossing:
 
   
