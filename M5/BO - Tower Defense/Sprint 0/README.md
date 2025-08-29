@@ -58,9 +58,10 @@ Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterk
 - Impact:
 - Oplossing:
 
--Probleem 2:
+- Probleem 2:
 - Impact:
 - Oplossing:
+
 
 - Probleem 3:
 - Impact:
