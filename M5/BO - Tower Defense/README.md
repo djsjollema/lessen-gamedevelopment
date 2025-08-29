@@ -1,4 +1,4 @@
-# Tower Defense Project – Briefing
+# Tower Defense Project : Briefing
 
 ## Doel
 Iedere student bouwt in Unity een complete maar eenvoudige tower defense met één unieke twist of unieke feature. We werken in sprints en tonen wekelijks voortgang. De focus ligt op de core.
