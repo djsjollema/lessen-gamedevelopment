@@ -1,14 +1,20 @@
 # Briefing : Tower Defense Project 
 
+
+![81xxwYY5cYL](https://github.com/user-attachments/assets/06f8545e-2c96-440b-b752-ceb7880e28c5)
+
 ## Doel
 Iedere student bouwt in Unity een complete maar eenvoudige tower defense met één unieke twist of unieke feature. We werken in sprints en tonen wekelijks voortgang. De focus ligt op de core.
 
-## Proces en bewijs
-1. Voor je gaat bouwen maak je in Sprint 0 je Game Design Document en je Technisch Ontwerp compleet. Elk project start met een uitgewerkt idee.
-2. De coach geeft daarna groen licht voor de start van Sprint 1.
-3. Na goedkeuring maak je een Trello met alle mechanics en verdeel je die per sprint volgens je GDD.
-4. Aan het einde van elke sprint demonstreer je de werkende versie aan je coach. Je levert geen build in. Zorg voor zichtbare commits en een korte retro.
-5. De eindoplevering op de releasedatum bestaat uit een werkende build, je planning en je Technisch Ontwerp.
+## Werkwijze en oplevering
+## Werkwijze en oplevering
+1. In Sprint 0 werk je je Game Design Document en je Technisch Ontwerp uit. Zet beide vindbaar in je README op GitHub. De GitHub link lever je in via Simulise.
+2. De coach geeft groen licht voor de start van Sprint 1 na beoordeling van je Game Design Document en je Technisch Ontwerp in je README.
+3. Na groen licht richt je een Trello in met alle mechanics en verdeel je die per sprint volgens je GDD. Voeg de Trello link toe in je README onder Trello en planning.
+4. Aan het einde van elke sprint demonstreer je in de editor de werkende versie aan je coach. Deze versie bevat de mechanics die in je Trello voor die sprint gepland staan en die correct werken. Je levert geen build in.
+5. Inleveren: alles staat op je GitHub projectpagina in de README. De GitHub link lever je in via Simulise.
+6. Eindoplevering: op de releasedatum staat de werkende build gelinkt in je README onder Release, samen met je planning en je Technisch Ontwerp.
+7. CGI na de eindoplevering: je demonstreert een werkende build en geeft uitleg over je code. Je beargumenteert gemaakte keuzes en bespreekt je reflectie en leerpunten. Data: maandag 3, woensdag 5 en vrijdag 7 november 2025.
 
 ## Globale planning
 1. Maandag 8 september 2025. Briefing en start Sprint 0.
