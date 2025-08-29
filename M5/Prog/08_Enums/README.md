@@ -1,4 +1,4 @@
-# PROG les 10: Enums
+# PROG les 08: Enums
 
 ![menu](../src/13_02_enum_menu.png)
 
@@ -95,7 +95,7 @@ Dankzij de code completion van je IDE zal deze altijd de verschillende opties/el
 
 ![autocomplete](../src/13_01_enum_autocomplete.png)
 
-### Opdracht 14: Anti-Magic
+### Opdracht 11: Anti-Magic
 
 ![anti magic](../src/13_03_anti_magic.jpg)
 

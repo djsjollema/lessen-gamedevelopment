@@ -1,4 +1,4 @@
-# PROG les 8: OOP Abstraction en Polymorfisme
+# PROG les 10: OOP Abstraction en Polymorfisme
 
 Abstractie en Polymorfisme zijn ook onderdeel van OOP en gaan in de praktijk vaak samen en worden veel door elkaar gebruikt. Ze dienen alleen beiden andere specifieke doelen. Maar hebben ook als gemeenschappelijk doel dat het de code beter leesbaar, onderhoudbaar en uitbreidbaar maakt.
 
@@ -399,7 +399,7 @@ Als ik een onderdeel uit de interface niet implementeer zal ik een error krijgen
 
 Dit helpt mij dus om alle classes die dezelfde functionaliteit met elkaar delen op de zelfde manier te bouwen en te structureren.
 
-### Opdracht 12: Polymorphisme via Interfaces
+### Opdracht 13: Polymorphisme via Interfaces
 
 Werk verder aan het prototype van [Opdracht 8: Inheritance](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/05_OOP_Inherritance#opdracht-8-inheritance). Doe dit in een nieuwe branch want er moet het een en ander worden omgegooid. Het zou jammer zijn als de vorige opdracht straks stuk is.
 
