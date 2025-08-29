@@ -1,132 +1,44 @@
-# Sprint 0 - Game Design Document : Tower Defense
-Naam:
+# Tower Defense Project – Briefing
 
-Klas:
+## Doel
+Iedere student bouwt in Unity een complete maar eenvoudige tower defense met één unieke twist of unieke feature. We werken in sprints en tonen wekelijks voortgang. De focus ligt op de core.
 
-Datum:
+## Proces en bewijs
+1. Voor je gaat bouwen maak je in Sprint 0 je Game Design Document en je Technisch Ontwerp compleet. Elk project start met een uitgewerkt idee.
+2. De coach geeft daarna groen licht voor de start van Sprint 1.
+3. Na goedkeuring maak je een Trello met alle mechanics en verdeel je die per sprint volgens je GDD.
+4. Aan het einde van elke sprint demonstreer je de werkende versie aan je coach. Je levert geen build in. Zorg voor zichtbare commits en een korte retro.
+5. De eindoplevering op de releasedatum bestaat uit een werkende build, je planning en je Technisch Ontwerp.
 
-## 1. Titel en elevator pitch
-Titel:
+## Globale planning
+1. Maandag 8 september 2025. Briefing en start Sprint 0.
+2. Vrijdag 12 september 2025. Oplevermoment Sprint 0. Start Sprint 1 op maandag 15 september.
+3. Vrijdag 19 september 2025. Einde Sprint 1. Start Sprint 2 op maandag 22 september.
+4. Vrijdag 26 september 2025. Einde Sprint 2. Start Sprint 3 op maandag 29 september.
+5. Vrijdag 3 oktober 2025. Einde Sprint 3. Start Sprint 4 op maandag 6 oktober.
+6. Vrijdag 10 oktober 2025. Einde Sprint 4. Start Sprint 5 op maandag 13 oktober.
+7. Vrijdag 17 oktober 2025. Einde Sprint 5.
+8. 20 tot en met 24 oktober 2025. Herfstvakantie.
+9. 27 tot en met 31 oktober 2025. Fine tune, testen en bugs oplossen. Geen nieuwe features.
+10. Vrijdag 31 oktober 2025. Release. Oplevering werkende versie, planning en Technisch Ontwerp.
+11. Maandag 3, woensdag 5 en vrijdag 7 november 2025. CGI sessies.
 
-Elevator pitch, maximaal twee zinnen:
-Beschrijf kort wat jouw game is en waarom het leuk is om te spelen.
+## Wat doen we per sprint
+1. Sprint 0. Game Design Document en Technisch Ontwerp uitwerken en laten goedkeuren. Daarna Trello inrichten met mechanics per sprint.
+2. Sprint 1. Core opzetten. Pad en vijandbeweging. Eén toren plaatsen en laten schieten. Verliesconditie. Demo aan coach.
+3. Sprint 2. Core uitbreiden. Tweede toren, minimaal twee vijandtypes, waves met startknop, basis van de economie. Demo aan coach.
+4. Sprint 3. Upgrades en basis UI. Geld, levens en wave teller. Pauze en herstart. Demo aan coach.
+5. Sprint 4. Jouw unieke twist of unieke feature zichtbaar en speelbaar. Eerste balans van de eerste vijf waves. Demo aan coach.
+6. Sprint 5.Feature complete. Alle geplande mechanics werken samen. Geen nieuwe features. Maak een geprioriteerde buglijst en een kort actieplan voor de fine tune week. Demo aan coach.
 
-## 2. Wat maakt jouw tower defense uniek
-Beschrijf in één of twee zinnen wat jouw game onderscheidt van een standaard tower defense. Denk aan iets dat de speler op een nieuwe manier laat nadenken of spelen.
+## Fine tune week
+Testen. Bugfixes. Kleine verbeteringen volgens het actieplan. Geen nieuwe features.
 
-## 3. Schets van je level en UI
-Maak een schets op papier of digitaal en voeg deze afbeelding toe aan je repository. Voeg in deze sectie de afbeelding in.
-
-Je schets bevat minimaal:
-1. Het pad waar de vijanden over lopen met beginpunt en eindpunt.
-2. De plaatsen waar torens gebouwd kunnen worden.
-3. De locatie van de basis of goal die verdedigd moet worden.
-4. De UI onderdelen geld, wave teller, levens, startknop en pauzeknop.
-5. Een legenda met symbolen of kleuren voor torens, vijanden, pad, basis en UI.
-
-## 4. Torens
-Toren 1 naam, bereik, schade, unieke eigenschap.
-
-Toren 2 naam, bereik, schade, unieke eigenschap.
-
-Eventuele extra torens:
-
-## 5. Vijanden
-Vijand 1 naam, snelheid, levens, speciale eigenschap.
-
-Vijand 2 naam, snelheid, levens, speciale eigenschap.
-
-Eventuele extra vijanden:
-
-## 6. Gameplay loop
-Beschrijf in drie tot vijf stappen wat de speler steeds doet.
-1.
-
-2.
-
-3.
-
-4.
-
-5.
-
-## 7. Progressie
-Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
-
-## 8. Risico’s en oplossingen volgens PIO
-- Probleem 1:
-- Impact:
-- Oplossing:
-
-- Probleem 2:
-- Impact:
-- Oplossing:
-
-
-- Probleem 3:
-- Impact:
-- Oplossing:
-  
-## 9. Planning per sprint en mechanics
-Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke feature.
-
-Sprint 1 mechanics:
-
-Sprint 2 mechanics:
-
-Sprint 3 mechanics:
-
-Sprint 4 mechanics:
-
-Sprint 5 mechanics:
-
-
-## 10. Inspiratie
-Noem een bestaande tower defense game die jou inspireert en wat je daarvan meeneemt of juist vermijdt.
-
-## 11. Technisch ontwerp mini
-
-Lees dit korte voorbeeld en vul daarna jouw eigen keuzes in.
-
-Voorbeeld ingevuld bij 11.1 Vijandbeweging over het pad
-- Keuze:
-Vijanden volgen punten A, B, C en daarna de goal.
-- Risico:
-Een vijand loopt een punt voorbij of blijft hangen.
-- Oplossing:
-Als de vijand dichtbij genoeg is kiest hij het volgende punt. Bij de goal gaat één leven omlaag en verdwijnt de vijand.
-- Acceptatie:
-Tien vijanden lopen van start naar de goal zonder vastlopers en verbruiken elk één leven.
-Alle tien vijanden bereiken achtereenvolgens elk waypoint binnen één seconde na elkaar.
-
-### 11.1 Vijandbeweging over het pad
-- Keuze:
-- Risico:
-- Oplossing:
-- Acceptatie:
-
-
-### 11.2 Doel kiezen en schieten
-- Keuze:
-- Risico:
-- Oplossing:
-- Acceptatie:
-
-### 11.3 Waves en spawnen
-- Keuze:
-- Risico:
-- Oplossing:
-- Acceptatie:
-
-  
-### 11.4 Economie en levens
-- Keuze:
-- Risico:
-- Oplossing:
-- Acceptatie:
-
-### 11.5 UI basis
-- Keuze:
-- Risico:
-- Oplossing:
-- Acceptatie:
+## Minimale eisen aan de game
+1. Vijanden volgen automatisch een pad naar de basis.
+2. Torens zijn plaatsbaar op geldige plekken. Torens kiezen zelf doelen en doen schade of effect.
+3. Waves worden zwaarder en speler kan nieuwe wave starten.
+4. Geld verdienen en uitgeven aan torens en upgrades.
+5. Basis verliest levenspunten als vijanden doorlopen.
+6. Simpele UI voor geld, waves, levens, start en pauze.
+7. Eén duidelijke unieke twist of unieke feature die merkbaar invloed heeft op de manier van spelen.
