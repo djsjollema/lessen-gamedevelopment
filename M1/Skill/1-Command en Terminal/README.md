@@ -101,15 +101,15 @@ rm -rf newDirectory   # force remove, inclusief inhoud
 
 ## Verwerkingsopdracht
 
-1. Maak in je home directory een subdirectory `f1m1` en maak deze je CWD.
-2. Maak in `f1m1` de volgende boomstructuur:
+1. Maak in je home directory een subdirectory `m1` en maak deze je CWD.
+2. Maak in `m1` de volgende boomstructuur:
 
    ```
    m1skil-github/
    ├── les1/
    └── les2/
    ```
-3. Test de opdrachten in de map `f1m1`.
+3. Test de opdrachten in de map `m1`.
 
 ## Programma’s en bestanden
 
@@ -125,7 +125,7 @@ rm -rf newDirectory   # force remove, inclusief inhoud
 
 ## Programma openen via CLI
 
-* Navigeer naar de map, bijv. `cd f1m1\Pvaardig\les01\`.
+* Navigeer naar de map, bijv. `cd m1\skill\les01\`.
 * Typ de programmanaam, bijv. `notepad`.
 
 ## Van CLI naar GUI en vice versa
@@ -153,6 +153,8 @@ rm -rf newDirectory   # force remove, inclusief inhoud
   * `..`: hoger niveau.
   * `~`: home directory (Linux/macOS).
 
-biedt dit bestand als download aan 
-
-biedt dit bestand aan als download
+## opdracht
+* breid met behulp van de Commandprompt in de terminal in de map m1skill-github uit met de mappen les3 tot en met les 8
+* gebruik het commando `tree` om een overzicht te maken van jouw directory
+* maak een screenshot van deze `tree` en bewaar deze als een .png afbeelding
+* stuur deze afbeelding naar simulise en wacht tot de docent jouw werk gecontroleerd heeft
