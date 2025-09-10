@@ -444,7 +444,7 @@ Zorg er in de Update methode van je Enemy voor dat deze over de z-as van je came
 
 Maak in je **EnemySpawner** een List aan voor je enemies.
 
-Gebruik de **Add** methode om je enemies aan de lijst toe te voegen. Gebruik **Instantiate** om je enemies te creeren. Gebruik de **Clear** methode om je lijst te legen. Gebruik **Destroy** om je enemies te verwijderen.
+Gebruik de **Add()** methode om je enemies aan de lijst toe te voegen. Gebruik **Instantiate()** om je enemies te creeren. Gebruik de **Clear()** methode om je lijst te legen. Gebruik **Destroy()** om je enemies te verwijderen.
 
 Laat de **EnemySpawner** in 1 keer 100 enemies spawnen als je op **"W"-toets** drukt.
 

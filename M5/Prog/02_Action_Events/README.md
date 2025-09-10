@@ -1,12 +1,10 @@
-# PROG les 2: Herhaling Action Events
+# PROG les 2: Action Events
 
 ![action](../src/02_01_action.png)
 
-Vorig jaar hebben een aantal van jullie wellicht [deze video](https://www.youtube.com/watch?v=IKBg97A7Sbw) gezien en hiermee misschien ook zelf **Action Events** gebruikt om stukken code tussen verschillende scripts aan te roepen.
+Kijk deze [deze video](https://www.youtube.com/watch?v=IKBg97A7Sbw) over **Action Events**. Dit is een handige manier om stukken code tussen verschillende scripts aan te roepen.
 
-Wellicht weet je nog precies hoe je een **action event** maakt en misschien is het wel weer wat weggezakt. Hoe dan ook is het tijd om dit te herhalen of er nu voor het eerst in te duiken als je het nog niet weet.
-
-Je kunt je ook verdiepen in [Delegates en Unity Events](https://gamedevbeginner.com/events-and-delegates-in-unity/) als het **Action Event** gesneden koek voor je is.
+**Action events** zijn gebaseerd op zogenaamde **Delegates** als je meer wil begrijpen over deze onderliggende basis kun je je hier ook in verdiepen [Delegates en Unity Events](https://gamedevbeginner.com/events-and-delegates-in-unity/)
 
 <a name = "action_events"></a>
 
@@ -63,7 +61,7 @@ class Scoreboard:MonoBehaviour{
 
 Wat zou er nu gebeuren als je het scorebord of de speler uit het spel zou verwijderen? In het bovenstaande voorbeeld heeft de Enemy class een dependancy naar de **Player** en de **Scoreboard** classes. Ook een aanpassing in 1 van deze scripts zou tot problemen kunnen leiden. Wat zou er bijvoorbeeld gebeuren als de **AddScore** functie van de Scoreboard class private word gemaakt?
 
-Kortom genoeg reden om te zorgen dat je deze **dependancies** en **tight couplinbg** zoveel mogelijk voorkomt.
+Kortom genoeg reden om te zorgen dat je deze **dependancies** en **tight coupling** zoveel mogelijk voorkomt.
 
 ## Action Events
 
@@ -88,7 +86,7 @@ Class Enemy:Monobehaviour{
 
 ```
 
-Het Action Event is zowel **public** als **static**. Static betekent dat deze variabele vanuit elk ander script direct te benaderen is via de class Enemy die niet geinstantieerd is. Echter kan er dus maar 1 versie van deze variabele bestaan ook al zijn er meer enemies. Hier wordt het dus ook gelijk duidelijk waarom het belangrijk is om Classes Uppercase te schrijven en variabelen lowercase. Zodat je static classes en instnces van classes dus makkelijk uit elkaar kunt houden.
+Het Action Event is zowel **public** als **static**. Static betekent dat deze variabele vanuit elk ander script direct te benaderen is via de class Enemy die niet geinstantieerd is. Echter kan er dus maar 1 versie van deze variabele bestaan ook al zijn er meer enemies. Hier wordt het dus ook gelijk duidelijk waarom het belangrijk is om Classes Uppercase te schrijven en variabelen lowercase. Zodat je static classes en instances van classes (objecten) dus makkelijk uit elkaar kunt houden.
 
 ```
     Enemy.OnEnemyDeath //zo benader je vanuit een ander script een static variabele
@@ -114,7 +112,7 @@ Eigenlijk is het technisch gezien zo dat er geen bericht verstuurd wordt maar da
 
 Er wordt een bericht gestuurd als er een enemy dood gaat maar niemand luistert daar nog naar.
 
-Om te zorgen dat andere scripts hier naar gaan luisteren gaan we ons in de Start methode van deze scripts **"abboneren"** op deze berichten. Dit doen we door een functie te maken die we met **+=** gaan toevoegen aan de Action. Let op dat je geen () achter de naam van de functie zet.
+Om te zorgen dat andere scripts hier naar gaan luisteren gaan we ons in de Start methode van de "luisterende" scripts **"abboneren"** op deze berichten. Dit doen we door een functie te maken die we met **+=** gaan toevoegen aan de Action. Let op dat je geen () achter de naam van de functie zet.
 
 ```
 class Scoreboard:MonoBehaviour{
@@ -155,7 +153,7 @@ Hang aan je scoreboard een script met de classname **Scoreboard**.
 
 Maak een blokje waarmee je door een level rond kunt lopen met WASD.
 
-Maak een prefab voor een pickup en hang hieraan een script met als classname **Pickup** die checkt of hij geraakt wordt door de player.
+Maak een prefab voor een pickup en hang hieraan een script met als classname **Pickup** die checkt of hij geraakt wordt door de player. (IsTrigger)
 
 Laat de **Pickup** een Action Event versturen als hij is opgepakt.
 
