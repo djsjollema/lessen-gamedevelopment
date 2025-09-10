@@ -293,7 +293,7 @@ public class Game{
 }
 ```
 
-Binnen Unity kun je met de Instantiate functie prefabs instantieren een prefab wordt dus ook behandeld als een class in de zin dat deze pas bestaat nadat hij geinstantieerd is. Eigenlijk maken we binnen Unity dus geen gebruik van constructors zoals je dan normaal in C# wel zou doen.
+Binnen Unity kun je met de Instantiate functie prefabs instantieren een prefab wordt dus ook behandeld als een (Monobahaviour) class in de zin dat deze pas bestaat nadat hij geinstantieerd is. Eigenlijk maken we binnen Unity dus vooral gebruik van Instantiate i.p.v constructors.
 
 Het instantieren van prefabs kun je zo doen:
 
