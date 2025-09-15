@@ -4,9 +4,6 @@
 
 -   Voor Mac-gebruikers:
     [instructies](https://blanken5.home.xs4all.nl/webSlidesPresentaties/git.html)\
--   Terugblik: les 03 -- Hosting\
--   Bonusvraag: Zijn QR-codes altijd veilig?\
--   Overzicht volgende les: les 04
 
 ------------------------------------------------------------------------
 
