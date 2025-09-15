@@ -8,7 +8,7 @@ Naast de het voorkomen van Tight Coupling ([behandeld in les 2](../02_Herhaling_
 
 Het Single Responsibility Principle is onderdeel van de [SOLID](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design) principles. Dit zijn basisprincipes die programmeurs altijd moeten aanhouden om robuuste en makkelijk uitbreidbare en onderhoudbare code te kunnen schrijven. De SOLID principes zijn weer een belangrijk onderdeel van het Object GeOrienteerd Programmeren (OOP).
 
-Daarnaast bestaat OOP in de basis uit een 4 tal basisonderdelen die we in deze lessenreeks ook nog zullen behandelen:
+Daarnaast bestaat OOP in de basis uit een 4 tal basisonderdelen die we in deze lessenreeks deels ook nog zullen behandelen:
 
 - Overerving / Inheritance
 - Abstractie / Abstraction
@@ -42,7 +42,7 @@ Het gebruik van SRP zal leiden tot losse herbruikbare scripts die een duidelijk 
 
 ## Don't Repeat Yourself
 
-Code moet compact en herbruikbaar zijn. Op het moment dat je stukken herhalende code schrijft wordt het later erg lastig om aan te passen. elke aanpassing zal dan op heel ververschillende plekken moeten worden doorgevoerd.
+Code moet compact en herbruikbaar zijn. Op het moment dat je stukken herhalende code schrijft wordt het later erg lastig om aan te passen. Elke aanpassing zal dan op verschillende plekken moeten worden doorgevoerd.
 
 Ook maakt herhaling je code gewoonweg lastig leesbaar. Herhalende code noemen me ook wel eens spaghetti code omdat de functionaliteit allemaal met elkaar verweven is en een aanpassing op de ene plek ook weer gevolgen heeft voor code op een andere plek. Het wordt dan al snel een soort speurtocht om kleine veranderingen te maken. Herkenbaar?!
 
@@ -105,7 +105,7 @@ Zorg dat het prototype precies blijft werken zoals het deed.
 ![demo](../src/04_09_demo.gif)
 
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
-- **_Lever een link je code en je gifje in via Simulize._**
+- **_Zet je werk (gifje , omschrijving en links naar je code) op je PROG readme op github._**
 
 <a name = "opdracht7"></a>
 
