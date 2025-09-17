@@ -1,107 +1,168 @@
-# Instructieles: Werken met GitHub en een repository klonen naar de lokale computer
+# skill-github-les3
 
 ## Doel van de les
+Na deze les kun je:
+- Op GitHub een nieuwe repository **skill-github-les3** aanmaken.
+- De repo lokaal **klonen** in `C:/documents/ma/m1/skill-github/les3`.
+- `README.md` **bewerken**, **committen** en **pushen** naar de **remote**.
+- Veelvoorkomende fouten herkennen en oplossen.
 
-Na deze les kun je: - Uitleggen wat Git en GitHub zijn.\
-- Met de **command prompt** werken om een repository te klonen.\
-- Een repository lokaal opslaan in een specifieke directory.
+---
 
-------------------------------------------------------------------------
+## 1) Maak een nieuwe repository op GitHub
+1. Log in op **GitHub**.
+2. Klik rechtsboven op **+ → New repository**.
+3. Vul in:
+   - **Repository name**: `skill-github-les3`
+   - **Description**: *(optioneel)*
+   - kies **Public**
+   - **Initialize this repository**: vink **Add a README file** aan *(aanbevolen)*.
+4. Klik **Create repository**.
+5. Klik op de groene knop **<> Code** en kopieer de **HTTPS**-URL, bijvoorbeeld:  
+   `https://github.com/<jouw-gebruikersnaam>/skill-github-les3.git`
 
-## 1. Wat is Git en GitHub?
+> *Waarom README aanvinken?* Dan heb je meteen een bestand om aan te passen en kun je zonder extra stappen pushen.
 
--   **Git** is een versiebeheersysteem: het houdt bij welke wijzigingen
-    in je code/project gemaakt worden en door wie.\
--   **GitHub** is een online platform waar je Git-repositories kunt
-    opslaan en delen met anderen.\
--   Een **repository (repo)** is een projectmap met bestanden en de
-    volledige versiegeschiedenis.
+---
 
-------------------------------------------------------------------------
+## 2) Repo lokaal klonen in de juiste map
+We werken in de map `C:/documents/ma/m1/skill-github/les3`.
 
-## 2. Voorbereiding
+1. Open **Command Prompt** (Start → typ *cmd*).
+2. Navigeer naar de werkmap (maak eventueel de map aan):
+   ```bash
+   cd C:/documents/ma/m1/skill-github
+   mkdir les3
+   cd les3
+   ```
+3. 
 
-1.  Zorg dat **Git** geïnstalleerd is op je computer.
-    -   Controleer dit met:
+3. **Kloon** de repo en ga de map in:
+   ```bash
+   git clone https://github.com/<jouw-gebruikersnaam>/skill-github-les3.git
+   cd skill-github-les3
+   ```
 
-        ``` bash
-        git --version
-        ```
+*(Eenmalig per computer) Stel je Git-identiteit in als dat nog niet gebeurd is:*
+```bash
+git config --global user.name "Jouw Naam"
+git config --global user.email "jij@example.com"
+```
 
-        Als er een versienummer verschijnt, is Git correct
-        geïnstalleerd.
-2.  Maak de mapstructuur waar je de repository wilt opslaan:
-    -   We gaan werken in:
+---
 
-            C:/documents/ma/m1/skill-github/les3
+## 3) README.md aanpassen
+### Optie A — Je hebt op GitHub al een README laten aanmaken (aanbevolen)
+1. Open het bestand in Kladblok (of je favoriete editor):
+   ```bash
+   notepad README.md
+   ```
+2. Voeg bijvoorbeeld onderaan toe:
+   ```md
+   ## Mijn aanpassing
+   - README bijgewerkt op <vul datum in>
+   ```
+3. **Sla op** en sluit het bestand.
 
-------------------------------------------------------------------------
+### Optie B — Geen README aanwezig (je hebt README niet aangevinkt)
+1. Maak een nieuwe `README.md` aan met een starttekst:
+   ```bash
+   echo # skill-github-les3> README.md
+   echo Introductietekst voor mijn project.>> README.md
+   ```
 
-## 3. Een repository klonen
+---
 
-**Klonen** betekent dat je een kopie maakt van een repository van GitHub
-naar je eigen computer.
+## 4) Wijzigingen opslaan (commit) en pushen
+1. Controleer de status:
+   ```bash
+   git status
+   ```
+2. **Stage** de wijzigingen:
+   ```bash
+   git add README.md
+   ```
+3. **Commit** met duidelijke boodschap:
+   ```bash
+   git commit -m "Update README: eerste aanpassing"
+   ```
+4. **Push** naar GitHub:
+   - Als de branch al een upstream heeft (meestal bij een repo met README):  
+     ```bash
+     git push
+     ```
+   - Eerste push vanaf je lokale branch (als upstream nog niet is ingesteld):  
+     ```bash
+     git push -u origin main
+     ```
 
-### Stappenplan:
+> **Authenticatie-tip (Windows):** Bij de eerste push kan Git vragen om in te loggen. Gebruik de browser-prompt of een **Personal Access Token (PAT)** als “wachtwoord”. Een PAT maak je via **GitHub → Settings → Developer settings → Personal access tokens**.
 
-1.  Open de **Command Prompt** (Windows: zoek naar *cmd* in het
-    startmenu).
+---
 
-2.  Navigeer naar de gewenste directory met het commando `cd`:
+## 5) Extra: werken op een aparte branch (optioneel)
+```bash
+git checkout -b docs/update-readme
+# pas README aan
+git add README.md
+git commit -m "Docs: README uitgebreid"
+git push -u origin docs/update-readme
+```
+Maak vervolgens op GitHub een **Pull Request**, laat ’m reviewen en **merge**.
 
-    ``` bash
-    cd C:/documents/ma/m1/skill-github/les3
-    ```
+---
 
-3.  Ga naar GitHub en kopieer de **clone-URL** van de repository:
+## 6) Veelvoorkomende problemen & oplossingen
+- **“fatal: not a git repository”**  
+  → Zorg dat je in de map `skill-github-les3` staat (`cd skill-github-les3`).
 
-    -   Klik op de groene knop **\<\> Code** in de repository.\
-    -   Kies **HTTPS** en kopieer de link (bijvoorbeeld
-        `https://github.com/gebruikersnaam/projectnaam.git`).
+- **“destination path already exists and is not an empty directory”** bij `git clone`  
+  → Verwijder of hernoem de bestaande map, of clone naar een **andere** doelmap:
+  ```bash
+  git clone https://github.com/<jouw-gebruikersnaam>/skill-github-les3.git skill-github-les3-kopie
+  ```
 
-4.  Voer het clone-commando uit:
+- **“updates were rejected because the remote contains work that you do not have locally”**  
+  → Haal eerst op en herprobeer:
+  ```bash
+  git pull --rebase
+  git push
+  ```
 
-    ``` bash
-    git clone https://github.com/gebruikersnaam/projectnaam.git
-    ```
+- **“permission denied” of login-problemen**  
+  → Gebruik een **PAT** of log in via de credential prompt.
 
-5.  Na enkele seconden staat er een map in `les3` met de naam van de
-    repository.
+- **Verkeerde branch**  
+  ```bash
+  git branch
+  git switch main
+  ```
 
-------------------------------------------------------------------------
+---
 
-## 4. Controleren of het gelukt is
+## 7) Samenvatting kerncommando’s
+```bash
+# Aanmaken: op GitHub -> New repository -> skill-github-les3 (met README)
 
--   Typ in de command prompt:
+# Lokaal klonen
+cd C:/documents/ma/m1/skill-github
+mkdir les3
+cd les3
+git clone https://github.com/<jouw-gebruikersnaam>/skill-github-les3.git
+cd skill-github-les3
 
-    ``` bash
-    dir
-    ```
+# README bewerken
+notepad README.md
 
-    → Je ziet nu een map met de naam van de repository.
+# Status, stage, commit, push
+git status
+git add README.md
+git commit -m "Update README: eerste aanpassing"
+git push            # of: git push -u origin main (eerste keer)
+```
 
--   Ga naar die map:
+---
 
-    ``` bash
-    cd projectnaam
-    ```
-
--   Controleer de inhoud:
-
-    ``` bash
-    dir
-    ```
-
-------------------------------------------------------------------------
-
-## 5. Samenvatting
-
--   Met `cd` navigeer je naar de juiste map.\
--   Met `git clone [URL]` haal je een repository binnen.\
--   De repository wordt lokaal opgeslagen, inclusief alle bestanden en
-    de volledige geschiedenis.
-
-------------------------------------------------------------------------
-
-👉 Tip voor leerlingen: oefen dit proces meerdere keren met
-verschillende repositories om het goed onder de knie te krijgen.
+### Extra oefening
+- Voeg `notes.md` toe met drie bullets, commit & push.
+- Maak een branch `experiment/readme-badges`, voeg een badge toe en maak een Pull Request.
