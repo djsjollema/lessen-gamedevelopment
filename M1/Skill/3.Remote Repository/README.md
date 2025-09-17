@@ -11,15 +11,26 @@ Na deze les kun je:
 
 ## 1) Maak een nieuwe repository op GitHub
 1. Log in op **GitHub**.
-2. Klik rechtsboven op **+ → New repository**.
+2. Klik rechtsboven op **+ → New **.
+
+<img src="images/new.png" width="40%">
+
 3. Vul in:
    - **Repository name**: `skill-github-les3`
    - **Description**: *(optioneel)*
-   - kies **Public**
+   - **Public**
    - **Initialize this repository**: vink **Add a README file** aan *(aanbevolen)*.
 4. Klik **Create repository**.
+
+<img src="images/newRepo.png" width="70%">
+
 5. Klik op de groene knop **<> Code** en kopieer de **HTTPS**-URL, bijvoorbeeld:  
    `https://github.com/<jouw-gebruikersnaam>/skill-github-les3.git`
+
+of gebruik de copy-url-knop
+
+<img src="images/code.png" width="40%">
+
 
 > *Waarom README aanvinken?* Dan heb je meteen een bestand om aan te passen en kun je zonder extra stappen pushen.
 
@@ -35,8 +46,6 @@ We werken in de map `C:/documents/ma/m1/skill-github/les3`.
    mkdir les3
    cd les3
    ```
-3. 
-
 3. **Kloon** de repo en ga de map in:
    ```bash
    git clone https://github.com/<jouw-gebruikersnaam>/skill-github-les3.git
@@ -52,7 +61,6 @@ git config --global user.email "jij@example.com"
 ---
 
 ## 3) README.md aanpassen
-### Optie A — Je hebt op GitHub al een README laten aanmaken (aanbevolen)
 1. Open het bestand in Kladblok (of je favoriete editor):
    ```bash
    notepad README.md
@@ -63,13 +71,6 @@ git config --global user.email "jij@example.com"
    - README bijgewerkt op <vul datum in>
    ```
 3. **Sla op** en sluit het bestand.
-
-### Optie B — Geen README aanwezig (je hebt README niet aangevinkt)
-1. Maak een nieuwe `README.md` aan met een starttekst:
-   ```bash
-   echo # skill-github-les3> README.md
-   echo Introductietekst voor mijn project.>> README.md
-   ```
 
 ---
 
