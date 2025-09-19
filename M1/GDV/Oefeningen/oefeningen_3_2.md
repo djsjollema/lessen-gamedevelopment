@@ -32,7 +32,7 @@ Je maakt een script dat verschillende muziekfuncties bevat, zoals play, stop en 
    - `string GetCurrentSong()`
    - `bool IsPlaying()`
 3. **Roep de functies aan** in `Start()` en/of via toetsen (bijvoorbeeld P = Play, S = Stop, V = Volume).
-4. **Gebruik Debug.Log** om te laten zien wat er gebeurt.
+4. **Gebruik Debug.Log** om te laten zien wat er gebeurt. **Er hoeft dus niet echt muziek af te spelen!**
 5. **Test het systeem** door verschillende functies aan te roepen en te combineren.
 
 #### Voorbeeld Console Output
