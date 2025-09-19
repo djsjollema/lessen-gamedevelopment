@@ -1,95 +1,72 @@
-# Oefeningen Les 3.1: Physics-componenten en Botsingen
+# Oefeningen Les 3.1: Unity Physics en Colliders  
 
-Kies 1 van de volgende oefeningen en voer die uit. Je mag er ook meer maken als je dat leuk vindt en daar ook tijd voor over hebt.
+## Werkwijze  
+In deze les maak je drie **verplichte** oefeningen (3.1A, 3.1B en 3.1C).  
+De *bonusuitdagingen* zijn **optioneel**: ze zijn bedoeld voor wie sneller klaar is of zichzelf extra wil uitdagen.  
 
-## Inleveren werk
-
-De oefeningen moeten jullie inleveren via een README.md file op Github.
-
-Voor alle oefeningen geldt dat je een titel met de opdracht plaatst, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
-
-[gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
-
----
-
-## Oefening 3.1A: Basketbal Dunk Simulator
-
-### Doel
-
-Oefen met Rigidbody, krachten en colliders door een basketbal te laten stuiteren en dunken.
-
-### Wat ga je doen?
-
-Je maakt een basketbal die kan stuiteren op de vloer en in een basket kan worden gegooid met physics.
-
-### Stappen
-
-1. **Maak een nieuwe scene** genaamd "BasketbalDunk"
-2. **Voeg een Sphere toe** als basketbal, geef deze een oranje materiaal.
-3. **Voeg een Plane toe** als vloer en een Cube als basket (boven de vloer).
-4. **Voeg een Rigidbody toe** aan de basketbal.
-5. **Voeg een Box Collider toe** aan de basket (Cube).
-6. **Maak een script** `BasketballController.cs` waarmee je met de spatiebalk de bal omhoog laat springen (`AddForce`).
-7. **Test het stuiteren en probeer te scoren!**
-
-### Bonus Uitdagingen
-
-- Maak de bal extra stuiterig met een Physics Material.
-- Tel het aantal scores met een script.
-- Voeg een scorebord toe met Debug.Log.
+De oefeningen lever je in via een **README.md** bestand op GitHub met:  
+- Titel van de oefening  
+- Korte omschrijving van wat je hebt gedaan  
+- Een gifje met je resultaat  
+- Link naar je script (indien gebruikt)  
 
 ---
 
-## Oefening 3.1B: Ruimte Asteroïde Botsing
+## Oefening 3.1A: Vallende bal  
 
-### Doel
+#### Doel  
+Leer hoe je een object laat vallen en realistisch laat stuiteren met behulp van physics.  
 
-Oefen physics door een asteroïde te laten bewegen en botsen met een ruimteschip.
+#### Wat ga je doen?  
+Je maakt een bal die door zwaartekracht naar beneden valt en stuitert op de vloer – net als een stuiterbal in *Angry Birds* of een vallend blok in *Tetris*.  
 
-### Wat ga je doen?
+#### Stappen  
+1. Voeg een vloer (met BoxCollider) en een bal (met CircleCollider) toe.  
+2. Voeg een **Rigidbody** toe aan de bal.  
+3. Speel de scène af en kijk hoe de bal valt.  
+4. Voeg een **Physics Material** toe met bounciness > 0.  
+5. Pas de bounciness aan om het verschil te zien.  
 
-Je maakt een asteroïde die door de ruimte zweeft en botst tegen een ruimteschip, beide reageren met physics.
-
-### Stappen
-
-1. **Maak een nieuwe scene** genaamd "AsteroidCollision"
-2. **Voeg een Sphere toe** als asteroïde, geef deze een grijs materiaal.
-3. **Voeg een Cube toe** als ruimteschip, plaats deze in het pad van de asteroïde.
-4. **Voeg Rigidbody en Collider toe** aan beide objecten.
-5. **Maak een script** `AsteroidMover.cs` dat de asteroïde een kracht geeft richting het schip (`AddForce` in `Start()`).
-6. **Test de botsing en kijk hoe beide objecten reageren.**
-
-### Bonus Uitdagingen
-
-- Laat het schip wegschieten bij botsing.
-- Voeg een Physics Material toe voor extra stuiter of wrijving.
-- Log de snelheid van de asteroïde bij impact.
+#### Bonus uitdagingen (optioneel)  
+- Laat meerdere ballen tegelijk vallen met verschillende physics materials.  
+- Experimenteer met gravity scale voor maan- of lood-effecten.  
 
 ---
 
-## Oefening 3.1C: Fantasy Springende Kist
+## Oefening 3.1B: Foutieve physics  
 
-### Doel
+#### Doel  
+Begrijp wat er gebeurt als physics expres fout ingesteld zijn.  
 
-Oefen physics door een magische kist te laten springen en botsen op een fantasy vloer.
+#### Wat ga je doen?  
+Je maakt een object dat onnatuurlijk reageert, bijvoorbeeld zweeft of extreem stuitert – alsof je een “maan-level” bouwt of een glitch in een game tegenkomt.  
 
-### Wat ga je doen?
+#### Stappen  
+1. Kopieer de scène van Oefening 3.1A.  
+2. Zet gravity scale op 0 en kijk wat er gebeurt.  
+3. Verander bounciness naar een extreme waarde (bijvoorbeeld 2).  
+4. Observeer en noteer in je README wat er gebeurt en waarom.  
 
-Je maakt een kist die met een magische kracht kan springen en botst op een vloer, alles met physics.
-
-### Stappen
-
-1. **Maak een nieuwe scene** genaamd "MagicChest"
-2. **Voeg een Cube toe** als kist, geef deze een fantasy kleur.
-3. **Voeg een Plane toe** als vloer, geef deze een magisch materiaal.
-4. **Voeg een Rigidbody toe** aan de kist.
-5. **Maak een script** `MagicChestController.cs` waarmee je met de spatiebalk de kist laat springen (`AddForce`).
-6. **Test het springen en botsen van de kist.**
-
-### Bonus Uitdagingen
-
-- Voeg een Particle System toe bij het springen.
-- Maak de vloer extra glad of stuiterig met een Physics Material.
-- Tel het aantal sprongen met Debug.Log.
+#### Bonus uitdagingen (optioneel)  
+- Combineer meerdere “fouten” in één scène.  
+- Maak een object dat zweeft of blijft glijden alsof het op ijs staat (lage friction).  
 
 ---
+
+## Oefening 3.1C: Velocity en botsing  
+
+#### Doel  
+Leer hoe je een object met snelheid vooruit kunt schieten en laten botsen.  
+
+#### Wat ga je doen?  
+Je maakt een object dat met velocity beweegt en ergens tegenaan botst – vergelijkbaar met een projectiel in *Angry Birds* of een vuurbal in *Mario*.  
+
+#### Stappen  
+1. Voeg een nieuw object toe met Rigidbody en Collider.  
+2. Gebruik `rigidbody.velocity = new Vector2(…);` in Start() om het een zet te geven.  
+3. Plaats een muur of ander object om tegenaan te botsen.  
+4. Observeer hoe de botsing verloopt.  
+
+#### Bonus uitdagingen (optioneel)  
+- Voeg meerdere muren en obstakels toe en laat je object ertegen botsen.  
+- Combineer velocity met gravity voor een “projectiel-effect” (zoals een kanonskogel).  
