@@ -76,7 +76,7 @@ void DoJump()
 }
 ```
 
-![don't repeat](../gfx/3_2_dont_repeat_yourself.jpg)
+![don't repeat](../gfx/3_2_repeat.gif)
 
 **Voordelen:**
 
@@ -92,9 +92,9 @@ void DoJump()
 
 ```csharp
 // Dit is een functie (alleen voor dit script)
-void MijnPrivateFunctie()
+private void MijnPrivateFunctie()
 {
-    Debug.Log("Alleen ik kan deze gebruiken");
+    Debug.Log("Alleen in dit script mag ik deze gebruiken");
 }
 
 // Dit is een method (andere scripts kunnen deze ook gebruiken)
@@ -111,7 +111,7 @@ public void MijnPubliekeMethod()
 ### Basis Functie Syntax
 
 ```csharp
-void FunctieNaam()
+private void FunctieNaam()
 {
     // Code die wordt uitgevoerd
 }
@@ -119,9 +119,10 @@ void FunctieNaam()
 
 **Uitleg:**
 
+- `private` = mag ook `public` zijn
 - `void` = Deze functie geeft niets terug (geen output)
 - `FunctieNaam` = Kies een duidelijke naam (zoals `DoJump` of `PlaySound`)
-- `()` = Hier komen later argumenten (de input)
+- `()` = Hier tussen komen later argumenten (de input)
 - `{}` = De code die wordt uitgevoerd (wat de machine doet)
 
 ### Voorbeeld: Welkomstbericht
@@ -144,44 +145,6 @@ public class FunctionExample : MonoBehaviour
 }
 ```
 
-### Meer Voorbeelden
-
-```csharp
-public class GameFunctions : MonoBehaviour
-{
-    void Start()
-    {
-        StartGame();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartLevel();
-        }
-    }
-
-    void StartGame()
-    {
-        Debug.Log("Game Started!");
-        Time.timeScale = 1.0f; // Normale tijd
-    }
-
-    void RestartLevel()
-    {
-        Debug.Log("Level Restarted!");
-        transform.position = Vector3.zero; // Terug naar start
-    }
-
-    void PauseGame()
-    {
-        Debug.Log("Game Paused!");
-        Time.timeScale = 0.0f; // Stop de tijd
-    }
-}
-```
-
 ---
 
 ## Argumenten - Data Doorgeven aan Functies
@@ -191,24 +154,29 @@ public class GameFunctions : MonoBehaviour
 **Argumenten** zijn waarden die je aan **Parameters** meegeeft. De parameters geven deze waarden door aan de functie in een variabele.
 
 ```csharp
-void SayHello(string naam)
+public class FunctionExample : MonoBehaviour
 {
-    Debug.Log("Hallo " + naam + "!");
+    void Start()
+    {
+        ShowWelcomeMessage("Kim");
+        ShowWelcomeMessage("Jelle");
+        ShowWelcomeMessage("Erwin"); // Roep onze functie aan
+    }
+
+    void ShowWelcomeMessage(string name)
+    {
+        Debug.Log("=================");
+        Debug.Log("Hee! "+ name +"!");
+        Debug.Log("Welkom bij mijn game!");
+        Debug.Log("Veel plezier!");
+        Debug.Log("=================");
+    }
 }
 ```
 
-**Hoe gebruik je het:**
+Hierboven is de variabele `naam` dus de **Parameter** en de waarden `"Kim", "Jelle" & "Erwin" ` zijn de **Argumenten**.
 
-```csharp
-void Start()
-{
-    SayHello("Jan");    // Output: "Hallo Jan!"
-    SayHello("Emma");   // Output: "Hallo Emma!"
-    SayHello("Alex");   // Output: "Hallo Alex!"
-}
-```
-
-Hierboven is de variabele `naam` dus de **Parameter** en de waarden `"Jan", "Emma" & "Alex" ` zijn de **Argumenten**.
+Met het `+`(plus)-symbool kun je de waarde van de variabele aan een string vastplakken.
 
 ### Verschillende Typen Parameters
 
@@ -391,31 +359,33 @@ public class MathFunctions : MonoBehaviour
 {
     void Start()
     {
-        // Functie met argumenten EN return value
-        int som = AddNumbers(5, 3);
-        Debug.Log("5 + 3 = " + som); // Output: "5 + 3 = 8"
+      // Return een int of basis van een geboortejaar, maand en dag.
+        int leeftijd = GetPlayerAge(26, 11, 1979);
+        Debug.Log("Speler leeftijd: " + leeftijd);
 
-        float wortel = CalculateSquareRoot(16.0f);
-        Debug.Log("Wortel van 16 = " + wortel); // Output: "Wortel van 16 = 4"
+        // Return een float of basis van 2 posities(Vector3)
+        float afstand = CalculateDistance( new Vector3(0f,1f,5f), new Vector3(11f,9f,6f) );
+        Debug.Log("Afstand: " + afstand);
 
-        bool isGroter = IsNumberBigger(10, 5);
-        Debug.Log("Is 10 groter dan 5? " + isGroter); // Output: "Is 10 groter dan 5? True"
     }
 
-    int AddNumbers(int a, int b)
+    int GetPlayerAge(int dayOfB, int monthOfB, int yearOfB)
     {
-        int result = a + b;
-        return result;
+        // Bereken leeftijd op basis van geboortedatum
+        System.DateTime today = System.DateTime.Today;
+        int age = today.Year - yearOfB;
+
+        // Check of verjaardag dit jaar al is geweest
+        if (today.Month < monthOfB || (today.Month == monthOfB && today.Day < dayOfB))
+        {
+            age--;
+        }
+        return age;//geef de leeftijd terug
     }
 
-    float CalculateSquareRoot(float number)
+    float CalculateDistance(Vector3 pointA, Vector3 pointB)
     {
-        return Mathf.Sqrt(number); // Unity's ingebouwde wiskundige functie
-    }
-
-    bool IsNumberBigger(int number1, int number2)
-    {
-        return number1 > number2; // Return true als number1 groter is
+        return Vector3.Distance(pointA, pointB); // Return een float
     }
 }
 ```
@@ -502,11 +472,6 @@ void Jump()
 void Attack()
 void MoveLeft()
 void PlaySound()
-
-// Get/Set voor data ophalen/instellen
-int GetPlayerHealth()
-string GetPlayerName()
-void SetPlayerPosition(Vector3 pos)
 
 // Is/Can/Has voor boolean returns
 bool IsPlayerAlive()

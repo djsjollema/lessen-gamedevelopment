@@ -24,10 +24,10 @@ Je maakt een script waarin een speler alleen een health potion kan oppakken als 
 
 ### Stappen
 
-1. **Maak een nieuwe scene** genaamd "SmartPickup"
+1. **Maak een nieuwe scene** genaamd "HealthPickup"
 2. **Maak een Capsule als speler** met een variabele `int health` en `int maxHealth`
 3. **Maak een Sphere als health potion** met een Collider (Is Trigger aan)
-4. **Maak een script** `SmartPickup.cs` dat in `OnTriggerEnter` checkt:
+4. **Maak een script** `HealthPickup.cs` dat in `OnTriggerEnter` checkt:
    - Alleen oppakken als `health < maxHealth`
    - Verhoog health en vernietig het potion object
    - Toon een bericht in de console
@@ -63,15 +63,18 @@ Je maakt een script waarin een speler een deur kan openen met de E-toets, maar a
 1. **Maak een nieuwe scene** genaamd "DoorWithKey"
 2. **Maak een Capsule als speler** met een bool `hasKey`
 3. **Maak een Cube als deur** met een Collider (Is Trigger aan)
-4. **Maak een script** `DoorWithKey.cs` dat in `OnTriggerEnter` een hint toont ("Press E to open")
-5. **Laat de deur alleen openen** als de speler op E drukt en `hasKey == true`
-6. **Test het systeem** door een sleutel op te pakken en de deur te openen
+4. **Maak een sphere als key** met een Collider (Is Trigger aan)
+5. **Maak een script** `OpenDoorWithKey.cs` dat in `OnTriggerEnter` een hint toont ("Press E to open").
+6. **Laat de deur alleen openen** als de speler op E drukt en `hasKey == true`
+7. **Laat de speler de key pakken** als de speler deze raakt en zet dan de bool `hasKey = true`
+8. **Test het systeem** door een sleutel op te pakken en de deur te openen
 
 #### Voorbeeld Console Output
 
 ```
 Press E to open (needs key)
 Need a key!
+Picked up key!
 Door opened!
 ```
 
@@ -83,41 +86,39 @@ Door opened!
 
 ---
 
-## Oefening 5.2C: Game State Manager (Zonder Enum)
+## Oefening 5.2C: Kleurwisselende Platform
 
 ### Doel
 
-Combineer input, if-statements en variabelen door een simpel game state systeem te maken.
+Maak een platform dat van kleur verandert wanneer de speler erop staat en een toets indrukt.
 
 ### Wat ga je doen?
 
-Je maakt een script waarin je tussen verschillende game states kunt wisselen (Playing, Paused, GameOver) en de juiste acties uitvoert, zonder gebruik van een enum.
+Je maakt een script waarin een platform van kleur verandert als de speler erop staat en op verschillende toetsen drukt (R = rood, G = groen, B = blauw).
 
 ### Stappen
 
-1. **Maak een nieuwe scene** genaamd "GameStateManager"
-2. **Maak een script** `GameStateManager.cs` met een variabele `string gameState` (of `int gameState`)
-   - Bijvoorbeeld: `"Playing"`, `"Paused"`, `"GameOver"`
-3. **Gebruik toetsen** om van state te wisselen:
-   - Escape = pauzeren/hervatten
-   - R = opnieuw starten bij GameOver
-4. **Gebruik if-statements** om te bepalen wat er gebeurt in elke state
-5. **Toon een bericht in de console** bij elke state wissel
-6. **Test het systeem** door te wisselen tussen states
+1. **Maak een nieuwe scene** genaamd "ColorPlatforms"
+2. **Maak meerdere Cubes als platforms** met een Collider (Is Trigger aan)
+3. **Maak een script** `ColorChanger.cs` dat:
+   - Checkt of de speler op het platform staat
+   - Bij R/G/B toetsen de kleur verandert
+   - Een bericht toont welke kleur actief is
+4. **Test het systeem** door op het platform te staan en toetsen in te drukken
 
 #### Voorbeeld Console Output
 
 ```
-Game Paused - Press ESC to resume
-Game Resumed
-GAME OVER! Press R to restart
-Game Restarted
+Player on platform - Press R/G/B to change color
+Changed to Red!
+Changed to Green!
+Changed to Blue!
 ```
 
 ### Bonus Uitdagingen
 
-- Voeg een score en lives systeem toe
-- Laat het spel automatisch GameOver gaan als lives 0 zijn
-- Toon een visueel effect bij elke state wissel
+- Voeg meer kleuren toe met andere toetsen
+- Laat het platform langzaam van kleur veranderen
+- Tel hoe vaak elke kleur is gebruikt
 
 ---

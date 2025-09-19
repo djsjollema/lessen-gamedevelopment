@@ -47,6 +47,7 @@ for (initialisatie; conditie; increment)
 ```
 
 **Uitleg:**
+
 - **Initialisatie**: Wat gebeurt voor de eerste iteratie (meestal `int i = 0`)
 - **Conditie**: Wanneer stopt de loop? (meestal `i < aantal`)
 - **Increment**: Wat gebeurt na elke iteratie (meestal `i++`)
@@ -215,7 +216,7 @@ public class ForeachExamples : MonoBehaviour
         foreach (string naam in spelerNamen)
         {
             Debug.Log("Welcome " + naam + " (length: " + naam.Length + ")");
-            
+
             // Check voor specifieke namen
             if (naam.StartsWith("A"))
             {
@@ -334,10 +335,10 @@ void DoWhileExample()
     {
         attempts++;
         Debug.Log("Attempt " + attempts);
-        
+
         // Simuleer random success
         success = Random.Range(0f, 1f) > 0.7f; // 30% kans op success
-        
+
     } while (!success && attempts < 5);
 
     if (success)
@@ -430,7 +431,7 @@ public class GridSystem : MonoBehaviour
                 int neighborY = centerY + offsetY;
 
                 // Check bounds
-                if (neighborX >= 0 && neighborX < gridWidth && 
+                if (neighborX >= 0 && neighborX < gridWidth &&
                     neighborY >= 0 && neighborY < gridHeight)
                 {
                     Debug.Log("  Neighbor at (" + neighborX + ", " + neighborY + ")");
@@ -801,7 +802,7 @@ public class WaveManager : MonoBehaviour
 
     public List<EnemyWave> waves = new List<EnemyWave>();
     public List<Transform> spawnPoints = new List<Transform>();
-    
+
     private int currentWave = 0;
     private bool waveInProgress = false;
 
@@ -840,7 +841,7 @@ public class WaveManager : MonoBehaviour
         {
             // Kies random spawn point
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
-            
+
             // Spawn enemy
             GameObject enemy = Instantiate(wave.enemyPrefab, spawnPoint.position, spawnPoint.rotation);
             enemy.name = "Wave" + currentWave + "_Enemy" + enemyIndex;
@@ -932,6 +933,7 @@ In Les 7.1 komt er een summatieve toets om je kennis te testen, plus tijd voor i
 ### Q: Wanneer gebruik ik for vs foreach vs while?
 
 **A:**
+
 - **For**: Als je index nodig hebt, specifieke range, of achterstevoren wilt
 - **Foreach**: Als je alleen alle items wilt doorlopen (eenvoudigst en veiligst)
 - **While**: Als je niet weet hoeveel iteraties je nodig hebt
@@ -959,6 +961,7 @@ while (counter < 10)
 ### Q: Mijn nested loops zijn traag, wat nu?
 
 **A:** Optimaliseer door:
+
 - Vermijd onnodige GetComponent() calls
 - Cache List.Count waarden
 - Gebruik break/continue om vroeg te stoppen

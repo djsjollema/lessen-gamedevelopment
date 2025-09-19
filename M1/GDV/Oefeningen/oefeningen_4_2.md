@@ -29,7 +29,8 @@ Je maakt een script dat punten toevoegt als de speler een muntje oppakt.
 3. **Voeg meerdere Spheres toe** als muntjes en geef ze de tag "Coin"
 4. **Zet "Is Trigger" aan** op de Sphere Colliders van de muntjes
 5. **Maak een script** `CoinPickup.cs` dat punten toevoegt en het muntje vernietigt bij aanraking
-6. **Test het systeem** door de speler langs de muntjes te bewegen
+6. **Optimaliseer je code** door code die herhalend is in functies te stoppen.
+7. **Test het systeem** door de speler langs de muntjes te bewegen
 
 #### Voorbeeld Console Output
 
@@ -65,7 +66,8 @@ Je maakt een script dat elke seconde schade toebrengt aan de speler als hij in d
 3. **Geef de Cube de tag "DamageZone"**
 4. **Voeg een Capsule toe** als speler en geef deze de tag "Player"
 5. **Maak een script** `DamageZone.cs` dat elke seconde schade toebrengt aan de speler zolang hij in de zone is
-6. **Test het systeem** door de speler in de zone te laten staan
+6. **Optimaliseer je code** door code die herhalend is in functies te stoppen.
+7. **Test het systeem** door de speler in de zone te laten staan
 
 #### Voorbeeld Console Output
 
@@ -101,7 +103,8 @@ Je maakt een script dat een bal laat stuiteren als hij de grond of een muur raak
 3. **Voeg een Plane toe** als grond en geef deze de tag "Ground"
 4. **Voeg een Cube toe** als muur en geef deze de tag "Wall"
 5. **Maak een script** `BouncingBall.cs` dat de bal laat stuiteren bij botsing met grond of muur
-6. **Test het systeem** door de bal te laten vallen en botsen
+6. **Optimaliseer je code** door code die herhalend is in functies te stoppen.
+7. **Test het systeem** door de bal te laten vallen en botsen
 
 #### Voorbeeld Console Output
 

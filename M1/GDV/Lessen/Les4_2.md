@@ -179,6 +179,7 @@ public class PickupItem : MonoBehaviour
     void Start()
     {
         // Zorg dat dit object een trigger is
+        // Dit kun je ook via de inspector doen
         GetComponent<Collider>().isTrigger = true;
     }
 
@@ -204,14 +205,14 @@ public class PickupItem : MonoBehaviour
         Debug.Log("Player picked up: " + itemName);
         Debug.Log("Points gained: " + points);
 
-        // Hier zou je later de score kunnen bijwerken
-        // PlayerScript.Instance.AddScore(points);
+        // Hier zou je later het scorebord kunnen bijwerken
+
     }
 
     // Functie om visueel effect te tonen
     void ShowPickupEffect()
     {
-        Debug.Log("✨ Pickup effect! ✨");
+        Debug.Log("Pickup effect!");
         // Hier zou je later een particle effect kunnen spelen
     }
 }
@@ -228,7 +229,6 @@ public class DamageZone : MonoBehaviour
     void Start()
     {
         GetComponent<Collider>().isTrigger = true;
-        SetDangerAppearance();
     }
 
     void OnTriggerEnter(Collider other)
@@ -266,19 +266,10 @@ public class DamageZone : MonoBehaviour
     // Functie voor damage toepassen
     void ApplyDamage(GameObject target, int damage)
     {
-        Debug.Log("Player takes " + damage + " damage!");
+        Debug.Log(target.name + " takes " + damage + " damage!");
         // Hier zou je later PlayerHealth kunnen verminderen
     }
 
-    // Functie voor danger zone uiterlijk
-    void SetDangerAppearance()
-    {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.material.color = new Color(1f, 0f, 0f, 0.5f); // Rood, half transparant
-        }
-    }
 }
 ```
 
@@ -314,6 +305,7 @@ public class BouncingBall : MonoBehaviour
     // Functie om bal te laten stuiteren
     void BounceBall(Collision collision)
     {
+        // Haal de "normaal"-vector op van het contactpunt (de richting loodrecht op het oppervlak)
         Vector3 bounceDirection = collision.contacts[0].normal;
         rb.AddForce(-bounceDirection * bounceForce, ForceMode.Impulse);
 
