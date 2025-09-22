@@ -46,7 +46,7 @@ Je maakt een scène waarin een object onnatuurlijk reageert, bijvoorbeeld zweeft
 **Stappen**  
 - Kopieer je scène van 3.1A.  
 - Zet bij de bal **Use Gravity** uit of zet de globale **Gravity** tijdelijk richting 0 in Project Settings.  
-- Geef de bal een Physic Material met **Bounciness** rond 2 en **Friction** laag.  
+- Geef de bal een Physic Material met **Bounciness** rond 1 en **Friction** laag.  
 - Speel af en noteer in je README wat er gebeurt en waarom dit niet realistisch is.  
 
 **Bonus uitdagingen**  
