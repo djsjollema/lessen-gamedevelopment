@@ -61,16 +61,17 @@ git config --global user.email "jij@example.com"
 ---
 
 ## 3) README.md aanpassen
-1. Open het bestand in Kladblok (of je favoriete editor):
+1. Open het bestand in Visual Studio Code  (of je favoriete editor):
    ```bash
-   notepad README.md
+   code .
    ```
-2. Voeg bijvoorbeeld onderaan toe:
+Dit opent jouw Visual Studio met direct de directory ('.' betekent current directory) die op dit moment actief in jou commandprompt staat
+4. Voeg bijvoorbeeld onderaan toe:
    ```md
    ## Mijn aanpassing
    - README bijgewerkt op <vul datum in>
    ```
-3. **Sla op** en sluit het bestand.
+5. **Sla op** en sluit het bestand.
 
 ---
 

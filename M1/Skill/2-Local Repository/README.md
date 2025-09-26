@@ -1,4 +1,4 @@
-# Les 02 -- Git: Versiebeheer
+# Les 02 -- Git: Versiebeheer 
 
 ### Extra
 
