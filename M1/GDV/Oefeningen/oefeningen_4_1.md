@@ -5,6 +5,9 @@ Begin met **Oefening 4.1A**.
 Heb je die af? Ga door met **Oefening 4.1B** en daarna met **Oefening 4.1C**.  
 De oefeningen bouwen op elkaar voort, dus het is het beste om ze in deze volgorde te maken.  
 
+
+Als je klaar bent, vul dan [dit](https://forms.gle/VqBssDKbTQtTE37n8) reflectieformulier in.  
+
 ---
 
 ## Oefening 4.1A: Coin Collector
