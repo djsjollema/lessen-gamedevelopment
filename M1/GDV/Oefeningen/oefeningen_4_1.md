@@ -1,114 +1,74 @@
-# Oefeningen Les 4.1: Colliders, Triggers en Tags
+# Oefeningen Les 4.1: Trigger vs Collision Quest
 
-Kies 1 van de volgende oefeningen en voer die uit. Je mag er ook meer maken als je dat leuk vindt en daar ook tijd voor over hebt.
-
-## Inleveren werk
-
-De oefeningen moeten jullie inleveren via een README.md file op Github.
-
-Voor alle oefeningen geldt dat je een titel met de opdracht plaatst, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
-
-[gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
+## Werkwijze
+Begin met **Oefening 4.1A**.  
+Heb je die af? Ga door met **Oefening 4.1B** en daarna met **Oefening 4.1C**.  
+De oefeningen bouwen op elkaar voort, dus het is het beste om ze in deze volgorde te maken.  
 
 ---
 
-## Oefening 4.1A: Pickup Zone Challenge
+## Oefening 4.1A: Coin Collector
 
-### Doel
+**Doel**  
+Leer hoe je een speler laat bewegen, coins oppakt via een trigger en muren gebruikt als collision.  
 
-Leer werken met Trigger Colliders en Tags door een pickup zone te maken.
+**Wat ga je doen?**  
+Je maakt een speler die coins kan verzamelen. Coins verdwijnen via een **Trigger** en muren blokkeren de speler via een **Collision**. De score wordt zichtbaar gemaakt in de Console.  
 
-### Wat ga je doen?
+**Stappen**  
+- Maak een **Player** (bijv. Cube) met Rigidbody en Collider. Zet de tag op **Player**.  
+- Maak een **Coin** (bijv. Sphere) met Collider, zet **Is Trigger** aan en de tag op **Coin**.  
+- Maak een **Muur** (Cube) met Collider. Laat **Is Trigger** uit staan.  
+- Laat de speler links en rechts bewegen via `Input.GetAxis("Horizontal")`.  
+- Zorg dat coins verdwijnen met `OnTriggerEnter` en dat er een score in de Console wordt bijgehouden.  
+- Zorg dat muren de speler blokkeren met een Collision.  
 
-Je maakt een pickup item dat alleen reageert als de speler (met de juiste tag) het aanraakt.
-
-### Stappen
-
-1. **Maak een nieuwe scene** genaamd "PickupZone"
-2. **Voeg een Capsule toe** als speler en geef deze de tag "Player"
-3. **Voeg een Sphere toe** als pickup en geef deze de tag "Pickup"
-4. **Zet "Is Trigger" aan** op de Sphere Collider van het pickup item
-5. **Maak een script** `PickupZone.cs` dat een Debug.Log geeft als de speler het pickup item aanraakt
-6. **Test het systeem** door de speler naar het pickup item te bewegen
-
-#### Voorbeeld Console Output
-
-```
-Player entered the pickup zone!
-Pickup collected!
-```
-
-### Bonus Uitdagingen
-
-- Maak het pickup item transparant met een materiaal
-- Voeg een tweede pickup toe met een andere tag ("PowerUp")
-- Laat alleen spelers met de tag "Player" het item oppakken
+**Bonus uitdagingen**  
+- Laat de coin ronddraaien in de lucht en kies bewust voor **Space.Self** of **Space.World**.  
+- Voeg meerdere coins toe en tel ze allemaal mee in de score.  
+- Toon in de Console een duidelijke melding bij zowel Trigger als Collision.  
 
 ---
 
-## Oefening 4.1B: Checkpoint Tag System
+## Oefening 4.1B: Goomba Trouble
 
-### Doel
+**Doel**  
+Leer hoe je naast triggers ook collisions met vijanden en UI-feedback gebruikt.  
 
-Oefen met Tags en Colliders door een checkpoint systeem te maken.
+**Wat ga je doen?**  
+Je breidt je coin-scène uit met een vijand (Goomba of stilstaand object) die een leven kost bij collision. Coins keren automatisch terug en de score verschijnt in een Canvas-tekst.  
 
-### Wat ga je doen?
+**Stappen**  
+- Breid je vorige scène uit.  
+- Voeg een **Canvas** toe met een Text (of TextMeshProUGUI) voor de score.  
+- Zorg dat coins na een paar seconden respawnen.  
+- Voeg een **Enemy** toe (Goomba of stilstaand object) met Collider en tag **Enemy**.  
+- Laat bij collision met de Enemy een leven van de speler afgaan (houd dit bij met een int-variabele en toon dit in de Console of UI).  
 
-Je maakt meerdere checkpoints die alleen reageren op objecten met de tag "Player".
-
-### Stappen
-
-1. **Maak een nieuwe scene** genaamd "Checkpoints"
-2. **Voeg meerdere Cubes toe** als checkpoints en geef ze de tag "Checkpoint"
-3. **Zet "Is Trigger" aan** op de Box Collider van elke checkpoint
-4. **Maak een Capsule als speler** en geef deze de tag "Player"
-5. **Maak een script** `CheckpointTrigger.cs` dat een Debug.Log geeft als de speler een checkpoint raakt
-6. **Test het systeem** door de speler langs de checkpoints te bewegen
-
-#### Voorbeeld Console Output
-
-```
-Player reached checkpoint 1!
-Player reached checkpoint 2!
-```
-
-### Bonus Uitdagingen
-
-- Geef elke checkpoint een uniek nummer of naam
-- Laat checkpoints alleen één keer reageren per speler
-- Toon een visueel effect bij het bereiken van een checkpoint
+**Bonus uitdagingen**  
+- Laat de coin krimpen bij oppakken en terugploppen bij respawn.  
+- Laat de Enemy of Goomba om een **pivot** draaien in plaats van op zichzelf.  
+- Voeg een geluidseffect toe bij het oppakken van coins.  
 
 ---
 
-## Oefening 4.1C: Enemy Detection Zone
+## Oefening 4.1C: Boo Challenge
 
-### Doel
+**Doel**  
+Leer hoe je complexe collisions en triggers combineert, inclusief respawn-mechanieken.  
 
-Oefen met Trigger Colliders en Tags door een detectie zone voor vijanden te maken.
+**Wat ga je doen?**  
+Je voegt een bewegende vijand toe die rond een as draait, een KillZone die levens kost bij vallen, en coins met verschillende waarden en respawntijden.  
 
-### Wat ga je doen?
+**Stappen**  
+- Breid je vorige scène uit.  
+- Voeg een **Boo** of ander vijand-object toe dat rond een empty parent draait. Zet de tag op **Enemy**.  
+- Zorg dat collision met deze vijand levens aftrekt.  
+- Maak een **KillZone** onder het level (bijv. een groot vlak met Is Trigger aan en tag KillZone).  
+- Laat de speler een leven verliezen en terugkeren naar een RespawnPoint wanneer deze in de KillZone valt.  
+- Voeg meerdere coins toe met verschillende scorewaarden en respawntijden.  
 
-Je maakt een zone die een melding geeft als een vijand (met de tag "Enemy") binnenkomt.
-
-### Stappen
-
-1. **Maak een nieuwe scene** genaamd "EnemyDetection"
-2. **Voeg een Cube toe** als detectie zone en zet "Is Trigger" aan
-3. **Geef de Cube de tag "DetectionZone"**
-4. **Voeg een Sphere toe** als vijand en geef deze de tag "Enemy"
-5. **Maak een script** `EnemyDetection.cs` dat een Debug.Log geeft als een vijand de zone binnenkomt
-6. **Test het systeem** door de vijand naar de zone te bewegen
-
-#### Voorbeeld Console Output
-
-```
-Enemy detected in zone!
-```
-
-### Bonus Uitdagingen
-
-- Laat de zone een alarm afgaan (kleur veranderen)
-- Voeg meerdere vijanden toe met verschillende tags
-- Laat de zone ook reageren als de speler binnenkomt, maar met een andere melding
-
----
+**Bonus uitdagingen**  
+- Laat de Boo wiebelen tijdens het roteren om hem levendiger te maken.  
+- Voeg een **Checkpoint** toe als Trigger die tijdelijk een bericht in de UI toont. Tag dit object **Checkpoint**.  
+- Bouw een cooldown zodat de speler niet meerdere levens tegelijk verliest bij aanhoudend contact met een vijand.  
