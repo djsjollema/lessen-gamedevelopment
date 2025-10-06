@@ -1,6 +1,10 @@
 # Oefeningen Les 5.1: If-Statements en Switch Gebruiken
 
-Kies 1 van de volgende oefeningen en voer die uit. Je mag er ook meer maken als je dat leuk vindt en daar ook tijd voor over hebt.
+Kies of je start met oefening A of B. Maak beide af voor volgende week.  
+Het is verstandig om daarna ook oefening C te doen — die kun je pas maken als A en B klaar zijn.  
+
+Reflectievragen horen bij elke opdracht en moeten in je README worden beantwoord.  
+Succes!
 
 ## Inleveren werk
 
@@ -42,6 +46,11 @@ Warning: Low health!
 Critical: Very low health!
 ```
 
+### Reflectievragen
+
+- Waarom past hier een if-structuur goed?  
+- Wanneer zou een switch beter werken?
+
 ### Bonus Uitdagingen
 
 - Voeg een visueel effect toe bij elke status (kleur veranderen)
@@ -82,6 +91,12 @@ Equipped: Bow
 Damage: 20, Speed: 1.5
 ```
 
+### Reflectievragen
+
+- Waarom past hier een switch-statement beter dan een if-structuur?  
+- Wat zou er gebeuren als je dit met if/else zou doen?
+
+- 
 ### Bonus Uitdagingen
 
 - Voeg een "Unarmed" optie toe als default
@@ -90,45 +105,47 @@ Damage: 20, Speed: 1.5
 
 ---
 
-## Oefening 5.1C: NPC Dialogue Choices
+## Oefening 5.1C: Verdieping – Weapon Switch met Enum
 
 ### Doel
 
-Oefen met switch-statements en logische operatoren door een dialoog systeem te maken.
+Leer hoe je vaste keuzes typeveilig en overzichtelijk maakt met een enum.
 
 ### Wat ga je doen?
 
-Je maakt een script waarin een NPC verschillende antwoorden geeft afhankelijk van de keuze van de speler.
+Je breidt de vorige opdracht uit en vervangt de string door een enum voor de wapentypes.
 
 ### Stappen
 
-1. **Maak een nieuwe scene** genaamd "NPCDialogue"
-2. **Maak een script** `NPCDialogue.cs` met een variabele `int dialogueStage`
-3. **Gebruik een switch-statement** om verschillende dialogen te tonen:
-   - 1: "Welkom, held!"
-   - 2: "Kun je ons helpen?"
-   - 3: "Er is een draak in het bos."
-   - 4: "Wil je de quest accepteren?"
-   - 5: "Bedankt! Je bent onze hoop."
-   - default: "Succes op je avontuur!"
-4. **Laat de speler verder gaan** met een toets (bijvoorbeeld E) en toon de juiste tekst
-5. **Test het systeem** door door de dialogen te klikken
-
-#### Voorbeeld Console Output
-
+1. **Kopieer** je bestaande script `WeaponSwitch.cs` en noem het `WeaponSwitchEnum.cs`.  
+2. **Verwijder** de stringvariabele en **voeg een enum toe** bovenaan in je script:  
+   ```csharp
+   public enum WeaponType { Sword, Bow, Staff, Dagger }
+   ```
+Maak een variabele aan:
+  ```csharp
+   public WeaponType selectedWeapon = WeaponType.Sword;
 ```
-Welkom, held!
-Kun je ons helpen?
-Er is een draak in het bos.
-Wil je de quest accepteren?
-Bedankt! Je bent onze hoop.
-Succes op je avontuur!
+Gebruik toetsen R, T, Y, U om te wisselen tussen wapens.
+
+Gebruik een switch om feedback te tonen via Debug.Log() of TextMeshPro.
+
+Roep SelectWeapon(selectedWeapon) alleen aan binnen de juiste toetsblokken.
+
+Voorbeeld Console Output
+  ```csharp
+   You selected the sword: strong and close range.
+   You selected the bow: long range and fast.
+   You selected the magic staff: powerful but uses mana.
+   You selected the hammer: heavy, slow, but deals massive damage.
 ```
+### Reflectievragen
+- Wat is het verschil tussen het gebruik van een string en een enum?
+- Waarom zou een professionele developer een enum gebruiken?
+  
+Bonus Uitdagingen
+- Laat de enum zichtbaar zijn in de Unity Inspector (dropdown)
+- Voeg een nieuw wapen toe aan de enum, bijvoorbeeld Axe
+- Combineer enum met een if: toon extra info als het wapen Staff is én health > 50
 
-### Bonus Uitdagingen
 
-- Voeg een keuze toe (Y/N) bij de quest acceptatie
-- Toon een andere dialoog als de speler weigert
-- Voeg een visueel effect toe bij elke dialoog stage
-
----
