@@ -162,6 +162,12 @@ Vanaf nu kun je verder werken met:
 - `git push` → om te uploaden naar GitHub
 
 ---
+
+### workflow
+Verander iets in jouw Unityproject en update jouw remote repository op unity. 
+
+Zorg dat je op jouw remote repo 3 of meer commits hebt
+
 ## Copieer de url van jouw online repository van een unityproject en lever deze in bij simulise 
 ---
 
