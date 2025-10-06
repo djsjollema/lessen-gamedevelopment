@@ -20,7 +20,7 @@ Daarom gebruik je een .gitignore om die bestanden automatisch buiten Git te houd
 
 ### voorbeeld van een .gitignore
 
-```` c
+```` bash
 # de hashtag wordt gebruikt als opmerking dus niet uitgevoerd
 
 # een bestand negeren
