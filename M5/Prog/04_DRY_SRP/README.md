@@ -98,7 +98,7 @@ Op de volgende manieren kun je je code verbeteren op gebied van SRP:
 
 ### Opdracht 6: SRP
 
-Fork en clone [dit project](https://github.com/erwinhenraat/Space48/tree/main) en probeer het script: PlayerBehaviour.cs op te delen in losse scripts volgens het SRP principe.
+Fork en clone [dit project](https://github.com/erwinhenraat/Space48/tree/main) en probeer het script: ShipBehaviour.cs op te delen in losse scripts volgens het SRP principe.
 
 Zorg dat het prototype precies blijft werken zoals het deed.
 
