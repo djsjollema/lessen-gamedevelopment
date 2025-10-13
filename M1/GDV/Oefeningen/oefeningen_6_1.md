@@ -9,7 +9,7 @@ Je hebt **1,5 uur** de tijd om een werkend mini-level te maken en aan het einde 
 
 ## Werkwijze
 In deze les bouw je een eigen speelbaar mini-level waarin je laat zien wat je tot nu toe hebt geleerd.  
-Gebruik de kennis en scripts uit eerdere lessen. Voeg minimaal één nieuwe feature toe die jij zelf hebt bedacht.  
+Gebruik de kennis en scripts uit eerdere lessen. Extra uitdaging: Voeg minimaal één nieuwe feature toe die jij zelf hebt bedacht.  
 
 ---
 
@@ -17,14 +17,18 @@ Gebruik de kennis en scripts uit eerdere lessen. Voeg minimaal één nieuwe feat
 Je level bevat minimaal:  
 - 1 bewegend object (via script of physics)  
 - 1 interactie met een if- of switch-statement (bijv. deur open bij sleutel, verschillende aanvallen, score bij item)  
-- 1 collider of trigger  
-- 1 eigen feature of idee gebaseerd op wat je al kunt  
+- 1 collider of trigger
+
+Extra:
+- 1 eigen feature of idee gebaseerd op wat je al kunt
+
 
 Je mag scripts van eerdere lessen hergebruiken of aanpassen.  
 
 ---
 
 ## Inspiratie
+- Collect them all:  Een eindpunt dat verschijnt als je alle items verzamelt 
 - Mini adventure: verzamel sleutels om een deur te openen  
 - Obstacle run: ontwijk bewegende obstakels en bereik de finish  
 - Arena challenge: kies aanval met switch (sword/bow/magic) en raak doelwitten  
