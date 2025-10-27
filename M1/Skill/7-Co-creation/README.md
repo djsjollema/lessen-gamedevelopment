@@ -92,7 +92,7 @@ Elke student kan ook eigen bestanden toevoegen, bijvoorbeeld afbeeldingen of een
 
 ## 8. Voorbeeld van een eenvoudige teamstructuur
 
-Voorbeeld van een pagina: [voorbeeld](https://github.com/djsjollema/lessen-gamedevelopment/edit/main/M1/Skill/7-Co-creation?//https://github.com/djsjollema/lessen-gamedevelopment/edit/main/M1/Skill/7-Co-creation/src/index.html)
+Voorbeeld van een pagina: [voorbeeld](M1/Skill/7-Co-creation/src/index.html)
 
 | Student | Bestand | Verantwoordelijkheid |
 |----------|----------|----------------------|
