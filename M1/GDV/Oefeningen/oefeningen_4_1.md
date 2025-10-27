@@ -6,7 +6,7 @@ Heb je die af? Ga door met **Oefening 4.1B** en daarna met **Oefening 4.1C**.
 De oefeningen bouwen op elkaar voort, dus het is het beste om ze in deze volgorde te maken.  
 
 
-Als je klaar bent, vul dan [dit](https://forms.gle/VqBssDKbTQtTE37n8) reflectieformulier in.  
+Als je klaar bent, vul dan [dit](https://forms.gle/VqBssDKbTQtTE37n8) formulier in. De kennisvragen helpen je om te ontdekken of je de belangrijkste onderdelen van de les echt begrijpt. Dezelfde onderwerpen komen later terug in de toets.
 
 ---
 
