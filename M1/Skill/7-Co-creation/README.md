@@ -92,7 +92,7 @@ Elke student kan ook eigen bestanden toevoegen, bijvoorbeeld afbeeldingen of een
 
 ## 8. Voorbeeld van een eenvoudige teamstructuur
 
-Voorbeeld van een pagina: [voorbeeld](M1/Skill/7-Co-creation/src/index.html)
+Voorbeeld van een pagina: [voorbeeld](src/index.html)
 
 | Student | Bestand | Verantwoordelijkheid |
 |----------|----------|----------------------|
