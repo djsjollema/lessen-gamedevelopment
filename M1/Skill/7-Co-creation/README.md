@@ -92,6 +92,8 @@ Elke student kan ook eigen bestanden toevoegen, bijvoorbeeld afbeeldingen of een
 
 ## 8. Voorbeeld van een eenvoudige teamstructuur
 
+Voorbeeld van een pagina: [voorbeeld](src/index.html)
+
 | Student | Bestand | Verantwoordelijkheid |
 |----------|----------|----------------------|
 | Anna | index.html | Startpagina en structuur |
@@ -105,10 +107,7 @@ Elke student kan ook eigen bestanden toevoegen, bijvoorbeeld afbeeldingen of een
 ## 9. Afronden en presenteren
 
 Wanneer iedereen klaar is:
-1. Controleer samen de website via de GitHub Pages-link.
-2. Maak eventueel een korte presentatie over wie wat heeft gedaan.
-3. Lever de link in bij de docent of deel hem met de groep.
-
+1. Lever de link naar de URL in github in bij Simulise
 ---
 
 ## 10. Samenvatting
