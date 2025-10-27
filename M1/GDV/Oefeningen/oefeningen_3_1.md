@@ -9,7 +9,9 @@ De oefeningen lever je in via een **README.md** bestand op GitHub met:
 - Titel van de oefening  
 - Korte omschrijving van wat je hebt gedaan  
 - Een gifje met je resultaat  
-- Link naar je script  
+- Link naar je script
+
+Ben je klaar met de oefeningen? Vul dan [dit](https://forms.gle/FZf25qqManYV2cFQ6) formulier in. De kennisvragen helpen je om te ontdekken of je de belangrijkste onderdelen van de les echt begrijpt. Dezelfde onderwerpen komen later terug in de toets.
 
 ---
 
