@@ -9,17 +9,16 @@ Gebruik dit als **basis voor je eigen opzet**:
 
 ## Conceptschets: Fruit Peggle
 
-## Titel (werktitel):  **Juicy Bounce!**
+Titel (werktitel):  **Juicy Bounce!**
 
-
-## Beschrijving
+**Beschrijving**
 De speler schiet een bal (bijv. een citroen) van boven in het speelveld.  
 De bal stuitert tegen fruitstukken (appels, druiven, sinaasappels) en sapflesjes.  
 Bij elke aanraking spat er sap op het scherm en loopt de score op.  
 Wanneer de bal in een blender onderaan valt, wordt de beurt afgesloten.  
 Hoe meer fruit je raakt, hoe voller de sapmeter wordt.
 
-## Gameplaykern
+**Gameplaykern**
 - **Bal:** een stuk fruit (citroen, kiwi, aardbei)  
 - **Targets / bumps:** ander fruit met colliders  
 - **Score:** punten + sapmeter stijgt  
