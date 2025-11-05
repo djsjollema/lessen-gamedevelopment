@@ -7,10 +7,11 @@ Gebruik dit als **basis voor je eigen opzet**:
 - Vul dit format in je eigen README aan met jouw ideeën.  
 - Noteer wekelijks wat je hebt gemaakt, hoe je dat hebt gedaan en wat je hebt geleerd.
 
-## Conceptschets: Fruit Peggle
+## Conceptschets
 
-Titel (werktitel):  **Juicy Bounce!**
-Genre : Physics-based arcade puzzelgame
+Titel: Fruity Peggle!
+
+Genre: Physics-based arcade puzzelgame
 
 ## Beschrijving
 De speler schiet een bal (bijv. een citroen) van boven in het speelveld.  
