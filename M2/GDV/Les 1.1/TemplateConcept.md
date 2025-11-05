@@ -9,8 +9,8 @@ Gebruik dit als **basis voor je eigen opzet**:
 
 ## Conceptschets: Fruit Peggle
 
-## Titel (werktitel)
-**Juicy Bounce!**
+##Titel (werktitel):  **Juicy Bounce!**
+
 
 ## Beschrijving
 De speler schiet een bal (bijv. een citroen) van boven in het speelveld.  
