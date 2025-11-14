@@ -41,13 +41,13 @@ In [deze PDF](Debugging.pdf) kun je voorbeelden zien van hoe je de een aantal De
 
 <a name = "opdracht5"></a>
 
-### Opdracht 5A : Wat veroorzaakt de bugs?
+### Opdracht 3A : Wat veroorzaakt de bugs?
 
 ![find bugs](../src/03_05_find_bugs.png)
 Noteer de oorzaken van deze 2 bugs gebruik notepad om dit in een .txt bestand te zetten.
 Lever je .txt bestand in op simulize
 
-### Opdracht 5B : Vastleggen van Mythe bugs
+### Opdracht 3B : Vastleggen van Mythe bugs
 
 Pak je project Mythe erbij en noteer minimaal 3 verschillende bugs. Zorg voor een duidelijke Omschrijving van:
 
@@ -59,7 +59,7 @@ Pak je project Mythe erbij en noteer minimaal 3 verschillende bugs. Zorg voor ee
 
 Doe dit door 3 nieuwe issues aan te maken op de repo van je Mythe project. Lever van elke gemaakte issue een screenshot in op simulize.
 
-### Opdracht 5C : Breakpoints
+### Opdracht 3C : Breakpoints
 
 Koppel voor je Towerdefense project Unity aan je Editor en plaats een breakpoint. Laat zien dat je de breakpoints kunt gebruiken en dat de states van je variabelen objecten te zien zijn in het Autos window.
 

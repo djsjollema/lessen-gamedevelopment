@@ -134,7 +134,7 @@ Hiermee kun je terwijl je bezig bent goed zien wat er gebeurt in je diagrammen.
 
 ![mermaid preview](../src/08_02_mermaid_preview_2.png)
 
-## Opdracht 10: Class Diagram van je TD project
+## Opdracht 7: Class Diagram van je TD project
 
 Maak een class diagram van alle code in je TD project.
 

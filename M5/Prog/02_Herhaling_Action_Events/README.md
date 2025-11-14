@@ -145,9 +145,9 @@ Met de onderstaande code kun je er ook voor zorgen dat een script stopt met luis
     Enemy.OnEnemyDeath -= GetEnemyPoints;
 ```
 
-<a name = "opdracht4"></a>
+<a name = "opdracht2"></a>
 
-### Opdracht 4: Action Events
+### Opdracht 2: Action Events
 
 Maak op een canvas een gameobject genaamd "scoreboard" met een textfield (TMPro) component aan waar je score in gaat bijhouden.
 

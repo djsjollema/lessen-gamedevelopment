@@ -94,11 +94,11 @@ Op de volgende manieren kun je je code verbeteren op gebied van SRP:
 
 ![inheritance and abstraction](../src/04_08_inher_abstr.png)
 
-<a name = "opdracht6"></a>
+<a name = "opdracht4A"></a>
 
-### Opdracht 6: SRP
+### Opdracht 4A: SRP
 
-Fork en clone [dit project](https://github.com/erwinhenraat/Space48/tree/main) en probeer het script: PlayerBehaviour.cs op te delen in losse scripts volgens het SRP principe.
+Fork en clone [dit project](https://github.com/erwinhenraat/Space48/tree/main) en probeer het script: ShipBehaviour.cs op te delen in losse scripts volgens het SRP principe.
 
 Zorg dat het prototype precies blijft werken zoals het deed.
 
@@ -107,9 +107,9 @@ Zorg dat het prototype precies blijft werken zoals het deed.
 - **_Push je code naar github en maak een screen capture van je werkende prototype._**
 - **_Lever een link je code en je gifje in via Simulize._**
 
-<a name = "opdracht7"></a>
+<a name = "opdracht4B"></a>
 
-### Opdracht 7: DRY
+### Opdracht 4B: DRY
 
 In de code voor de LaserBehaviour staat de volgende code:
 

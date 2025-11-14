@@ -206,7 +206,7 @@ public class HealthSystem : MonoBehaviour
 }
 ```
 
-### Complexere Logica
+### Complexere Logica (ge-neste if's)
 
 ```csharp
 public class GameLogic : MonoBehaviour
