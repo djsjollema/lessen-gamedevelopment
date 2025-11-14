@@ -159,6 +159,6 @@ Er mogen in je project geen public variabelen meer zijn.
 
 ### Inleveren
 
-Lever je dependancies lijst in als .pdf op Simulise.
+Lever je dependancies lijst in op je readme.
 
-Lever op simulise een linkje in naar je Scripts map op je github repo.
+Zet op je readme ook een link naar de code die je voor deze opdracht hebt aangepast.
