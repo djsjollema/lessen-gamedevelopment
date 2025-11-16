@@ -341,7 +341,7 @@ Onze code voldoet nu aan het **OCP** principe!
 
 Als ik een nieuwe methode wil toevoegen kan ik daar nu een nieuwe class voor maken zonder dat ik hoef te "rommelen" aan bestaande code.
 
-### Opdracht 15: BoulderDamage!
+### Opdracht 11: BoulderDamage!
 
 ![boulder damage](../src/14_05_boulder_damage.gif)
 
@@ -353,7 +353,7 @@ Zorg dat je gebruik maakt van de interface **ICalculation** en laat zien in de i
 
 ![calculation](../src/14_05_damage.png)
 
-### Opdracht 15 Bonus: Open-Closed (Bonus)
+### Opdracht 11 Bonus: Open-Closed (Bonus)
 
 Zijn er in jouw game ook onderdelen die goed uitbreidbaar moeten zijn? Heb jij zelf ook gebruik gemaakt van switch of if statements waarin je van plan bent om verschillende variaties op dezelfde methode toe te voegen?
 

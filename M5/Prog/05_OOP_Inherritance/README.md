@@ -163,9 +163,9 @@ Andere voor jullie bekende scope modifiers zijn: **private** en **public**.
 
 [Kijk ook even deze video](https://www.youtube.com/watch?v=F7Wu6_uzD1I)
 
-<a name = "opdracht8"></a>
+<a name = "opdracht5"></a>
 
-### Opdracht 8: Inheritance
+### Opdracht 5: Inheritance
 
 Maak een **EnemyParent** class waarin je programmeert dat deze automatisch van links naar rechts loopt zolang het leven van de enemy niet op is. Zorg dat deze enemy levens verliest als ze door een projectiel worden geraakt.
 

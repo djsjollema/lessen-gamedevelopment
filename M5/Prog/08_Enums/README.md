@@ -95,7 +95,7 @@ Dankzij de code completion van je IDE zal deze altijd de verschillende opties/el
 
 ![autocomplete](../src/13_01_enum_autocomplete.png)
 
-### Opdracht 11: Anti-Magic
+### Opdracht 10: Anti-Magic
 
 ![anti magic](../src/13_03_anti_magic.jpg)
 

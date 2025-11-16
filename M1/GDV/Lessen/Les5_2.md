@@ -6,6 +6,7 @@ In deze les combineer je eenvoudige logica met collision detection en input. Je 
 
 - If-statements gebruiken bij collision detection (Les 4.2 + 5.1)
 - Input controleren met logische voorwaarden (Les 2.2 + 5.1)
+- De `GetComponent<Type>()` functie gebruiken.
 - Eenvoudige interaction systemen maken
 - Alles wat je hebt geleerd samenvoegen
 
@@ -144,6 +145,28 @@ public class PlayerMovement : MonoBehaviour
 
 ---
 
+## GetComponent
+
+![get component](../gfx/5_2_get_component.jpg)
+
+GetComponent is een belangrijke Unity functie die je gebruikt om componenten (scripts, colliders, etc.) van een GameObject op te halen. Het werkt als een "zoekfunctie" op een GameObject.
+
+```csharp
+// Basis gebruik:
+Rigidbody rb = GetComponent<Rigidbody>();        // Haalt Rigidbody van DIT object
+Collider col = GetComponent<Collider>();         // Haalt Collider van DIT object
+
+// Gebruik op andere objecten:
+PlayerScript playerScript = other.GetComponent<PlayerScript>();  // Haalt PlayerScript van ANDER object, bijvoorbeeld na een collision.
+```
+
+**Belangrijke punten:**
+
+- Je moet het type component tussen `< >` zetten
+- Geeft `null` terug als de component niet bestaat
+- Werkt voor alle Unity componenten én je eigen scripts
+- Is handig voor communicatie tussen scripts
+
 ## Collision Detection met Logica
 
 ### Slimme Pickup Items
@@ -153,8 +176,7 @@ In Les 4.2 pakte je alles op. Nu worden we selectief:
 ```csharp
 public class SmartPickup : MonoBehaviour
 {
-    public enum ItemType { Coin, HealthPotion, Key } // Uit Les 5.1: verschillende opties
-    public ItemType itemType = ItemType.Coin;
+    public string itemType = "Coin";
     public int value = 10;
 
     void Start()
@@ -166,17 +188,18 @@ public class SmartPickup : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Les 4.1: tag checking
         {
-            SmartPlayer player = other.GetComponent<SmartPlayer>();
+            //Haal het script van de player op!
+            PlayerScript player = other.GetComponent<PlayerScript>();
 
             // Switch uit Les 5.1 + collision uit Les 4.2
             switch (itemType)
             {
-                case ItemType.Coin:
+                case "Coin":
                     Debug.Log("Coin collected!");
                     Destroy(gameObject);
                     break;
 
-                case ItemType.HealthPotion:
+                case "HealthPotion":
                     // Alleen oppakken als je schade hebt
                     if (player.health < 100)
                     {
@@ -190,7 +213,7 @@ public class SmartPickup : MonoBehaviour
                     }
                     break;
 
-                case ItemType.Key:
+                case "Key":
                     if (!player.hasKey) // Als je nog geen sleutel hebt
                     {
                         player.hasKey = true;
@@ -248,7 +271,8 @@ public class SimpleDoor : MonoBehaviour
 
     void TryOpenDoor() // Functie uit Les 3.2
     {
-        SmartPlayer player = GameObject.FindWithTag("Player").GetComponent<SmartPlayer>();
+        //Zoek de player in de scene op basis van zijn tag en pak het script. Let op dit is een zware functie. Dus gebruik deze niet zomaar in je update
+        PlayerScript player = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
 
         // If-else uit Les 5.1
         if (needsKey)
@@ -288,204 +312,6 @@ public class SimpleDoor : MonoBehaviour
         {
             Debug.Log("Press E to open");
         }
-    }
-}
-```
-
----
-
-## Eenvoudig Game State System
-
-### Game Manager (Versimpeld)
-
-```csharp
-public class SimpleGameManager : MonoBehaviour
-{
-    // Enum uit Les 5.1 - verschillende game states
-    public enum GameState { Playing, Paused, GameOver }
-    public GameState currentState = GameState.Playing;
-
-    public int score = 0;
-    public int lives = 3;
-
-    void Update()
-    {
-        // Switch uit Les 5.1 + Input uit Les 2.2
-        switch (currentState)
-        {
-            case GameState.Playing:
-                HandlePlayingInput();
-                break;
-
-            case GameState.Paused:
-                HandlePausedInput();
-                break;
-
-            case GameState.GameOver:
-                HandleGameOverInput();
-                break;
-        }
-    }
-
-    void HandlePlayingInput() // Functie uit Les 3.2
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseGame();
-        }
-    }
-
-    void HandlePausedInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ResumeGame();
-        }
-    }
-
-    void HandleGameOverInput()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartGame();
-        }
-    }
-
-    void PauseGame()
-    {
-        currentState = GameState.Paused;
-        Time.timeScale = 0f; // Stop tijd
-        Debug.Log("Game Paused - Press ESC to resume");
-    }
-
-    void ResumeGame()
-    {
-        currentState = GameState.Playing;
-        Time.timeScale = 1f; // Normale tijd
-        Debug.Log("Game Resumed");
-    }
-
-    void RestartGame()
-    {
-        currentState = GameState.Playing;
-        Time.timeScale = 1f;
-        score = 0;
-        lives = 3;
-        Debug.Log("Game Restarted");
-    }
-
-    public void AddScore(int points) // Public functie - andere scripts kunnen dit aanroepen
-    {
-        score += points;
-        Debug.Log("Score: " + score);
-    }
-
-    public void LoseLife()
-    {
-        lives--;
-        if (lives <= 0)
-        {
-            GameOver();
-        }
-        else
-        {
-            Debug.Log("Lives left: " + lives);
-        }
-    }
-
-    void GameOver()
-    {
-        currentState = GameState.GameOver;
-        Debug.Log("GAME OVER! Press R to restart");
-    }
-}
-```
-
----
-
-## Alles Combineren: Complete Player
-
-```csharp
-public class CompletePlayer : MonoBehaviour
-{
-    [Header("Player Stats")] // Netjes organiseren in Inspector
-    public int health = 100;
-    public int maxHealth = 100;
-    public bool hasKey = false;
-
-    [Header("Movement")] // Les 2.1 beweging
-    public float speed = 5f;
-
-    [Header("References")]
-    public SimpleGameManager gameManager;
-
-    void Start()
-    {
-        gameManager = FindObjectOfType<SimpleGameManager>(); // Zoek GameManager
-    }
-
-    void Update()
-    {
-        // Alleen bewegen als game speelt (Les 5.1 logica)
-        if (gameManager.currentState == SimpleGameManager.GameState.Playing)
-        {
-            HandleMovement(); // Functie uit Les 3.2
-        }
-    }
-
-    void HandleMovement() // Beweging uit Les 2.1 + 2.2
-    {
-        if (health > 0) // Alleen bewegen als je leeft
-        {
-            float horizontal = Input.GetAxis("Horizontal"); // Les 2.2
-            float vertical = Input.GetAxis("Vertical");
-
-            Vector3 movement = new Vector3(horizontal, vertical, 0);
-            transform.position += movement * speed * Time.deltaTime; // Les 2.1
-        }
-    }
-
-    void OnTriggerEnter(Collider other) // Les 4.2
-    {
-        // Switch uit Les 5.1 voor verschillende objecten
-        switch (other.tag)
-        {
-            case "Coin":
-                gameManager.AddScore(10);
-                Destroy(other.gameObject);
-                break;
-
-            case "Enemy":
-                TakeDamage(25);
-                break;
-
-            case "HealthPotion":
-                if (health < maxHealth) // Alleen heal als nodig
-                {
-                    health += 30;
-                    if (health > maxHealth) health = maxHealth;
-                    Debug.Log("Healed! Health: " + health);
-                    Destroy(other.gameObject);
-                }
-                break;
-        }
-    }
-
-    public void TakeDamage(int damage) // Public - andere scripts kunnen dit aanroepen
-    {
-        health -= damage;
-        Debug.Log("Took damage! Health: " + health);
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Debug.Log("Player died!");
-        gameManager.LoseLife();
     }
 }
 ```
@@ -561,189 +387,3 @@ In Les 6.1 gaan we lijsten en arrays leren! Dan kunnen we meerdere objecten tege
 **A:** Hoeft niet! Het belangrijkste is dat je begrijpt HOE het werkt. Je kunt altijd terug kijken naar eerdere lessen voor voorbeelden.
 
 ---
-
-        if (gameManager.currentState == GameManager.GameState.Playing)
-        {
-            HandleMovement();
-            HandleActions();
-        }
-    }
-
-    void HandleMovement()
-    {
-        // Beweging alleen als speler leeft
-        if (health > 0)
-        {
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
-
-            Vector3 movement = new Vector3(horizontal, 0, vertical);
-            rb.AddForce(movement * moveSpeed);
-
-            // Springen alleen als op grond
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-            {
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                isGrounded = false;
-            }
-        }
-    }
-
-    void HandleActions()
-    {
-        // Actie knoppen
-        if (Input.GetKeyDown(KeyCode.H) && health < maxHealth)
-        {
-            TryHeal();
-        }
-    }
-
-    void TryHeal()
-    {
-        // Logica: alleen heal als je minder dan vol leven hebt
-        if (health < maxHealth)
-        {
-            health += 25;
-            if (health > maxHealth) health = maxHealth;
-
-            Debug.Log("Healed! Health: " + health + "/" + maxHealth);
-        }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        Debug.Log("Took " + damage + " damage! Health: " + health);
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Debug.Log("Player died!");
-        gameManager.PlayerDied();
-    }
-
-    // Collision detection
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamage(20);
-        }
-    }
-
-    // Trigger detection
-    void OnTriggerEnter(Collider other)
-    {
-        switch (other.tag)
-        {
-            case "Coin":
-                gameManager.CollectCoin();
-                Destroy(other.gameObject);
-                break;
-
-            case "HealthPotion":
-                if (health < maxHealth)
-                {
-                    health += 30;
-                    if (health > maxHealth) health = maxHealth;
-                    Debug.Log("Health potion used!");
-                    Destroy(other.gameObject);
-                }
-                break;
-
-            case "Key":
-                hasKey = true;
-                Debug.Log("Key acquired!");
-                Destroy(other.gameObject);
-                break;
-
-            case "DamageZone":
-                TakeDamage(10);
-                break;
-        }
-    }
-
-}
-
-```
-
----
-
-## Aantekeningen maken
-
-Maak aantekeningen over de behandelde stof in de les. Schrijf het nu zo op zodat je het later makkelijk begrijpt als je het terugleest.
-
-**Belangrijke punten om te noteren:**
-
-- Hoe combineer je input met logische voorwaarden?
-- Hoe gebruik je switch statements in collision detection?
-- Wat is de rol van game state management?
-- Hoe kun je complexe interacties maken door alles te combineren?
-- Welke patronen zie je terugkomen in interactieve systemen?
-
-Schrijf ook op wat je niet hebt begrepen uit deze les. Dan kun je hier later nog vragen over stellen aan de docent.
-
-Bewaar al je aantekeningen goed! Deze moet je aan het einde van de periode inleveren.
-
-![notes](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHhzdzZzbHQzYWgyNG1mZDRhdW05dWIwMDI2b2xoNWtkMWN0ODl2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7GUB9ExWUxjiSrKw/giphy.gif)
-
-## Oefeningen uitvoeren
-
-Doe nu minimaal 1 oefening naar keuze voor les 5.2
-De oefeningen vind je [hier](../Oefeningen/oefeningen_5_2.md) terug
-
-![exercise](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZXRrc3QwYWV1Ym5oY2FrZnF5YWxnaW9heTRsNnZzdnpnMmRxeXM1ZiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/x1BVziEYuKBd1aVZRz/giphy.gif)
-
-## Wat Heb Je Geleerd?
-
-### Checklist
-
-- [ ] Je kunt input combineren met logische voorwaarden
-- [ ] Je gebruikt switch statements effectief in collision detection
-- [ ] Je begrijpt game state management met enums
-- [ ] Je kunt complexe interactieve systemen bouwen
-- [ ] Je integreert kennis uit alle vorige lessen
-- [ ] Je maakt slimme pickup en door systemen
-- [ ] Je bouwt een complete game manager
-- [ ] Je combineert physics, logic en input in één systeem
-
-### Volgende Stap
-
-In Les 6.1 gaan we lijsten en arrays leren! Dan kunnen we meerdere objecten tegelijk beheren en nog complexere systemen maken.
-
----
-
-## Veelgestelde Vragen
-
-### Q: Hoe voorkom ik dat mijn code te complex wordt?
-
-**A:** Gebruik functies (Les 3.2) om je code op te delen in kleine, begrijpelijke stukjes. Elke functie moet één duidelijke taak hebben.
-
-### Q: Wanneer gebruik ik switch vs if-else?
-
-**A:** Switch voor één variabele met veel mogelijke waarden (zoals game states). If-else voor complexere voorwaarden of combinaties van variabelen.
-
-### Q: Mijn collision detection werkt niet goed met complexe logica?
-
-**A:** Gebruik guard clauses (Les 5.1) om eerst te checken of collision überhaupt geldig is voordat je complexe logica uitvoert.
-
-### Q: Hoe organiseer ik grote scripts?
-
-**A:** Deel op in secties met comments en gebruik #region tags in C# om code secties inklapbaar te maken.
-
-### Q: Kan ik meerdere GameManagers hebben?
-
-**A:** Technisch wel, maar meestal wil je één centrale GameManager. Gebruik Singleton pattern voor complexere projecten.
-
----
-```

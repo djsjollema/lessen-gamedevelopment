@@ -152,7 +152,7 @@ Kortom, codeconventies zijn bedoeld om een gemeenschappelijke "taal" voor code t
 
 Voor **Unity** kun je ook gebruik maken van de standaard codeconventions die door de Unity community zelf zijn opgesteld. Dit is een mooie basis om verder uit te bouwen naar eigen behoefte. De Unity code conventions zijn heel uitgebreid en [hier te vinden](https://unity.com/how-to/naming-and-code-style-tips-c-scripting-unity).
 
-### Opdracht 12: Code Conventions
+### Opdracht 9:
 
 Lees de volgende onderdelen uit de Unity code conventions goed door:
 
