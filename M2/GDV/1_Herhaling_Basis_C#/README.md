@@ -150,7 +150,7 @@ D) Als je altijd `else` wilt vermijden
 
 ---
 
-## 4) Lists en Arrays (duidelijke uitleg met voorbeelden)
+## 4) Lists en Arrays
 
 Arrays:
 
@@ -162,12 +162,12 @@ Arrays:
 int[] scores = new int[5];
 scores[0] = 10;
 // of direct
-int[] enemies = new int[] { 1, 2, 3 };
+int[] enemyValues = new int[] { 1, 2, 3 };
 
 // Itereren
-for (int i = 0; i < enemies.Length; i++)
+for (int i = 0; i < enemyValues.Length; i++)
 {
-    Debug.Log(enemies[i]);
+    Debug.Log(enemyValues[i]);
 }
 ```
 
@@ -175,7 +175,7 @@ Lists (`System.Collections.Generic.List<T>`):
 
 - Dynamische grootte: je kunt items toevoegen/verwijderen tijdens runtime.
 - Handiger voor variabele collecties.
-- C# voorbeeld (Unity):
+- C# voorbeeld:
 
 ```csharp
 using System.Collections.Generic;
@@ -231,99 +231,78 @@ void SpawnAll()
 
 ---
 
-## Praktische Oefening — Combineer variabelen, functie, if-statements en een List
+## Praktijk opdracht — Array en List
 
-Opdracht: maak een nieuw C# script `PlayerExample.cs` (attach aan een GameObject) dat de volgende functionaliteit heeft:
+### Opdracht 1A, Array:
 
-- Declaraties:
+maak een nieuw C# script `RandomItem.cs` (attach aan een GameObject).
 
-  - Een `int health` (startwaarde 100)
-  - Een `float speed` (bijv. 5f)
-  - Een `string playerName`
-  - Een `List<string> inventory` om opgepakte items in op te slaan
+Maak een array waarin 10 verschillende items als string opgeslagen kunnen worden. Zorg dat je deze array beschikbaar maakt in unity met `[SerialiseField]` ervoor. Kijk goed in de uitleg hoe je een array kunt maken.
 
-- Functie:
+Vul deze array vanuit de inspector in unity met 10 verschillende items (strings).
 
-  - Implementeer een publieke methode `bool ApplyDamage(int damage)` die de `health` vermindert en `true` teruggeeft als de speler nog leeft, `false` als `health <= 0`.
+![array vullen](../src/1_2_array_vullen.png)
 
-- If-statements:
+Maak nu een functie die willekeurug 1 van deze 10 items op de console print als je op "Enter" drukt.
 
-  - Gebruik een `if` om te controleren of `health` onder bepaalde drempels valt (bijv. <50 en <=0) en log een passende boodschap met `Debug.Log()`.
+Tip: `Random.Range(0,9)` genereent een random int van 0 t/m 9
 
-- List gebruik:
-  - Voeg een methode `void PickUpItem(string item)` die het item toevoegt aan `inventory`.
-  - Voeg een methode `void PrintInventory()` die alle items uit de `inventory` via `Debug.Log` print.
-
-Code-skeleton:
+Maak ook een functie die alle items print in de console als je op Escape drukt.
 
 ```csharp
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerExample : MonoBehaviour
+public class RandomItem : MonoBehaviour
 {
-        // variabelen
-        public int health = 100;
-        public float speed = 5f;
-        public string playerName = "Player";
-        private List<string> inventory = new List<string>();
+    //array maken voor 10 items
 
-        // functie: past damage toe en retourneert of speler leeft
-        public bool ApplyDamage(int damage)
-        {
-                health -= damage;
-                if (health <= 0)
-                {
-                        Debug.Log(playerName + " is dead.");
-                        return false;
-                }
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Return))PrintRandomItem();
+        if(Input.GetKeyDown(KeyCode.Escape))PrintAllItems();
+    }
+    private void PrintRandomItem() {
+        //printen van 1 random item.
 
-                if (health < 50)
-                        Debug.Log(playerName + " is wounded (" + health + ").");
+    }
+    private void PrintAllItems() {
+        //Printen van alle items
+    }
 
-                return true;
-        }
-
-        // list: items oppakken en tonen
-        public void PickUpItem(string item)
-        {
-                inventory.Add(item);
-                Debug.Log(item + " picked up.");
-        }
-
-        public void PrintInventory()
-        {
-                Debug.Log("Inventory for " + playerName + ":");
-                foreach (var it in inventory)
-                        Debug.Log("- " + it);
-        }
 }
 ```
 
-Acceptatiecriteria / wat aflevering moet tonen:
+Resultaat:
 
-- Het script compileert zonder fouten in Unity.
-- `ApplyDamage` vermindert `health`, logt juiste berichten en returned correcte boolean.
-- `PickUpItem` voegt items toe aan de `List` en `PrintInventory` toont ze.
-- Voeg in een korte README of screenshot toe waarin je laat zien dat je script werkt (bijv. Console output na ApplyDamage en PrintInventory).
+![array result](../src/1_2_array_result.gif)
 
-Hints:
+### Opdracht 1B, List:
 
-- Zet `playerName` en `health` als public of `[SerializeField] private` zodat je ze in de Inspector kunt aanpassen.
-- Test via `Start()` of door een tijdelijk debug-script dat `ApplyDamage` en `PickUpItem` aanroept.
+Paats 3 3d objecten met verschillende kleuren in een level op de vloer.
+
+Zorg voor een player object dat rond kan lopen. Gebruik hiervoor een script met de naam `PlayerMove.cs`. Gebruik een rigidbody op je player en zet `IsKinematic` op `true`
+
+Maak nog een script met de naam `Inventory.cs` en plaats deze ook op je speler gameobject.
+
+Zodra je speler een item raakt plaats je dit item in een List met de naam `itemInventory` en deactiveer je het item uit de scene met `SetActive(false)`. Gebruik `CompareTag()` om te checken of het een item betreft. (geef je items dus ook deze tag)
+
+Zorg voor een functie met de naam `ReplaceItem` deze functie moet het laatste opgepakte item weer terugplaatsen (-R- key) in de wereld met de `SetActive(true)` functie. Verwijder het item ook weer uit je List als je hem terug plaatst.
+
+Zorg dat je met `itemInventory.Count` controleert of er wel items in je inventory zitten.
+
+Met `itemInventory[itemInventory.Count - 1]` kun je bij het laatste item dat je hebt toegevoegd.
+
+Let op dat je het item vlak naast je player terugplaatst en niet op exact dezelfde plek. Want dan pak je hem gelijk weer op.
+
+Resultaat:
+
+![list result](../src/1_2_list_result.gif)
 
 ---
 
 ## Oplevering / huiswerk
 
-- Optioneel: maak een korte Unity-scene die één array en één list toont in de Inspector en laat zien dat je items kunt toevoegen aan de list via code (of via Inspector) en dat de array vaste lengte heeft.
-- Lever eventueel een screenshot of korte notitie in tijdens de volgende les.
+Maak een gif van je werkende prototype.
+Plaats de titel, een omschrijving , je gifje en een link naar je scripts in je GDV Readme op github.
 
----
-
-Als je wilt, voeg ik nu:
-
-- Een korte quiz-oplossing met uitleg per vraag (in comments), of
-- Een voorbeeld Unity-scene en scripts als startpunt (maak ik bestanden aan in de repo).
-
-Welke van de twee heeft je voorkeur?
+(Dezelfde readme als bij M1)
