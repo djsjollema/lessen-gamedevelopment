@@ -231,6 +231,10 @@ void SpawnAll()
 
 ---
 
+![exercise](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZXRrc3QwYWV1Ym5oY2FrZnF5YWxnaW9heTRsNnZzdnpnMmRxeXM1ZiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/x1BVziEYuKBd1aVZRz/giphy.gif)
+
+---
+
 ## Praktijk opdracht — Array en List
 
 ### Opdracht 1A, Array:
