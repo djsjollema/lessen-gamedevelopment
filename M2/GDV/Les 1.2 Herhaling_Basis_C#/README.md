@@ -1,4 +1,4 @@
-# M2 GDV les 1 (CODE) Herhaling Basis C#
+# M2 GDV les 1.2 (CODE) Herhaling Basis C#
 
 Doel: korte en duidelijke herhaling van belangrijke programmeerconcepten in de context van Unity en C#.
 
