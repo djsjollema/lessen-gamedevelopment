@@ -11,6 +11,8 @@ Je zet je Unity-project op, legt je concept vast binnen de vaste basis van dit v
 5. Je repository heeft minimaal één commit en een push van vandaag.
 6. Je Git-link is ingeleverd via Simulise.
 
+Mocht je vergeten zijn hoe je een repository opzet volg dan [deze stappen](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M1/Skill/3.Remote%20Repository)
+
 ## Vaste basis voor iedereen
 1. De speler schiet ballen af.
 2. Er zijn bumps of targets die geraakt kunnen worden.
