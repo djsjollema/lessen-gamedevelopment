@@ -30,6 +30,7 @@ Maak een script dat speler statistieken bijhoudt en toont, zoals een RPG charact
 ```csharp
 public class PlayerStats : MonoBehaviour
 {
+//Tip: Met een header kun je titels plaatsen in de inspector
     [Header("Character Info")]
     public string playerName = "DragonSlayer";
     public int level = 1;
@@ -101,23 +102,27 @@ public class PlayerStats : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            //Display Character Sheet
-            Debug.Log("=== CHARACTER SHEET ===");
-            Debug.Log("Name: " + playerName + " the " + characterClass);
-            Debug.Log("Level: " + level);
-            Debug.Log("Health: " + health + "/" + maxHealth);
-            Debug.Log("Mana: " + mana);
-            Debug.Log("Attack: " + attack + " | Defense: " + defense);
-            Debug.Log("Experience: " + experience + " XP");
-            Debug.Log("Gold: " + gold + " coins");
-            Debug.Log("Playtime: " + playtimeHours + " hours");
-            Debug.Log("Current Weapon: " + currentWeapon);
-            Debug.Log("Items: " + healthPotions + " health potions, " + keys + " keys");
-            Debug.Log("Tutorial Complete: " + hasCompletedTutorial);
-            Debug.Log("========================");
+            DisplayCharacterSheet();
         }
         //Reset Stats here when R is pressed!
 
+    }
+
+    private void DisplayCharacterSheet(){
+        //Display Character Sheet
+        Debug.Log("=== CHARACTER SHEET ===");
+        Debug.Log("Name: " + playerName + " the " + characterClass);
+        Debug.Log("Level: " + level);
+        Debug.Log("Health: " + health + "/" + maxHealth);
+        Debug.Log("Mana: " + mana);
+        Debug.Log("Attack: " + attack + " | Defense: " + defense);
+        Debug.Log("Experience: " + experience + " XP");
+        Debug.Log("Gold: " + gold + " coins");
+        Debug.Log("Playtime: " + playtimeHours + " hours");
+        Debug.Log("Current Weapon: " + currentWeapon);
+        Debug.Log("Items: " + healthPotions + " health potions, " + keys + " keys");
+        Debug.Log("Tutorial Complete: " + hasCompletedTutorial);
+        Debug.Log("========================");
     }
 }
 ```

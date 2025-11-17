@@ -69,53 +69,6 @@ title: Dependancy
 
 In het bovenstaande voorbeeld is de UI afhankelijk van de Player class. Zonder de Player kan de UI geen **life** waarde krijgen en breekt de code.
 
-In het volgende class diagram zie je een voorbeeld van de code van de [vorige opdracht](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M5/Prog/07_OOP_Abstraction#opdracht-10-abstraction-via-interfaces)
-
-Hierin zie je naast de relaties en de inhoud van de classes ook nog de definitie van de bijbehorende interfaces.
-
-```mermaid
-
----
-title: Class Diagram
----
-
-classDiagram
-
-    IMovable <|-- Unit
-
-    IDamagable <|-- Unit
-
-    Unit <|-- Player
-    Unit <|-- Elf
-    Unit <|-- Brute
-
-class IMovable{
-    <<interface>>
-    Move()
-}
-class IDamagable{
-    <<interface>>
-    TakeDamage()
-}
-class Unit{
-    - int health
-    + ~~get~~int Health
-
-    + Initialize()
-    + OnCollisionEnter()
-    + TakeDamage()
-    + Move()
-}
-
-class Elf{
-    - ToggleInvisibility()
-}
-class Player{
-    + Move()
-}
-
-```
-
 ## Mermaid
 
 Om class diagrammen te maken heb je heel erg veel verschillende tools. Je zou het in photoshop kunnen doen of zelfs in paint(niet aan te raden). Echter is het lastigste niet de inhoud goed krijgen maar de ordening van de blokjes. Met de **Mermaid** tool gaat dat ordenen vanzelf en hoef je alleen de inhoud en de relaties van je classes aan te geven.
@@ -128,13 +81,13 @@ Je kunt ook de bron van deze readme bekijken om te zien hoe ik de bovenstaande s
 
 VSCode heeft ook een handige Markdown Preview Mermaid Support extension. Het is ook zeker handig om die te installeren.
 
-![mermaid preview](../src/08_01_mermaid_preview.png)
+![mermaid preview](../../../M5/Prog/src/08_01_mermaid_preview.png)
 
 Hiermee kun je terwijl je bezig bent goed zien wat er gebeurt in je diagrammen.
 
-![mermaid preview](../src/08_02_mermaid_preview_2.png)
+![mermaid preview](../../../M5/Prog/src/08_02_mermaid_preview_2.png)
 
-## Opdracht 7: Class Diagram van je TD project
+## Opdracht 10: Class Diagram van je TD project
 
 Maak een class diagram van alle code in je TD project.
 
@@ -179,6 +132,18 @@ MyClass <..> AnotherClass
 ```
 ````
 
-Alleen global variables (gedefinieerd in je class en niet lokaal in een functie) en dependancies en inheritance relaties verwerk je in je class diagram.
+Verwerk alle classes in je TD project in het class diagram.
 
-push je readme in een mapje op je TD repo op github en lever een link in naar de readme via simulise. Lever ook een link in naar je Scripts folder op github waar alle classes ook terug te vinden zijn.
+**Beoordeling:**
+
+- Je hebt Mermaid goed gebruikt
+- Alle classes uit je TD project zijn verwerkt
+- Alle variabelen en functies zijn weergegeven
+- Alle inheritance relaties zijn juist weergegeven
+- Alle dependancies zijn juist weergegeven
+
+**Lever in:**
+
+- Zet de opdracht in je PROG README
+- Geef de titel en uitleg over de opdracht
+- zet in de readme een link naar de code van je TD game
