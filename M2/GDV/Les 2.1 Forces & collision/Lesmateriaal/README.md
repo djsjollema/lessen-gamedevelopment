@@ -1,7 +1,14 @@
-# Les 2.1 Week 2 – Forces & collision
+# Les 2.1 Week 2 – Forces & collision Stappenplan
 
 
+## Inleiding
 
+In deze les voeg je een nieuwe feature toe aan je project: een bal die je kunt afschieten met AddForce.  
+Hieronder vind je een stappenplan dat je kunt volgen als je vastloopt of als je wilt controleren of je het goed hebt gedaan.  
+Volg de stappen in je eigen tempo. Je mag het eerst zelf proberen, maar je kunt altijd terugvallen op dit stappenplan of de voorbeeldcode openen als je vastzit
+
+
+---
 
 ## Waarom gebruiken we AddForce?
 
@@ -19,7 +26,7 @@ AddForce werkt samen met het physics-systeem. Daarom is het de juiste manier voo
 
 ## Stap 1. 
 
-- Maak een nieuw 2D project aan. 
+- Maak een nieuw 2D project aan of open het project van vorige week. 
 ![Universal 2D project](image.png)
 
 Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat het is en van wie het is, bijvoorbeeld FruityPeggle_KimVerweij.
@@ -31,8 +38,8 @@ Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat he
 
 ### 0. Maak een bal.
 ![alt text](image-1.png)
-
-Geef het een GameObject een correcte naam zoals Bal.
+Dat kun je doen door een nieuw 2D object te maken (kies sprite - circle)
+Geef dit GameObject een duidelijke naam, zoals Bal.
 
 --- 
 
@@ -60,7 +67,9 @@ Zonder collider zijn er geen botsingen.
 - Open deze folder, right-click in deze folder en maak een Physics Material 2D aan.
 <img width="766" height="328" alt="image" src="https://github.com/user-attachments/assets/60104bbb-45a2-4584-84eb-47fd37810c2f" />
 
-Zonder physics material 2D heeft de bal geen bounce. 
+Met een Physics Material 2D kun je de bounciness van je bal instellen.
+Zonder material stuitert de bal meestal nauwelijks of heel weinig.
+
 - Voeg de material toe aan de collider (NIET AAN de RIGIDBODY)
 
 ---
@@ -114,3 +123,97 @@ void Update()
 }
 ```
 </details>
+
+
+## Stap 3 – Targets & Collisions toevoegen
+
+Nu je bal kan schieten, voeg je targets toe waarop de bal kan botsen.  
+Daarna laat je Unity een melding geven wanneer de bal een target raakt.
+
+---
+
+### 1. Maak een target in je scene
+- Maak een nieuw GameObject → **Sprite / 2D Object** (bijvoorbeeld een vierkant of eigen sprite).
+- Geef het object een duidelijke naam, zoals **Target**.
+- Schaal het naar wens en plaats het ergens onder je bal.
+
+Waarom?
+Dit is het object waar de bal straks tegenaan botst.
+
+---
+
+### 2. Voeg een Collider2D toe aan het target
+- Selecteer het target.  
+- Ga naar **Add Component**  kies **BoxCollider2D**, **CircleCollider2D** of iets anders dat past.  
+
+Zonder Collider2D registreert Unity geen botsingen.
+
+---
+
+### 2.1 Geef je target een tag (aanbevolen)
+Het is handig om je target een tag te geven, zodat je later in je project
+kunt herkennen wat de bal precies raakt.
+
+#### Zo doe je dat:
+- Selecteer het target.
+- Ga in de Inspector naar **Tag**.
+- Kies **Add Tag…**.
+- Voeg een nieuwe tag toe, bijvoorbeeld **Target**.
+- Selecteer opnieuw je target en geef hem deze tag.
+
+Je hebt dit nog niet nodig voor het loggen van botsingen,  
+maar je hebt het wél nodig voor volgende lessen (scoring en triggers).
+
+<img width="515" height="275" alt="image" src="https://github.com/user-attachments/assets/b02cb22a-1b94-45cc-bbc6-380899f08744" />
+<img width="235" height="139" alt="image" src="https://github.com/user-attachments/assets/e37a0fd6-0621-4793-a7ef-ea401095cc40" />
+
+
+
+### 3. Zorg dat het target géén Rigidbody2D heeft
+- Targets die stil moeten blijven **hebben geen Rigidbody nodig**.
+- Unity laat een bal prima botsen op een object dat alleen een Collider heeft.
+
+---
+
+### 4. Collision-detectie toevoegen met OnCollisionEnter2D
+- Voeg een nieuw script toe aan het target, bijvoorbeeld **TargetCollision.cs**.
+- Plaats deze code in het script:
+
+```csharp
+void OnCollisionEnter2D(Collision2D collision)
+{
+    Debug.Log("Hit!");
+}
+```
+
+### 5. Test je collisions
+
+- Druk op **Play**.  
+- Schiet de bal af.  
+- Bekijk of er een **"Hit!"** verschijnt in de Console wanneer de bal je target raakt.
+
+**Werkt het niet? Controleer:**
+- Heeft de bal een **Rigidbody2D**?  
+- Hebben beide objecten een **Collider2D**?  
+- Staat het **script op het target**?  
+- Raakt de bal het target echt?  
+
+---
+
+### 6. Breid je scene uit
+
+- Maak meerdere targets en plaats ze op verschillende plekken.  
+- Varieer in vorm, grootte en afstand.  
+- Zo krijgt jouw Peggle-spel steeds meer vorm.
+
+---
+
+### 7. Voeg een GIF en uitleg toe aan je README
+
+Maak een korte GIF van je schietende bal die een target raakt en voeg deze toe aan je README.
+
+
+
+
+
+
