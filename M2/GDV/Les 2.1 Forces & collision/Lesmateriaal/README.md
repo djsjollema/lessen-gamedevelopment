@@ -17,48 +17,87 @@ AddForce werkt samen met het physics-systeem. Daarom is het de juiste manier voo
 
 ---
 
-## S
-
-Stap 1. 
+## Stap 1. 
 
 Maak een nieuw 2D project aan. 
 ![Universal 2D project](image.png)
 
-Geef het project een naam 
+Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat het is en van wie het is, bijvoorbeeld FruityPeggle_KimVerweij.
 
 ## Stap 1 - Level
-Maak een 
+
 
 ## Stap 2 – Bal afschieten met AddForce
 
-Maak een bal.
+### 0. Maak een bal.
 ![alt text](image-1.png)
+Geef het een correcte naam zoals Bal.
 
 
 ### 1. Controleer of je bal een Rigidbody2D heeft
 Selecteer je bal in de scene.  
 Ga naar **Add Component** en kies **Rigidbody2D**.  
-Zorg dat *Gravity Scale* aan staat (standaard is 1).
 
 ### 2. Zorg dat de bal een Collider heeft
 Gebruik een **CircleCollider2D** of een andere 2D-collider.  
 Zonder collider zijn er geen botsingen.
 
-### 3. Richt je kanon
-Zorg dat jouw kanon in de richting wijst waarin je wilt schieten.  
-In 2D gebruik je **transform.up** als schietrichting.
+### 3. Voeg een 2D physics material toe
+Maak een folder aan genaamd Material.
+Open deze folder, right-click in deze folder en maak een Physics Material 2D aan.
+<img width="766" height="328" alt="image" src="https://github.com/user-attachments/assets/60104bbb-45a2-4584-84eb-47fd37810c2f" />
+Zonder physics material 2D heeft de bal geen bounce. 
+Voeg de material toe aan de collider (NIET AAN de RIGIDBODY)
+
 
 ### 4. Maak een script om de bal te schieten
 Maak een nieuw script, bijvoorbeeld **ShootBall.cs**.
+Voeg het script toe aan de bal.
 
+
+Je kunt de opdracht helemaal zelf maken door de stappen hieronder te volgen.  
+Lukt het niet of wil je je werk controleren?  
+Dan kun je verderop de voorbeeldcode openen.
+
+### Stappen om je op weg te helpen
+1. Zorg dat je bal een Rigidbody2D heeft.
+2. Maak een script dat luistert naar een toets (bijvoorbeeld A of Spatie).
+3. Haal in Start() de Rigidbody2D op met GetComponent.
+4. In Update(): wanneer je op de toets drukt, geef je een AddForce.
+5. Test verschillende waardes voor richting en kracht.
+
+
+
+<details>
+<summary>Klik om de voorbeeldcode te openen</summary>
+    
 ```csharp
-public Rigidbody2D rb;
-public float force = 500f;
 
+
+// Hoe hard de bal wordt weggeduwd
+public float ShootForce = 500f;
+
+// In welke richting de bal duwt krijgt (0,1,0 = omhoog)
+public Vector3 Direction = new Vector3(0f,1f,0f);
+
+private Rigidbody2D rb;
+
+// Start is called once before the first execution of Update after the MonoBehaviour is created
+void Start()
+{
+    // aalt automatisch de Rigidbody2D op van dit object
+    rb = GetComponent<Rigidbody2D>();
+}
+
+// Update is called once per frame
 void Update()
 {
-    if (Input.GetKeyDown(KeyCode.Space))
+    if(Input.GetKeyDown(KeyCode.A))
     {
-        rb.AddForce(transform.up * force);
+        // Geeft een kracht in de opgegeven richting * sterkte
+        rb.AddForce(Direction * ShootForce);
+        
     }
 }
+```
+</details>
