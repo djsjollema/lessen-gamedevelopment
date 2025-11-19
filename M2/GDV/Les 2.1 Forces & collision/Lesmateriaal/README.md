@@ -27,7 +27,7 @@ AddForce werkt samen met het physics-systeem. Daarom is het de juiste manier voo
 ## Stap 1. 
 
 - Maak een nieuw 2D project aan of open het project van vorige week. 
-![Universal 2D project](image.png)
+<img width="2132" height="1097" alt="image" src="https://github.com/user-attachments/assets/9ceee922-5b06-4275-ae82-e43a156820a8" />
 
 Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat het is en van wie het is, bijvoorbeeld FruityPeggle_KimVerweij.
 
@@ -75,7 +75,8 @@ In de volgende stap ga je de bal laten schieten met AddForce.
 ## Stap 2 – Bal afschieten met AddForce
 
 ### 0. Maak een bal.
-![alt text](image-1.png)
+<img width="1352" height="841" alt="image" src="https://github.com/user-attachments/assets/7a04291c-ba49-4214-b7ff-beaab57dee1d" />
+
 - Dat kun je doen door een nieuw 2D object te maken (kies sprite - circle)
 - Geef dit GameObject een duidelijke naam, zoals Bal.
 
