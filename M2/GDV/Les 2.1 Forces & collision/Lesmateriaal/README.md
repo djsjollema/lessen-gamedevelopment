@@ -38,8 +38,8 @@ Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat he
 
 ### 0. Maak een bal.
 ![alt text](image-1.png)
-Dat kun je doen door een nieuw 2D object te maken (kies sprite - circle)
-Geef dit GameObject een duidelijke naam, zoals Bal.
+- Dat kun je doen door een nieuw 2D object te maken (kies sprite - circle)
+- Geef dit GameObject een duidelijke naam, zoals Bal.
 
 --- 
 
