@@ -33,6 +33,45 @@ Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat he
 
 ## Stap 1 - Level
 
+Open het project dat je vorige week hebt gemaakt.
+
+In deze stap bouw je de basis van je level. Je maakt een speelgebied waar de bal in kan vallen en tegenaan kan stuiteren. Dit doe je met colliders: een vloer, twee muren en een plafond.
+
+### 1. Maak een vloer
+- Maak een nieuw GameObject, kies **2D Object, Sprite,  Square**  
+- Geef het de naam **Vloer**  
+- Schaal het breder (bijv. X = 10, Y = 0.5)  
+- Plaats het onderaan je level  
+- Voeg een **BoxCollider2D** toe (als die nog niet aanwezig is)
+
+### 2. Maak een linker muur
+- Dupliceer de vloer (Ctrl + D)  
+- Hernoem naar **MuurLinks**  
+- Draai of schaal het zodat het een verticale muur wordt (bijv. X = 0.5, Y = 8)  
+- Plaats deze links in het scherm  
+- BoxCollider2D blijft staan
+
+### 3. Maak een rechter muur
+- Dupliceer MuurLinks  
+- Hernoem naar **MuurRechts**  
+- Plaats deze rechts in het scherm
+
+### 4. Maak een plafond
+- Dupliceer de vloer  
+- Hernoem naar **Plafond**  
+- Plaats deze bovenaan het scherm (bijv. boven de bal)  
+- Schaal de breedte zodat het gehele speelveld afgesloten is
+
+### 5. Controleer de colliders
+Alle vier de randen van je speelveld moeten een **BoxCollider2D** hebben.  
+Zorg dat:
+- Nergens een gat zit  
+- Alles goed aansluit  
+- De bal niet kan ontsnappen
+
+Je basislevel is nu klaar.  
+In de volgende stap ga je de bal laten schieten met AddForce.
+
 
 ## Stap 2 – Bal afschieten met AddForce
 
