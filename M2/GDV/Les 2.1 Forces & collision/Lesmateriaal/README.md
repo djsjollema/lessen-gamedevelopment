@@ -39,7 +39,7 @@ In deze stap bouw je de basis van je level. Je maakt een speelgebied waar de bal
 ### 1. Maak een vloer
 - Maak een nieuw GameObject, kies **2D Object, Sprite,  Square**  
 - Geef het de naam **Vloer** of **Floor** 
-- Schaal het breder (bijv. X = 10, Y = 0.5)  
+- Schaal het breder
 - Plaats het onderaan je level  
 - Voeg een **BoxCollider2D** toe (als die nog niet aanwezig is)
 
