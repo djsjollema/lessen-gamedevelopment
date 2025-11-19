@@ -33,7 +33,6 @@ Geef je project een naam waar jij en je docent meteen uit kunnen afleiden wat he
 
 ## Stap 1 - Level
 
-Open het project dat je vorige week hebt gemaakt.
 
 In deze stap bouw je de basis van je level. Je maakt een speelgebied waar de bal in kan vallen en tegenaan kan stuiteren. Dit doe je met colliders: een vloer, twee muren en een plafond.
 
