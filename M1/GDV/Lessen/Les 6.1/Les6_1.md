@@ -261,7 +261,7 @@ public class ListIterator : MonoBehaviour
 }
 ```
 
-### Met Foreach (Simpeler)
+### Met Foreach
 
 ```csharp
 void Start()

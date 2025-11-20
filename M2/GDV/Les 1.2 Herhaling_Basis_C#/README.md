@@ -241,7 +241,7 @@ void SpawnAll()
 
 maak een nieuw C# script `RandomItem.cs` (attach aan een GameObject).
 
-Maak een array waarin 10 verschillende items als string opgeslagen kunnen worden. Zorg dat je deze array beschikbaar maakt in unity met `[SerialiseField]` ervoor. Kijk goed in de uitleg hoe je een array kunt maken.
+Maak een array waarin 10 verschillende items als string opgeslagen kunnen worden. Zorg dat je deze array beschikbaar maakt in unity met `[SerializeField]` ervoor. Kijk goed in de uitleg hoe je een array kunt maken.
 
 Vul deze array vanuit de inspector in unity met 10 verschillende items (strings).
 
