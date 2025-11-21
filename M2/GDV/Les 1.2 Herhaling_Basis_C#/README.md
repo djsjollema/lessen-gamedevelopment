@@ -159,41 +159,79 @@ Arrays:
 - C# voorbeeld:
 
 ```csharp
-int[] scores = new int[5];
-scores[0] = 10;
-// of direct
-int[] enemyValues = new int[] { 1, 2, 3 };
 
-// Itereren
-for (int i = 0; i < enemyValues.Length; i++)
-{
-    Debug.Log(enemyValues[i]);
+public class Arrays:MonoBehaviour{
+    //een lijst(array) maken
+    int[] scores = new int[5];
+    // een lijst(array) maken en gelijk vullen
+    int[] getallen = new int[] { 1, 2, 3 };
+    //een lijst(array) maken waar je strings in kunt bewaren
+    string[] names = new string[] {"hallo", "doei", "boe", "six", "seven"};
+
+    void Start(){
+        scores[0] = 10; //iets in een array stoppen op de eerste plek
+        scores[1] = 20; //iets in een array stoppen op de tweede plek
+        scores[2] = 30; //iets in een array stoppen op de derde plek
+        scores[3] = 40; //iets in een array stoppen op de vierde plek
+        scores[4] = 50; //iets in een array stoppen op de vijfde plek
+        scores[5] = 60; //dit geeft een fout! er is geen zesde plek. out of bounds error
+
+        names[1] = "adios"; //een string in een array stoppen, vervangt "doei"
+
+        // Door een lijst(array) heen loopen en alle waarden printen
+        for (int i = 0; i < scores.Length; i++)
+        {
+            Debug.Log(scores[i]);//print 10 20 30 40 50
+        }
+        //of met een for each loop
+        foreach (var name in names){
+            Debug.Log(name);//print "hallo" "doei" "boe" "six" "seven"
+        }
+
+    }
 }
+
 ```
 
-Lists (`System.Collections.Generic.List<T>`):
+Lists:
 
 - Dynamische grootte: je kunt items toevoegen/verwijderen tijdens runtime.
 - Handiger voor variabele collecties.
 - C# voorbeeld:
 
 ```csharp
-using System.Collections.Generic;
+using System.Collections.Generic; //importeer de List
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private List<string> items = new List<string>();
+    //maak een lege list aan
+    List<string> items = new List<string>();
 
     void Start()
     {
+        //voeg items toe aan de list
         items.Add("Sword");
         items.Add("Potion");
+        items.Add("Shield");
+
+        //voeg "Spear" toe op de plek van "Potion" en schuif de rest door
+        items.Insert(1,"Spear");
+
+        //Verwijder "Sword" omdat hij op de eerste plek staat
+        items.RemoveAt(0);
+
+        //Verwijder "Potion" uit de lijst
+        items.Remove("Potion");
+
+        PrintItems();
     }
 
     void PrintItems()
     {
-        foreach (var it in items)
-            Debug.Log(it);
+        foreach (var it in items){
+            Debug.Log(it);          //Print alle items in de List
+        }
+
     }
 }
 ```
@@ -208,7 +246,7 @@ Belangrijkste verschillen en tips:
   - Je gemak wilt (methodes als `Add`, `Remove`, `Insert`).
 - Unity Inspector: `List<T>` en arrays zijn beide serialiseerbaar en zichtbaar in Inspector als ze `public` of `[SerializeField] private` zijn (let op: sommige oude Unity-versies verschilden).
 
-Voorbeeld: array vs list
+Voorbeeld in Unity: array vs list
 
 ```csharp
 // Array
