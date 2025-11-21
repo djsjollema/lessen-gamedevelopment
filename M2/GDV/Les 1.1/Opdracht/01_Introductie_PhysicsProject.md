@@ -34,7 +34,7 @@ Mocht je vergeten zijn hoe je een repository opzet volg dan [deze stappen](https
 Gebruik dit als basis voor je eigen opzet. Houd je aan de vaste basis hierboven. Thema, stijl en naam kies je zelf.
 
 **Bekijk hier het voorbeeldconcept van Fruity Peggle:**  
-[Voorbeeldconcept – Fruity Peggle](https://github.com/gebruikersnaam/repositorynaam/blob/main/voorbeeldconcept.md)
+[Voorbeeldconcept – Fruity Peggle](https://github.com/djsjollema/lessen-gamedevelopment/blob/main/M2/GDV/Les%201.1/Lesmateriaal/Voorbeeldconcept_FruityPeggle.md)
 
 
 #### Titel (werktitel)
