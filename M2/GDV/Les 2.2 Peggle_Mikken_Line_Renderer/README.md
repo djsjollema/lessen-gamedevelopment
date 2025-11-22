@@ -1,4 +1,4 @@
-# M2 GDV les 2.2 (CODE) Peggle Game, Mikken en Line Rendering
+# M2 GDV les 2.2 (CODE) Peggle Game, Mikken, Schieten en Line Rendering
 
 ![result](../src/2_2_Aim_Line_result.gif)
 
