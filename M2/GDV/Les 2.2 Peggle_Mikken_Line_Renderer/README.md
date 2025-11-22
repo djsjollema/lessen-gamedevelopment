@@ -6,7 +6,7 @@
 
 ### 1. importeer een image
 
-Imorteer een image van je kanon of wat je dan ook wil gebruiken om ballen mee af te vuren.
+Importeer een image van je kanon of wat je dan ook wil gebruiken om ballen mee af te vuren.
 
 Maak in je Assets folder een graphics folder aan en sleep daar een .png bestand in.
 
@@ -332,4 +332,4 @@ Dit zou het ongeveer moeten zijn:
 ## Inleveren op je README
 
 Zet in de titel **2.2 Aim, Shoot en Line**
-Maak een korte GIF van je aim en shoot system met line renderer en zet deze op je readme. Zet hier ook een link naar de code.
+Maak een korte omschrijving en GIF van je aim en shoot system met line renderer en zet deze op je readme. Zet hier ook de links naar de code.
