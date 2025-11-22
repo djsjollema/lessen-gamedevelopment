@@ -36,13 +36,13 @@ Het punt waarop je kanon gaat draaien is het midden van je lege game object (hol
 
 ![create cannon](../src/2_2_create_cannon.gif)
 
-### 3. Scrijf je script
+### 3. Schrijf je script
 
 Maak een nieuwe map in je Assets folder met de naam `Scripts`
 
 Maak een script met de naam `Aim.cs` en hang die aan je `cannon holder`
 
-Open je script in Visual Studio en scrijf de volgende code:
+Open je script in Visual Studio en schrijf de volgende code:
 
 Als je het zelf op een andere manier wilt proberen dan mag dat uiteraard ook.
 
@@ -52,7 +52,7 @@ public class Aim : MonoBehaviour
 {
     void Update()
     {
-        //positie van het gameobject op het screen bepalen
+        //positie van het gameobject (kanon) op het scherm bepalen
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
         //Richting tussen het gameobject en je muiscursor bepalen
         Vector3 dir = Input.mousePosition - pos;
@@ -76,7 +76,7 @@ public class Aim : MonoBehaviour
 
 2. `Vector3 dir = Input.mousePosition - pos;`
 
-   - Doel: bepaal de richtingvector van het object naar de muis in schermruimte.
+   - Doel: bepaal de richting-**"vector"** van het gameobject naar de muis op het scherm.
    - Waarom: door de schermpositie van het object af te trekken van de muispositie krijg je een vector die zowel richting (x,y) als afstand geeft; deze vector gebruik je om de richting te berekenen.
    - Belangrijk: zorg dat beide waarden in schermruimte zijn (anders klopt de richting niet).
 
@@ -114,13 +114,15 @@ Maak een map `Prefabs` aan in je `Assets` folder.
 
 Sleep nu je gameobject naar deze map in je project window. Op deze manier maak je van je gameobject een zogenaamde "prefab". Dit zorgt ervoor dat je dit gameobject kunt gaan hergebruiken in je game.
 
+Als je een `prefab` hebt gemaakt herken je deze aan het blauwe blokje.
+
 ![make prefab](../src/2_2_make_prefab.gif)
 
 Verwijder nu de prefab uit de hierarchy! Deze ballen gaan we later weer vanuit ons script in de scene zetten.
 
 ### Prefab mode
 
-Dubbelklik op de bal in je project window. Je komt nu in "prefab mode". Door op het pijltij links bovenin je hierarchy te drukken ga je weer terug naar je scene.
+Dubbelklik op de bal in je project window. Je komt nu in "prefab mode". Door op het pijltje links bovenin je hierarchy te drukken ga je weer terug naar je scene.
 
 ![prefab mode](../src/2_2_prefab_mode.gif)
 
@@ -154,15 +156,15 @@ Hang dit script als component aan je bal in de inspector.
 
 Open het script na het compilen in Visual Studio.
 
-Gebruik de volegende code en probeer te begrijpen wat deze doet door de comments te lezen:
+Gebruik de volgende code en probeer te begrijpen wat deze doet door de comments te lezen:
 
 ```Csharp
 using UnityEngine;
 public class Shoot : MonoBehaviour
 {
-    //De waarden van deze variabelen kun je in de inspector editen
+    //De waarden van deze variabelen kun je in de inspector editen dankzij [SerializeField]
 
-    //in de inspector moet de prefab van de bal in het veld gesleept worden.
+    //in de inspector moet de prefab van de bal in dit veld (variabele) gesleept worden.
     [SerializeField] private GameObject prefab;
     //kracht die de bal krijgt per seconde dat we de knop inhouden
     [SerializeField] private float forceBuild = 20f;
@@ -196,16 +198,17 @@ public class Shoot : MonoBehaviour
 
             /*Instantiate maakt van een prefab een gameonject in je scene.
             Er wordt dus een nieuwe bal in je scene aangemaakt.
-            Om nog meer met deze bal te kunnen in ons script slaan we hem op in een variabele*/
+            Om nog meer met deze bal te kunnen in ons script slaan we hem op in een variabele
+            transform.parent verwijst naar de scene zodat de bal in de scene beland en niet in je kannon */
             GameObject ball = Instantiate(prefab, transform.parent);
 
-            /*geef de bal dezelfde rotatie als ons kanon zodat we heb de juiste richting op kunnen schieten.*/
+            /*geef de bal dezelfde rotatie als het kanon zodat we heb de juiste richting op kunnen schieten.*/
             ball.transform.rotation = transform.rotation;
 
-            /*Geef de Rigidbody van de bal een kracht (_launchForce) naar rechts mee zijn eigen x-as. Doordat de bal goed geroteerd is gaat hij de goede kant op.*/
+            /*Geef de Rigidbody van de bal een kracht (_launchForce) naar rechts mee op zijn eigen x-as. Doordat de bal goed geroteerd is gaat hij de goede kant op. ForceMode2D.Impulse zorgt dat alle kracht in 1 keer aan de bal gegeven wordt*/
             ball.GetComponent<Rigidbody2D>().AddForce(ball.transform.right * _launchForce, ForceMode2D.Impulse);
 
-            /*Plaats de bal op dezelfde plek als het kanon zodat deze vanaf die plek in de scene verschijnt*/
+            /*Plaats de bal op dezelfde plek als het kanon zodat deze op die plek in de scene verschijnt*/
             ball.transform.position = transform.position;
         }
         /*Om te voorkomen dat we oneindige kracht mee kunnen geven beperken we de tijd die we maximaal bij gaan houden. Deze maximum tijd kunnen we in seconden instellen in de inspector (maximumHoldTime)*/
@@ -217,7 +220,9 @@ public class Shoot : MonoBehaviour
 }
 ```
 
-Sleep nu de prefab van je bal in het veld `prefab` van je script.
+Nadat je de code hebt geschreven en opgeslagen ga je weer naar unity en laat je de code compilen.
+
+Sleep nu de prefab van je bal in het veld `prefab` van je script in de inspector. Dit noem je een **"Referentie"**! Hierdoor heeft jouw script een link met de prefab en weet het script dus dat hij deze moet gebruiken.
 
 ![prefab in veld](../src/2_2_prefab_into_field.gif)
 
@@ -275,32 +280,33 @@ Verder voeg je een `Start` functie toe als die er niet al is. In deze functie ze
 ```Csharp
  private void Start()
  {
-    //we vragen het Line Renderer comonent op en slaan deze op in een variabele
+    //we vragen het Line Renderer component op en slaan deze op in een variabele zodat we er later dingen mee kunnen doen
      _line = GetComponent<LineRenderer>();
-     //We pakken het eindpunt van de lijn en zetten deze op positie 0,0,0 (zelfde plek als het beginpunt). Hierdoor word de lijn onzichtbaar.
+     //We pakken het eindpunt van de lijn en zetten deze op positie 0,0,0 (zelfde plek als het beginpunt). Hierdoor word de lijn onzichtbaar. Punt 0 is het beginpunt en punt 1 het eindpunt.
      _line.SetPosition(1,Vector3.zero);
+     //_line.SetPosition(0,Vector3.one); zou het beginpunt aanpassen. Maar dat is niet nodig nu.
 
  }
 ```
 
-In de functie `HandleShot` zorgen we dat de boolean `_lineActive` true wordt als de muisknop wordt ingedrukt.
+In de functie `HandleShot` zorgen we dat de boolean `_lineActive` de waarde `true` krijgt als de muisknop wordt ingedrukt. Ook zetten we de waarde van `_pressTimer` op `0f` Zodat we kunnen bijhouden hoe lang we de knop hebben ingehouden.
 
 ```CSharp
     if (Input.GetMouseButtonDown(0))
     {
-        _pressTimer = 0;
+        _pressTimer = 0f;
         _lineActive = true;
     }
 ```
 
 Als de muisknop wordt losgelaten voeg je de volgende regels toe: `_lineActive = false;` en `_line.SetPosition(1, Vector3.zero);`.
-We houden dus bij dat de lijn niet meer actief moet zijn en we maken hem weer onzichtbaar.
+We houden dus bij dat de lijn niet meer actief moet zijn en we maken hem weer onzichtbaar door het eindpunt op dezelfde plek te zetten als het beginpunt.
 
 ```Csharp
     if (Input.GetMouseButtonUp(0))
     {
 
-        //andere code....
+        //eerdere code....voor nu even overgeslagen
 
 
         _lineActive = false;
@@ -308,7 +314,7 @@ We houden dus bij dat de lijn niet meer actief moet zijn en we maken hem weer on
     }
 ```
 
-Helamaal onderin de functie `HandleShot` voeg je de volgende code toe:
+Helemaal onderin de functie `HandleShot` voeg je de volgende code toe:
 
 ```Csharp
     if (_lineActive) {
