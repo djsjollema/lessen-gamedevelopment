@@ -2,23 +2,25 @@
 
 ## Doel
 
-Kort overzicht voor beginnende game developers: wanneer gebruik je Class, Struct, Enum of ScriptableObject? Praktische voorbeelden en 2 korte oefeningen.
+Jullie leren wat "data structuren" zijn en maken kennis met een specifieke structuren. Je leert wanneer je welke het beste kunt gebruiken: wanneer gebruik je Class, Struct, Enum of ScriptableObject?
 
-## Tijd (45 min)
+## Inhoud van de les
 
-- Korte intro Stack vs Heap (7 min)
-- Classes vs Structs (10 min)
-- Oefening 1 (5 min)
-- Enums & ScriptableObjects (10 min)
-- Oefening 2 (5 min)
-- Huiswerk uitleg (8 min)
+- Korte intro Stack vs Heap
+- Classes vs Structs
+- Oefening 1
+- Enums & ScriptableObjects
+- Oefening 2
+- Huiswerk uitleg
+
+## Stack vs Heap
+
+Het RAM geheugen van je computer heb je nodig om je computer instructies te laten onthouden zodat deze ook goed uitgevoerd kunnen worden. Het geheugen kent 2 verschillende manieren van hoe deze omgaan met data.
 
 ![stack vs heap](../src/03_stack_heap.png)
 
-## Stack vs Heap (kort)
-
-- **Stack:** snelle, tijdelijke opslag voor value types (lokale variabelen, structs). Wordt automatisch opgeruimd.
-- **Heap:** opslag voor reference types (classes, ScriptableObjects). Langere levensduur, beheerd door Garbage Collector.
+- **Stack:** snelle, tijdelijke opslag voor **"value types"** (lokale variabelen, structs). Wordt automatisch opgeruimd volgens het first in last out (FILO) principe.
+- **Heap:** opslag voor **"reference types"** (classes, ScriptableObjects). Langere levensduur, beheerd door Garbage Collector. Slim systeem dat zorgt dat gegevens automatisch worden verwijderd bijvoorbeeld als er weinig geheugen over is.
 
 Kort voorbeeld:
 
@@ -31,6 +33,53 @@ Player p = new Player();   // class - heap
 Belangrijk: structs zijn snel en licht, maar worden steeds gekopieerd. Classes zijn flexibeler (null, inheritance) maar kosten heap-overhead. (garbage collection)
 
 ![garbage](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmlmZTk3YWd3MjFiYzFjbGVpbGxnY2U4b3J3OGszMDdmaXRqZTlnYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/19D9Pj5eoKUPtEsLGf/giphy.gif)
+
+---
+
+## 10 veel voorkomende Value Types in Unity
+
+1. **int** — gehele getallen (-2147483648 tot 2147483647)
+2. **float** — kommagetallen met enkele precisie (3.14f)
+3. **bool** — true/false waarden
+4. **double** — kommagetallen met dubbele precisie (7.5d)
+5. **byte** — kleine gehele getallen (0 tot 255)
+6. **short** — gehele getallen (-32768 tot 32767)
+7. **long** — grote gehele getallen (-9223372036854775808 tot 9223372036854775807)
+8. **char** — één karakter ('a', 'Z', '5')
+9. **decimal** — zeer nauwkeurige kommagetallen (voor financiële berekeningen)
+10. **uint** — positieve gehele getallen (0 tot 4294967295)
+
+---
+
+## 10 veel voorkomende structs in Unity
+
+1. **Vector2** — 2D vector met x en y coördinaten (bijv. voor 2D-spellen)
+2. **Vector3** — 3D vector met x, y en z coördinaten (bijv. voor posities en rotaties)
+3. **Quaternion** — rotatiedata in 3D ruimte (efficiënter dan Euler-hoeken)
+4. **Color** — RGBA kleuren (rood, groen, blauw, alpha/doorzichtigheid)
+5. **Bounds** — rechthoekig volume gedefinieerd door center en extents
+6. **Rect** — rechthoek gedefinieerd door positie en grootte
+7. **Matrix4x4** — 4x4 matrix voor transformaties
+8. **RaycastHit** — informatie uit een raycast (wat geraakt werd)
+9. **ContactPoint** — contactpunt tussen twee colliders (gebruikt bij Physics callbacks)
+10. **Plane** — oneindig vlak in 3D ruimte gedefinieerd door normal en afstand
+
+---
+
+## De 10 Meest Gebruikte Classes in Unity
+
+1. **GameObject** — basis object in Unity (alles wat in een scene staat)
+2. **Transform** — positie, rotatie en schaal van een GameObject
+3. **MonoBehaviour** — basis class voor alle scripts die je schrijft
+4. **Rigidbody** — physics component voor realistische beweging
+5. **Collider** — geometry voor collision detection (BoxCollider, SphereCollider, etc.)
+6. **Camera** — kijkpunt van de speler in de wereld
+7. **Light** — lichtbron in de scene
+8. **Canvas** — container voor UI-elementen
+9. **Image** — 2D plaatje weergeven in UI
+10. **AudioSource** — geluid afspelen in de wereld of voor UI
+
+---
 
 ## Classes
 
