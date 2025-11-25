@@ -78,7 +78,7 @@ Unity opent nu en laadt je nieuwe project!
 
 Je ziet nu de Unity Editor - dit is waar alle magie gebeurt! Het kan even duren voordat alles geladen is.
 
-![Unity Interface Overview](../gfx/1_1_unity_overview.png)
+![Unity Interface Overview](../../gfx/1_1_unity_overview.png)
 
 ---
 
@@ -88,7 +88,7 @@ De Unity interface bestaat uit verschillende **vensters** (windows). Elke heeft 
 
 ### 1. Scene View (Midden)
 
-![Scene View](../gfx/1_1_unity_sceneview.png)
+![Scene View](../../gfx/1_1_unity_sceneview.png)
 
 **Wat is dit?**
 
@@ -105,7 +105,7 @@ De Unity interface bestaat uit verschillende **vensters** (windows). Elke heeft 
 
 ### 2. Game View (Tab naast Scene)
 
-![game view](../gfx/1_1_unity_gameview.png)
+![game view](../../gfx/1_1_unity_gameview.png)
 
 **Wat is dit?**
 
@@ -115,7 +115,7 @@ De Unity interface bestaat uit verschillende **vensters** (windows). Elke heeft 
 
 ### 3. Hierarchy Window (Links)
 
-![Hierarchy](../gfx/1_1_unity_hierarchy.png)
+![Hierarchy](../../gfx/1_1_unity_hierarchy.png)
 
 **Wat is dit?**
 
@@ -131,7 +131,7 @@ De Unity interface bestaat uit verschillende **vensters** (windows). Elke heeft 
 
 ### 4. Inspector Window (Rechts)
 
-![Inspector](../gfx/1_1_inspector.png)
+![Inspector](../../gfx/1_1_inspector.png)
 
 **Wat is dit?**
 
@@ -147,7 +147,7 @@ De Unity interface bestaat uit verschillende **vensters** (windows). Elke heeft 
 
 ### 5. Project Window (Onderin)
 
-![Project Window](../gfx/1_1_project.png)
+![Project Window](../../gfx/1_1_project.png)
 
 **Wat is dit?**
 
@@ -163,7 +163,7 @@ Klik daar maar eens op en je vind netjes de locatie van je unity project terug o
 
 ### 6. Console Window (Tab naast Project)
 
-![console](../gfx/1_1_console.png)
+![console](../../gfx/1_1_console.png)
 
 **Wat is dit?**
 
@@ -185,7 +185,7 @@ Klik daar maar eens op en je vind netjes de locatie van je unity project terug o
 - Een pickup item = GameObject
 - Zelfs de camera = GameObject
 
-![GameObjects](../gfx/1_1_gameobject.png)
+![GameObjects](../../gfx/1_1_gameobject.png)
 
 ### Eigenschappen van GameObjects
 
@@ -198,7 +198,7 @@ Een GameObject is zoals een **LEGO blokje**. Op zichzelf doet het niet veel, maa
 
 Dus de components die op een gameobject zitten bepalen de mogelijkheden en gedrag van het gameobject
 
-![components](../gfx/1_1_components.png)
+![components](../../gfx/1_1_components.png)
 
 ---
 
@@ -244,7 +244,7 @@ Dus de components die op een gameobject zitten bepalen de mogelijkheden en gedra
 
 In de Scene View zie je bovenin een toggle knop tussen **Local** en **Global**. Dit bepaalt hoe Unity je GameObjects manipuleert:
 
-![Local vs Global](../gfx/1_1_local_global.png)
+![Local vs Global](../../gfx/1_1_local_global.png)
 
 #### Global Mode
 
@@ -277,7 +277,7 @@ Een **Scene** is zoals een **level** in je game:
 1. **Rechtsklikken in het project window → Create → Scene → Scene**
 2. **Verander de naam**
 
-![new scene](../gfx/1_1_scene.png)
+![new scene](../../gfx/1_1_scene.png)
 
 **Scene laden:**
 
@@ -353,7 +353,7 @@ Assets/
 
 **Edit → Preferences → Colors → Playmode Tint**
 
-![Playmode Tint](../gfx/1_1_playmode_tint.png)
+![Playmode Tint](../../gfx/1_1_playmode_tint.png)
 
 ---
 

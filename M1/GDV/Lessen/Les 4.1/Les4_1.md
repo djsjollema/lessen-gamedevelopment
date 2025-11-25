@@ -30,7 +30,7 @@ In Les 3.1 heb je Colliders leren kennen voor **physics botsingen**. Maar Collid
 - Detecteert alleen **wanneer** objecten elkaar raken
 - Perfect voor pickup items, checkpoints, detectie zones
 
-![trigger vs collider](../gfx/4_1_pickups.png)
+![trigger vs collider](../../gfx/4_1_pickups.png)
 
 ---
 
@@ -43,7 +43,7 @@ In Les 3.1 heb je Colliders leren kennen voor **physics botsingen**. Maar Collid
 3. **Kijk naar de Box Collider** in de Inspector
 4. **Vink "Is Trigger" aan**
 
-![trigger setup](../gfx/4_1_trigger_setup.png)
+![trigger setup](../../gfx/4_1_trigger_setup.png)
 
 **Nu is je Cube een Trigger!** Andere objecten kunnen er doorheen lopen, maar het detecteert wel contact.
 
@@ -55,7 +55,7 @@ In Les 3.1 heb je Colliders leren kennen voor **physics botsingen**. Maar Collid
 4. **Verlaag de Alpha waarde**
 5. **Sleep het materiaal op je trigger object**
 
-![transparent material](../gfx/4_1_transparent_material.png)
+![transparent material](../../gfx/4_1_transparent_material.png)
 
 ---
 
@@ -80,8 +80,8 @@ Het is zoals naamplaatjes op een feest - je weet meteen wie wie is!
 4. **Klik het + icoontje**
 5. **Type een tag naam** bijvoorbeeld: "Player", "Enemy", "Pickup"
 
-![create tag](../gfx/4_1_add_tag.png)
-![save tag](../gfx/4_1_save_tag.png)
+![create tag](../../gfx/4_1_add_tag.png)
+![save tag](../../gfx/4_1_save_tag.png)
 
 #### Stap 2: Tag Toewijzen
 
@@ -89,7 +89,7 @@ Het is zoals naamplaatjes op een feest - je weet meteen wie wie is!
 2. **Klik op Tag dropdown**
 3. **Kies je nieuwe tag**
 
-![set tag](../gfx/4_1_set_tag.png)
+![set tag](../../gfx/4_1_set_tag.png)
 
 ### Veelgebruikte Tags
 
@@ -125,7 +125,7 @@ Een Rigidbody component geeft een GameObject physics eigenschappen. Voor trigger
 1. **Voeg Rigidbody toe** aan je bewegende object (Add Component → Physics → Rigidbody)
 2. **Vink "Is Kinematic" aan** (geen zwaartekracht, maar wel trigger detectie)
 
-![rigidbody kinematic](../gfx/4_1_rigidbody_kinematic.png)
+![rigidbody kinematic](../../gfx/4_1_rigidbody_kinematic.png)
 
 ### Praktisch Voorbeeld: Pickup System Setup
 
@@ -264,11 +264,11 @@ Unity heeft ook een **Layer** systeem naast Tags:
 
 Je kunt zelf layers toevoegen via de inspector
 
-![Add Layer](../gfx/4_1_add_layer.png)
+![Add Layer](../../gfx/4_1_add_layer.png)
 
 Via **Project Settings → Physics → Settings** kun je bepalen welke layers met elkaar kunnen botsen.
 
-![Physics Layer Matrix](../gfx/4_1_physics_layer_matrix.png)
+![Physics Layer Matrix](../../gfx/4_1_physics_layer_matrix.png)
 
 ---
 
