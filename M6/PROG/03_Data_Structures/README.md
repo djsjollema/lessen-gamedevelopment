@@ -106,7 +106,8 @@ public struct PlayerStats {
 }
 ```
 
-Oefening 1 (5 min):
+### Oefening 1:
+
 Welk type kies je?
 
 1. Powerup state van een tower in een towerdefense game.
@@ -136,11 +137,11 @@ public class GameSettings : MonoBehaviour
 }
 ```
 
-## ScriptableObjects (kort)
+## ScriptableObjects
 
 - Asset-based reference type, ideaal voor gedeelde configuratie/gegevens (items, level data, tuning)
 - Voordelen: deelbaar tussen prefabs, zichtbaar in Inspector, persistente asset (ook als de game niet speelt)
-- Niet bedoeld als per-instance runtime-state container (dat leidt tot onverwachte gedeelde wijzigingen) Dus niet geschikt om veranderende data bij te houden.
+- Niet bedoeld als "per-instance runtime-state container" oftewel normaal RAM geheugen (dat leidt tot onverwachte gedeelde wijzigingen) Dus niet geschikt om veranderende data bij te houden.
 
 Kort voorbeeld:
 
@@ -149,6 +150,8 @@ Kort voorbeeld:
 public class WeaponData : ScriptableObject { public string name; public int damage; }
 ```
 
+Je kunt een scriptable object wel gebruiken om bijvoorbeel je level designs in op te slaan of gegevens van de verschillende waves in je towerdefense game.
+
 ### ScriptableObjects vs Structs (kort)
 
 - ScriptableObject: één gedeelde asset, reference type op heap, goed voor templates/configs.
@@ -156,8 +159,9 @@ public class WeaponData : ScriptableObject { public string name; public int dama
 
 Gebruik ScriptableObject als je één bron van waarheid wil (bijv. wapen-template). Gebruik struct voor per-entity kleine data (bijv. positie, simpele stats).
 
-Oefening 2 (5 min):
-Refactor de volgende (kort):
+### Oefening 2:
+
+Refactor de volgende code:
 
 ```csharp
 public class Enemy : MonoBehaviour {
@@ -166,7 +170,7 @@ public class Enemy : MonoBehaviour {
 }
 ```
 
-## Huiswerk (kort)
+## Opdracht 3: ....W.I.P
 
 - Maak 4 Weapon ScriptableObjects (verschillende damage, speed, durability).
 - Maak een `WeaponStats` struct die je gebruikt om de ????.
