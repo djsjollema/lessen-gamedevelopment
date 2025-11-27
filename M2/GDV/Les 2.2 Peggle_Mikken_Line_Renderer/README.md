@@ -152,7 +152,7 @@ We maken nu een script aan waarmee we de ballen gaan afvuren.
 
 Maak in je `Scripts` folder een nieuw script aan met de naam `Shoot.cs`
 
-Hang dit script als component aan je bal in de inspector.
+Hang dit script als component aan je `Cannon Holder` in de inspector.
 
 Open het script na het compilen in Visual Studio.
 
