@@ -1,27 +1,26 @@
-# Les 3.1 Week 3 – Score & Triggers 
+# Les 3.1 Week 3 – Peggle, hits & score
 
 
 ## Inleiding
 
-In deze les breid je jouw Peggle-mechanic verder uit. Vorige week heb je een Peggle gemaakt die hits kan verwerken, punten doorgeeft en verdwijnt wanneer de hits op zijn. Deze week voeg je nieuwe elementen toe zoals scoreberekening, triggers en een centrale manier om events in je level te verwerken. Hiermee leg je de basis voor bonusgebieden, speciale effecten en meer geavanceerde gameplay.
+In deze les bouw je de complete basis van jouw Peggle-mechanic. Je maakt een Peggle die reageert op de bal, bijhoudt hoeveel hits er nog over zijn, punten doorgeeft aan de ScoreManager en uit het level verdwijnt wanneer de hits op zijn. Dit is de eerste versie van de echte gameplay van jouw spel: raken, punten verdienen en Peggles die verdwijnen. Deze mechanic breid je de komende weken verder uit met extra feedback en spelvariatie.
 
 ---
 
 ## Theorie
-Unity maakt onderscheid tussen collisions en triggers.
-Een collision vindt plaats wanneer twee colliders elkaar raken en minstens één van deze colliders een Rigidbody heeft. Hierbij botsen objecten zichtbaar tegen elkaar. Een trigger werkt anders: een collider staat dan in ‘Is Trigger’-modus en zorgt niet voor fysieke botsingen, maar detecteert alleen of een object een zone binnenkomt.
+Een Peggle reageert wanneer de bal ertegenaan botst. Deze botsing activeert (of “triggert”) een stukje gameplay: het optellen van punten, het aftellen van de overgebleven hits en uiteindelijk het verwijderen van de Peggle wanneer deze op is. Dit systeem is gebaseerd op collisions in Unity. Een collision ontstaat wanneer twee colliders elkaar raken en één van de objecten een Rigidbody heeft.
 
-Triggers worden gebruikt voor game-logica die niet afhankelijk is van fysiek gedrag, zoals scorezones, bonusgebieden, checkpoints, killzones of het starten van events. Je gebruikt OnTriggerEnter2D om te bepalen wanneer jouw bal een trigger raakt, zodat je daar een actie aan kunt koppelen, zoals punten toevoegen of een animatie starten.
+Elke Peggle heeft een eigen set waardes die het gedrag bepalen, zoals het aantal hits dat nog over is en het aantal punten dat een hit waard is. Door die waardes aanpasbaar te maken in de Inspector, kun je verschillende soorten Peggles maken. Op die manier bouw je variatie in je spel zonder nieuwe scripts te hoeven schrijven.
 
-Daarnaast gebruik je een centrale ScoreManager om alle punten in je spel te beheren. De ScoreManager houdt de totale score bij, verzamelt alle punten vanuit peggles en triggers en maakt het systeem overzichtelijker omdat alle scorelogica op één plek staat.
+De ScoreManager verzamelt alle punten van alle Peggles op één centrale plek. Wanneer een Peggle geraakt wordt, “meldt” deze zich bij de ScoreManager en geeft een aantal punten door. Zo ontstaat er een duidelijk en uitbreidbaar puntensysteem dat later gebruikt kan worden voor leveldoelen, bonusregels of scorevergelijkingen.
 
-In deze les combineer je je Peggle-mechanic met triggers, zodat je straks zowel raakpunten als zones in je game kunt gebruiken om scores, states of events aan te sturen.
+De combinatie van collision-detectie, hit-registratie en de ScoreManager vormt de basis van Peggle-achtige gameplay: raken, feedback krijgen, punten verdienen en objecten die verdwijnen na genoeg hits.
 
 ---
 
 
 ###  Voeg een GIF en uitleg toe aan je README
-
+Maak een korte GIF waarin jouw mechanic duidelijk te zien is. Zorg dat de GIF laat zien dat de bal de Peggle raakt, dat de score oploopt en dat de Peggle op het juiste moment verdwijnt. Plaats deze GIF onderaan je README en schrijf er een korte uitleg bij waarin je in je eigen woorden beschrijft wat jouw Peggle precies doet: hoeveel hits er nodig zijn, hoeveel punten je krijgt en wat er gebeurt wanneer de Peggle “op” is.
 
 
 
