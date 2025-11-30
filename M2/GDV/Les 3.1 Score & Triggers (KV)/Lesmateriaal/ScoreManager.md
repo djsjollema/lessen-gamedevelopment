@@ -1,26 +1,75 @@
-# Les 3.1 Week 3 – Score & Triggers 
+# Les 3.1 Week 3 – Score Manager
 
 
-## Inleiding
+## Wat is een Singleton Pattern?
 
-In deze les breid je jouw Peggle-mechanic verder uit. Vorige week heb je een Peggle gemaakt die hits kan verwerken, punten doorgeeft en verdwijnt wanneer de hits op zijn. Deze week voeg je nieuwe elementen toe zoals scoreberekening, triggers en een centrale manier om events in je level te verwerken. Hiermee leg je de basis voor bonusgebieden, speciale effecten en meer geavanceerde gameplay.
+De ScoreManager gebruikt een zogenoemd singleton pattern. Dat betekent dat er van de ScoreManager maar één exemplaar bestaat in je hele spel. Alle scripts die punten willen toevoegen, verwijzen naar hetzelfde centrale punt.
 
----
+Je maakt dus niet meerdere ScoreManagers, maar één vaste plek waar de totale score wordt bijgehouden. Hierdoor blijft het systeem overzichtelijk en voorkom je fouten, omdat alle peggles altijd naar dezelfde ScoreManager verwijzen.
 
-## Theorie
-Unity maakt onderscheid tussen collisions en triggers.
-Een collision vindt plaats wanneer twee colliders elkaar raken en minstens één van deze colliders een Rigidbody heeft. Hierbij botsen objecten zichtbaar tegen elkaar. Een trigger werkt anders: een collider staat dan in ‘Is Trigger’-modus en zorgt niet voor fysieke botsingen, maar detecteert alleen of een object een zone binnenkomt.
+Een singleton is handig voor dingen die maar één keer hoeven te bestaan, zoals een score, game manager, audio manager of level manager. Het zorgt ervoor dat andere scripts de ScoreManager makkelijk kunnen bereiken via bijvoorbeeld ScoreManager.Instance.
 
-Triggers worden gebruikt voor game-logica die niet afhankelijk is van fysiek gedrag, zoals scorezones, bonusgebieden, checkpoints, killzones of het starten van events. Je gebruikt OnTriggerEnter2D om te bepalen wanneer jouw bal een trigger raakt, zodat je daar een actie aan kunt koppelen, zoals punten toevoegen of een animatie starten.
+Bijvoorbeeld:
+ScoreManager.Instance.AddScore(10);
 
-Daarnaast gebruik je een centrale ScoreManager om alle punten in je spel te beheren. De ScoreManager houdt de totale score bij, verzamelt alle punten vanuit peggles en triggers en maakt het systeem overzichtelijker omdat alle scorelogica op één plek staat.
-
-In deze les combineer je je Peggle-mechanic met triggers, zodat je straks zowel raakpunten als zones in je game kunt gebruiken om scores, states of events aan te sturen.
+Daarmee weet Unity altijd: “Gebruik dé ScoreManager van dit spel.”
 
 ---
 
+## Stappenplan
 
-###  Voeg een GIF en uitleg toe aan je README
+Stap 1
+- Voeg een leeg object toe aan je scene en noem deze GameManager.
+- Voeg een nieuw script toe aan dit gameobject benaamd ScoreManager.
+
+Stap 2
+
+Voeg deze code toe aan het script:
+
+```Charp
+
+using UnityEngine;
+
+public class ScoreManager : MonoBehaviour
+{
+    // Singleton
+    public static ScoreManager Instance;
+
+    // Totale score
+    public int score = 0;
+
+
+    private void Awake()
+    {
+        // controleren of er al een ScoreManager bestaat
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // dit is nu de enige ScoreManager in de scene
+        Instance = this;
+    }
+
+    // functie om punten toe te voegen
+    public void AddScore(int amount)
+    {
+        score = score + amount;
+        // debug voor testen
+        Debug.Log("Score: " + score);
+    }
+}
+```
+
+---
+
+Vanuit elk ander script kun je punten toevoegen via:
+
+```Charp
+ScoreManager.Instance.AddScore(2);
+```
+
 
 
 
