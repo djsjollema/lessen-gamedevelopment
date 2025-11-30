@@ -7,6 +7,7 @@
 
 - Download een font naar keuze, via websites zoals www.dafont.com kun je gratis fonts downloaden.
 - Je hebt een otf. of ttf. bestand nodig om te importeren in unity.
+- 
 
 
 ## Stap 2 - Voeg font toe aan project
