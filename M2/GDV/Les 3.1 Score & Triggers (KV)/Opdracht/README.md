@@ -80,7 +80,7 @@ public class Peggle : MonoBehaviour
         if (hitsToDestroy <= 0)
         {
             Destroy(gameObject, 0.25f);
-        }  Destroy(this.gameObject, 0.25f);
+        } 
    }
 }
 
