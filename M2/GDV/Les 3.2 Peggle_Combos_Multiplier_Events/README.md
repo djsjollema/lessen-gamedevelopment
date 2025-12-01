@@ -79,6 +79,8 @@ Nu gaan we dus voor elke bumper bijhouden of hij geraakt wordt door de bal. Hier
     }
 ```
 
+### Action Events
+
 Als we geraakt worden door de bal willen we eigenlijk iets doen in een ander script. Er zijn meer manieren om dit voor elkaar te krijgen maar een mooie manier is gebruik maken van `Action Events`. Zie dit als berichtjes die scripts kunnen versturen waar andere scripts naar kunnen luisteren. Een soort radiostation en radio ontvangers dus.
 
 _Technish gezien werkt het iets anders maar zo is het makkelijk te begrijpen en te onthouden._
@@ -273,12 +275,12 @@ public class ComboSystem : MonoBehaviour
 }
 ```
 
-Tot slot moeten we natuurlijk nog onze score op gaan tellen en bijhouden. Hiervoor maken we weer een variabele `private int score = 0;` weer op de juiste plek!
+Tot slot moeten we natuurlijk nog onze score op gaan tellen en bijhouden. Hiervoor maken we gebruik van de **Singleton** `ScoreManager.score` die jullie in [les 3.1](<https://github.com/djsjollema/lessen-gamedevelopment/blob/main/M2/GDV/Les%203.1%20Score%20%26%20Triggers%20(KV)/Lesmateriaal/ScoreManager.md#les-31-week-3--score-manager>) hebben gemaakt. Als je nog les nog niet hebt uitgewerkt kun je dat nu eerst doen.
 
 bij elke bumper die we raken gaan we de waarde van deze bumper optellen bij de score. Deze punten worden ook vermenigvuldigd met de `scoreMultiplier`.
 
 Dit doen we nadat we gecheckt hebben of onze chain nog heel is of verbroken.
-`score += value * scoreMultiplier;`
+`ScoreManager.score += value * scoreMultiplier;`
 
 We printen onze score en de multiplier ook gelijk even naar de `console` met behulp van `Debug.Log`.
 
@@ -291,7 +293,6 @@ public class ComboSystem : MonoBehaviour
 {
     private List<string> bumperTags = new List<string>();
     private int multiplier = 1;
-    private int score = 0;
     private void Start()
     {
         BumperHit.onBumperHit += CheckForCombo;
@@ -315,7 +316,7 @@ public class ComboSystem : MonoBehaviour
                 bumperTags.Clear();
             }
         }
-        score += bumperValue * multiplier;
+        ScoreManager.score += bumperValue * multiplier;
         Debug.Log($"Score: {score} || Multiplier: {multiplier}X");
     }
 }
