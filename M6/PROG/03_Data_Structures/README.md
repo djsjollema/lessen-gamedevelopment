@@ -100,7 +100,7 @@ public class Player {
 - Value type, gebruik bij: kleine data (posities, stats), performance-kritische, immutable waar mogelijk. Passieve data.
 
 ```csharp
-public struct PlayerStats {
+[Serializable] public struct PlayerStats {
     public int health;
     public float speed;
 }
@@ -150,7 +150,7 @@ Kort voorbeeld:
 public class WeaponData : ScriptableObject { public string name; public int damage; }
 ```
 
-Je kunt een scriptable object wel gebruiken om bijvoorbeel je level designs in op te slaan of gegevens van de verschillende waves in je towerdefense game.
+Je kunt een scriptable object wel gebruiken om bijvoorbeeld je level designs in op te slaan of gegevens van de verschillende waves in je towerdefense game.
 
 ### ScriptableObjects vs Structs (kort)
 
@@ -170,20 +170,315 @@ public class Enemy : MonoBehaviour {
 }
 ```
 
-## Opdracht 3: ....W.I.P
+## Opdracht 3: Inventory & Item Management System
 
-- Maak 4 Weapon ScriptableObjects (verschillende damage, speed, durability).
-- Maak een `WeaponStats` struct die je gebruikt om de ????.
-- Toon in een kleine scene: 1 prefab die een ScriptableObject gebruikt en zijn struct-gegevens toont in de Inspector/console.
+### Scenario
 
-Lever in: korte GitHub PR met code + 1 screenshot.
+Je maakt een small inventory/shop systeem voor een RPG-spel. Spelers kunnen items kopen, verkopen en beheren. Je gaat vier data structure types gebruiken om dit systeem op te bouwen.
 
-## Tips (1 regel)
+### Leerdoelen
 
-- Structs = snel & klein; Classes/ScriptableObjects = deelbaar & flexibel. Kies bewust of je wilt delen of kopiëren.
+- Begrijpen wanneer je Class, Struct, Enum of ScriptableObject gebruikt.
+- Praktisch werken met reference types (Class, ScriptableObject) en value types (Struct).
+- Een klein maar realistisch systeem ontwerpen en implementeren.
 
-## Links
+---
 
-- Unity scripting docs: https://docs.unity3d.com/ScriptReference/
-- ScriptableObject guide: https://unity.com/how-to/architect-game-code-scriptable-objects
-  - Je inheritance nodig hebt
+## Deel A: Enum — ItemType
+
+### Doel
+
+Definieer vaste item-typen zodat je geen "magic numbers" gebruikt.
+
+### Instructie
+
+1. Maak een nieuw script `ItemType.cs`
+2. Definieer een public enum met minstens 5 item-typen:
+
+```csharp
+public enum ItemType
+{
+    Weapon,
+    Armor,
+    Potion,
+    Consumable,
+    Misc
+}
+```
+
+### Waarom Enum?
+
+- Voorkomen van magic numbers (0, 1, 2, ...)
+- Code leesbaarder: `ItemType.Weapon` is duidelijker dan `0`
+- Compiler checkt of je alleen geldige waarden gebruikt
+- De waardes veranderen nooit (statisch)
+
+### Tip
+
+- Enums zijn intern integers, dus efficiënt
+- Je kunt ze in if-statements vergelijken: `if (item.type == ItemType.Weapon)`
+
+---
+
+## Deel B: Struct — ItemStats
+
+### Doel
+
+Maak een kleine, lichtgewicht data container voor item-statistieken. Structs zijn ideaal voor eenvoudige, passieve data die veel voorkomt (en niet verandert).
+
+### Instructie
+
+1. Maak een nieuw script `ItemStats.cs`
+2. Definieer een struct met deze properties:
+
+```csharp
+[Serializable] public struct ItemStats
+{
+    public float damage;
+    public float defense;
+    public float weight;
+
+    // Constructor (optioneel maar handig)
+    public ItemStats(float damage, float defense, float weight)
+    {
+        this.damage = damage;
+        this.defense = defense;
+        this.weight = weight;
+    }
+}
+```
+
+### Waarom Struct?
+
+- Snelle opslag (stack) voor kleine, onveranderlijke data
+- Geen garbage collection overhead
+- Ideaal voor performance-kritische waarden (stats, posities)
+- Wordt **gekopieerd** bij toewijzing (dus wijzigingen zijn lokaal)
+
+### Voorbeeld gebruik
+
+```csharp
+ItemStats sword = new ItemStats(15f, 0f, 5f);
+ItemStats armor = new ItemStats(0f, 10f, 10f);
+```
+
+### Tip
+
+- Structs zijn value types → wees voorzichtig met grote data containers
+- Voor mutable/gedeelde data: gebruik Class in plaats van Struct
+
+---
+
+## Deel C: Class — Item
+
+### Doel
+
+Maak de hoofdklasse `Item` met gedrag, inventory management en identity. Classes zijn ideaal voor objecten met gedrag en gedeelde state.
+
+### Instructie
+
+1. Maak een nieuw script `Item.cs`
+2. Definieer een public class met:
+   - Properties (naam, type, stats, prijs)
+   - Methoden (Describe(), CalculateValue())
+
+```csharp
+using UnityEngine;
+public class Item
+{
+    public string itemName;
+    public ItemType itemType;
+    public ItemStats stats;
+    public int sellPrice;
+    public bool isEquipped;
+
+    // Constructor
+    public Item(string name, ItemType type, ItemStats itemStats, int price)
+    {
+        itemName = name;
+        itemType = type;
+        stats = itemStats;
+        sellPrice = price;
+        isEquipped = false;
+    }
+
+    // Methode: geef item-beschrijving
+    public string Describe()
+    {
+        return $"{itemName} ({itemType})\n" +
+               $"Damage: {stats.damage}, Defense: {stats.defense}, Weight: {stats.weight}\n" +
+               $"Sell Price: {sellPrice}";
+    }
+}
+```
+
+### Waarom Class?
+
+- **Reference type** → één object, veel referenties (minder geheugen)
+- Gedrag via methoden (Describe, CalculateValue, Toggle)
+- Mutable state (isEquipped kan veranderen)
+- Inheritance mogelijk (later: Weapon extends Item)
+- Null kan zijn (geen onverwachte default values)
+
+### Voorbeeld gebruik
+
+```csharp
+Item ironSword = new Item("Iron Sword", ItemType.Weapon, new ItemStats(15f, 0f, 5f), 100);
+Debug.Log(ironSword.Describe());
+ironSword.Toggle(); // Equip
+```
+
+### Tip
+
+- Classes zijn flexibel → gebruik ze voor "smart objects" met logica
+- Structs kopiëren → classes zijn efficiënter voor grote, gedeelde data
+
+---
+
+## Deel D: ScriptableObject — ItemTemplate
+
+### Doel
+
+Maak herbruikbare item-sjablonen die in de Inspector kunnen worden ingesteld en opgeslagen als Unity-assets.
+
+### Instructie
+
+1. Maak een nieuw script `ItemTemplate.cs`
+
+```csharp
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "Game/Item Template")]
+public class ItemTemplate : ScriptableObject
+{
+    public string itemName;
+    public ItemType itemType;
+    public ItemStats stats;
+    public int basePrice;
+    public Sprite icon; // Plaatje voor UI
+
+    // Methode: maak een runtime Item van dit template
+    public Item CreateInstance()
+    {
+        return new Item(itemName, itemType, stats, basePrice);
+    }
+
+    // Methode: geef template-info
+    public void LogTemplate()
+    {
+        Debug.Log($"Template: {itemName} (Price: {basePrice})");
+    }
+}
+```
+
+2. In Unity Editor:
+   - Rechtsklik in Project > Create > Game > Item Template
+   - Vul de waarden in (bijv. "Light Saber", Weapon, price=500)
+   - Sla op als asset (bijv. `lightSaber.asset`)
+
+### Waarom ScriptableObject?
+
+- **Persistent asset** → blijft bestaan buiten runtime
+- Zichtbaar in Inspector → designers kunnen waarden wijzigen zonder code
+- **Gedeelde template** → één "bron van waarheid" voor vele instances
+- Efficiënt voor configuratie (items, levels, waves)
+- **NIET** geschikt voor per-instance veranderende data (daarvoor: Class)
+
+### Verschil: Template vs Runtime Instance
+
+```csharp
+// Template (in Inspector)
+ItemTemplate lightSaberTemplate; // ScriptableObject, 1x in geheugen
+
+// Runtime instances (unieke kopieën)
+Item lightSaber1 = lightSaberTemplate.CreateInstance(); // Nieuwe object
+Item lightSaber2 = lightSaberTemplate.CreateInstance(); // Nog één
+// goldSword1 en goldSword2 zijn onafhankelijk (via Class)
+```
+
+### Tip
+
+- Gebruik ScriptableObject voor templates, configuratie, statische data
+- Gebruik Class/Struct voor runtime-instances die kunnen veranderen
+
+---
+
+## Samenvattend: Alle vier gebruiken
+
+Maak een `Inventory.cs` script dat alles samenvoegt:
+
+```csharp
+public class Inventory : MonoBehaviour
+{
+    // Class: verzamelt items
+    private List<Item> items = new List<Item>();
+
+    // ScriptableObject: templates laden
+    public ItemTemplate[] itemTemplates;
+
+    // Enum: filter op type
+    public ItemType filterType;
+
+    void Start()
+    {
+        // Maak items van templates
+        foreach (ItemTemplate template in itemTemplates)
+        {
+            Item newItem = template.CreateInstance();
+            items.Add(newItem);
+            Debug.Log(newItem.Describe());
+        }
+    }
+
+    // Filter items op enum-type
+    public List<Item> GetItemsByType(ItemType type)
+    {
+        List<Item> filtered = new List<Item>();
+        foreach (Item item in items)
+        {
+            if (item.itemType == type) // Enum vergelijking
+            {
+                filtered.Add(item);
+            }
+        }
+        return filtered;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            List<Item> filteredItems = GetItemsByType(filterType);
+            foreach (Item fi in filteredItems) {
+                Debug.Log(fi.Describe());
+            }
+
+        }
+    }
+}
+```
+
+Hang je `Inventory` script aan een leeg gameobject in de scene!
+
+Maak minimaal 3 soorten wapens en armor aan en vul je inventory met deze items!
+
+![result](../src/03_inventory_system.png)
+
+Als je op play drukt worden alle items die je in je inventory hebt staan geprint in de console:
+
+Verander het filter en druk op spatie alleen de gefilterde items worden nu weergegeven.
+![print](../src/3_inventory_result.gif)
+
+---
+
+**Beoordeling:**
+
+- Alles werkt zoals het voorbeeld
+
+**Lever in:**
+
+- Zet de opdracht in je PROG README
+- Geef de titel en uitleg over de opdracht
+- Screenshots van je Unity Inspector setup
+- Gifje van je werkende inventory system
+- Link naar je code
+
+---
