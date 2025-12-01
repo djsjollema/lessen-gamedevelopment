@@ -90,20 +90,20 @@ _Technish gezien werkt het iets anders maar zo is het makkelijk te begrijpen en 
 We gaan nu dus een radio bericht maken om te kunnen versturen. Een `Action Event` dus. Deze maken we in de `class` maar voor de functie `OnCollisionEnter2D`
 
 Het bericht zetten we als volgt klaar voor gebruik:
-`public static event Action<string, int> onBumperHit;`
+`public static event Action<string> onBumperHit;`
 
 - `public` zorgt dat andere scripts erbij mogen komen
 - `static` zorgt dat hij niet bij 1 gameobject hoort en dat alle bumpers hetzelfde bericht kunnen sturen.
 - `event` zorgt dat alleen de bumpers dit bericht kunnen sturen
 - `Action` zorgt dat andere scripts iets kunnen doen met het bericht als ze het ontvangen
-- `<string, int>` zorgt dat we extra informatie mee kunnen sturen in het bericht
+- `<string>` zorgt dat we extra informatie mee kunnen sturen in het bericht
 - `onBumperHit` is de naam van het bericht
 
 ```Csharp
 public class BumperHit : MonoBehaviour
 {
     //dit is het action event , het bericht
-    public static event Action<string, int> onBumperHit;
+    public static event Action<string> onBumperHit;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball")) {
@@ -118,13 +118,9 @@ Dit ziet er dan zo uit `onBumperHit?.Invoke();`
 
 Met het vraagteken checken we of er wel naar het bericht wordt geluisterd. Zo niet hoeven we hem niet te versturen. Met Invoke versturen we het bericht.
 
-We gaan ook informatie met het bericht meesturen. Namenlijk de `tag` van onze bumper en het aantal punten dat onze bumper waard is.
+We gaan ook informatie met het bericht meesturen. Namenlijk de `tag` van onze bumper, zodat ons combo systeem kan zien welke bumper er geraakt is. Ook sturen we de waarde van de bumper mee zodat het combo systeem kan bepalen hoe veel punten we erbij krijgen.
 
-voor de laatste moeten we nog een variabele maken die we ook in de unity inspector een waarde kunnen geven. Voor de zekerheid kun je hem ook een default waarde geven voor het geval je vergeet om dit in de inspector te doen.
-
-`[SerializeField] private int scoreValue = 100;` Plaats deze bij de rest van de variabelen boven de `OnCollisionEnter` methode.
-
-De scoreValue kunnen we nu dus net als de `tag` mee gaan geven met het bericht: `onBumperHit?.Invoke(gameObject.tag, scoreValue);`
+In de vorige les hebben we al een `ScoreSystem` gemaakt met daarin een methode `AddScore`. Deze kunnen we nu ook gebruiken om onze score te verhogen.
 
 De code ziet er nu als volgt uit:
 
@@ -136,19 +132,20 @@ public class BumperHit : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball")) {
-            onBumperHit?.Invoke(gameObject.tag, scoreValue);
+            onBumperHit?.Invoke(gameObject.tag, scoreValue);//bericht versturen dat er een bumper geraakt is. De tag en waarde sturen we mee
+
         }
     }
 }
 ```
 
-We hebben nu dus een script dat bijhoud voor alle bumpers of ze geraakt worden. Zodra dat zo is versturen ze een bericht met daarbij ook de tag van de bumper en de waarde. Elk ander script in mijn project kan nu besluiten om naar dit bericht te gaan luisteren en er iets mee te gaan doen. Dat maakt voor dit script verder niet meer uit. Dit script is nu klaar met zijn werk.
+We hebben nu dus een script dat bijhoud voor alle bumpers of ze geraakt worden. Zodra dat zo is versturen ze een bericht met daarbij ook de tag en punten waarde van de bumper. Elk ander script in mijn project kan nu besluiten om naar dit bericht te gaan luisteren en er iets mee te gaan doen. Dat maakt voor dit script verder niet meer uit. Dit script is nu klaar met zijn werk.
 
 ## ComboSystem.cs
 
 We gaan nu het systeem bouwen dat bijhoud welke bumpers er geraakt zijn en in welke volgorde. Zolang de bumpers die geraakt worden bij elkaar horen (zelfde tags) zal de combo oplopen en zo ook een multiplier waarmee de score vermenigvuldigd kan worden.
 
-We gaan beginnen om te zorgen dat dit script gaat luisteren naar berichten van de bumpers.
+We gaan beginnen om te zorgen dat dit script gaat luisteren naar berichten van de bumpers. Hang het script op
 
 Die doen we als volgt in de `Start` methode:
 
@@ -275,12 +272,12 @@ public class ComboSystem : MonoBehaviour
 }
 ```
 
-Tot slot moeten we natuurlijk nog onze score op gaan tellen en bijhouden. Hiervoor maken we gebruik van de **Singleton** `ScoreManager.score` die jullie in [les 3.1](<https://github.com/djsjollema/lessen-gamedevelopment/blob/main/M2/GDV/Les%203.1%20Score%20%26%20Triggers%20(KV)/Lesmateriaal/ScoreManager.md#les-31-week-3--score-manager>) hebben gemaakt. Als je nog les nog niet hebt uitgewerkt kun je dat nu eerst doen.
+Tot slot moeten we natuurlijk nog onze score op gaan tellen en bijhouden. Hiervoor maken we gebruik van de `ScoreManager` die jullie in [les 3.1](<https://github.com/djsjollema/lessen-gamedevelopment/blob/main/M2/GDV/Les%203.1%20Score%20%26%20Triggers%20(KV)/Lesmateriaal/ScoreManager.md#les-31-week-3--score-manager>) hebben gemaakt. Als je nog les nog niet hebt uitgewerkt kun je dat nu eerst doen.
 
 bij elke bumper die we raken gaan we de waarde van deze bumper optellen bij de score. Deze punten worden ook vermenigvuldigd met de `scoreMultiplier`.
 
 Dit doen we nadat we gecheckt hebben of onze chain nog heel is of verbroken.
-`ScoreManager.score += value * scoreMultiplier;`
+`ScoreManager.Instance.AddScore(bumperValue * scoreMultiplier);`
 
 We printen onze score en de multiplier ook gelijk even naar de `console` met behulp van `Debug.Log`.
 
@@ -291,33 +288,35 @@ using System.Collections.Generic;
 using UnityEngine;
 public class ComboSystem : MonoBehaviour
 {
-    private List<string> bumperTags = new List<string>();
-    private int multiplier = 1;
+    private List<string> bumperTags = new List<string>();   //lijst met geraakte tags
+    private int scoreMultiplier = 1;
     private void Start()
     {
-        BumperHit.onBumperHit += CheckForCombo;
+        BumperHit.onBumperHit += CheckForCombo;             //luisteren naar action event onBumperHit als game start
     }
     private void OnDisable()
     {
-        BumperHit.onBumperHit -= CheckForCombo;
+        BumperHit.onBumperHit -= CheckForCombo;             //stop met luisteren naar action event onBumperHit als scene herstart of game stopt
     }
     private void CheckForCombo(string tag, int bumperValue)
     {
-        bumperTags.Add(tag);
-        if (bumperTags.Count > 1)
-        {
+        bumperTags.Add(tag);                                //tag toevoegen aan lijst
+        if (bumperTags.Count > 1)                           //check of er meer dan 1 tag is
+        {                                                   //check of de laatste 2 tags gelijk zijn
             if (bumperTags[bumperTags.Count - 2] == bumperTags[bumperTags.Count - 1])
             {
-                multiplier++;
+                scoreMultiplier++;                          //verhoog de multiplier
             }
-            else
+            else                                            //als ze niet gelijk zijn
             {
-                multiplier = 1;
-                bumperTags.Clear();
+                scoreMultiplier = 1;                        //reset multiplier
+                bumperTags.Clear();                         //leeg de lijst met tags
             }
-        }
-        ScoreManager.score += bumperValue * multiplier;
-        Debug.Log($"Score: {score} || Multiplier: {multiplier}X");
+        }                                                   //voeg score toe aan de ScoreManager
+        ScoreManager.Instance.AddScore(bumperValue * scoreMultiplier);
+
+                                                            //print score en multiplier in de console
+        Debug.Log($"Score: {ScoreManager.Instance.score} || Multiplier: {scoreMultiplier}X");
     }
 }
 

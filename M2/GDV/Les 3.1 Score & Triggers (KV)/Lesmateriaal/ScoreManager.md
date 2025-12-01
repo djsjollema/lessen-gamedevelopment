@@ -1,6 +1,5 @@
 # Les 3.1 Week 3 – Score Manager
 
-
 ## Wat is een Singleton Pattern?
 
 De ScoreManager gebruikt een zogenoemd singleton pattern. Dat betekent dat er van de ScoreManager maar één exemplaar bestaat in je hele spel. Alle scripts die punten willen toevoegen, verwijzen naar hetzelfde centrale punt.
@@ -19,6 +18,7 @@ Daarmee weet Unity altijd: “Gebruik dé ScoreManager van dit spel.”
 ## Stappenplan
 
 Stap 1
+
 - Voeg een leeg object toe aan je scene en noem deze GameManager.
 - Voeg een nieuw script toe aan dit gameobject benaamd ScoreManager.
 
@@ -26,7 +26,7 @@ Stap 2
 
 Voeg deze code toe aan het script:
 
-```Charp
+```Csharp
 
 using UnityEngine;
 
@@ -66,15 +66,6 @@ public class ScoreManager : MonoBehaviour
 
 Vanuit elk ander script kun je punten toevoegen via:
 
-```Charp
+```Csharp
 ScoreManager.Instance.AddScore(2);
 ```
-
-
-
-
-
-
-
-
-
