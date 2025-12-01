@@ -13,7 +13,7 @@ Zoals jullie in [les 3.2](../Les%203.2%20Peggle_Combos_Multiplier_Events/#action
 
 We gaan dit principe nu weer gebruiken om de score en de multiplier naar het script van de UI te sturen.
 
-We maken ook een rechtstreekse koppeling maken tussen de textvelden en het UI script. Dit heet een **referentie**.
+We maken ook een rechtstreekse koppeling tussen de textvelden en het UI script. Dit heet een **referentie**.
 
 ## Opbouw van je UI in de canvas
 
