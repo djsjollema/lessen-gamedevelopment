@@ -9,4 +9,4 @@ In les [4.1](../Les%204.1%20Leveldesign%20&%20UI/Lesmateriaal/AddFont.md) kun je
 
 We gaan nu de `score` en `multiplier` waardes naar de UI sturen zodat we aan de speler kunnen communiceren hoe goed hij het doet!
 
-Zoals jullie in [les 3.2](../Les%203.2%20Peggle_Combos_Multiplier_Events/###Action--Events) ook al konden lezen zijn er meerdere manieren om gegevens tussen scripts te versturen
+Zoals jullie in [les 3.2](../Les%203.2%20Peggle_Combos_Multiplier_Events/#Action--Events) ook al konden lezen zijn er meerdere manieren om gegevens tussen scripts te versturen
