@@ -469,6 +469,9 @@ Verander het filter en druk op spatie alleen de gefilterde items worden nu weerg
 
 ---
 
+**Bonus (optioneel)**
+Zorg dat je items kunt verkopen door op **S-knop** (sell) te drukken en dan **W-knop** voor weapon. Of **S-knop** (sell) en **P-knop** voor potion etc..
+
 **Beoordeling:**
 
 - Alles werkt zoals het voorbeeld
