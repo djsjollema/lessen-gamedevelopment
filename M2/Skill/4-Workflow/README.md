@@ -4,7 +4,7 @@ Dit project bevat een eenvoudige webpagina voor de workflow-les.
 
 ## Live demo
 
-Bekijk de pagina via [index.html](./index.html).
+Bekijk de pagina via [index.html](https://djsjollema.github.io/lessen-gamedevelopment/M2/Skill/4-Workflow/).
 
 ## Gebruik op GitHub Pages
 
