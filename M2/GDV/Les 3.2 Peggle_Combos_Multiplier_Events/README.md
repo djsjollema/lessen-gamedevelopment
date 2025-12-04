@@ -100,6 +100,7 @@ Het bericht zetten we als volgt klaar voor gebruik:
 - `onBumperHit` is de naam van het bericht
 
 ```Csharp
+using System;       //nodig voor Action
 public class BumperHit : MonoBehaviour
 {
     //dit is het action event , het bericht
@@ -125,6 +126,7 @@ In de vorige les hebben we al een `ScoreSystem` gemaakt met daarin een methode `
 De code ziet er nu als volgt uit:
 
 ```Csharp
+using System;   //nodig voor Action
 public class BumperHit : MonoBehaviour
 {
     [SerializeField] private int scoreValue = 100;
