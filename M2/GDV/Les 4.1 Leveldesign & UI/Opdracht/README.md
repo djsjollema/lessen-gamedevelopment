@@ -35,6 +35,16 @@ Je maakt een gif waarin je laat zien hoe jouw UI schaalt in verschillende resolu
 • Minimaal één commit en één push deze week
 
 ---
+## Bonus (optioneel)
+
+Wil je verder gaan deze week? Maak dan één of meer van deze extra UI-features:
+
+• Een startscherm voordat het spel begint  
+• Een startknop die het spel laat starten  
+• Een game over-scherm dat verschijnt wanneer je verliest  
+• Een retryknop om opnieuw te beginnen
+
+---
 
 ## Reflectie – Week 4
 Beantwoord kort in je README:
