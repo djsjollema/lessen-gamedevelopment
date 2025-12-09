@@ -147,6 +147,113 @@ Als het goed is werkt je prototype nu ongeveer zo:
 
 ![result](../src/4_2_result_2.gif)
 
+## Ballen tellen en 5x schieten:
+
+We gaan ook aan de gang om te tellen hoe veel ballen je hebt geschoten. We kunnen dan zorgen dat we na 5x een bal te hebben geschoten niet meer kunnen schieten.
+
+Hiervoor gaan we weer action events gebruiken. Je `Shoot.cs` script verstuurt een bericht en een nieuw script genaamd `CountBalls.cs` houdt bij hoe veel ballen er zijn afgevuurd.
+
+Maak een leeg gameobject aan met daarop een `BoxCollider2D` component. Zorg dat deze box collider het scherm bedekt. Hang het `CountBalls` script hier ook aan.
+
+Het nieuwe script ziet er zo uit:
+
+```csharp
+using System;
+using UnityEngine;
+public class CountBalls : MonoBehaviour
+{
+    public static event Action onBallLost;          //event als je een bal verliest
+    public static event Action onBallsDepleted;     //event als ballen op zijn
+    [SerializeField]private int ballsLeft = 5;       //Aantal ballen over, aanpasbaar in inspector
+    private void Start(){
+        //Luister naar het onShootBall event
+        Shoot.onShootBall += CountOnShot;
+    }
+    private void OnDisable(){
+        //verwijder ook weer alle events
+        Shoot.onShootBall -= CountOnShot;
+    }
+    private void CountOnShot(){
+
+
+        //Check of je nog genoeg ballen over hebt
+        if(ballsLeft > 0){
+            //pas je ballen reserve aan
+            ballsLeft--;
+        }else{
+            //verstuur event als ze op zijn
+            onBallsDepleted?.Invoke();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //Check of de bal uit het scherm gaat
+        if (collision.gameObject.CompareTag("Ball")) {
+            //verstur een event
+            onBallLost?.Invoke();
+            //vernietig de bal
+            Destroy(collision.gameObject);
+        }
+    }
+}
+
+```
+
+Je `Shoot` script moet nu ook worden aangepast zodat deze een event verstuurt bij het schieten. Maar er moet ook worden geluisterd naar een event vanuit het `CountBalls` script namelijk het event dat de ballen op zijn. Het Shoot Script mag dan dus niet meer schieten.
+
+```Csharp
+using UnityEngine;
+public class Shoot : MonoBehaviour
+{
+    //Maak een nieuw Action Event
+    public static event Action onShootBall;
+
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private float forceBuild = 20f;
+    [SerializeField] private float maximumHoldTime = 5f;
+    private float _pressTimer = 0f;
+    private float _launchForce = 0f;
+    private bool _shotEnabled = true;
+
+    //Luister naar het onBallsDepleted event
+    private void Start(){
+        CountBalls.onBallsDepleted += DisableShot;
+    }
+    //Verwijder altijd netjes alle events weer
+    private void OnDisable(){
+        CountBalls.onBallsDepleted -= DisableShot;
+    }
+    private void Update(){
+        //Zorg dat je alleen kunt schieten als _shotEnabled true is
+        if(_shotEnabled)HandleShot();
+    }
+    private void HandleShot() {
+        if (Input.GetMouseButtonDown(0))
+        {
+            _pressTimer = 0;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            _launchForce = _pressTimer * forceBuild;
+            GameObject ball = Instantiate(prefab, transform.parent);
+            ball.transform.rotation = transform.rotation;
+            ball.GetComponent<Rigidbody2D>().AddForce(ball.transform.right * _launchForce, ForceMode2D.Impulse);
+            ball.transform.position = transform.position;
+
+            //Invoke de action event bij het schieten
+            onShootBall?.Invoke();
+        }
+        if(_pressTimer < maximumHoldTime){
+            _pressTimer += Time.deltaTime;
+        }
+    }
+    //Zorg dat je niet meer kunt schieten als de ballen op zijn
+    private void DisableShot(){
+        _shotEnabled = false;
+    }
+}
+```
+
 ## Extra uidraging (niet verplicht):
 
 Lukt het jou nu ook om bij te houden hoeveel ballen je al hebt afgeschoten? En dit ook naar de UI te sturen?
@@ -159,3 +266,11 @@ _Tip: in de class `Shoot` kun je het moment van schieten bepalen. Je kunt dan we
 
 Zet in de titel **4.2 Scores versturen**
 Maak een korte omschrijving en GIF van je prototype en zet deze op je readme. Zet hier ook de links naar de code.
+
+```
+
+```
+
+```
+
+```
