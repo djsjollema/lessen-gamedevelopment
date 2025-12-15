@@ -22,7 +22,7 @@ De specifieke settings voor dit effect kun je in de screenshots terugzien:
 
 Probeer zelf ook eens een beetje te spelen met de settings om het effect eigen te maken.
 
-Je hebt nu ook code nodig om je particles te activeren. Dit doen we in het script `BumperHit.cs`.
+Je hebt nu ook code nodig om je particles te activeren. Dit doen we in het script `HitBumper.cs`.
 
 ```csharp
 using System;
@@ -39,10 +39,10 @@ public class HitBumper : MonoBehaviour
     public static event Action<Transform,int> onHitBumper;
     private void Start()
     {
-        //sla je Particle System op in je variabele zodat je er later dingen mee kunt doen
+        //Vraag het Particle System Component op als de game start en bewaar hem in je variabele, zodat je er later dingen mee kunt doen
         ps = GetComponent<ParticleSystem>();
 
-        //zet hem stil!
+        //zet je particle system stil! (? checkt of er wel een particle system is.)
         ps?.Stop();
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -50,22 +50,31 @@ public class HitBumper : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball")) {
 
             onHitBumper?.Invoke(gameObject.transform, bumperValue);
-            //zet hem eerst weer stil voor het geval hij nog niet klaar was
+
+            //zet je Particle System hem eerst weer stil voor het geval hij nog niet klaar was met de vorige loop
             ps?.Stop();
-            //speel hem nu af
+
+            //speel hem nu af vanaf het begin.
             ps?.Play();
         }
     }
 }
 
-
 ```
+
+Als je wat uitgebreidere effecten wilt hebben kun je ook kijken of je bijvoorbeeld [deze tutorial](https://youtu.be/cvQiQglPI18?si=o-1VHdu5lkJ1OMZa) kunt volgen om een meer realistische explosie te maken.
+
+Ok kijk ook eens op de Unity Assetstore [![assetstore](../src/5_2_assetstore.png)](https://assetstore.unity.com/?category=vfx%2Fparticles&free=true&orderBy=1)
+
+---
 
 ## Audio & Sounds
 
+![audio](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2RiejNpZWNvZm44eWtsYWZzdWV5MncwcG5ibnh4bjdnbXhyemhvaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3j3F04QmP5BSIj3gCF/giphy.gif)
+
 ### Geluid importeren
 
-Om geluid in Unity te gebruiken, plaats je je audio-bestanden (`.mp3`, `.wav`, `.ogg`) in de `Assets` folder van je project. Unity detecteert deze automatisch. De audio-files verschijnen dan in je Project window waar je ze kunt selecteren en gebruiken.
+Om geluid in Unity te gebruiken, plaats je je audio-bestanden (`.mp3`, `.wav`, `.ogg`) in de `Assets` folder van je project. Unity detecteert deze automatisch. Maak daar dus ook even een mapje met de naam **/Audio** of **/Sounds**. De audio-files verschijnen dan in je Project window waar je ze kunt selecteren en gebruiken.
 
 ### AudioSource Component
 
@@ -78,6 +87,12 @@ Om geluid af te spelen, moet je een `AudioSource` component aan je GameObject to
 5. **Belangrijk:** Zet `Play on Awake` uit in de Inspector
 
 De `Play on Awake` optie zorgt ervoor dat het geluid automatisch afgespeeld wordt wanneer je game start. Dit willen we voorkomen omdat we het geluid vanuit code willen besturen. Zorg dat deze checkbox **uitgevinkt** is.
+
+### Hoe kom je aan geluid?
+
+Om aan geluiden te komen kun je een aantal dingen doen. Je kunt proberen om deze zelf op te nemen en te bewerken maar audio design is ook weer een vak apart.
+
+Een goede resource om te hebben is een account bij de site [FreeSound.org](https://freesound.org/). Hier kun je rechtenvrije audio downloaden van een community van audio designers. Hier kun je verschillende geluiden terugvinden van een gevarieerde kwaliteit. Met een simpel audio bewerkingsprogramma zoals [Audacity](https://www.audacityteam.org/) kun je de geluiden simpel op maat knippen, eventueel nog wat bewerken en exporteren voor gebruik.
 
 ### Geluid afspelen vanuit code
 
@@ -115,7 +130,13 @@ Je kunt ook `PlayOneShot()` gebruiken voor korte effectgeluiden, of `Stop()` om 
 
 **Probeer nu zelf eens goed na te denken hoe je nu je geluidje kunt afspelen zodra je bal een bumper raakt!**
 
-Tip: Denk aan de [Action events uit les 4.2](../Les%204.2%20Scores%20versturen/README.md)
+Je kunt hiervoor meerdere aanpakken hanteren:
+
+1. De bal maakt het geluid elke keer als hij een bumper raakt. Dus de audioSource komt op de bal en je checkt met de OnCollisionEnter methode of je een gameobject met een bepaalde naam of tag (Bumper) hebt geraakt
+
+2. De Bumpers produceren het geluid. Elke bumper krijgt een audioSource en een script dat met OnCollisionEnter checkt of een gameobject met de tag "Ball" hem heeft geraakt. (tip : dit gebeurt nu ook al in je `HitBumper` script)
+
+3. Je HitBumper script verstuurt al een event (`onHitBumper`) elke keer als de bal een bumper raakt. Je kunt dus ook een audioSource en script aan een leeg gameobject hangen en dit event afwachten en dan je geluidje afspelen.
 
 ---
 
@@ -123,12 +144,16 @@ Tip: Denk aan de [Action events uit les 4.2](../Les%204.2%20Scores%20versturen/R
 
 Voeg met behulp van de bovenstaande uitleg particles en geluiden toe aan je bumpers als de bal deze raakt.
 
+Leg in de readme van de opdracht ook uit welke aanpak je hebt geprobeerd om geluiden af te spelen en waarom.
+
 ## Inleveren op je README
 
 Zet in de titel **5.2 Particles & Sound effect**
 Maak een korte omschrijving en GIF van je prototype en zet deze op je readme. Zet hier ook de links naar de code.
 
-## Extra: Screenshake
+---
+
+## Extra (Optioneel): Screenshake
 
 Zorg ook dat het scherm gaat schudden als de bal de bumper raakt.
 
@@ -136,7 +161,23 @@ Zorg ook dat het scherm gaat schudden als de bal de bumper raakt.
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3B3MzhtYWQxY2p1eHh4amx1d2hkbWo0aWx3dzRvYWh5bmdteHFpeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26H73Dl4HXXFe/giphy.gif)
 
-Screen Shake geeft je spel meer impact en feedback wanneer belangrijke gebeurtenissen plaatsvinden, zoals explosies of hits.
+Een goede **Screen Shake** geeft je spel meer impact en feedback wanneer belangrijke gebeurtenissen plaatsvinden, zoals explosies of hits.
+
+### Coroutines
+
+In het script dat we gaan gebruiken voor de screen shake gaan we gebruik maken van een `Coroutine`.
+
+**Wat is een Coroutine?**
+
+Een coroutine is een functie die je **pauzeert** en later **hervat**. In tegenstelling tot normale functies die in één keer van begin tot eind uitvoeren, kan een coroutine de uitvoering onderbreken en wachten.
+
+In ons geval:
+
+- De `TrembleStep()` coroutine trilt de camera frame voor frame
+- `yield return new WaitForEndOfFrame()` pauzeerde de coroutine tot de volgende frame
+- Na 0.1 seconde stopt de shake en gaat het terug naar de originele positie
+
+**Zonder coroutine** zou de trilling in één frame happerig zijn. **Met coroutine** spreid je de trilling over meerdere frames, wat veel vloeiender oogt!
 
 ### De ScreenShake code
 
@@ -175,7 +216,7 @@ public class Screenshake : MonoBehaviour
         shakeForce = .04f;    // Kleine amplitude
         elapsedTime = 0f;     // Reset de timer
         StopCoroutine("TrembleStep");  // Stop eventueel lopende shake
-        StartCoroutine("TrembleStep");
+        StartCoroutine("TrembleStep"); //Start de shake
     }
     // Coroutine die de camera aan het trillen zet
     private IEnumerator TrembleStep() {
