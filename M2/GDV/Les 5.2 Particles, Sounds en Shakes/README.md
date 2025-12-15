@@ -64,7 +64,7 @@ public class HitBumper : MonoBehaviour
 
 Als je wat uitgebreidere effecten wilt hebben kun je ook kijken of je bijvoorbeeld [deze tutorial](https://youtu.be/cvQiQglPI18?si=o-1VHdu5lkJ1OMZa) kunt volgen om een meer realistische explosie te maken.
 
-Ok kijk ook eens op de Unity Assetstore [![assetstore](../src/5_2_assetstore.png)](https://assetstore.unity.com/?category=vfx%2Fparticles&free=true&orderBy=1)
+Kijk ook eens op de Unity Assetstore [![assetstore](../src/5_2_assetstore.png)](https://assetstore.unity.com/?category=vfx%2Fparticles&free=true&orderBy=1)
 
 ---
 
@@ -128,21 +128,21 @@ Zet dit script op hetzelfde GameObject als je AudioSource. Nu zal het geluid afs
 
 Je kunt ook `PlayOneShot()` gebruiken voor korte effectgeluiden, of `Stop()` om geluid te stoppen.
 
-**Probeer nu zelf eens goed na te denken hoe je nu je geluidje kunt afspelen zodra je bal een bumper raakt!**
-
-Je kunt hiervoor meerdere aanpakken hanteren:
-
-1. De bal maakt het geluid elke keer als hij een bumper raakt. Dus de audioSource komt op de bal en je checkt met de OnCollisionEnter methode of je een gameobject met een bepaalde naam of tag (Bumper) hebt geraakt
-
-2. De Bumpers produceren het geluid. Elke bumper krijgt een audioSource en een script dat met OnCollisionEnter checkt of een gameobject met de tag "Ball" hem heeft geraakt. (tip : dit gebeurt nu ook al in je `HitBumper` script)
-
-3. Je HitBumper script verstuurt al een event (`onHitBumper`) elke keer als de bal een bumper raakt. Je kunt dus ook een audioSource en script aan een leeg gameobject hangen en dit event afwachten en dan je geluidje afspelen.
-
 ---
 
 ## Opdracht: Particles & Sound effect
 
 Voeg met behulp van de bovenstaande uitleg particles en geluiden toe aan je bumpers als de bal deze raakt.
+
+**Probeer nu zelf eens goed na te denken hoe je nu je geluidje kunt afspelen zodra je bal een bumper raakt!**
+
+Je kunt hiervoor meerdere aanpakken hanteren:
+
+**1.** De bal maakt het geluid elke keer als hij een bumper raakt. Dus de audioSource komt op de bal en je checkt met de OnCollisionEnter methode of je een gameobject met een bepaalde naam of tag (Bumper) hebt geraakt.
+
+**2.** De Bumpers produceren het geluid. Elke bumper krijgt een audioSource en een script dat met OnCollisionEnter checkt of een gameobject met de tag "Ball" hem heeft geraakt. (tip : dit gebeurt nu ook al in je `HitBumper` script)
+
+**3.** Je HitBumper script verstuurt al een event (`onHitBumper`) elke keer als de bal een bumper raakt. Je kunt dus ook een audioSource en script aan een leeg gameobject hangen en dit event afwachten en dan je geluidje afspelen.
 
 Leg in de readme van de opdracht ook uit welke aanpak je hebt geprobeerd om geluiden af te spelen en waarom.
 
@@ -242,9 +242,9 @@ public class Screenshake : MonoBehaviour
 
 ### Hoe werkt deze code?
 
-**Events en callbacks:** De code luistert naar twee events: `onHitBumper` en `onComboAchieved`. Wanneer deze events plaatsvinden, wordt de `ShakeBumper()` methode automatisch aangeroepen.
+**Events en callbacks:** De code luistert naar het event: `onHitBumper`. Wanneer dit event plaatsvindt, wordt de `ShakeBumper()` methode automatisch aangeroepen.
 
-**Shake parameters:** Elk event stelt verschillende parameters in:
+**Shake parameters:** Het event stelt verschillende parameters in:
 
 - `shakeTime`: hoe lang de shake duurt
 - `shakeForce`: hoe sterk de camera beweegt (amplitude)
