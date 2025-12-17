@@ -4,10 +4,14 @@
 
 Abstractie is het concept van **complexe details verbergen** en alleen de **essentiële eigenschappen** van een object tonen. Denk eraan als het besturen van een auto: je hoeft niet de hele motor te begrijpen om te rijden. Je gebruikt gewoon het stuurwiel, pedalen en versnellingspook. Al het overige is verborgen.
 
+![drive](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ21qc2I2bWYxdDBxNzl1c3F0aXVvcnV2Y3VvYW9pMnY3MnFrMzFnZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ov9jWu7BuHufyLs7m/giphy.gif)
+
 In programmeren betekent abstractie:
 
-- Verberg het **HOE** (implementatiedetails)
-- Toon het **WAT** (interface/functionaliteit)
+- Verberg het **HOE**
+  _via het stuur draai je de stuurkolom en via tandwielen die vervolgens via armen de wielen draait.. etc...)_
+- Toon het **WAT**
+  _Je kunt met het stuur de auto sturen_
 
 ---
 

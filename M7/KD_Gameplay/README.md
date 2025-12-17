@@ -11,13 +11,22 @@
 planning
 9 weken
 
-    4 x 2 + 1
+    wk 1: Sprint 0
 
-
-    - opstart en playtest week sprint 0 ,
-        - voorbereiding , codebase doornemen, brainstormen, collaboraten
-        - userstories als designs.(inleveren van concepten, presenteren , designs aftikken KT1)
-
+    - Testen Game
+    - Codebase doornemen
+    - Duo's maken
+    - Brainstormen
+    - Collaborator worden op Repo
+    - Userstories, en todo's schrijven
+    - Designs maken (one page & class diagram)
+    - Presenteren van designs
+    - Inleveren presentatie en designs op simulise
+    
+    wk 2, 3: Sprint 1
+    - Sprint planning
+    - Development van userstory
+    - Sprint review
 
     - 1
     - 2
