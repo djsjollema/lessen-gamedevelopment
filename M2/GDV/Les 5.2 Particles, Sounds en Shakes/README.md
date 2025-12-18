@@ -36,7 +36,11 @@ public class HitBumper : MonoBehaviour
     //maak een variabele voor je Particle System aan
     private ParticleSystem ps;
 
+    //Pas het datatype aan die je meegeeft met je action event van string naar Transform
+    //public static event Action<string,int> onHitBumper;
     public static event Action<Transform,int> onHitBumper;
+
+
     private void Start()
     {
         //Vraag het Particle System Component op als de game start en bewaar hem in je variabele, zodat je er later dingen mee kunt doen
@@ -49,6 +53,7 @@ public class HitBumper : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball")) {
 
+            //geef in plaats van de tag nu de transform mee aan het event. Dit is noodzakelijk voor de screenshake!
             onHitBumper?.Invoke(gameObject.transform, bumperValue);
 
             //zet je Particle System hem eerst weer stil voor het geval hij nog niet klaar was met de vorige loop
@@ -59,6 +64,41 @@ public class HitBumper : MonoBehaviour
         }
     }
 }
+
+```
+
+Nu moet er in je comboscript ook een aanpassing gedaan worden omdat je de tag van de bumper niet meer rechtstreeks meegeeft. Je moet nu de tag via de transform van de bumper opvragen.
+
+```csharp
+using System.Collections.Generic;
+using UnityEngine;
+public class ComboSystem : MonoBehaviour
+    //Vervang:
+    //private void CheckForCombo(string tag, int bumperValue)
+    //Met:
+    private void CheckForCombo(Transform transform, int bumperValue)
+    {
+        //vervang
+        //bumperTags.Add(tag);
+        //Met:
+        bumperTags.Add(transform.gameobject.tag);
+        if (bumperTags.Count > 1)
+        {
+            if (bumperTags[bumperTags.Count - 2] == bumperTags[bumperTags.Count - 1])
+            {
+                scoreMultiplier++;                          //verhoog de multiplier
+            }
+            else                                            //als ze niet gelijk zijn
+            {
+                scoreMultiplier = 1;                        //reset multiplier
+                bumperTags.Clear();                         //leeg de lijst met tags
+            }
+        }                                                   //voeg score toe aan de ScoreManager
+        ScoreManager.Instance.AddScore(bumperValue * scoreMultiplier);
+        OnScoreChange?.Invoke(ScoreManager.Instance.score, scoreMultiplier);
+    }
+}
+
 
 ```
 
