@@ -4,7 +4,6 @@ Deze checklist wordt uitgevoerd door een medestudent. Alle onderstaande onderdel
 
 Als alle onderdelen aanwezig zijn en het spel niet vastloopt, mag je verder werken aan een uitbreiding.
 
-
 ---
 
 ### Start
