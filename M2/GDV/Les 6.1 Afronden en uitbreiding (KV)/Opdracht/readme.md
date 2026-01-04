@@ -1,81 +1,72 @@
-# Opdracht Week 1 – Introductie Physics Project
+# Les – Afronden en uitbreiden
 
-## Doel van deze week
-Je zet je Unity-project op, legt je concept vast binnen de vaste basis van dit vak, doet kort inspiratie-onderzoek en start met een eerste levelschets. Je commit en pusht je werk en levert je Git-link in via Simulise.
-
-## Wat lever je aan het einde van Week 1 in
-1. Een werkend Unity-project in je repository.
-2. Een README met jouw concept volgens het format hieronder.
-3. Een korte levelschets (afbeelding of PDF) in de README
-4. Een reflectie bij Week 1 in je README.
-5. Je repository heeft minimaal één commit en een push van vandaag.
-6. Je Git-link is ingeleverd via Simulise.
-
-Mocht je vergeten zijn hoe je een repository opzet volg dan [deze stappen](https://github.com/djsjollema/lessen-gamedevelopment/tree/main/M1/Skill/3.Remote%20Repository)
-
-## Vaste basis voor iedereen
-1. De speler schiet ballen af.
-2. Er zijn bumps of targets die geraakt kunnen worden.
-3. Er is score die oploopt bij raken.
-4. Je werkt in één Unity-scene.
-5. Je pusht elke week je voortgang.
-
-## Stappenplan
-1. Maak een nieuw Unity-project aan voor deze module.
-2. Vul je README aan met het onderstaande conceptformat en sla op.
-3. Doe kort inspiratie-onderzoek: bekijk minimaal één Peggle-achtig spel en noteer wat opvalt.
-4. Maak een eenvoudige levelschets voor jouw thema en voeg hem toe aan de README.
-5. Schrijf je reflectie bij Week 1 in je README.
-6. Push de veranderingen en controleer je repository online.
-7. Lever je Git-link in via Simulise.
-
-## Conceptformat om in je README te plakken
-### Voorbeeldconcept – te volgen format
-Gebruik dit als basis voor je eigen opzet. Houd je aan de vaste basis hierboven. Thema, stijl en naam kies je zelf.
-
-**Bekijk hier het voorbeeldconcept van Fruity Peggle:**  
-[Voorbeeldconcept – Fruity Peggle](https://github.com/djsjollema/lessen-gamedevelopment/blob/main/M2/GDV/Les%201.1/Lesmateriaal/Voorbeeldconcept_FruityPeggle.md)
+In deze les werk je aan het afronden van je Peggle game en het toevoegen van
+een nieuwe feature.
 
 
-#### Titel (werktitel)
-Schrijf hier de naam van je spel.
+In de volgende les (van Erwin) ga je het spel verder finetunen, polishen en animaties
+toevoegen.
 
-#### Genre
-Physics-based arcade puzzelgame.
+---
 
-#### Beschrijving
-Schrijf in twee of drie zinnen wat de speler doet, wat er geraakt kan worden en hoe er punten worden gescoord.
+## Stap 1. Duo feature check
 
-#### Gameplaykern
-1. Bal: wat is de bal in jouw thema.
-2. Targets of bumps: wat raakt de bal.
-3. Score: wanneer en hoeveel krijg je punten.
-4. Doel: wat is een geslaagde beurt of level.
+- Wissel van laptop met je duo
+- Speel het spel van de ander
+- Gebruik de feature checklist
+- Er wordt niets uitgelegd tijdens het spelen
 
-#### Stijl en sfeer
-Korte omschrijving van thema, kleuren en geluid.
+De uitkomst gebruik je voor de volgende stap.
 
-#### Structuur van het level
-1. Bovenaan: schietplek.
-2. Midden: veld met targets.
-3. Onderaan: opvang of doelgebied voor het einde van de beurt.
+---
 
-## Levelschets
-1. Maak een eenvoudige schets van je startlevel met schietplek, targets en onderzijde.
-2. Voeg de schets toe aan de README.
+## Stap 2. Checklist en planning
 
-## Reflectie – Week 1
-Beantwoord kort in je README:
-1. Wat heb je deze week gemaakt.
-2. Hoe heb je dit aangepakt.
-3. Waar liep je tegenaan en hoe heb je dat opgelost of wat heb je nodig.
-4. Welke theorie of Unity-onderdelen heb je geleerd of toegepast.
+Noteer in deze README:
 
-## Checklist voordat je inlevert
-1. Project opent in Unity en is opgeslagen in je repo.
-2. README bevat je concept, levelschets en reflectie van Week 1.
-3. Minimaal één commit en push van vandaag zichtbaar.
-4. Git-link staat in Simulise.
+### Checklist
+- Welke onderdelen van de checklist compleet zijn
+- Welke onderdelen nog ontbreken
+- Of het spel vastloopt
 
-## Tip
-Houd je repository netjes. Gebruik duidelijke bestandsnamen en werk elke week in dezelfde scene.
+### Planning
+- Wat eerst moet worden afgerond
+- Wat daarna wordt gedaan
+- Wat je nieuwe feature wordt
+- Hoe lang elk onderdeel gaat duren
+
+Na 15 minuten:
+- Lever je planning bij de docent in
+- Commit en push deze README
+
+---
+
+## Stap 3. Werken
+
+### Als de checklist nog niet compleet is
+- Werk eerst aan afronden
+- Maak ontbrekende onderdelen af
+- Los vastlopers op
+
+### Als de checklist compleet is
+- Start met bouwen van de nieuwe feature
+
+---
+
+## Nieuwe feature
+
+- Iedereen voegt een nieuwe feature toe
+- Wanneer je start, hangt af van afronding
+- De feature mag bestaande functionaliteit niet breken
+
+Als je klaar bent:
+- Test of alles nog werkt
+- Werk je README bij
+- Commit en push je wijzigingen
+
+---
+
+## Aan het einde van de les
+
+- Je kunt laten zien wat je hebt gemaakt
+- Je README geeft een duidelijk beeld van je voortgang
