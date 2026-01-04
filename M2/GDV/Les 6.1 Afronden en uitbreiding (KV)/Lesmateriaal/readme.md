@@ -33,3 +33,4 @@ In de README staat onder andere:
 De game telt mee voor 50% van het eindresultaat.
 De toets telt mee voor 50%.
 
+
