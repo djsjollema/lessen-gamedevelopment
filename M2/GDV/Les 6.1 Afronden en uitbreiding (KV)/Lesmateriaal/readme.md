@@ -1,57 +1,35 @@
-# Les 1.1: Voorbeeld Concept: Fruity Peggle
+# Uitleg – Afronden en uitbreiden
 
-Dit is mijn voorbeeldconcept voor het Physics Project.  
-Gebruik dit als **basis voor je eigen opzet**:  
-- Houd je aan de verplichte basisfeatures (ballen afschieten, bumps raken, score).  
-- Kies daarna je **eigen thema, stijl en naam**.  
-- Vul dit format in je eigen README aan met jouw ideeën.  
-- Noteer wekelijks wat je hebt gemaakt, hoe je dat hebt gedaan en wat je hebt geleerd.
+In deze les werk je aan het afronden en uitbreiden van je Peggle game.
+Je controleert of alle eerder gemaakte features aanwezig zijn en of het spel
+stabiel genoeg is om uit te breiden richting de oefentoets.
 
-## Conceptschets
+In de volgende les bij Erwin ga je het spel verder finetunen, polishen
+en animaties implementeren.
 
-Titel: Fruity Peggle!
 
-Genre: Physics-based arcade puzzelgame
+Deze week staat in het teken van:
+- afronden en uitbreiden van de gameplay
+- voorbereiden op het inlevermoment en de oefentoets
 
-## Beschrijving
-De speler schiet een bal (bijv. een citroen) van boven in het speelveld.  
-De bal stuitert tegen fruitstukken (appels, druiven, sinaasappels) en sapflesjes.  
-Bij elke aanraking spat er sap op het scherm en loopt de score op.  
-Wanneer de bal in een blender onderaan valt, wordt de beurt afgesloten.  
-Hoe meer fruit je raakt, hoe voller de sapmeter wordt.
+In de volgende les ga je verder met:
+- finetunen van het spel
+- polish
+- animaties
 
-## Gameplaykern
-- **Bal:** een stuk fruit (citroen, kiwi, aardbei)  
-- **Targets / bumps:** ander fruit met colliders  
-- **Score:** punten + sapmeter stijgt  
-- **Doel:** maak een volle smoothie voordat je beurten op zijn  
+Richting het inlevermoment lever je je game in via Git.
+Daarbij geldt:
+- het werk staat in je repository
+- alles is gecommit en gepusht
+- de laatste versie is speelbaar
+- de README is volledig
+- er staat een werkende release op Git
 
-## Stijl en sfeer
-Kleurrijk, sappig, cartoony en met geluiden van fruit dat spat of plopt.
+In de README staat onder andere:
+- een level schets of design
+- reflecties (zoals eerder behandeld)
+- een beschrijving en gifje van de werkende feature
 
-## Structuur van het level
-- **Bovenaan:** schietplek (de speler richt en vuurt)  
-- **Midden:** veld vol fruit (cirkelvormige of onregelmatige patronen)  
-- **Onderaan:** opvangbak of blender (scoreberekening)
+De game telt mee voor 50% van het eindresultaat.
+De toets telt mee voor 50%.
 
----
-
-## Wekelijkse voortgang en reflectie
-
-Hier noteer je wekelijks wat je hebt gemaakt, hoe je het hebt aangepakt en wat je hebt geleerd.  
-Vermeld ook kort welke theorie of technieken uit de les je hebt toegepast.
-
-### Week 1
-Wat heb je gemaakt?  
-Hoe heb je dit gedaan?  
-Waar liep je tegenaan?  
-Welke theorie of Unity-onderdelen heb je geleerd of toegepast?
-
-### Week 2
-Wat heb je toegevoegd of verbeterd?  
-Hoe heb je dit technisch opgelost?  
-Wat ging goed en wat wil je volgende week anders doen?  
-Welke nieuwe Unity-concepten of physics-principes kwamen aan bod?
-
-### Week 3
-... vul elke week verder aan.
