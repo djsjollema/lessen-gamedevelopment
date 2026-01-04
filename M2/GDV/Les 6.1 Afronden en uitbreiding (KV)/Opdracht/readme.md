@@ -1,4 +1,4 @@
-# Les – Afronden en uitbreiden
+# Les opdracht – Afronden en uitbreiden
 
 In deze les werk je aan het afronden van je Peggle game en het toevoegen van
 een nieuwe feature.
