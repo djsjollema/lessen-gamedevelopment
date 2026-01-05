@@ -78,7 +78,6 @@ Als je klaar bent:
 ## Aan het einde van de les
 
 - Maak een gifje aan van wat je hebt gemaakt en voeg deze toe aan je readme met een omschrijving
-- Zet in de titel **Extra feature les 6**
+- Zet in de titel **Les 6: Afronden en uitbreiden**
 - Je README geeft een duidelijk beeld van je voortgang
-
 - Lever de link naar je plannning en de extra feature in via simulise. Zorg ook dat je build onder releases staat.
