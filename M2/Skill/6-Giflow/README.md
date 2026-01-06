@@ -1,6 +1,6 @@
-# 🧭 Instructie: Samenwerken met GitFlow in een Publieke Repository
+# Samenwerken met GitFlow in een Publieke Repository
 
-## 🎯 Doel van deze opdracht
+## Doel van deze opdracht
 Jullie leren:
 - samenwerken in een team met Git en GitFlow
 - werken met branches en pull requests
@@ -12,7 +12,7 @@ Security is nog niet nodig in deze opdracht.
 
 ---
 
-## 👥 1. Teamvorming en Rollen
+## 1. Teamvorming en Rollen
 Werk in groepjes van **3 tot 6 studenten**.
 
 ### Gitmaster verantwoordelijkheden:
@@ -23,7 +23,7 @@ Werk in groepjes van **3 tot 6 studenten**.
 
 ---
 
-## 🌐 2. Repository aanmaken
+## 2. Repository aanmaken
 De Gitmaster maakt een **publieke repository** aan en voegt toe:
 - een basisproject (website, Unity of Godot)
 - een README met teamleden, taakverdeling en projectbeschrijving
@@ -32,7 +32,7 @@ Alle teamleden clonen de repository.
 
 ---
 
-## 🌱 3. GitFlow‑structuur
+## 3. GitFlow‑structuur
 Gebruik de volgende branches:
 
 | Branch | Doel |
@@ -45,7 +45,7 @@ Teamleden werken **nooit** direct op `main` of `develop`.
 
 ---
 
-## 🧩 4. Taken verdelen
+## 4. Taken verdelen
 Maak samen een lijst met features. Voorbeelden:
 - navigatie
 - homepage
@@ -58,7 +58,7 @@ Iedere student kiest één feature en maakt een branch:
 
 ---
 
-## 🛠️ 5. Werken met Feature Branches
+## 5. Werken met Feature Branches
 Stappen:
 1. nieuwe branch maken vanaf `develop`  
 2. feature bouwen  
@@ -67,7 +67,7 @@ Stappen:
 
 ---
 
-## 🔍 6. Pull Requests
+## 6. Pull Requests
 Wanneer een feature klaar is:
 - PR openen naar `develop`
 - beschrijving toevoegen
@@ -76,14 +76,14 @@ Wanneer een feature klaar is:
 
 ---
 
-## 🚀 7. Integratie en Testen
+## 7. Integratie en Testen
 - project testen als team  
 - alle features mergen in `develop`  
 - release merge naar `main` uitvoeren  
 
 ---
 
-## 🕒 8. Tijdsplanning (± 1 uur)
+## 8. Tijdsplanning (± 1 uur)
 - 10 min team vormen + Gitmaster kiezen  
 - 10 min repository aanmaken + clonen  
 - 10 min GitFlow instellen  
@@ -92,7 +92,7 @@ Wanneer een feature klaar is:
 
 ---
 
-## 📦 9. Eindresultaat
+## 9. Eindresultaat
 - publieke repository  
 - werkende basis van website of Unity/Godot‑applicatie  
 - GitFlow toegepast  
@@ -101,7 +101,10 @@ Wanneer een feature klaar is:
 
 ---
 
-## 🎓 10. Reflectie
+## 10. Reflectie
 - wat ging goed  
 - wat kan beter  
 - duidelijkheid van taken  
+
+## checklist of je alles hebt gedaan
+[checklist](checklist.md)
