@@ -1,4 +1,4 @@
-# Les: Return en Early Return
+# Les 7 : Early Return Patterns
 
 ## Wat is Return?
 
@@ -373,7 +373,7 @@ if (e.IsError()) return;
 
 ## Refactoring Challenge
 
-### Opgave 1: Simplify This
+### Opdracht 1: Simplify This
 
 ```csharp
 public bool IsPlayerReadyToAttack(Player player)
