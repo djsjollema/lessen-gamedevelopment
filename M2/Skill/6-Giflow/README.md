@@ -105,3 +105,6 @@ Wanneer een feature klaar is:
 - wat ging goed  
 - wat kan beter  
 - duidelijkheid van taken  
+
+## checklist of je alles hebt gedaan
+[checklist](checklist.md)
