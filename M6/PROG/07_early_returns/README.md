@@ -20,16 +20,6 @@ public int GetNumber()
 {
     return 42;  // Functie stopt, retourneert 42
 }
-
-// Early return - stop vroeg als iets fout is
-public void Attack(Enemy target)
-{
-    if (target == null) return;  // Stop functie als target niet bestaat
-    if (!target.IsAlive) return; // Stop functie als target dood is
-
-    // Nu kunnen we veilig aanvallen
-    target.TakeDamage(10);
-}
 ```
 
 **Kernidee**: `return` stopt direct - code NA de `return` wordt NIET uitgevoerd.
@@ -65,18 +55,6 @@ public void PrintNumbers()
         Debug.Log(i);          // Print 0,1,2,3,4,6,7,8,9
     }
 }
-
-// continue vs break
-public void FindEnemy(List<Enemy> enemies)
-{
-    foreach (Enemy enemy in enemies)
-    {
-        if (enemy == null) continue;    // continue = skip, ga volgende
-        if (enemy.Name == "Boss") break; // break = stop hele loop
-
-        Debug.Log(enemy.Name);
-    }
-}
 ```
 
 **Kernidee**: `continue` slaat DEZE iteratie over, maar gaat verder met de VOLGENDE iteratie. `break` stopt de loop helemaal.
@@ -85,25 +63,11 @@ public void FindEnemy(List<Enemy> enemies)
 
 ## Wat is Break?
 
-`break` is een keyword dat **loops onmiddellijk beëindigt**. In tegenstelling tot `continue` (volgende iteratie) of `return` (hele functie), stopt `break` alleen de huidige loop.
+`break` is een keyword dat **loops onmiddellijk beëindigt**.
 
-**Basis voorbeelden:**
+**Voorbeeld:**
 
 ```csharp
-// break in foreach - stop als we gevonden hebben wat we zoeken
-public Enemy FindEnemyByName(List<Enemy> enemies, string name)
-{
-    foreach (Enemy enemy in enemies)
-    {
-        if (enemy == null) continue;      // Skip deze
-        if (enemy.Name == name)
-        {
-            return enemy;                 // Gevonden! Functie stopt
-        }
-    }
-    return null;                          // Niet gevonden
-}
-
 // break in for loop - stop vroeg
 public void SearchNumbers()
 {
@@ -118,7 +82,18 @@ public void SearchNumbers()
     }
     Debug.Log("Loop klaar");               // Dit WORDT nog uitgevoerd
 }
+```
 
+## De verschillen:
+
+Dus:
+`continue` stopt de huidige iteratie en gaat naar de volgende.
+
+`break` stopt de huidige loop en slaat dus alle verdere iteraties over.
+
+`return` stopt de gehele functie en geeft eventueel een waarde terug.
+
+```Csharp
 // continue vs break vs return
 public void ProcessEnemies(List<Enemy> enemies)
 {
@@ -135,19 +110,15 @@ public void ProcessEnemies(List<Enemy> enemies)
 }
 ```
 
-**Kernidee**:
-
-- `continue` = skip deze iteratie, volgende iteratie
-- `break` = stop de loop, ga naar code NA de loop
-- `return` = stop de hele functie
-
 ---
 
 ## Het Probleem: Nested Conditions
 
-Wanneer je veel if-statements hebt, ontstaan **"pyramids of doom"**:
+Wanneer je veel if-statements hebt, ontstaan **"pyramids of doom"** of **"Nesting Hell"**:
 
-![pyramid](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NHloOGZxdXN2OWE4bmFrYWdpcXUycTA5aWIwMWphN2NraWl0N28yYyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/l3g00p6L9P1CEVX5C/giphy.gif)
+<img height=250, src= https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NHloOGZxdXN2OWE4bmFrYWdpcXUycTA5aWIwMWphN2NraWl0N28yYyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/l3g00p6L9P1CEVX5C/giphy.gif />
+
+<img height=250, src= https://img.devrant.com/devrant/rant/r_576804_LgG45.jpg />
 
 ```csharp
 
@@ -178,26 +149,31 @@ public void ProcessPlayer(Player player)
 - Moeilijk te lezen
 - Lastig om logica te volgen
 - Makkelijk bugs introduceren
-- Code rekt zich uit over veel regels
+- Code rekt zich uit over veel regels en tabs
 
 ---
 
-## De Oplossing: Reversed If (Early Return)
+## De Oplossing: Early Return
 
-**Idee**: Controleer eerst wat FOUT is, en return vroeg. Dan is de rest een "happy path" waarin je alles wat je wil doen mag doen.
+**Idee**: Controleer eerst wat FOUT is, en return vroeg. Dan is de rest een **"happy path"** waarin je alles wat je wil doen mag doen.
+
+<img width=200, src=https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGx2MGxmaWw5dHg5aGYyZnk3ZnRpc3Q4MG92aGowNWs5cHA2a2ZuOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2j2cyE6FgE0XSarRmM/giphy.gif />
 
 ```csharp
-// GOED - Flat structure
+// GOED - Platte structuur
 public void ProcessPlayer(Player player)
 {
     // Early returns: check alle foute condities eerst
     if (player == null) return;
     if (!player.IsAlive) return;
     if (player.Health <= 0) return;
+
+    Debug.Log("!!") //Makkelijk debuggen
+
     if (!player.Inventory.HasWeapon()) return;
     if (!player.CanAttack()) return;
 
-    //Hier mag je nu doen wat je wil doen!
+    //Hier mag je nu doen wat je wil doen! De happy path!
     player.Attack();
 }
 ```
@@ -207,13 +183,13 @@ public void ProcessPlayer(Player player)
 - Vlak en leesbaar
 - Logica is duidelijk
 - Minder snel bugs
-- Makkelijk uit te breiden
+- Makkelijk uit te breiden en te debuggen
 
 ---
 
 ## "Early Return Patterns":
 
-Bij programmen zijn er veel voorkomende patronen te herkennen. Bij het gebruiken van "Early returns" zijn er dus ook eenaantal herkenbare patronen te vinden.
+Bij programmen zijn er veel voorkomende patronen te herkennen. Bij het gebruiken van "Early returns" zijn er dus ook een aantal herkenbare patronen te vinden.
 
 ### Patroon 1: Guard Clauses
 
@@ -261,12 +237,16 @@ public bool CanPlayerJump(Player player)
 public Enemy FindNearestEnemy(List<Enemy> enemies)
 {
     Enemy nearest = null;
+
+    //Nesting van 4 lagen!
     for (int i = 0; i < enemies.Count; i++)
     {
         if (enemies[i] != null)
         {
             if (enemies[i].IsAlive)
             {
+
+                //lastig leesbare conditie, door de lengte
                 if (nearest == null || Vector3.Distance(transform.position, enemies[i].position) <
                     Vector3.Distance(transform.position, nearest.position))
                 {
@@ -285,14 +265,18 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
 {
     Enemy nearest = null;
 
+    //Nog maar 2 lagen nesting
     foreach (Enemy enemy in enemies)
     {
+
         if (enemy == null) continue;           // Skip invalid
         if (!enemy.IsAlive) continue;          // Skip dead
 
-        float distance = Vector3.Distance(transform.position, enemy.position);
 
+        float distance = Vector3.Distance(transform.position, enemy.position);
         float nearestDistance;
+
+        //Zelfde logica maar dan stap voor stap leesbaar onder elkaar in plaats van in 1 if statement
         if (nearest == null)
         {
             nearestDistance = float.MaxValue;
@@ -301,7 +285,6 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
         {
             nearestDistance = Vector3.Distance(transform.position, nearest.position);
         }
-
         if (distance < nearestDistance)
         {
             nearest = enemy;
@@ -316,20 +299,22 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
 
 ---
 
-## Tips & Tricks
+## Verdere tips
 
-### Tip 1: Inverting Boolean Conditions
+### Tip 1: InvertOmdraaien van Boolean Conditions
 
 ```csharp
-// Wrong
-if (!isInvincible) { /* take damage */ }
+// Verwarrend - je kijkt snel over de ! heen
+if (!isInvincible) {
+    TakeDamage(damageDealt);
+ }
 
-// Better - reverse it
+// Beter - early return - gelijk duidelijk
 if (isInvincible) return;
-/* take damage */
+TakeDamage(damageDealt);
 ```
 
-### Tip 2: Use Continue in Loops
+### Tip 2: Continue in Loops
 
 ```csharp
 // Nested
@@ -337,60 +322,83 @@ foreach (Enemy enemy in enemies)
 {
     if (enemy.IsAlive)
     {
-        // process
+        enemy.Move();
     }
 }
 
-// Early continue
+// Early continue, maar 1 nesting level
 foreach (Enemy enemy in enemies)
 {
     if (!enemy.IsAlive) continue;
-    // process
+    enemy.Move();
 }
 ```
 
-### Tip 3: Combine Simple Checks with && Only
+### Tip 3: Complexe if statements vermijden
 
 ```csharp
-// Too complex
+// Te complex
 if (a > 0 && b < 100 && c == "valid" && d.IsReady() && !e.IsError())
 {
-    // Very hard to read
+    HandleSomething();
 }
 
-// Use early returns instead
+// Gebruik early returns
 if (a <= 0) return;
 if (b >= 100) return;
 if (c != "valid") return;
 if (!d.IsReady()) return;
 if (e.IsError()) return;
+HandleSomething();
 
 ```
 
 ---
 
----
+### Practische Opdracht: Maak de code plat!
 
-## Refactoring Challenge
+Maak de onderstaande code plat met behulp van early returns. Zet de opdracht in je readme met de titel een korte omschrijving en de uitwerking van je code letterlijk in een codeblock.
 
-### Opdracht 1: Simplify This
+Kijk naar de volgende aspecten van de structuur:
+
+| Aspect                | SLECHT                         | GOED                             |
+| --------------------- | ------------------------------ | -------------------------------- |
+| **Nesting diepte**    | 8 lagen                        | 1-2 lagen                        |
+| **Leesbaarheid**      | Heel lastig, lang if-statement | Elk check op eigen regel         |
+| **&& en \|\| logica** | Verstopt in 1 grote if         | Stap voor stap met early returns |
 
 ```csharp
 public bool IsPlayerReadyToAttack(Player player)
 {
     if (player != null)
     {
+        //Level1
         if (player.IsAlive)
         {
+            //Level2
             if (player.AttackCooldown <= 0)
             {
+                //Level3
                 if (player.Target != null)
                 {
+                    //Level4
                     if (player.Target.IsAlive)
                     {
+                        //Level5
                         if (Vector3.Distance(player.transform.position, player.Target.transform.position) < 5f)
                         {
-                            return true;
+                            //Level6
+                            // Nog meer geneste conditions met && en ||
+                            if ((player.Mana >= 20 && player.WeaponEquipped) ||
+                                (player.Health > 30 && player.HasBuff("Strength")))
+                            {
+                                //Level7
+                                if (!player.IsStunned && !player.IsSlowed)
+                                {
+                                    //Level8
+                                    return true;
+                                }
+                            }
                         }
                     }
                 }
@@ -399,33 +407,7 @@ public bool IsPlayerReadyToAttack(Player player)
     }
     return false;
 }
-```
-
----
-
-## Checklist: Code Review
 
 ```
-Early Return Checklist
-
-[ ] Null checks zijn early returns
-[ ] Guard clauses komen EERST
-[ ] Geen "pyramid of doom"
-[ ] Elke condition op eigen regel
-[ ] Happy path is leesbaar
-[ ] Boolean conditions niet dubbel negatief
-[ ] Loops gebruiken continue voor invalid items
-[ ] Max nesting level = 2
-[ ] Makkelijk te testen (flat structure)
-```
-
----
-
-## Belangrijkste punten
-
-**Reversed If Statements** = Check wat FOUT is eerst, dan return.
-Dit maakt je code plat, leesbaar en maintainable.
-
-**Gouden Regel**: Hoe minder nesting, hoe beter je code!
 
 ---
