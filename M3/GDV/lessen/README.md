@@ -75,11 +75,11 @@ Elke les is **onafhankelijk** - je kan ze in willekeurige volgorde doen!
 
 ## Tips voor Succes
 
-✓ **Type de code zelf** - Copy-paste helpt niet bij leren
-✓ **Experimenteer** - Verander waarden en kijk wat gebeurt
-✓ **Debug** - Gebruik Debug.Log() om te zien wat je code doet
-✓ **Bouw voort** - Combineer concepten van verschillende lessen
-✓ **Vraag om hulp** - Lukt iets niet? Vraag je docent!
+- **\*Type de code zelf** - Copy-paste helpt niet bij leren
+- **Experimenteer** - Verander waarden en kijk wat gebeurt
+- **Debug** - Gebruik Debug.Log() om te zien wat je code doet
+- **Bouw voort** - Combineer concepten van verschillende lessen
+- **Vraag om hulp** - Lukt iets niet? Vraag je docent!
 
 ---
 
@@ -92,4 +92,4 @@ Na het voltooien van deze lessen kan je:
 - Complete game loops implementeren met UI
 - AI-gedrag meer geavanceerd maken
 
-Veel plezier met leren! 🎮
+Veel plezier met leren!
