@@ -277,7 +277,7 @@ Asteroids is een arcade shoot-em-up waar de speler een driehoekig ruimteschip be
 
 Joust is een arcade-actie spel waarbij twee ridders boven op elkaar moeten botsen. Spelers besturen hun ridders op vliegende struisvogels en proberen elkaar aan te vallen van bovenaf op de tegenstander te landen. Dit gebeurt boven een lava-achtige ondergrond met een aantal platforms erboven. Het doel is om alle tegenstanders uit te schakelen zonder zelf in het magma te vallen of getrokken te worden (door een hand). Ook is er een buizerd die iedereen aanvalt in het veld als het te lang duurt voordat alle tegenstanders zijn verslagen.
 
-<img height=200 src=https://i.redd.it/ijo7yoy30d7c1.gif />
+<img height=200 src=./src/Joust.gif />
 
 ### Core Mechanics
 
