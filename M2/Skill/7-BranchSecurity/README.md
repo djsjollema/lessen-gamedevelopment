@@ -18,7 +18,7 @@ Aan het einde van deze les zijn studenten in staat om:
 ---
 
 ### **Voorbereiding door de Instructeur**
-1. Maak een openbare of privé GitHub-repository en voeg de studenten als "collaborators" toe, of laat hen dit zelf doen als onderdeel van de les.
+1. Maak een openbare GitHub-repository en voeg de studenten als "collaborators" toe, of laat hen dit zelf doen als onderdeel van de les.
 2. Zorg dat de repository ten minste één branch heeft naast de `main`-branch (bijvoorbeeld `dev`).
 
 ---
@@ -43,9 +43,8 @@ Aan het einde van deze les zijn studenten in staat om:
   - **Ontwikkelaars:** De rest van het team zal werken aan pull-requests en proberen branches te beveiligen.
 
 **Stap 2: Simuleer een ontwikkelomgeving (10 minuten)**
-1. **Fork de repository:** Laat elk teamlid de repository forken naar hun eigen account.
-2. **Maak een nieuwe branch aan:** Elk teamlid maakt een eigen feature-branch, bijvoorbeeld `feature/username`.
-3. **Wijzigingen aanbrengen:** Elk teamlid voegt een eenvoudige wijziging toe, zoals een extra regel tekst in een README-bestand of een nieuw bestand.
+1. **Maak een nieuwe branch aan:** Elk teamlid maakt een eigen feature-branch, bijvoorbeeld `feature/username`.
+2. **Wijzigingen aanbrengen:** Elk teamlid voegt een eenvoudige wijziging toe, zoals een extra regel tekst in een README-bestand of een nieuw bestand.
 
 **Stap 3: Branch-beveiliging instellen (15 minuten)**
 1. **Beheerderstaak:**
