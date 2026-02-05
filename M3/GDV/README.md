@@ -1,374 +1,360 @@
 # Lessen Gamedevelopment (GDV)
 
+---
+
+## Inhoudsopgave
+
+- [Inleiding](#inleiding)
+- [Aanpak & Leermethode](#aanpak--leermethode)
+- [Tijd & Ondersteuning](#tijd--ondersteuning)
+- [Rooster](#rooster)
+- [Lesprogramma](#lesprogramma)
+- [De Game](#de-game)
+- [Beoordeling](#beoordeling)
+
+---
+
 ## Inleiding
 
-Welkom in deze module Gamedevelopment! In deze module gaan we minimaal **2 kleine arcade-style games** bouwen. Hierbij leren we de fundamentele programmeerconcepten die je in elk game nodig hebt.
+Welkom bij de module Gamedevelopment! In deze module bouw je een arcade-style game geïnspireerd op de klassieker **PAC-MAN**. Hierbij leer je fundamentele programmeerconcepten die je voor veel verschillende soorten games nodig hebt.
 
-### Aanpak
+### Wat je leert
 
-Deze module behandelt **basisconcepten (technieken)** die je moet begrijpen én toepassen:
+**Techniek:** Programmeer basics, grids genereren, input & beweging, collision detection, waypoint navigation, animaties aansturen, game state management, code reviews
 
-- Per les leggen we **één specifieke techniek** uit (bv. Rigidbody2D, Collisions, etc.)
-- We laten **niet zien hoe je de complete games bouwt**, maar wel hoe je iedere techniek toepast
-- Je maakt zelf de **vertaling naar je eigen game**
+**Design:** Game concept ontwikkelen, Game Design Document, animaties maken, usertesten, UI bouwen, polishen (particles, sound, screen shake)
 
-### Leren door Oefenen
+---
+
+## Aanpak & Leermethode
+
+### Hoe we werken
+
+Deze module behandelt **basisconcepten (technieken)** die je moet begrijpen én toepassen. Per les behandelen we meerdere technieken (zoals Rigidbody2D, Collisions of Input). We laten niet zien hoe je een complete game bouwt, maar wel hoe elke techniek werkt. Jij maakt vervolgens zelf de vertaling naar je eigen game.
+
+### Lesstructuur
 
 Elke les volgt hetzelfde patroon:
 
-1. **Theorie** - Uitleg van het concept
-2. **Voorbeeld** - Hoe het in een echte game werkt
-3. **Oefening** - Een kleine praktijk-opdracht (niet aan games gekoppeld)
-4. **Toepassing** - Je past het toe in je eigen game
+| Stap | Onderdeel      | Beschrijving                    |
+| :--: | -------------- | ------------------------------- |
+|  1   | **Theorie**    | Uitleg van het concept          |
+|  2   | **Voorbeeld**  | Hoe het in een game werkt       |
+|  3   | **Oefening**   | Praktijkoefening tijdens de les |
+|  4   | **Toepassing** | Toepassen in je eigen game      |
 
-De oefeningen kunnen snel in één les gemaakt worden. Dit helpt je de techniek te begrijpen voordat je het in je game toepast.
+> **Tip:** De oefeningen kun je snel in één les maken. Dit helpt je de techniek te begrijpen voordat je het in je game toepast.
 
-### Leervolgorde
+### Leerdoelen
 
-Iedereen **start met Flappy Bird** (warming up met basis-concepten)
+Aan het eind van deze module kun je:
 
-Daarna kies je:
-
-- **Asteroids** of **Joust** (afhankelijk van voorkeur)
-  - Technieken van Flappy Bird komen ook terug in deze games
-  - Asteroids en Joust delen bepaalde concepten met elkaar
-
-**Advies:** Doe alle lessen en oefeningen - alles is relevant!
-
-### Werkschema
-
-| Lessen          | Activiteit                                       |
-| --------------- | ------------------------------------------------ |
-| **HNR-lessen**  | Werk aan theorie-lessen en bijhorende oefeningen |
-| **VERI-lessen** | Pas de technieken toe in je eigen game           |
-
-### Verwachtingen en Doelen
-
-Eind van deze module moet je:
-
-- Alle oefeningen hebben gemaakt en ingeleverd (via GitHub README presentatie)
-- Minimaal 2 games hebben afgerond
-- Alle basis-concepten begrijpen en kunnen toepassen
-
-### Tijd en Ondersteuning
-
-**Inzet:**
-
-- 4 uur les per week (GDV)
-- 2 uur huiswerk per week (oefeningen en game-development)
-
-**Support:**
-
-- Docenten beschikbaar tijdens lessen
-- Hulp via Teams ook buiten lestijd
-- Vraag snel hulp als je ergens niet uitkomt!
-
-### Aanbevolen Snelheid
-
-Werk elke week aan **minimaal 2 lessen/oefeningen** om goed op schema te blijven.
-
-## Game 1. Flappy Bird :smiley_cat: (Zeer goed te doen)
-
-### Overzicht
-
-Flappy Bird is een casual mobiel spel waarbij de speler een vogel bestuurt die door verticale buizen vliegt. De speler raakt de scherm aan om de vogel omhoog te doen vliegen. Zonder input valt de vogel naar beneden door de zwaartekracht. Het doel is om zoveel mogelijk buizen voorbij te gaan zonder ze aan te raken.
-
-<img height=200 src=https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXVkbmhjcXA5M3NlYXMxcnpub24yM2xsd3FxYzR3djV5bzNtdXYxOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/euuaA2cwLEUuI/giphy.gif />
-
-### Core Mechanics
-
-#### 1. **Bird Control**
-
-<details>
-
-- **Invoer:**
-  - Muis-klik of SPATIE voor flap (sprongetje omhoog)
-  - Geen input = vallen door zwaartekracht
-- **Beweging:**
-  - Vogel stijgt snel omhoog bij flap
-  - Lineaire snelheid naar beneden (zwaartekracht)
-  - Horizontale beweging constant naar rechts
-- **Animatie:** Vogel roteert op basis van verticale snelheid
-
-</details>
-
-#### 2. **Pipe Generation**
-
-<details>
-
-- **Obstakels:** Paren van verticale buizen (boven en onder)
-- **Gat:** Variabele opening tussen boven- en onderbuis
-- **Spawning:** Buizen verschijnen aan rechterkant met regelmatige intervallen
-- **Beweging:** Buizen schuiven naar links (of vogel beweegt relatief naar rechts)
-- **Verwijdering:** Buizen verdwijnen aan linkerkant na passeren
-
-</details>
-
-#### 3. **Collision Detection**
-
-<details>
-
-- **Pipe Collision:** Vogel raakt buis = Game Over
-- **Ground/Ceiling Collision:** Vogel raakt grond of bovenkant = Game Over
-- **Pipe Passing:** Vogel passeert veilig door gat = +1 score
-
-</details>
-
-#### 4. **Scoring System**
-
-<details>
-
-- **Per Buis:** +1 punt voor elke succesvolle passage
-- **High Score:** Weergeven van beste prestatie
-- **Game Over Score:** Tonen huidige en best behaalde score
-
-</details>
-
-#### 5. **Physics**
-
-<details>
-
-- **Zwaartekracht:** Constante neerwaartse versnelling
-- **Flap Force:** Instant snelheidswijziging omhoog
-- **Terminal Velocity:** Maximale valsnelheid
-- **No Acceleration:** Vogel versnelt niet horizontaal
-
-</details>
-
-#### 6. **Game States**
-
-<details>
-
-- **Start:** Vogel wachten op eerste flap
-- **Playing:** Actieve gameplay
-- **Game Over:** Vogelbotsing, optie om opnieuw te starten
-
-</details>
-
-### Noodzakelijke Code Concepten
-
-- `Rigidbody2D` voor gravity en physica
-- `AddForce()` of directe velocity-aanpassing voor flap
-- `OnTriggerEnter2D()` voor collision detection buizen
-- Instantiate/pooling voor pipe generation
-- Random gat-positie per buis
-- UI-update voor score en high score
+- [ ] Alle oefeningen maken en inleveren (via GitHub README)
+- [ ] Je eigen game afronden en inleveren (release build op github)
+- [ ] Alle basisconcepten begrijpen en toepassen
+- [ ] Alle basisconcepten uitleggen in een code review
+- [ ] Je werk op een goede manier presenteren
 
 ---
 
-## Game 2. Asteroids :construction_worker: (Hard werken)
+## Tijd & Ondersteuning
 
-### Overzicht
+### Tijdsinvestering
 
-Asteroids is een arcade shoot-em-up waar de speler een driehoekig ruimteschip bestuurt. Het doel is om alle asteroïden te vernietigen zonder geraakt te worden. Vernietigde asteroïden splitsen in kleinere stukken.
+Wij verwachten van jou een investering in tijd:
 
-<img height=200 src=https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHdsbDRrZmFnMjZzM2Jrc2FvbWtxcXducjl2Znl0ZTdwYWZkYXdhOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QDNEIwuqlSFjWYo/giphy.gif />
+| Type                | Uren per week |
+| ------------------- | :-----------: |
+| Les (totaal)        |     4 uur     |
+| ↳ Theorie & uitleg  |  max. 2 uur   |
+| ↳ Oefeningen & game |     2 uur     |
+| Huiswerk            |     2 uur     |
 
-### Core Mechanics
+### Ondersteuning
 
-#### 1. **Spaceship Control**
+Dan krijg jij van ons ondersteuning:
 
-<details>
+- **Tijdens lessen:** Docenten beschikbaar voor vragen
+- **Buiten lestijd:** Hulp via Teams
+- **Belangrijkste tip:** Vraag snel hulp als je ergens niet uitkomt!
 
-- **Invoer:**
-  - Pijltoetsen LINKS/RECHTS voor rotatie
-  - Pijltoets OMHOOG voor acceleratie voorwaarts
-  - SPATIE voor schieten
-- **Beweging:**
-  - Rotatie rond eigen as (Z-as in 2D)
-  - Lineaire versnelling in neus-richting
-  - Inertia: schip blijft bewegen als je geen input geeft
-- **Scherm Wrapping:** Schip verdwijnt aan één kant en verschijnt aan andere kant
-
-</details>
-
-#### 2. **Wapen System**
-
-<details>
-
-- **Projectielen:** Kogels die van het schip schieten
-- **Snelheid:** Vaste snelheid + snelheid van het schip
-- **Richting:** Dezelfde richting als het schip neus
-- **Lifespan:** Projectielen verdwijnen na bepaalde tijd of buiten scherm
-- **Fire Rate:** Cooldown tussen shots (geen spammen)
-
-</details>
-
-#### 3. **Asteroid Mechanics**
-
-<details>
-
-- **Soorten:**
-  - Grote asteroïden (slow, veel punten)
-  - Middelgrote asteroïden (faster, medium punten)
-  - Kleine asteroïden (fastest, weinig punten)
-- **Beweging:**
-  - Lineaire beweging in willekeurige richting
-  - Rotatie/tumble effect
-- **Spawning:**
-  - Grote asteroïden spawnen bij level start
-  - Middelgrote + kleine asteroïden spawnen als grote wordt vernietigd
-  - Maximum aantal asteroïden op scherm
-- **Collision:**
-  - Asteroïden botsen niet met elkaar (passeren door)
-  - Asteroïden botsen met schip = schade/leven verlies
-
-</details>
-
-#### 4. **Collision Detection**
-
-<details>
-
-- **Projectiel + Asteroid:** Asteroïde vernietigd, splits in kleinere stukken
-- **Asteroid + Spaceship:** Schip geraakt, verliest leven
-- **Screen Wrapping:** Objecten verdwijnen en verschijnen aan andere kant
-
-</details>
-
-#### 5. **Scoring System**
-
-<details>
-
-- **Per Asteroïde:**
-  - Grote: 20 punten
-  - Middelgrote: 50 punten
-  - Kleine: 100 punten
-- **Level Complete:** Als alle asteroïden vernietigd → level complete
-- **Score Multiplier:** Optioneel bonus per niveau
-
-</details>
-
-#### 6. **Lives & Game Over**
-
-<details>
-
-- **Start Lives:** 3-5 levens
-- **Lose Life:** When schip geraakt door asteroïde
-- **Invulnerability:** Korte periode onschadelijk na hit
-- **Game Over:** Geen levens meer over
-
-</details>
-
-#### 7. **Wave/Level System**
-
-<details>
-
-- **Difficulty Scaling:**
-  - Meer asteroïden per level
-  - Snellere asteroïden
-  - Minder spawntijd tussen asteroïden
-
-</details>
-
-### Noodzakelijke Code Concepten
-
-- `transform.Rotate()` voor schip-rotatie
-- `Physics2D.OverlapCircle()` of raycasts voor collision
-- `Vector2.Lerp()` voor smooth acceleration/deceleration
-- Object pooling voor asteroïden en projectielen
-- Randomness voor asteroïden-spawning
-- Screen boundary wrapping met modulo-berekeningen
+> **Let op:** Probeer oefeningen tijdens de les af te ronden. Dan kun je direct vragen stellen bij problemen.
 
 ---
 
-## Game 3. Joust :scream_cat: (Pittig!)
+## Rooster
+
+### SD1A
+
+| Dag     | Tijd          | Les      | Docent |
+| ------- | ------------- | -------- | ------ |
+| Dinsdag | 09:00 - 11:00 | Les \*.1 | WISJ   |
+| Dinsdag | 11:15 - 13:15 | Les \*.2 | VERI   |
+
+### SD1B
+
+| Dag     | Tijd          | Les      | Docent |
+| ------- | ------------- | -------- | ------ |
+| Maandag | 11:15 - 13:15 | Les \*.1 | WISJ   |
+| Dinsdag | 09:00 - 11:00 | Les \*.2 | VERI   |
+
+> **Let op:** In Magister staan deze mogelijk niet als GDV maar als BO ingeroosterd!
+
+---
+
+## Lesprogramma
 
 ### Overzicht
 
-Joust is een arcade-actie spel waarbij twee ridders boven op elkaar moeten botsen. Spelers besturen hun ridders op vliegende struisvogels en proberen elkaar aan te vallen van bovenaf op de tegenstander te landen. Dit gebeurt boven een lava-achtige ondergrond met een aantal platforms erboven. Het doel is om alle tegenstanders uit te schakelen zonder zelf in het magma te vallen of getrokken te worden (door een hand). Ook is er een buizerd die iedereen aanvalt in het veld als het te lang duurt voordat alle tegenstanders zijn verslagen.
-
-<img height=200 src=./src/Joust.gif />
-
-### Core Mechanics
-
-#### 1. **Player Control**
-
-<details>
-
-- **Invoer:**
-  - Pijltoetsen LINKS/RECHTS voor beweging
-  - PIJLTJE OMHOOG of SPATIE voor vleugels slaan (vliegen/opstijgen)
-- **Beweging:**
-  - Horizontale beweging links/rechts
-  - Verticale beweging door vleugelslagen (flappen)
-  - Zwaartekracht trekt ridder omlaag
-- **Hoogte Management:** Speler moet hoogte behouden door te flappen
-
-</details>
-
-#### 2. **Combat System**
-
-<details>
-
-- **Attack:** Ridder aanvallen van hoger vliegende positie (boven tegenstander)
-- **Hoogte Voordeel:** Alleen bovenste speler kan schade uitdelen bij botsing
-- **Vijand Transformatie:** Verslagen vijand transformeert tot ander type , ridder en vogel apart
-- **Wave Escalation:** Meer vijanden per ronde, sneller en agressiever
-
-</details>
-
-#### 3. **Enemy AI**
-
-<details>
-
-- **Tegenstanders:** Andere ridders/vogels met AI
-- **Behavior:** Jagen op speler, proberen hoger te vliegen
-- **Wave System:** Meerdere tegenstanders tegelijk
-- **Respawning:** Verslagen vijanden komen terug als volgende ronde
-
-</details>
-
-#### 4. **Collision Detection**
-
-<details>
-
-- **Ridder-Ridder:** Botsing resulteert in schade (hoogte bepaalt uitkomst)
-- **Lava Collision:** Raken van ondergrond/magma = verlies van leven
-- **Screen Wrapping:** Ridders verdwijnen links/rechts en verschijnen aan andere kant
-
-</details>
-
-#### 5. **Scoring System**
-
-<details>
-
-- **Per Tegenstander:** Punten voor verslaan van vijand
-- **Wave Bonus:** Bonus voor alle tegenstanders verslaan
-- **Survival:** Extra punten voor niet in lava vallen
-- **High Score:** Meest behaalde punten
-
-</details>
-
-#### 6. **Physics**
-
-<details>
-
-- **Zwaartekracht:** Constante neerwaartse kracht
-- **Flap Mechanics:** Korte opwaarts-impuls per vleugelslag
-- **Terminal Velocity:** Maximale valsnelheid
-- **Momentum:** Behoud van horizontale snelheid
-
-</details>
-
-#### 7. **Game Progression**
-
-<details>
-
-- **Waves/Levels:** Oplopende moeilijkheid
-- **Lives System:** Aantal pogingen voordat Game Over
-- **Level Complete:** Alle tegenstanders verslaan → volgende wave
-- **Game Over:** Geen levens meer
-
-</details>
-
-### Noodzakelijke Code Concepten
-
-- `Rigidbody2D` met zwaartekracht voor vlieg-mechanica
-- `AddForce()` voor flap/vleugelslagen
-- `OnCollisionEnter2D()` voor ridder-ridder en lava-botsingen
-- Hoogte-berekening voor combat outcome
-- AI-pathfinding voor tegenstanders (simpel volgen van speler)
-- Wave-management en enemy-spawning
-- Screen wrapping voor horizontale beweging
+| Week | Les \*.1 (Techniek)                                                       | Les \*.2 (Design/Toepassing)                                   |
+| :--: | ------------------------------------------------------------------------- | -------------------------------------------------------------- |
+|  1   | [Programmeer Basics Herhaling](lessen/les-1.1-programmeer-basics.md)      | [Game Concept](lessen/les-1.2-game-concept.md)                 |
+|  2   | [Grid maken met modulo](lessen/les-2.1-grid-met-modulo.md)                | [Game Design Document](lessen/les-2.2-game-design-document.md) |
+|  3   | [Input, Beweging & Collision](lessen/les-3.1-input-beweging-collision.md) | [Animatie maken](lessen/les-3.2-animatie-maken.md)             |
+|  4   | [Waypoint / Navigation](lessen/les-4.1-waypoint-navigation.md)            | [Usertesten](lessen/les-4.2-usertesten.md)                     |
+|  5   | [Controleren van Animaties](lessen/les-5.1-animaties-aansturen.md)        | [UI](lessen/les-5.2-ui.md)                                     |
+|  6   | [Game State Manager](lessen/les-6.1-game-state-manager.md)                | [Polishen](lessen/les-6.2-polishen.md)                         |
+|  7   | [Code Reviews](lessen/les-7.1-code-reviews.md)                            | [Reflectie & Voorbereiding](lessen/les-7.2-reflectie.md)       |
+|  8   | Eindpresentatie                                                           | Toets                                                          |
+|  9   | Inhalen                                                                   | Inhalen                                                        |
 
 ---
+
+### Week 1
+
+#### Les 1.1 — Introductie & Programmeer Basics (WISJ)
+
+Herhaling van de volgende onderwerpen:
+
+| Onderwerp              | Voorbeelden                               |
+| ---------------------- | ----------------------------------------- |
+| Variabelen & datatypes | `int`, `float`, `string`, `bool`          |
+| Functions              | arguments, return types                   |
+| Conditionals           | `if`, `while`, `for`, `foreach`, `switch` |
+| Access modifiers       | `public` vs `private`                     |
+| Operators              | `+`, `+=`, `=`, `==`, `!`, `&&`, `\|\|`   |
+
+#### Les 1.2 — Game Concept (VERI)
+
+Analyseer een bestaande game en brainstorm over een eigen gameconcept.
+
+---
+
+### Week 2
+
+#### Les 2.1 — Grid maken met modulo (WISJ)
+
+Leer hoe je een grid genereert vanuit een array met tekens of getallen. Elk teken/getal genereert een ander type tile. Hiermee kun je snel levels ontwerpen.
+
+#### Les 2.2 — Game Design Document (VERI)
+
+Maak een Game Design Document waarin je het design van je game duidelijk, concreet en volledig omschrijft.
+
+---
+
+### Week 3
+
+#### Les 3.1 — Input, Beweging & Collision Detection (WISJ)
+
+Leer verschillende manieren om input van toetsenbord of controller op te vangen en om te zetten in beweging van een bestuurbaar gameobject.
+
+#### Les 3.2 — Animatie maken in Unity (VERI)
+
+Maak animaties voor je game characters en objecten.
+
+---
+
+### Week 4
+
+#### Les 4.1 — Waypoint / Navigation System (WISJ)
+
+Implementeer een systeem waarmee tegenstanders of NPC's zich door je level kunnen bewegen.
+
+#### Les 4.2 — Usertesten (VERI)
+
+Laat anderen je game testen en verzamel feedback.
+
+---
+
+### Week 5
+
+#### Les 5.1 — Controleren van Animaties (WISJ)
+
+Leer animaties aan te sturen via code met Animator Controllers.
+
+#### Les 5.2 — UI (VERI)
+
+Bouw de User Interface van je game (score, levens, menu's).
+
+---
+
+### Week 6
+
+#### Les 6.1 — Game State Manager (WISJ)
+
+Beheer verschillende game states en deel informatie tussen scripts.
+
+#### Les 6.2 — Polishen (VERI)
+
+Voeg juice toe: particles, sound effects, screen shake.
+
+---
+
+### Week 7
+
+#### Les 7.1 — Code Reviews (WISJ)
+
+Review elkaars code en leer van feedback.
+
+#### Les 7.2 — Reflectie & Voorbereiding (VERI)
+
+Bereid je eindpresentatie voor.
+
+---
+
+### Week 8
+
+#### Les 8.1 — Eindpresentatie (WISJ)
+
+Presenteer je game.
+
+#### Les 8.2 — Toets (VERI)
+
+Schriftelijke toets over de behandelde stof.
+
+---
+
+### Week 9
+
+#### Les 9.1 & 9.2 — Inhalen
+
+Inhaalmoment voor toets en/of presentatie.
+
+---
+
+## De Game
+
+Je bouwt een game gebaseerd op de onderstaande user stories, geïnspireerd door PAC-MAN. De invulling hoeft niet exact zoals PAC-MAN te zijn — je mag je eigen creatieve draai geven, zolang het past bij de omschreven user stories.
+
+### User Stories
+
+#### 1. Beweging & Navigatie
+
+| Als speler wil ik...                                  | Zodat...                              |
+| ----------------------------------------------------- | ------------------------------------- |
+| Een entiteit in vaste richtingen kunnen besturen      | Ik door een speelruimte kan navigeren |
+| Dat mijn entiteit blijft bewegen zolang ik input geef | De besturing consistent aanvoelt      |
+| Beperkt worden door obstakels                         | De speelruimte structuur heeft        |
+
+#### 2. Verzamelobjecten
+
+| Als speler wil ik...                                                     | Zodat...                   |
+| ------------------------------------------------------------------------ | -------------------------- |
+| Objecten kunnen verzamelen door ermee te interacteren                    | Ik voortgang boek          |
+| Feedback krijgen bij het verzamelen van een object                       | Mijn actie bevestigd wordt |
+| Dat een doel wordt bereikt wanneer alle vereiste objecten zijn verzameld | Een level kan eindigen     |
+
+#### 3. Tegenstanders
+
+| Als speler wil ik...                                         | Zodat...                |
+| ------------------------------------------------------------ | ----------------------- |
+| Tegenstanders hebben die mij actief bedreigen                | Er spanning ontstaat    |
+| Dat verschillende tegenstanders verschillend gedrag vertonen | Ik patronen kan leren   |
+| Gestraft worden bij contact met een tegenstander             | Fouten betekenis hebben |
+
+#### 4. Tijdelijke Macht / Statusverandering
+
+| Als speler wil ik...                                                     | Zodat...                        |
+| ------------------------------------------------------------------------ | ------------------------------- |
+| Tijdelijk een voordeel kunnen krijgen                                    | De machtsverhouding kan omslaan |
+| Dat tegenstanders in die periode kwetsbaar worden                        | Ik strategisch kan handelen     |
+| Duidelijke visuele en auditieve signalen krijgen bij statusveranderingen | Ik de speltoestand begrijp      |
+| Dat tijdelijke effecten automatisch verlopen                             | Timing belangrijk is            |
+
+#### 5. Risico & Beloning
+
+| Als speler wil ik...                                          | Zodat...                        |
+| ------------------------------------------------------------- | ------------------------------- |
+| Extra beloningen krijgen bij opeenvolgende succesvolle acties | Risico nemen wordt aangemoedigd |
+| Zelf kunnen beslissen of ik risico neem voor meer beloning    | Ik agency ervaar                |
+
+#### 6. Levens, Straf & Herstel
+
+| Als speler wil ik...                            | Zodat...                 |
+| ----------------------------------------------- | ------------------------ |
+| Meerdere kansen hebben voordat het spel eindigt | Leren wordt gestimuleerd |
+| Na falen terugkeren naar een veilige toestand   | Het spel verder kan      |
+| Een duidelijke eindtoestand bij volledig falen  | Afsluiting helder is     |
+
+#### 7. Score & Feedback
+
+| Als speler wil ik...                                | Zodat...                     |
+| --------------------------------------------------- | ---------------------------- |
+| Kwantitatieve feedback krijgen over mijn prestaties | Ik mezelf kan vergelijken    |
+| Directe feedback op acties                          | Het spel responsief aanvoelt |
+| Optionele uitdagingen voor extra beloning           | Meesterschap wordt beloond   |
+
+#### 8. Progressie & Schaling
+
+| Als speler wil ik...                            | Zodat...                           |
+| ----------------------------------------------- | ---------------------------------- |
+| Dat uitdagingen geleidelijk toenemen            | Het spel interessant blijft        |
+| Herkenbare structuren met variërende parameters | Leren mogelijk is zonder verveling |
+
+#### 9. Systeem & Speltoestanden
+
+| Als systeem wil ik...                                                    | Zodat...                           |
+| ------------------------------------------------------------------------ | ---------------------------------- |
+| Duidelijke speltoestanden hanteren (actief, gepauzeerd, falen, voltooid) | Logica beheersbaar blijft          |
+| Tijdgedreven regels toepassen                                            | Gedrag voorspelbaar en testbaar is |
+
+---
+
+## Beoordeling
+
+### Beoordelingsrubric
+
+| Feature                               | O — Onvoldoende                       | V — Voldoende                                 | G — Goed                                        |
+| ------------------------------------- | ------------------------------------- | --------------------------------------------- | ----------------------------------------------- |
+| **Entiteit kan bestuurd worden**      | Besturing werkt niet of onbetrouwbaar | Speler kan entiteit besturen met input        | Besturing reageert consistent en voorspelbaar   |
+| **Entiteit blijft bewegen bij input** | Beweging stopt onlogisch of hapert    | Beweging blijft actief zolang input actief is | Overgangen tussen inputrichtingen zijn vloeiend |
+| **Obstakels blokkeren beweging**      | Entiteit kan door obstakels heen      | Obstakels blokkeren beweging correct          | Botsing werkt in alle richtingen foutloos       |
+| **Objecten kunnen verzameld worden**  | Verzamelen werkt niet of soms         | Objecten verdwijnen en tellen mee             | Verzamelen werkt altijd en foutloos             |
+| **Feedback bij verzamelen**           | Geen zichtbare feedback               | Speler ziet of hoort feedback                 | Feedback is duidelijk en niet te missen         |
+| **Level eindigt bij doel**            | Level eindigt niet of fout            | Level eindigt bij juiste voorwaarde           | Eindconditie werkt zonder bugs                  |
+| **Tegenstanders vormen gevaar**       | Geen effect bij contact               | Contact leidt tot straf                       | Straf is consistent en duidelijk                |
+| **Verschillende gedragingen**         | Alle tegenstanders doen hetzelfde     | Minstens twee verschillende gedragingen       | Gedragingen zijn herkenbaar en consistent       |
+| **Tijdelijke statusverandering**      | Status is permanent of onduidelijk    | Status is tijdelijk en werkt                  | Begin en einde zijn duidelijk herkenbaar        |
+| **Tegenstanders tijdelijk kwetsbaar** | Geen verschil merkbaar                | Tegenstanders zijn tijdelijk kwetsbaar        | Kwetsbaarheid werkt in alle situaties           |
+| **Feedback bij statusverandering**    | Geen feedback zichtbaar               | Feedback is zichtbaar of hoorbaar             | Feedback is direct en onmiskenbaar              |
+| **Meerdere kansen (levens)**          | Game stopt direct                     | Speler heeft meerdere pogingen                | Herstart is logisch en foutloos                 |
+| **Eindtoestand (game over)**          | Geen duidelijke eindtoestand          | Game over is herkenbaar                       | Game over is technisch en visueel duidelijk     |
+
+### Toets
+
+Aan het eind van de periode wordt de behandelde stof schriftelijk getoetst. Dit is een toets met **open vragen** over alle behandelde onderwerpen.
+
+### Eindpresentatie
+
+Na afronding van je game presenteer je deze samen met je teamgenoot.
+
+**Wat moet er in je presentatie?**
+
+| Onderdeel           | Beschrijving                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------ |
+| **Inspiratie**      | Laat zien waar je inspiratie vandaan kwam (bijv. bestaande game)                                 |
+| **Ontwerp**         | Toon je ontwerp — is het gelukt om dit na te bouwen?                                             |
+| **Demo**            | Korte GIF van je eindresultaat (max 10 sec, gebruik [ScreenToGif](https://www.screentogif.com/)) |
+| **Wat ging goed?**  | Minimaal 2 punten + wat je hiervan hebt geleerd                                                  |
+| **Wat was lastig?** | Minimaal 2 punten + wat je hiervan hebt geleerd                                                  |
+| **Trots**           | Waar ben je het meest trots op?                                                                  |
+
+### Weging
+
+| Onderdeel       |  Weging   |
+| --------------- | :-------: |
+| Game            | 3/5 (60%) |
+| Toets           | 1/5 (20%) |
+| Eindpresentatie | 1/5 (20%) |
+
+> Met een voldoende kun je een **Bronzen badge** verdienen op Simulise.
