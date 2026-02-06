@@ -1,43 +1,111 @@
-# M7_KD_Gameplay
+# M7 KD Gameplay
 
-- ontwikkelen nieuwe game mechanics
+## Keuzedeel: Ontwikkelt Gameplay
 
-  - ontwerpen
-  - proototypen
-  - imlementeren in base game (peggle)
-  - Ontwikkelt Gameplay
-  - Test de ontwikkelde gameplay (sprint 0 , )
+### Wat je doet
 
-planning
-9 weken
+De beginnend beroepsbeoefenaar achterhaalt wat de opdrachtgever wil en oriënteert zich op de doelgroep en het onderwerp door
+verschillende bronnen te raadplegen. Hij komt met verschillende ideeen voor de gameplay-elementen: spelregels, verbinding tussen
+speler en spel, uitdagingen, motivatie en de connectie van de speler met het plot. Hij werkt deze ideeen uit en kiest, in overleg
+met betrokkenen, de ideeen die het beste passen bij de te ontwikkelen game. De beginnend beroepsbeoefenaar legt de gekozen ideeen
+vast in een gameplaydocument of vult een bestaand gamedesign aan met de nieuwe gameplay-elementen. Hij legt dit voor aan de
+opdrachtgever en/of zijn leidinggevende. Indien nodig past hij de gameplay aan.
 
-    wk 1: Sprint 0
+### Resultaat
 
-    - Testen Game
-    - Codebase doornemen
-    - Duo's maken
-    - Brainstormen
-    - Collaborator worden op Repo
-    - Userstories, en todo's schrijven
-    - Designs maken (one page & class diagram)
-    - Presenteren van designs
-    - Inleveren presentatie en designs op simulise
-    
-    wk 2, 3: Sprint 1
-    - Sprint planning
-    - Development van userstory
-    - Sprint review
+"Er is een gameplaydocument of gameplaybeschrijvingen die voldoen aan de eisen/wensen van de opdrachtgever/leidinggevende."
 
-    - 1
-    - 2
-    - 3 , usertest
-    - reparatie sprint (CGI eerste dag)
+### Test de ontwikkelde gameplay
 
-    - eindweek niets
+De beginnend beroepsbeoefenaar maakt een rapid prototype van de gameplay. Hij organiseert een playtest. Bij het testen gebruikt
+hij een vragenlijst/checklist om de gameplay te analyseren. Vervolgens evalueert hij de testresultaten en stelt hij de
+gameplay-elementen waar nodig iteratief bij. Gedurende het proces overlegt de beginnend beroepsbeoefenaar met andere teamleden
+en/of leidinggevende en stemt zijn werkzaamheden af.
 
-- ipv gameplay kunnen het ook systemen zijn
+### Resultaat
 
-  - 4 uur per dag pair-developen
-  - CGI's flippen. of iig uitwisselen.
+"Gameplay die aansluit bij de eisen/wensen van de opdrachtgever."
 
-  [kopieren:](https://docs.google.com/presentation/d/16hLFxfu9vs4bYGBbfG2WmGv9DTHvUI0pEoswb63T1d8/edit?usp=sharing)
+---
+
+## Opdracht
+
+- Ontwikkel nieuwe game mechanics in de bestaande game "Gelactic Ricochet"
+- In plaats van gameplay mogen het ook systemen zijn zoals een level editor of een highscore
+- Je onderzoekt of de nieuwe features een goede toevoeging zijn aan de game door te prototypen en te testen
+- Je voegt de designs, prototypes en tests toe aan de door jullie gemaakte feature branches via de readme
+
+De game kunnen jullie hier terugvinden: https://github.com/erwinhenraat/Gelactic_Ricochet/tree/development
+
+## Extra voor SD Studenten
+
+- Jullie realiseren de feature op de feature branch
+- Jullie testen de feature of deze leuk en bugvrij is en of deze voldoet aan de technische eisen uit het technisch design
+- Jullie updaten het technisch design met jullie eigen toevoegingen zodat deze up to date blijft.
+- Als dit allemaal gedaan is maken jullie een pull request aan om de feature in de game te mergen.
+
+---
+
+## Planning (9 weken)
+
+### Week 1: Sprint 0
+
+- Duo's maken en doorgeven van jullie github usernames
+- Game testen en review
+- Technische documentatie doornemen
+- Collaborator worden op de repo
+- Brainstormen en mindmap maken
+- Designs maken (one page, user stories, class diagram)
+- Feature branch aanmaken en designs plaatsen in README
+- Link naar README met designs inleveren op Simulise
+
+### Week 2-3: Sprint 1
+
+- Sprint planning
+- Prototypen
+- Development van user story
+- Sprint review
+
+### Week 4-5: Sprint 2
+
+- Sprint planning
+- Prototypen
+- Development van user story
+- Sprint review
+
+### Week 6-7: Sprint 3
+
+- Sprint planning
+- Development van user story
+- Sprint review
+
+### Week 8-9: Reparatie Sprint
+
+- Usertesten
+- Reparatie
+- Polish
+- CGI, beoordeling van WP1 Ontwikkelt Gameplay
+
+---
+
+## Rooster en betrokken docenten
+
+Dinsdag
+9:00 - 13:15: Keuzedeel - werken aan werkprocessen (KEN, HNR)
+13:45 - 15:45: Realiseren van feature (HNR)
+
+Woensdag
+9:00 - 15:45: Realiseren van feature (SJO, HNR)
+
+Vrijdag
+11:15 - 15:45: Extra ondersteuning Programmeren (WISJ, HERS)
+
+## Werkwijze
+
+- pair-developen
+
+---
+
+## Kickoff presentatie
+
+- [Kopieren](https://docs.google.com/presentation/d/16hLFxfu9vs4bYGBbfG2WmGv9DTHvUI0pEoswb63T1d8/edit?usp=sharing)
