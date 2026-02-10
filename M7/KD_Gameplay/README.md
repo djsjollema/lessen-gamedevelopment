@@ -30,16 +30,16 @@ en/of leidinggevende en stemt zijn werkzaamheden af.
 
 ## Opdracht
 
-- Ontwikkel nieuwe game mechanics in de bestaande game "Gelactic Ricochet"
-- In plaats van gameplay mogen het ook systemen zijn zoals een level editor of een highscore
+- Ontwikkel nieuwe game mechanics voor de bestaande game "Gelactic Ricochet"
+- In plaats van gameplay mogen het ook systemen zijn zoals bijvoorbeeld een level editor of een highscore
 - Je onderzoekt of de nieuwe features een goede toevoeging zijn aan de game door te prototypen en te testen
-- Je voegt de designs, prototypes en tests toe aan de door jullie gemaakte feature branches via de readme
+- Je voegt de designs, prototypes en tests toe aan de door jullie gemaakte feature branches via de readme of aan het project op deze branch
 
-De game kunnen jullie hier terugvinden: https://github.com/erwinhenraat/Gelactic_Ricochet/tree/development
+Het game project kunnen jullie hier terugvinden op github: https://github.com/erwinhenraat/Gelactic_Ricochet/tree/development
 
 ## Extra voor SD Studenten
 
-- Jullie realiseren de feature op de feature branch
+- Jullie realiseren de nieuwe feature(s) op de feature branch(es)
 - Jullie testen de feature of deze leuk en bugvrij is en of deze voldoet aan de technische eisen uit het technisch design
 - Jullie updaten het technisch design met jullie eigen toevoegingen zodat deze up to date blijft.
 - Als dit allemaal gedaan is maken jullie een pull request aan om de feature in de game te mergen.
@@ -51,11 +51,11 @@ De game kunnen jullie hier terugvinden: https://github.com/erwinhenraat/Gelactic
 ### Week 1: Sprint 0
 
 - Duo's maken en doorgeven van jullie github usernames
-- Game testen en review
-- Technische documentatie doornemen
-- Collaborator worden op de repo
-- Brainstormen en mindmap maken
-- Designs maken (one page, user stories, class diagram)
+- Game testen en reviewen (10 tips en 10 tops)
+- Technische documentatie doornemen (stel vragen als je iets niet begrijpt)
+- Collaborator worden op de repo (geef je username door)
+- Brainstormen en mindmap maken (kwantiteit boven kwaliteit)
+- Game Designs maken (one page, user stories, class diagram)
 - Feature branch aanmaken en designs plaatsen in README
 - Link naar README met designs inleveren op Simulise
 
@@ -76,6 +76,7 @@ De game kunnen jullie hier terugvinden: https://github.com/erwinhenraat/Gelactic
 ### Week 6-7: Sprint 3
 
 - Sprint planning
+- Prototypen
 - Development van user story
 - Sprint review
 
@@ -97,9 +98,6 @@ Dinsdag
 Woensdag
 9:00 - 15:45: Realiseren van feature (SJO, HNR)
 
-Vrijdag
-11:15 - 15:45: Extra ondersteuning Programmeren (WISJ, HERS)
-
 ## Werkwijze
 
 - pair-developen
@@ -108,4 +106,4 @@ Vrijdag
 
 ## Kickoff presentatie
 
-- [Kopieren](https://docs.google.com/presentation/d/16hLFxfu9vs4bYGBbfG2WmGv9DTHvUI0pEoswb63T1d8/edit?usp=sharing)
+- [Kickoff](https://docs.google.com/presentation/d/16hLFxfu9vs4bYGBbfG2WmGv9DTHvUI0pEoswb63T1d8/edit?usp=sharing)
