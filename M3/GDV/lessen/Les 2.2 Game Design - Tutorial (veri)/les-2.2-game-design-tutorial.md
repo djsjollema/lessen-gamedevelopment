@@ -1,7 +1,8 @@
 # Tutorial zonder tekst
 ## Eerste 30 seconden van mijn game
-
 De speler leert door te doen, niet door te lezen.
+
+<img width="1536" height="1024" alt="Speler leren spelen" src="https://github.com/user-attachments/assets/4531f365-c674-4bf8-afb8-3356173af687" />
 
 ## Opdracht
 
