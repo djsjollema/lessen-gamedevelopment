@@ -69,7 +69,7 @@ Wat leert de speler hier?
 
 ---
 
-### Schets 2 – Doel of Gevaar
+### Schets 2 – Doel 
 
 Voeg hier je afbeelding toe:
 
@@ -80,7 +80,7 @@ Wat leert de speler hier?
 
 ---
 
-### Schets 3 – Overgebleven element
+### Schets 3 – Gevaar
 
 Voeg hier je afbeelding toe:
 
