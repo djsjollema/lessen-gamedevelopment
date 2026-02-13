@@ -62,7 +62,7 @@ Technische eisen:
 
 Voeg hier je afbeelding toe:
 
-![Schets 1](schets1.png)
+![Schets 1](grid_64x36_2048x1152.png)
 
 Wat leert de speler hier?
 [2–3 zinnen uitleg.]
@@ -73,7 +73,7 @@ Wat leert de speler hier?
 
 Voeg hier je afbeelding toe:
 
-![Schets 2](schets2.png)
+![Schets 2](grid_64x36_2048x1152.png)
 
 Wat leert de speler hier?
 [2–3 zinnen uitleg.]
@@ -84,7 +84,7 @@ Wat leert de speler hier?
 
 Voeg hier je afbeelding toe:
 
-![Schets 3](schets3.png)
+![Schets 3](grid_64x36_2048x1152.png)
 
 Wat leert de speler hier?
 [2–3 zinnen uitleg.]
