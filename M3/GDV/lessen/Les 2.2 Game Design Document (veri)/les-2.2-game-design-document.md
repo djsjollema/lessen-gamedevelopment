@@ -1,125 +1,117 @@
-# Les 2.2 — Game Design Document
+# Tutorial zonder tekst
+## Eerste 30 seconden van mijn game
 
-## Leerdoel
+De speler leert door te doen, niet door te lezen.
 
-Na deze les kun je een Game Design Document (GDD) maken voor je eigen game.
+## Opdracht
 
----
+Ontwerp de eerste 30 seconden van jouw game als een tutorial zonder tekst.
 
-## Theorie
+De speler moet in deze eerste momenten begrijpen:
+- hoe hij kan bewegen,
+- wat het doel van het level is,
+- wat gevaarlijk is.
 
-### Wat is een GDD?
+Je werkt in twee stappen:
+1. Je beschrijft eerst je ontwerpkeuzes in tekst.
+2. Daarna ontwerp je drie schetsen op een vaste grid.
+3. Je voegt een legenda toe met consistente schaalverhoudingen.
 
-Een Game Design Document beschrijft **alles** over je game:
-
-- Wat de speler doet
-- Hoe de game eruitziet
-- Welke features er zijn
-- Hoe systemen werken
-
-### Waarom een GDD?
-
-| Voordeel          | Uitleg                                  |
-| ----------------- | --------------------------------------- |
-| **Duidelijkheid** | Je weet precies wat je gaat bouwen      |
-| **Communicatie**  | Je team begrijpt het plan               |
-| **Scope**         | Je ziet of je idee haalbaar is          |
-| **Referentie**    | Je kunt terugkijken tijdens development |
-
-### GDD Structuur
-
-Een simpel GDD bevat:
-
-1. **Concept** — Wat is de game in 1-2 zinnen?
-2. **Gameplay** — Wat doet de speler?
-3. **Win/Lose** — Hoe win of verlies je?
-4. **Controls** — Hoe bestuur je de game?
-5. **Art Style** — Hoe ziet het eruit?
-6. **Features** — Wat zijn de belangrijkste onderdelen?
+Alles wordt toegevoegd aan deze README.
 
 ---
 
-## Oefeningen
+## Stap 1 – Ontwerpkeuzes (tekst)
 
-### Oefening 1: GDD Invullen
+Beantwoord de volgende vragen uitgebreid in zinnen:
 
-Vul onderstaand template in voor jouw game:
+### 1. Hoe communiceer ik dat de speler kan bewegen?
 
----
+[Schrijf hier je antwoord.]
 
-## [Naam van je Game]
+### 2. Hoe communiceer ik wat het doel van het level is?
 
-### 1. Concept
+[Schrijf hier je antwoord.]
 
-> Beschrijf je game in 2-3 zinnen. Wat maakt het uniek?
+### 3. Hoe communiceer ik wat gevaarlijk is?
 
-_Jouw antwoord:_
+[Schrijf hier je antwoord.]
 
-### 2. Gameplay
+### 4. In welke volgorde introduceer ik deze onderdelen en waarom?
 
-> Wat doet de speler? Beschrijf de core loop.
-
-_Jouw antwoord:_
-
-### 3. Win/Lose Condities
-
-> Wanneer wint de speler? Wanneer verliest de speler?
-
-| Win conditie | Lose conditie |
-| ------------ | ------------- |
-|              |               |
-
-### 4. Controls
-
-| Input                  | Actie |
-| ---------------------- | ----- |
-| Pijltjestoetsen / WASD |       |
-| Spatie                 |       |
-| Escape                 |       |
-
-### 5. Art Style
-
-> Beschrijf de visuele stijl. Voeg referentie-afbeeldingen toe.
-
-- Kleurenpalet:
-- Stijl (pixel art, cartoon, realistisch):
-- Referenties:
-
-### 6. Features (prioriteit)
-
-| Must Have | Should Have | Could Have |
-| --------- | ----------- | ---------- |
-|           |             |            |
-|           |             |            |
-|           |             |            |
+[Beschrijf hier de volgorde en je motivatie.]
 
 ---
 
-### Oefening 2: Feature Prioritering
+## Stap 2 – Schetsen (64x36 grid)
 
-Gebruik de MoSCoW-methode om je features te prioriteren:
+Maak drie losse schetsen van de eerste 30 seconden van jouw game.
 
-- **Must have** — Zonder dit werkt de game niet
-- **Should have** — Belangrijk, maar game werkt zonder
-- **Could have** — Leuk om te hebben
-- **Won't have** — Niet in deze versie
-
-Vul de tabel in met minimaal:
-
-- 3 Must haves
-- 2 Should haves
-- 2 Could haves
-
-**Tip:** Wees realistisch! Je hebt maar 7 weken.
+Technische eisen:
+- 64 tiles breed
+- 36 tiles hoog
+- 1 tile = 1 unit
+- Werk consistent in schaal
+- Geen tekst
+- Geen pijlen
+- Alleen leveldesign
 
 ---
 
-## Toepassing
+### Schets 1 – Bewegen
 
-1. Deel je GDD met je duo-partner
-2. Geef elkaar feedback:
-   - Is het duidelijk wat de game is?
-   - Lijkt de scope haalbaar?
-   - Wat mist er nog?
-3. Pas je GDD aan op basis van feedback
-4. Upload je GDD naar je GitHub repository
+Voeg hier je afbeelding toe:
+
+![Schets 1](schets1.png)
+
+Wat leert de speler hier?
+[2–3 zinnen uitleg.]
+
+---
+
+### Schets 2 – Doel of Gevaar
+
+Voeg hier je afbeelding toe:
+
+![Schets 2](schets2.png)
+
+Wat leert de speler hier?
+[2–3 zinnen uitleg.]
+
+---
+
+### Schets 3 – Overgebleven element
+
+Voeg hier je afbeelding toe:
+
+![Schets 3](schets3.png)
+
+Wat leert de speler hier?
+[2–3 zinnen uitleg.]
+
+---
+
+## Legenda
+
+Beschrijf hier welke symbolen en vaste maten je gebruikt in je schetsen.
+
+Voorbeeld:
+
+- Speler = 2x2 tiles  
+- Vijand = 2x2 tiles  
+- Muur = 1x1 tile  
+- Doel-object = 1x1 of 2x2 tiles  
+- Power-up = 1x1 tile  
+
+Alle objecten moeten:
+- vaste afmetingen hebben
+- consistent gebruikt worden
+- schaalbaar zijn naar Unity
+
+---
+
+## Reflectie
+
+Wat werkt goed in mijn ontwerp?
+
+Wat zou ik verbeteren als ik dit opnieuw ontwerp?
