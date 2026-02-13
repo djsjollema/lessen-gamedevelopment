@@ -1,4 +1,4 @@
-# Tutorial zonder tekst
+# Speler leren spelen
 ## Eerste 30 seconden van mijn game
 De speler leert door te doen, niet door te lezen.
 
