@@ -1,15 +1,23 @@
-### Spelconcept
+# Spelconcept
 
-Speler verzamelt snoepjes in een kleuterklas.
+Game-idee
+Een Pacman-achtige game gebaseerd op verstoppertje in een kleuterklas.
+
+Doel van de speler
+Verzamel alle snoepjes zonder gevonden te worden.
+
+Wat doet de speler
+De speler beweegt door het lokaal, verzamelt snoepjes en gebruikt objecten en muren als dekking om uit zicht te blijven.
+
+Twist
 Eén kind telt af en zoekt actief.
-Andere kinderen lopen rond en verraden de speler wanneer zij de speler zien.
+Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 
+---
 
+## Stap 1 – Ontwerpkeuzes 
 
-
-### Stap 1 – Ontwerpkeuzes 
-
-1. Hoe communiceer ik dat de speler kan bewegen? 
+**1. Hoe communiceer ik dat de speler kan bewegen? **
 
 De speler start links onderin het lokaal, in een rustige hoek bij de kapstokken.
 Direct voor de startpositie ligt een snoepje op de looproute.
@@ -24,7 +32,8 @@ Daardoor gebeurt direct het volgende:
 Beweging en interactie worden dus niet uitgelegd, maar ervaren.
 
 
-2. Hoe communiceer ik wat het doel van het level is? 
+**2. Hoe communiceer ik wat het doel van het level is? **
+
 Het eerste snoepje ligt in een veilige zone zonder kinderen in de buurt.
 Bij het oppakken verschijnt een korte visuele reactie, bijvoorbeeld een lichteffect of kleine animatie.
 
@@ -44,39 +53,32 @@ Het doel wordt dus geleerd via plaatsing in het level.
 
 
 
-3. Hoe communiceer ik wat gevaarlijk is?
+**3. Hoe communiceer ik wat gevaarlijk is?**
 
-Rechts in het lokaal staat één kind bij het bord.
-Dit kind telt hardop af en beweegt niet. Tijdens het tellen is het veilig.
+Rechts in het lokaal staat één kind bij het bord. Wanneer de speler de triggerzone binnenkomt, begint dit kind hardop af te tellen. Tijdens het aftellen is het lokaal veilig.
+Het aftellen markeert een overgang: er staat iets te veranderen.
 
-Het aftellen is het signaal dat er straks iets verandert.
-
-Wanneer het tellen stopt:
+Wanneer het aftellen stopt:
 - Het kind draait zich om.
-- Het kind begint te zoeken.
-- Open zichtlijnen worden "gevaarlijk".
+- Het kind begint  te zoeken.
+- Open zichtlijnen worden gevaarlijk.
 
-Staat de speler in open ruimte binnen zicht van dit kind, dan beweegt het kind direct richting de speler.
-Blijft de speler zichtbaar, dan is het level mislukt.
+Staat de speler in open ruimte binnen de zichtlijn van dit kind, dan beweegt het kind direct richting de speler. Blijft de speler zichtbaar, dan mislukt het level.
 
-Andere kinderen zoeken niet actief, maar lopen rond in het lokaal.
-Wanneer de speler in hun zicht staat zonder dekking, reageren zij zichtbaar.
-Dit is het signaal dat de speler is verraden. Het zoekende kind beweegt dan naar die locatie.
+De andere kinderen zoeken niet actief. Zij bewegen door het lokaal en gaan door met hun eigen activiteit.
 
-De speler leert zo via het leveldesign:
+Wanneer de speler zonder dekking in hun zicht komt, reageren zij zichtbaar.
+Dat is het signaal van verraad. Het zoekende kind beweegt vervolgens naar die locatie.
 
-- Tijdens het tellen is het veilig.
-- Zicht van de zoeker betekent direct gevaar.
-- Zicht van andere kinderen leidt tot verraad.
-- Objecten en muren zijn functionele dekking.
+De speler leert via het leveldesign:
+- Tijdens het aftellen is er geen gevaar.
+- Na het aftellen bepaalt zichtlijn de dreiging.
+- Zicht van andere kinderen veroorzaakt verraad.
+- Objecten en muren functioneren als dekking.
 
-Alles wordt geleerd door ruimte, timing en plaatsing.
+Alles wordt gecommuniceerd door ruimte, timing en plaatsing.
 
-![Schets stap1](contentvoorbeeld/step2.png)
+![Schets stap1](contentvoorbeeld/step3.png)
 
 
-De speler leert zo heel duidelijk:
 
-Tijdens het tellen is het veilig.
-Na het tellen is zicht van de zoeker direct gevaar.
-Zicht van andere kinderen zorgt ervoor dat je verraden wordt.
