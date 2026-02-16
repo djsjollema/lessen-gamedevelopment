@@ -38,9 +38,6 @@ Beantwoord de volgende vragen uitgebreid in zinnen:
 
 [Schrijf hier je antwoord.]
 
-### 4. In welke volgorde introduceer ik deze onderdelen en waarom?
-
-[Beschrijf hier de volgorde en je motivatie.]
 
 ---
 
