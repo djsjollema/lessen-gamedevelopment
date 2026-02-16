@@ -20,7 +20,7 @@ Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 
 ## Stap 1 – Ontwerpkeuzes 
 
-**1. Hoe communiceer ik dat de speler kan bewegen? **
+**1. Hoe communiceer ik dat de speler kan bewegen?**
 
 De speler start links onderin het lokaal, in een rustige hoek bij de kapstokken.
 Direct voor de startpositie ligt een snoepje op de looproute.
@@ -35,7 +35,7 @@ Daardoor gebeurt direct het volgende:
 Beweging en interactie worden dus niet uitgelegd, maar ervaren.
 
 
-**2. Hoe communiceer ik wat het doel van het level is? **
+**2. Hoe communiceer ik wat het doel van het level is?**
 
 Het eerste snoepje ligt in een veilige zone zonder kinderen in de buurt.
 Bij het oppakken verschijnt een korte visuele reactie, bijvoorbeeld een lichteffect of kleine animatie.
