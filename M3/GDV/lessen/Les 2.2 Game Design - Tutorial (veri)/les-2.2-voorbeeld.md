@@ -13,6 +13,9 @@ Twist
 Eén kind telt af en zoekt actief.
 Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 
+![Schets stap1](contentvoorbeeld/step5.png)
+
+
 ---
 
 ## Stap 1 – Ontwerpkeuzes 
