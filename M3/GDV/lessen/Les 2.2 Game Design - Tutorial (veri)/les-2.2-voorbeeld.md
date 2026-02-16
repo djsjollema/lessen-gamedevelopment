@@ -1,4 +1,4 @@
-### Spelconcept
+# Spelconcept
 
 Game-idee
 Een Pacman-achtige game gebaseerd op verstoppertje in een kleuterklas.
@@ -15,7 +15,7 @@ Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 
 ---
 
-### Stap 1 – Ontwerpkeuzes 
+## Stap 1 – Ontwerpkeuzes 
 
 **1. Hoe communiceer ik dat de speler kan bewegen? **
 
