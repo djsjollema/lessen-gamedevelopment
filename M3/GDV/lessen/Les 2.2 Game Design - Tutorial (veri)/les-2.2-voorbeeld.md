@@ -72,7 +72,7 @@ De speler leert zo via het leveldesign:
 
 Alles wordt geleerd door ruimte, timing en plaatsing.
 
-![Schets stap1](contentvoorbeeld/step2.png)
+![Schets stap1](contentvoorbeeld/step3.png)
 
 
 De speler leert zo heel duidelijk:
