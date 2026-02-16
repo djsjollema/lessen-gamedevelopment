@@ -13,6 +13,8 @@ Twist
 Eén kind telt af en zoekt actief.
 Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 
+Dit level introduceert beweging, doel en zichtlijnen volledig via plaatsing en ruimte.
+
 ![Schets stap1](contentvoorbeeld/step5.png)
 
 
@@ -25,14 +27,13 @@ Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 De speler start links onderin het lokaal, in een rustige hoek bij de kapstokken.
 Direct voor de startpositie ligt een snoepje op de looproute.
 
-Om het lokaal in te gaan moet de speler automatisch over dit snoepje bewegen.
-Daardoor gebeurt direct het volgende:
+Om het lokaal in te gaan moet de speler over dit snoepje bewegen.
+Hierdoor gebeurt meteen het volgende:
+- Er vindt beweging plaats.
+- Het eerste snoepje wordt verzameld.
+- De UI verandert van 0/30 naar 1/30.
 
-- De speler beweegt.
-- Het snoepje wordt verzameld.
-- De UI telt op.
-
-Beweging en interactie worden dus niet uitgelegd, maar ervaren.
+Beweging en interactie worden niet uitgelegd, maar het overkomt de speler.
 
 
 **2. Hoe communiceer ik wat het doel van het level is?**
@@ -50,7 +51,7 @@ Hierdoor wordt duidelijk:
 - Positie en timing bepalen het risico.
 - Niet elke route is even veilig.
 
-Het doel wordt dus geleerd via plaatsing in het level.
+Dit level is een tutorial zonder uitleg: de speler leert alles door te doen.
 
 ![Schets stap1](contentvoorbeeld/step1.png)
 
