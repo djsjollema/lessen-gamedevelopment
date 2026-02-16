@@ -1,115 +1,42 @@
-# Speler leren spelen
-## Eerste 30 seconden van mijn game
-De speler leert door te doen, niet door te lezen.
-
-<img width="1536" height="1024" alt="Speler leren spelen" src="https://github.com/user-attachments/assets/4531f365-c674-4bf8-afb8-3356173af687" />
-
-## Opdracht
-
-Ontwerp de eerste 30 seconden van jouw game als een tutorial zonder tekst.
-
-De speler moet in deze eerste momenten begrijpen:
-- hoe hij kan bewegen,
-- wat het doel van het level is,
-- wat gevaarlijk is.
-
-Je werkt in twee stappen:
-1. Je beschrijft eerst je ontwerpkeuzes in tekst.
-2. Daarna ontwerp je drie schetsen op een vaste grid.
-3. Je voegt een legenda toe met consistente schaalverhoudingen.
-
-Alles wordt toegevoegd aan deze README.
-
----
-
-## Stap 1 – Ontwerpkeuzes (tekst)
-
-Beantwoord de volgende vragen uitgebreid in zinnen:
-
-### 1. Hoe communiceer ik dat de speler kan bewegen?
-
-[Schrijf hier je antwoord.]
-
-### 2. Hoe communiceer ik wat het doel van het level is?
-
-[Schrijf hier je antwoord.]
-
-### 3. Hoe communiceer ik wat gevaarlijk is?
-
-[Schrijf hier je antwoord.]
 
 
----
 
-## Stap 2 – Schetsen (64x36 grid)
+Speler verzamelt snoepjes.
+Eén kind telt af en zoekt actief.
+Andere kinderen lopen rond en verraden de speler als ze de speler zien.
 
-Maak drie losse schetsen van de eerste 30 seconden van jouw game.
+### Stap 1 – Ontwerpkeuzes 
 
-Technische eisen:
-- 64 tiles breed
-- 36 tiles hoog
-- 1 tile = 1 unit
-- Werk consistent in schaal
-- Geen tekst
-- Geen pijlen
-- Alleen leveldesign
+1. Hoe communiceer ik dat de speler kan bewegen? 
 
----
+De speler start in een rustige hoek van het klaslokaal, achter een grote kast. 
+De ruimte direct rechts van de speler is open en bevat een zichtbaar snoepje op korte afstand. Er is geen andere directe interactie mogelijk. 
+Doordat het snoepje net buiten bereik ligt, wordt de speler automatisch getriggerd om te bewegen. De open ruimte nodigt uit om naar rechts te lopen. 
+De speler leert dat bewegen nodig is om iets te bereiken. 
 
-### Schets 1 – Bewegen
+![Schets stap1](contentvoorbeeld/step1.png)
 
-Voeg hier je afbeelding toe:
 
-![Schets 1](grid_64x36_2048x1152.png)
+2. Hoe communiceer ik wat het doel van het level is? 
+Het eerste snoepje ligt veilig in een lege zone zonder kinderen. 
+Wanneer de speler het snoepje oppakt, verschijnt er een subtiele visuele reactie, bijvoorbeeld een korte animatie of lichteffect. 
+Daarna ziet de speler meerdere snoepjes verspreid door het lokaal liggen. Ze liggen op zichtbare plekken, soms dichter bij andere kinderen.
+Hierdoor begrijpt de speler dat snoepjes verzamelen het doel is, maar dat positionering belangrijk is.
 
-Wat leert de speler hier?
-[2–3 zinnen uitleg.]
+3. Hoe communiceer ik wat gevaarlijk is?
 
----
+Na het eerste snoepje begint één kind hardop af te tellen bij het bord. Het kind staat met de ogen dicht en beweegt niet. 
+Tijdens het tellen is de speler veilig. Er gebeurt nog niets als de speler door het lokaal loopt.
+Het tellen is het duidelijke moment waarop de speler begrijpt dat er straks iets verandert.
+Als het tellen klaar is, draait het kind zich om en begint het echt te zoeken. 
+Vanaf dat moment is zicht gevaarlijk. Staat de speler in open ruimte en kan het kind hem zien, dan reageert het meteen en beweegt het richting de speler. 
+Blijft de speler zichtbaar, dan is hij af.
 
-### Schets 2 – Doel 
+De andere kinderen zoeken niet actief, maar kunnen de speler wel zien. Als de speler langs hen loopt zonder dekking, kijken zij naar het zoekende kind. 
+Dat is het signaal dat de speler verraden is. Het zoekende kind beweegt dan naar die plek toe.
 
-Voeg hier je afbeelding toe:
+De speler leert zo heel duidelijk:
 
-![Schets 2](grid_64x36_2048x1152.png)
-
-Wat leert de speler hier?
-[2–3 zinnen uitleg.]
-
----
-
-### Schets 3 – Gevaar
-
-Voeg hier je afbeelding toe:
-
-![Schets 3](grid_64x36_2048x1152.png)
-
-Wat leert de speler hier?
-[2–3 zinnen uitleg.]
-
----
-
-## Legenda
-
-Beschrijf hier welke symbolen en vaste maten je gebruikt in je schetsen.
-
-Voorbeeld:
-
-- Speler = 2x2 tiles  
-- Vijand = 2x2 tiles  
-- Muur = 1x1 tile  
-- Doel-object = 1x1 of 2x2 tiles  
-- Power-up = 1x1 tile  
-
-Alle objecten moeten:
-- vaste afmetingen hebben
-- consistent gebruikt worden
-- schaalbaar zijn naar Unity
-
----
-
-## Reflectie
-
-Wat werkt goed in mijn ontwerp?
-
-Wat zou ik verbeteren als ik dit opnieuw ontwerp?
+Tijdens het tellen is het veilig.
+Na het tellen is zicht van de zoeker direct gevaar.
+Zicht van andere kinderen zorgt ervoor dat je verraden wordt.
