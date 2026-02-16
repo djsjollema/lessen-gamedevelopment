@@ -1,41 +1,79 @@
+### Spelconcept
 
-
-
-Speler verzamelt snoepjes.
+Speler verzamelt snoepjes in een kleuterklas.
 Eén kind telt af en zoekt actief.
-Andere kinderen lopen rond en verraden de speler als ze de speler zien.
+Andere kinderen lopen rond en verraden de speler wanneer zij de speler zien.
+
+
+
 
 ### Stap 1 – Ontwerpkeuzes 
 
 1. Hoe communiceer ik dat de speler kan bewegen? 
 
-De speler start in een rustige hoek van het klaslokaal, bij de kapstokken waar de kleuters en juf de jassen ophangen.
-Vlak voor de speler bevinden zich enkele snoepjes. Om uit dit hoekje te lopen is de speler loopt de speler gegarandeed over een snoepje. Dit maakt gelijk het doel duidelijk. De speler moet x snoepjes verzamelen en heeft er nu een enkele verzameld. 
+De speler start links onderin het lokaal, in een rustige hoek bij de kapstokken.
+Direct voor de startpositie ligt een snoepje op de looproute.
+
+Om het lokaal in te gaan moet de speler automatisch over dit snoepje bewegen.
+Daardoor gebeurt direct het volgende:
+
+- De speler beweegt.
+- Het snoepje wordt verzameld.
+- De UI telt op.
+
+Beweging en interactie worden dus niet uitgelegd, maar ervaren.
 
 
 2. Hoe communiceer ik wat het doel van het level is? 
-Het eerste snoepje ligt veilig in een lege zone zonder kinderen. 
-Wanneer de speler het snoepje oppakt, verschijnt er een subtiele visuele reactie, bijvoorbeeld een korte animatie of lichteffect. 
-Daarna ziet de speler meerdere snoepjes verspreid door het lokaal liggen. Ze liggen op zichtbare plekken, soms dichter bij andere kinderen.
-Hierdoor begrijpt de speler dat snoepjes verzamelen het doel is, maar dat positionering belangrijk is.
+Het eerste snoepje ligt in een veilige zone zonder kinderen in de buurt.
+Bij het oppakken verschijnt een korte visuele reactie, bijvoorbeeld een lichteffect of kleine animatie.
+
+In de UI linksboven is zichtbaar: 1/30.
+
+Daarna ziet de speler meerdere snoepjes verspreid door het lokaal liggen.
+Sommige snoepjes liggen in open ruimtes, andere dichter bij kinderen of in smallere doorgangen.
+
+Hierdoor wordt duidelijk:
+- Snoepjes verzamelen is het doel.
+- Positie en timing bepalen het risico.
+- Niet elke route is even veilig.
+
+Het doel wordt dus geleerd via plaatsing in het level.
 
 ![Schets stap1](contentvoorbeeld/step1.png)
 
 
 
-4. Hoe communiceer ik wat gevaarlijk is?
+3. Hoe communiceer ik wat gevaarlijk is?
 
-Na het eerste snoepje begint één kind hardop af te tellen bij het bord. Het kind staat met de ogen dicht en beweegt niet. 
-Tijdens het tellen is de speler veilig. Er gebeurt nog niets als de speler door het lokaal loopt.
-Het tellen is het duidelijke moment waarop de speler begrijpt dat er straks iets verandert.
-Als het tellen klaar is, draait het kind zich om en begint het echt te zoeken. 
-Vanaf dat moment is zicht gevaarlijk. Staat de speler in open ruimte en kan het kind hem zien, dan reageert het meteen en beweegt het richting de speler. 
-Blijft de speler zichtbaar, dan is hij af.
+Rechts in het lokaal staat één kind bij het bord.
+Dit kind telt hardop af en beweegt niet. Tijdens het tellen is het veilig.
+
+Het aftellen is het signaal dat er straks iets verandert.
+
+Wanneer het tellen stopt:
+- Het kind draait zich om.
+- Het kind begint te zoeken.
+- Open zichtlijnen worden "gevaarlijk".
+
+Staat de speler in open ruimte binnen zicht van dit kind, dan beweegt het kind direct richting de speler.
+Blijft de speler zichtbaar, dan is het level mislukt.
+
+Andere kinderen zoeken niet actief, maar lopen rond in het lokaal.
+Wanneer de speler in hun zicht staat zonder dekking, reageren zij zichtbaar.
+Dit is het signaal dat de speler is verraden. Het zoekende kind beweegt dan naar die locatie.
+
+De speler leert zo via het leveldesign:
+
+- Tijdens het tellen is het veilig.
+- Zicht van de zoeker betekent direct gevaar.
+- Zicht van andere kinderen leidt tot verraad.
+- Objecten en muren zijn functionele dekking.
+
+Alles wordt geleerd door ruimte, timing en plaatsing.
 
 ![Schets stap1](contentvoorbeeld/step2.png)
 
-De andere kinderen zoeken niet actief, maar kunnen de speler wel zien. Als de speler langs hen loopt zonder dekking, kijken zij naar het zoekende kind. 
-Dat is het signaal dat de speler verraden is. Het zoekende kind beweegt dan naar die plek toe.
 
 De speler leert zo heel duidelijk:
 
