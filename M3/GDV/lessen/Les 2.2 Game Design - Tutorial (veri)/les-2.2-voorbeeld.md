@@ -1,15 +1,23 @@
 ### Spelconcept
 
-Speler verzamelt snoepjes in een kleuterklas.
-Eén kind telt af en zoekt actief.
-Andere kinderen lopen rond en verraden de speler wanneer zij de speler zien.
+Game-idee
+Een Pacman-achtige game gebaseerd op verstoppertje in een kleuterklas.
 
+Doel van de speler
+Verzamel alle snoepjes zonder gevonden te worden.
+
+Wat doet de speler
+De speler beweegt door het lokaal, verzamelt snoepjes en gebruikt objecten en muren als dekking om uit zicht te blijven.
+
+Twist
+Eén kind telt af en zoekt actief.
+Andere kinderen zoeken niet, maar verraden de speler wanneer die zichtbaar is.
 
 
 
 ### Stap 1 – Ontwerpkeuzes 
 
-1. Hoe communiceer ik dat de speler kan bewegen? 
+**1. Hoe communiceer ik dat de speler kan bewegen? **
 
 De speler start links onderin het lokaal, in een rustige hoek bij de kapstokken.
 Direct voor de startpositie ligt een snoepje op de looproute.
@@ -24,7 +32,8 @@ Daardoor gebeurt direct het volgende:
 Beweging en interactie worden dus niet uitgelegd, maar ervaren.
 
 
-2. Hoe communiceer ik wat het doel van het level is? 
+**2. Hoe communiceer ik wat het doel van het level is? **
+
 Het eerste snoepje ligt in een veilige zone zonder kinderen in de buurt.
 Bij het oppakken verschijnt een korte visuele reactie, bijvoorbeeld een lichteffect of kleine animatie.
 
@@ -44,7 +53,7 @@ Het doel wordt dus geleerd via plaatsing in het level.
 
 
 
-3. Hoe communiceer ik wat gevaarlijk is?
+**3. Hoe communiceer ik wat gevaarlijk is?**
 
 Rechts in het lokaal staat één kind bij het bord. Wanneer de speler de triggerzone binnenkomt, begint dit kind hardop af te tellen. Tijdens het aftellen is het lokaal veilig.
 Het aftellen markeert een overgang: er staat iets te veranderen.
