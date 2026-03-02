@@ -51,7 +51,7 @@ Alles moet te vertalen zijn naar code.
 
 ## Stap 2 – Flowchart
 
-Maak een eenvoudige flowchart van het gedrag.
+Maak een eenvoudige flowchart van het gedrag bijvoorbeeld via https://mermaid.js.org/.
 
 Gebruik beslissingen zoals:
 
