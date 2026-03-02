@@ -1,4 +1,4 @@
-# Enemy Behaviour Gym
+# Game Design - Design your Enemy (Gym)
 
 ## Lescontext
 
@@ -51,7 +51,7 @@ Alles moet te vertalen zijn naar code.
 
 ## Stap 2 – Flowchart
 
-Maak een eenvoudige flowchart van het gedrag.
+Maak een eenvoudige flowchart van het gedrag bijvoorbeeld via https://mermaid.js.org/.
 
 Gebruik beslissingen zoals:
 
@@ -96,7 +96,7 @@ Focus op logica, niet op afwerking.
 
 ---
 
-# Inlevering
+# Opdracht - Enemy Behaviour Gym
 
 Je levert het volgende in via GitHub:
 
