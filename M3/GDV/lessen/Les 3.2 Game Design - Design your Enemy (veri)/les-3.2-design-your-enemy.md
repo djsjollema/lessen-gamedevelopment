@@ -96,7 +96,7 @@ Focus op logica, niet op afwerking.
 
 ---
 
-# Inlevering
+# Opdracht - Enemy Behaviour Gym
 
 Je levert het volgende in via GitHub:
 
