@@ -7,21 +7,21 @@ State: Idle
 - Vijand wacht tot de speler de TriggerZone betreedt.
 
 Trigger
-- Speler betreedt TriggerZone → state: Counting.
+- Speler betreedt TriggerZone - state: Counting.
 
 State: Counting
 - Vijand telt van 5 naar 1.
-- Na 1: vijand draait om → state: Searching.
+- Na 1: vijand draait om - state: Searching.
 
 State: Searching
 Prioriteit van checks:
-1. Als speler zichtbaar is → state: Chasing.
-2. Als speler niet zichtbaar is en er is geluid → beweeg richting GeluidPositie.
-3. Als speler niet zichtbaar is en er is geen geluid → zoekgedrag (simpel patroon).
+1. Als speler zichtbaar is - state: Chasing.
+2. Als speler niet zichtbaar is en er is geluid - beweeg richting GeluidPositie.
+3. Als speler niet zichtbaar is en er is geen geluid - zoekgedrag (simpel patroon).
 
 State: Chasing
 - Vijand beweegt richting speler zolang speler zichtbaar is.
-- Als speler niet meer zichtbaar is → terug naar Searching.
+- Als speler niet meer zichtbaar is - terug naar Searching.
 
 ---
 
@@ -30,11 +30,11 @@ State: Chasing
 Zicht (Line of Sight)
 - Vijand heeft 360 graden zicht.
 - Zicht wordt geblokkeerd door obstakels (raycast).
-- Als zicht true is → speler is gevonden.
+- Als zicht true is - speler is gevonden.
 
 Geluid
-- Speler loopt → produceert geluid.
-- Speler sluipt → produceert geen geluid.
+- Speler loopt - produceert geluid.
+- Speler sluipt - produceert geen geluid.
 - Als geluid gedetecteerd wordt:
   - GeluidPositie = laatste positie van de speler.
   - Vijand beweegt naar GeluidPositie.
