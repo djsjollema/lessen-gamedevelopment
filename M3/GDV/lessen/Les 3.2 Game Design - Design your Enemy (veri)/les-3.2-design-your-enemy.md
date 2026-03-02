@@ -1,4 +1,4 @@
-# Enemy Behaviour Gym
+# Game Design - Design your Enemy (Gym)
 
 ## Lescontext
 
