@@ -1,143 +1,136 @@
-# Les 3.2 — Animatie maken in Unity
+# Enemy Behaviour Gym
 
-## Leerdoel
+## Lescontext
 
-Na deze les kun je sprite-animaties maken in Unity met de Animator.
+In deze les bouwen we geen volledig level.  
+We ontwerpen en testen alleen het gedrag van een vijand.
 
----
+We gebruiken hiervoor een Gym-scene.
 
-## Theorie
+Een Gym is een testomgeving waarin je één mechanic los van de rest van de game bouwt en test.
 
-### Animatie Componenten
-
-| Component               | Functie                       |
-| ----------------------- | ----------------------------- |
-| **Sprite**              | Enkele afbeelding             |
-| **Animation Clip**      | Reeks sprites over tijd       |
-| **Animator Controller** | Beheert welke animatie speelt |
-| **Animator**            | Component op GameObject       |
-
-### Sprite Sheet
-
-Een sprite sheet bevat meerdere frames in één afbeelding:
-
-```
-+---+---+---+---+
-| 1 | 2 | 3 | 4 |  <- Walk animation
-+---+---+---+---+
-| 5 | 6 | 7 | 8 |  <- Idle animation
-+---+---+---+---+
-```
-
-### Sprite Sheet Importeren
-
-1. Sleep sprite sheet naar Assets
-2. Selecteer het bestand
-3. In Inspector:
-   - Sprite Mode: **Multiple**
-   - Pixels Per Unit: 16 (of passend)
-4. Klik **Sprite Editor**
-5. Slice: Grid by Cell Size
-6. Apply
-
-### Animatie Maken
-
-1. Selecteer je GameObject
-2. Window → Animation → Animation
-3. Klik **Create**
-4. Sleep sprites naar timeline
-5. Pas **Samples** aan (frames per seconde)
-
-### Animator Controller
-
-De Animator Controller bepaalt welke animatie speelt:
-
-```
-[Idle] ──── speed > 0 ───→ [Walk]
-   ↑                          │
-   └───── speed == 0 ─────────┘
-```
+Geen leveldesign.  
+Geen UI.  
+Geen polish.  
+Alleen gedrag en logica.
 
 ---
 
-## Oefeningen
+# Leerdoelen
 
-### Oefening 1: Idle Animatie
+Aan het einde van deze opdracht kun je:
 
-Maak een simpele idle animatie:
-
-1. **Maak sprites** (of download):
-   - Idle_1.png
-   - Idle_2.png (iets anders, bijv. knipperen)
-
-2. **Maak animatie:**
-   - Selecteer je Player
-   - Open Animation window
-   - Create → `Player_Idle.anim`
-   - Sleep beide sprites naar timeline
-   - Zet Samples op 2 (langzaam)
-
-3. **Test:**
-   - Play de game
-   - Je character moet subtiel bewegen/knipperen
-
-**Geen sprites?** Gebruik gekleurde vierkanten die van kleur wisselen.
+- Vijandgedrag vertalen naar concrete regels
+- Gedrag uitschrijven in een flowchart
+- Gedrag testen zonder volledig level
+- Het gedrag omzetten naar programmeerbare logica in Unity
 
 ---
 
-### Oefening 2: Walk Animatie
+# Opdracht
 
-Maak een walk animatie met 4 frames:
+## Stap 1 – Ontwerp het gedrag
 
-1. **Maak/vind 4 walk sprites**
+Schrijf het gedrag van jouw vijand uit in duidelijke, concrete regels.
 
-2. **Maak animatie:**
-   - Create → `Player_Walk.anim`
-   - Sleep 4 sprites naar timeline
-   - Samples: 8-12
+Beantwoord minimaal:
 
-3. **Animator instellen:**
-   - Open Animator window
-   - Je ziet Idle en Walk states
-   - Maak transition: Idle → Walk
-   - Maak transition: Walk → Idle
+- Wanneer start het gedrag?
+- Wat zijn de triggers?
+- Wanneer verandert het gedrag?
+- Hoe beweegt de vijand?
+- Wat gebeurt er als de speler zichtbaar is?
+- Wat gebeurt er als de speler niet zichtbaar is?
+- Wanneer stopt het gedrag?
 
-4. **Parameter toevoegen:**
-   - Parameters tab → + → Float → "Speed"
-   - Idle→Walk: Condition = Speed > 0.1
-   - Walk→Idle: Condition = Speed < 0.1
+Je mag het woord "gewoon" niet gebruiken.
 
-5. **Script aanpassen:**
-
-```csharp
-private Animator animator;
-
-void Start()
-{
-    animator = GetComponent<Animator>();
-}
-
-void Update()
-{
-    float speed = movement.magnitude;
-    animator.SetFloat("Speed", speed);
-}
-```
-
-**Test:** Je character loopt als je beweegt, staat stil als je stopt.
+Alles moet te vertalen zijn naar code.
 
 ---
 
-## Toepassing
+## Stap 2 – Flowchart
 
-Maak animaties voor je eigen game:
+Maak een eenvoudige flowchart van het gedrag.
 
-1. **Minimaal nodig:**
-   - Idle animatie (2+ frames)
-   - Movement animatie (4+ frames)
+Gebruik beslissingen zoals:
 
-2. **Optioneel:**
-   - Verschillende richtingen (left/right/up/down)
-   - Special action (power-up, damage)
+- Is speler zichtbaar?
+- Is er geluid?
+- Is trigger actief?
 
-**Tip:** Gebruik [OpenGameArt.org](https://opengameart.org) of [itch.io](https://itch.io/game-assets/free) voor gratis sprites.
+Denk in if/else-structuur.
+
+Als je het niet in een flowchart kunt zetten, kun je het niet programmeren.
+
+---
+
+## Stap 3 – Klassikale test
+
+Tijdens de les testen we een aantal ontwerpen samen.
+
+De "vijand" mag alleen doen wat letterlijk in de regels staat.
+
+Als iets niet beschreven is, mag het niet gebeuren.
+
+Na de test:
+
+- Maak je regels concreter
+- Pas je flowchart aan
+- Verwijder vaag taalgebruik
+
+---
+
+## Stap 4 – Implementatie in Unity
+
+Bouw een Gym-scene waarin je alleen het gedrag van je vijand test.
+
+Minimale vereisten:
+
+- De vijand kan bewegen
+- Er is een detectiesysteem (zicht of geluid)
+- Gedrag verandert op basis van condities
+- Het gedrag is logisch en consistent
+
+Focus op logica, niet op afwerking.
+
+---
+
+# Inlevering
+
+Je levert het volgende in via GitHub:
+
+## 1. README (verplicht)
+
+In je README staat:
+
+- De uitgeschreven gedragsregels
+- De flowchart (als afbeelding of duidelijke schematische weergave)
+- Een korte uitleg van hoe jouw detectiesysteem werkt
+- Een korte reflectie (minimaal 5 zinnen):
+  - Wat werkte direct?
+  - Wat werkte niet?
+  - Wat moest je aanpassen na het testmoment?
+
+## 2. Unity Project (verplicht)
+
+In je project:
+
+- Een aparte Gym-scene
+- Werkend vijandgedrag
+- Duidelijke scriptstructuur
+- Logische naamgeving van scripts
+
+Zorg dat het project compileert zonder errors.
+
+---
+
+# Beoordeling
+
+Je wordt beoordeeld op:
+
+- Duidelijkheid en concreetheid van je regels
+- Logische opbouw van gedrag
+- Werkende implementatie
+- Programmeerbaarheid van je ontwerp
+- Reflectie op je eigen proces
