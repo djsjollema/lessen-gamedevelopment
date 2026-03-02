@@ -1,136 +1,79 @@
-# Enemy Behaviour Gym
+# Enemy Behaviour Gym – Voorbeeld
 
-## Lescontext
+## Vijand: Zoekende Peuter
 
-In deze les bouwen we geen volledig level.  
-We ontwerpen en testen alleen het gedrag van een vijand.
+# 1. Gedragsregels
 
-We gebruiken hiervoor een Gym-scene.
+State: Idle
+- Vijand staat stil.
+- Vijand wacht tot de speler de TriggerZone betreedt.
 
-Een Gym is een testomgeving waarin je één mechanic los van de rest van de game bouwt en test.
+Trigger
+- Speler betreedt TriggerZone → state: Counting.
 
-Geen leveldesign.  
-Geen UI.  
-Geen polish.  
-Alleen gedrag en logica.
+State: Counting
+- Vijand telt van 5 naar 1.
+- Na 1: vijand draait om → state: Searching.
 
----
+State: Searching
+Prioriteit van checks:
+1. Als speler zichtbaar is → state: Chasing.
+2. Als speler niet zichtbaar is en er is geluid → beweeg richting GeluidPositie.
+3. Als speler niet zichtbaar is en er is geen geluid → zoekgedrag (simpel patroon).
 
-# Leerdoelen
-
-Aan het einde van deze opdracht kun je:
-
-- Vijandgedrag vertalen naar concrete regels
-- Gedrag uitschrijven in een flowchart
-- Gedrag testen zonder volledig level
-- Het gedrag omzetten naar programmeerbare logica in Unity
-
----
-
-# Opdracht
-
-## Stap 1 – Ontwerp het gedrag
-
-Schrijf het gedrag van jouw vijand uit in duidelijke, concrete regels.
-
-Beantwoord minimaal:
-
-- Wanneer start het gedrag?
-- Wat zijn de triggers?
-- Wanneer verandert het gedrag?
-- Hoe beweegt de vijand?
-- Wat gebeurt er als de speler zichtbaar is?
-- Wat gebeurt er als de speler niet zichtbaar is?
-- Wanneer stopt het gedrag?
-
-Je mag het woord "gewoon" niet gebruiken.
-
-Alles moet te vertalen zijn naar code.
+State: Chasing
+- Vijand beweegt richting speler zolang speler zichtbaar is.
+- Als speler niet meer zichtbaar is → terug naar Searching.
 
 ---
 
-## Stap 2 – Flowchart
+# 2. Detectie
 
-Maak een eenvoudige flowchart van het gedrag.
+Zicht (Line of Sight)
+- Vijand heeft 360 graden zicht.
+- Zicht wordt geblokkeerd door obstakels (raycast).
+- Als zicht true is → speler is gevonden.
 
-Gebruik beslissingen zoals:
-
-- Is speler zichtbaar?
-- Is er geluid?
-- Is trigger actief?
-
-Denk in if/else-structuur.
-
-Als je het niet in een flowchart kunt zetten, kun je het niet programmeren.
-
----
-
-## Stap 3 – Klassikale test
-
-Tijdens de les testen we een aantal ontwerpen samen.
-
-De "vijand" mag alleen doen wat letterlijk in de regels staat.
-
-Als iets niet beschreven is, mag het niet gebeuren.
-
-Na de test:
-
-- Maak je regels concreter
-- Pas je flowchart aan
-- Verwijder vaag taalgebruik
+Geluid
+- Speler loopt → produceert geluid.
+- Speler sluipt → produceert geen geluid.
+- Als geluid gedetecteerd wordt:
+  - GeluidPositie = laatste positie van de speler.
+  - Vijand beweegt naar GeluidPositie.
 
 ---
 
-## Stap 4 – Implementatie in Unity
-
-Bouw een Gym-scene waarin je alleen het gedrag van je vijand test.
-
-Minimale vereisten:
-
-- De vijand kan bewegen
-- Er is een detectiesysteem (zicht of geluid)
-- Gedrag verandert op basis van condities
-- Het gedrag is logisch en consistent
-
-Focus op logica, niet op afwerking.
+# 3. Zoekgedrag zonder zicht en zonder geluid
+- Vijand kiest een zoekpunt binnen een radius (bijv. 5 meter).
+- Vijand beweegt naar dat punt.
+- Na aankomst: opnieuw zicht en geluid checken.
 
 ---
 
-# Inlevering
+# 4. Flowchart (Mermaid)
 
-Je levert het volgende in via GitHub:
+```mermaid
+flowchart LR
 
-## 1. README (verplicht)
+    A["State: Idle"] --> B{"Speler in TriggerZone?"}
 
-In je README staat:
+    B -- Nee --> A
+    B -- Ja --> C["State: Counting (5 → 1)"]
 
-- De uitgeschreven gedragsregels
-- De flowchart (als afbeelding of duidelijke schematische weergave)
-- Een korte uitleg van hoe jouw detectiesysteem werkt
-- Een korte reflectie (minimaal 5 zinnen):
-  - Wat werkte direct?
-  - Wat werkte niet?
-  - Wat moest je aanpassen na het testmoment?
+    C --> D["Draai om"]
+    D --> E["State: Searching"]
 
-## 2. Unity Project (verplicht)
+    E --> F{"Kan speler zien?"}
 
-In je project:
+    F -- Ja --> G["State: Chasing"]
+    G --> H["Beweeg naar speler"]
+    H --> F
 
-- Een aparte Gym-scene
-- Werkend vijandgedrag
-- Duidelijke scriptstructuur
-- Logische naamgeving van scripts
+    F -- Nee --> I{"Hoort geluid?"}
 
-Zorg dat het project compileert zonder errors.
+    I -- Ja --> J["Set Target = GeluidPositie"]
+    J --> K["Beweeg naar Target"]
+    K --> F
 
----
-
-# Beoordeling
-
-Je wordt beoordeeld op:
-
-- Duidelijkheid en concreetheid van je regels
-- Logische opbouw van gedrag
-- Werkende implementatie
-- Programmeerbaarheid van je ontwerp
-- Reflectie op je eigen proces
+    I -- Nee --> L["Zoekgedrag (zoekpunt binnen radius)"]
+    L --> F
