@@ -1,6 +1,4 @@
-# Enemy Behaviour Gym – Voorbeeld
-
-# Vijand: Zoekende Peuter
+# Enemy Behaviour Gym – Voorbeeld Vijand: Zoekende Peuter
 
 # 1. Gedragsregels
 
