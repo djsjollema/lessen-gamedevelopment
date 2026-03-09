@@ -37,8 +37,8 @@ Mechanic: Dash
 Regels:
 - De speler kan dashen met de spatiebalk
 - De speler beweegt snel vooruit
-- De dash duurt 0.5 seconden
-- Daarna heeft de speler 2 seconden cooldown
+- De dash duurt x seconden
+- Daarna heeft de speler x seconden cooldown
 
 Maak eventueel ook een flowchart.
 
