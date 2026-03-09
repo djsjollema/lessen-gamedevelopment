@@ -1,136 +1,93 @@
-# Game Design - Design your Enemy (Gym)
+# Mechanics toevoegen aan de Gym
 
-## Lescontext
+In deze opdracht ontwerp en bouw je ieder een game mechanic voor jullie game.
 
-In deze les bouwen we geen volledig level.  
-We ontwerpen en testen alleen het gedrag van een vijand.
+Een game mechanic is een regel die bepaalt wat de speler kan doen en hoe de game reageert.
 
-We gebruiken hiervoor een Gym-scene.
+Voorbeelden van mechanics:
+- springen
+- schieten
+- power-ups
+- stealth
+- verzamelen
+- dash
 
-Een Gym is een testomgeving waarin je één mechanic los van de rest van de game bouwt en test.
 
-Geen leveldesign.  
-Geen UI.  
-Geen polish.  
-Alleen gedrag en logica.
+## Opdracht
 
----
+Elke student ontwerpt één eigen mechanic.
 
-# Leerdoelen
+De mechanic wordt:
+1. Uitgeschreven in regels
+2. Gedocumenteerd in de README
+3. Gebouwd in de Gym
+4. Getest samen met de mechanic van je teamgenoot
 
-Aan het einde van deze opdracht kun je:
 
-- Vijandgedrag vertalen naar concrete regels
-- Gedrag uitschrijven in een flowchart
-- Gedrag testen zonder volledig level
-- Het gedrag omzetten naar programmeerbare logica in Unity
+## Stap 1 – Ontwerp je mechanic
 
----
+Bedenk een mechanic die past bij de core van jullie game.
 
-# Opdracht
+Schrijf de mechanic uit in duidelijke regels.
 
-## Stap 1 – Ontwerp het gedrag
+Voorbeeld:
 
-Schrijf het gedrag van jouw vijand uit in duidelijke, concrete regels.
+Mechanic: Dash
 
-Beantwoord minimaal:
+Regels:
+- De speler kan dashen met de spatiebalk
+- De speler beweegt snel vooruit
+- De dash duurt 0.5 seconden
+- Daarna heeft de speler 2 seconden cooldown
 
-- Wanneer start het gedrag?
-- Wat zijn de triggers?
-- Wanneer verandert het gedrag?
-- Hoe beweegt de vijand?
-- Wat gebeurt er als de speler zichtbaar is?
-- Wat gebeurt er als de speler niet zichtbaar is?
-- Wanneer stopt het gedrag?
+Maak eventueel ook een flowchart.
 
-Je mag het woord "gewoon" niet gebruiken.
 
-Alles moet te vertalen zijn naar code.
+## Stap 2 – Documenteer in de README
 
----
+Voeg je mechanic toe aan de README.
 
-## Stap 2 – Flowchart
+Beschrijf:
+- naam van de mechanic
+- regels van de mechanic
+- wat de speler doet
+- hoe de game reageert
 
-Maak een eenvoudige flowchart van het gedrag bijvoorbeeld via https://mermaid.js.org/.
 
-Gebruik beslissingen zoals:
+## Stap 3 – Bouw de mechanic in de Gym
 
-- Is speler zichtbaar?
-- Is er geluid?
-- Is trigger actief?
+Implementeer je mechanic in de Gym-scene.
 
-Denk in if/else-structuur.
+De Gym is een testomgeving waarin je mechanics kunt uitproberen zonder een volledig level.
 
-Als je het niet in een flowchart kunt zetten, kun je het niet programmeren.
+Focus op:
+- functionaliteit
+- testen
 
----
 
-## Stap 3 – Klassikale test
+## Stap 4 – Git
 
-Tijdens de les testen we een aantal ontwerpen samen.
+Werk samen met je teamgenoot.
 
-De "vijand" mag alleen doen wat letterlijk in de regels staat.
+1. Push je eigen werk naar Git
+2. Pull het werk van je teamgenoot
+3. Zorg dat beide mechanics in de Gym werken
 
-Als iets niet beschreven is, mag het niet gebeuren.
 
-Na de test:
+## Stap 5 – Testen
 
-- Maak je regels concreter
-- Pas je flowchart aan
-- Verwijder vaag taalgebruik
+Test samen of de mechanics werken.
 
----
+Controleer:
+- Werkt de mechanic zoals bedoeld?
+- Werken de mechanics samen?
+- Ondersteunen ze de core van jullie game?
 
-## Stap 4 – Implementatie in Unity
 
-Bouw een Gym-scene waarin je alleen het gedrag van je vijand test.
+## Resultaat
 
-Minimale vereisten:
+Aan het einde van de opdracht:
 
-- De vijand kan bewegen
-- Er is een detectiesysteem (zicht of geluid)
-- Gedrag verandert op basis van condities
-- Het gedrag is logisch en consistent
-
-Focus op logica, niet op afwerking.
-
----
-
-# Opdracht - Enemy Behaviour Gym
-
-Je levert het volgende in via GitHub:
-
-## 1. README (verplicht)
-
-In je README staat:
-
-- De uitgeschreven gedragsregels
-- De flowchart (als afbeelding of duidelijke schematische weergave)
-- Een korte uitleg van hoe jouw detectiesysteem werkt
-- Een korte reflectie (minimaal 5 zinnen):
-  - Wat werkte direct?
-  - Wat werkte niet?
-  - Wat moest je aanpassen na het testmoment?
-
-## 2. Unity Project (verplicht)
-
-In je project:
-
-- Een aparte Gym-scene
-- Werkend vijandgedrag
-- Duidelijke scriptstructuur
-- Logische naamgeving van scripts
-
-Zorg dat het project compileert zonder errors.
-
----
-
-# Beoordeling
-
-Je wordt beoordeeld op:
-
-- Duidelijkheid en concreetheid van je regels
-- Logische opbouw van gedrag
-- Werkende implementatie
-- Programmeerbaarheid van je ontwerp
-- Reflectie op je eigen proces
+- staan beide mechanics in de Gym
+- zijn de mechanics gedocumenteerd in de README
+- is al het werk gepusht naar Git
