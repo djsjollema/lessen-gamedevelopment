@@ -241,15 +241,19 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
     //Nesting van 4 lagen!
     for (int i = 0; i < enemies.Count; i++)
     {
+        //level 1
         if (enemies[i] != null)
         {
+            //level 2
             if (enemies[i].IsAlive)
             {
+                //level 3
 
                 //lastig leesbare conditie, door de lengte
                 if (nearest == null || Vector3.Distance(transform.position, enemies[i].position) <
                     Vector3.Distance(transform.position, nearest.position))
                 {
+                    //level 4
                     nearest = enemies[i];
                 }
             }
@@ -268,6 +272,7 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
     //Nog maar 2 lagen nesting
     foreach (Enemy enemy in enemies)
     {
+        //level 1
 
         if (enemy == null) continue;           // Skip invalid
         if (!enemy.IsAlive) continue;          // Skip dead
@@ -279,6 +284,7 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
         //Zelfde logica maar dan stap voor stap leesbaar onder elkaar in plaats van in 1 if statement
         if (nearest == null)
         {
+            //level 2
             nearestDistance = float.MaxValue;
         }
         else
@@ -295,16 +301,16 @@ public Enemy FindNearestEnemy(List<Enemy> enemies)
 }
 ```
 
-**Voordeel**: Geeft een oerzichtelijker beeld van wat er gebeurt en in welke volgorde
+**Voordeel**: Geeft een overzichtelijker beeld van wat er gebeurt en in welke volgorde
 
 ---
 
 ## Verdere tips
 
-### Tip 1: InvertOmdraaien van Boolean Conditions
+### Tip 1: Omdraaien van negatieve Boolean Conditions
 
 ```csharp
-// Verwarrend - je kijkt snel over de ! heen
+// Verwarrend - je kijkt snel over het -!- heen
 if (!isInvincible) {
     TakeDamage(damageDealt);
  }
@@ -320,8 +326,10 @@ TakeDamage(damageDealt);
 // Nested
 foreach (Enemy enemy in enemies)
 {
+    //level 1
     if (enemy.IsAlive)
     {
+        //level 2
         enemy.Move();
     }
 }
@@ -329,6 +337,7 @@ foreach (Enemy enemy in enemies)
 // Early continue, maar 1 nesting level
 foreach (Enemy enemy in enemies)
 {
+    //level 1
     if (!enemy.IsAlive) continue;
     enemy.Move();
 }
@@ -355,13 +364,15 @@ HandleSomething();
 
 ---
 
-### Practische Opdracht: Maak de code plat!
+### Practische Opdracht: Flatten the Pyramid
+
+<img width=350, src=../src/06_flatten.png />
 
 Maak de onderstaande code plat met behulp van early returns. Zet de opdracht in je readme met de titel een korte omschrijving en de uitwerking van je code letterlijk in een codeblock.
 
 Kijk naar de volgende aspecten van de structuur:
 
-| Aspect                | SLECHT                         | GOED                             |
+| Aspect                | Probleem                       | Doel                             |
 | --------------------- | ------------------------------ | -------------------------------- |
 | **Nesting diepte**    | 8 lagen                        | 1-2 lagen                        |
 | **Leesbaarheid**      | Heel lastig, lang if-statement | Elk check op eigen regel         |

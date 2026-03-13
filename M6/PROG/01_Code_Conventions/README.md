@@ -89,6 +89,8 @@ Aanbevelingen om fouten te vermijden en de code efficiënter en leesbaarder te m
 
 ```
 
+<details><summary>Oefening 1</summary>
+
 #### Oefening 1 (5 min)
 
 Verbeter de naamgeving in de volgende code:
@@ -101,6 +103,8 @@ public class gamemanager : MonoBehaviour
     public bool Is_Player_Dead;
 }
 ```
+
+</details>
 
 ### 2. Code Structuur
 
@@ -213,6 +217,8 @@ public class PlayerMovement : BaseCharacter
 }
 ```
 
+<details><summary>Oefening 2</summary>
+
 #### Oefening 2 (5 min)
 
 Herstructureer deze classes volgens de juiste opbouw en zet overal de best passende acces modifier voor:
@@ -257,6 +263,8 @@ public class Enemy : BaseEnemy
 
 ```
 
+</details>
+
 ### 3. Comments
 
 Wanneer zet je wel en geen commentaar in je code? Wanneer moet de naam van je functie voldoende zijn? Wanneer schrijf je bijvoorbeeld een summary.
@@ -283,6 +291,8 @@ summary
 ```
 
 Tip: _Summaries kun je exporteren naar online documentatie met tools zoals [DoxyGen](https://www.doxygen.nl/download.html)_
+
+<details><summary>opdracht 1</summary>
 
 ## Opdracht 1
 
@@ -348,3 +358,4 @@ Je maakt een klein leveltje met items waar je met een character doorheen kunt lo
 - Screenshots van je Unity Inspector setup
 - Gifje van je werkende inventory system
 - Link naar je code
+</details>
