@@ -3,7 +3,7 @@
 
 ### Opgave 1  
 
-$$ \begin{pmatrix} 2 \\ 3 \end{pmatrix}
+$$ \begin{pmatrix}2 \\ 3 \end{pmatrix}
 $$
 
 ### Opgave 2  
