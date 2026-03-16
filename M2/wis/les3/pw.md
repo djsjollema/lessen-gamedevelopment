@@ -17,7 +17,7 @@ $$
 
 Teken beide vectoren en de som. Gebruik een schaal van 1:1
 
-<img src="media/grid.png">
+<img src="media/grid.png" width=200%>
 
 ---
 
@@ -37,7 +37,7 @@ $$
 $$
 Teken beide vectoren en de som. Gebruik een schaal van 1:1
 
-<img src="media/grid.png">
+<img src="media/grid.png" width=200%>
 
 
 ---
@@ -58,7 +58,7 @@ $$
 
 Teken de oorspronkelijke en de geschaalde vector. Gebruik een schaal van 1:1
 
-<img src="media/grid.png">
+<img src="media/grid.png" width=200%>
 
 ---
 
@@ -78,7 +78,7 @@ $$
 
 Teken de oorspronkelijke en de geschaalde vector. Gebruik een schaal van 1:1
 
-<img src="media/grid.png">
+<img src="media/grid.png" width=200%>
 
 ---
 
@@ -99,7 +99,7 @@ $$
 
 Teken de oorspronkelijke en de geschaalde vectoren. Gebruik een schaal van 1:1
 
-<img src="media/grid.png">
+<img src="media/grid.png" width=200%>
 ---
 
 ## Opgave 6 — Combinatie  
@@ -168,9 +168,9 @@ $$
 \vec{v} = 3\vec{a} - 2\vec{b}
 $$
 
-2. Bereken de magnitude van $ \vec{v} $
+2. Bereken de magnitude van $\vec{v}$
 
-3. Bepaal de richtingsvector van $ \vec{v} $
+3. Bepaal de richtingsvector van $\vec{v}$
 
 ---
 
@@ -189,7 +189,7 @@ $$
 \vec{z} = 2\vec{u} + \vec{w}
 $$
 
-2. Bereken de magnitude van $ \vec{z} $
+2. Bereken de magnitude van $\vec{z}$
 
-3. Bepaal de richtingsvector van $ \vec{z} $
+3. Bepaal de richtingsvector van $\vec{z}$
 
