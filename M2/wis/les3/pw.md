@@ -39,6 +39,7 @@ Bereken
 $$
 \vec{u} + \vec{v}
 $$
+
 Teken beide vectoren en de som. Gebruik een schaal van 1:1
 
 <img src="media/grid.png" width=200%>
@@ -162,7 +163,7 @@ $$
 Bereken  
 
 $$
-- \vec{m} + 5\vec{n}
+\vec{m} + 5\vec{n}
 $$
 
 ---
