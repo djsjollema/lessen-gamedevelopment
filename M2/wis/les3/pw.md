@@ -5,8 +5,10 @@
 Gegeven  
 
 $$
-\vec{a} = \begin{pmatrix} 3 \\ -2 \end{pmatrix}, \quad
-\vec{b} = \begin{pmatrix} -1 \\ 5 \end{pmatrix}
+\vec{a} = \begin{pmatrix} 3 \\ 
+-2 \end{pmatrix}, \quad
+\vec{b} = \begin{pmatrix} -1 \\ 
+5 \end{pmatrix}
 $$
 
 Bereken  
@@ -26,8 +28,10 @@ Teken beide vectoren en de som. Gebruik een schaal van 1:1
 Gegeven  
 
 $$
-\vec{u} = \begin{pmatrix} 4 \\ 7 \end{pmatrix}, \quad
-\vec{v} = \begin{pmatrix} 2 \\ -3 \end{pmatrix}
+\vec{u} = \begin{pmatrix} 4 \\ 
+7 \end{pmatrix}, \quad
+\vec{v} = \begin{pmatrix} 2 \\ 
+-3 \end{pmatrix}
 $$
 
 Bereken  
@@ -47,7 +51,8 @@ Teken beide vectoren en de som. Gebruik een schaal van 1:1
 Gegeven  
 
 $$
-\vec{p} = \begin{pmatrix} -6 \\ 2 \end{pmatrix}
+\vec{p} = \begin{pmatrix} -6 \\ 
+2 \end{pmatrix}
 $$
 
 Bereken  
@@ -67,7 +72,8 @@ Teken de oorspronkelijke en de geschaalde vector. Gebruik een schaal van 1:1
 Gegeven  
 
 $$
-\vec{q} = \begin{pmatrix} 5 \\ -4 \end{pmatrix}
+\vec{q} = \begin{pmatrix} 5 \\ 
+-4 \end{pmatrix}
 $$
 
 Bereken  
@@ -87,8 +93,10 @@ Teken de oorspronkelijke en de geschaalde vector. Gebruik een schaal van 1:1
 Gegeven  
 
 $$
-\vec{a} = \begin{pmatrix} 1 \\ 3 \end{pmatrix}, \quad
-\vec{b} = \begin{pmatrix} 4 \\ -2 \end{pmatrix}
+\vec{a} = \begin{pmatrix} 1 \\ 
+3 \end{pmatrix}, \quad
+\vec{b} = \begin{pmatrix} 4 \\ 
+-2 \end{pmatrix}
 $$
 
 Bereken  
@@ -107,8 +115,10 @@ Teken de oorspronkelijke en de geschaalde vectoren. Gebruik een schaal van 1:1
 Gegeven  
 
 $$
-\vec{u} = \begin{pmatrix} -3 \\ 6 \end{pmatrix}, \quad
-\vec{v} = \begin{pmatrix} 5 \\ 1 \end{pmatrix}
+\vec{u} = \begin{pmatrix} -3 \\ 
+6 \end{pmatrix}, \quad
+\vec{v} = \begin{pmatrix} 5 \\ 
+1 \end{pmatrix}
 $$
 
 Bereken  
@@ -124,8 +134,10 @@ $$
 Gegeven  
 
 $$
-\vec{x} = \begin{pmatrix} 2 \\ -5 \end{pmatrix}, \quad
-\vec{y} = \begin{pmatrix} -4 \\ 3 \end{pmatrix}
+\vec{x} = \begin{pmatrix} 2 \\ 
+-5 \end{pmatrix}, \quad
+\vec{y} = \begin{pmatrix} -4 \\ 
+3 \end{pmatrix}
 $$
 
 Bereken  
@@ -141,8 +153,10 @@ $$
 Gegeven  
 
 $$
-\vec{m} = \begin{pmatrix} 7 \\ 0 \end{pmatrix}, \quad
-\vec{n} = \begin{pmatrix} -2 \\ 9 \end{pmatrix}
+\vec{m} = \begin{pmatrix} 7 \\ 
+0 \end{pmatrix}, \quad
+\vec{n} = \begin{pmatrix} -2 \\ 
+9 \end{pmatrix}
 $$
 
 Bereken  
@@ -158,8 +172,10 @@ $$
 Gegeven  
 
 $$
-\vec{a} = \begin{pmatrix} 2 \\ -1 \end{pmatrix}, \quad
-\vec{b} = \begin{pmatrix} -3 \\ 4 \end{pmatrix}
+\vec{a} = \begin{pmatrix} 2 \\ 
+-1 \end{pmatrix}, \quad
+\vec{b} = \begin{pmatrix} -3 \\ 
+4 \end{pmatrix}
 $$
 
 1. Bereken eerst  
@@ -179,8 +195,10 @@ $$
 Gegeven  
 
 $$
-\vec{u} = \begin{pmatrix} -1 \\ 5 \end{pmatrix}, \quad
-\vec{w} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}
+\vec{u} = \begin{pmatrix} -1 \\ 
+5 \end{pmatrix}, \quad
+\vec{w} = \begin{pmatrix} 4 \\ 
+2 \end{pmatrix}
 $$
 
 1. Bereken  
