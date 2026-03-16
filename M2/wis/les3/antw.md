@@ -3,12 +3,12 @@
 
 ### Opgave 1  
 
-$\begin{pmatrix}2 \\ 3 \end{pmatrix}$
+dus $\begin{pmatrix}2 \\ 3 \end{pmatrix}$
 
 ### Opgave 2  
 
 $$
-\begin{pmatrix} 6 \\ 4 \end{pmatrix}
+\begin{bmatrix} 6 \\ 4 \end{bmatrix}
 $$
 
 ### Opgave 3  
