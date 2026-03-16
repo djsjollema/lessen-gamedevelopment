@@ -4,7 +4,9 @@ Anrtwoorden
 ### Opgave 1  
 
 $$
-\vec v = \begin{bmatrix}2 \\ 3 \end{bmatrix}
+\vec v = \begin{bmatrix}
+2 \\ 
+3 \end{bmatrix}
 $$
 
 ### Opgave 2  
