@@ -1,9 +1,11 @@
 
 # ✅ Antwoorden
-
+Anrtwoorden 
 ### Opgave 1  
 
-dus $\begin{pmatrix}2 \\ 3 \end{pmatrix}$
+$$
+\vec v = \begin{bmatrix}2 \\ 3 \end{bmatrix}
+$$
 
 ### Opgave 2  
 
@@ -14,44 +16,44 @@ $$
 ### Opgave 3  
 
 $$
-\begin{pmatrix} -18 \\ 6 \end{pmatrix}
+\begin{bmatrix} -18 \\ 6 \end{bmatrix}
 $$
 
 ### Opgave 4  
 
 $$
-\begin{pmatrix} -10 \\ 8 \end{pmatrix}
+\begin{bmatrix} -10 \\ 8 \end{bmatrix}
 $$
 
 ### Opgave 5  
 
 $$
-\begin{pmatrix} 6 \\ 4 \end{pmatrix}
+\begin{bmatrix} 6 \\ 4 \end{bmatrix}
 $$
 
 ### Opgave 6  
 
 $$
-\begin{pmatrix} -18 \\ 3 \end{pmatrix}
+\begin{bmatrix} -18 \\ 3 \end{bmatrix}
 $$
 
 ### Opgave 7  
 
 $$
-\begin{pmatrix} 0 \\ -14 \end{pmatrix}
+\begin{bmatrix} 0 \\ -14 \end{bmatrix}
 $$
 
 ### Opgave 8  
 
 $$
-\begin{pmatrix} -17 \\ 45 \end{pmatrix}
+\begin{bmatrix} -17 \\ 45 \end{bmatrix}
 $$
 
 ### Opgave 9  
 
 $$
 \vec{v} =
-\begin{pmatrix} 12 \\ -11 \end{pmatrix}
+\begin{bmatrix} 12 \\ -11 \end{bmatrix}
 $$
 
 $$
@@ -61,14 +63,14 @@ $$
 $$
 \text{Richtingsvector} =
 \frac{1}{\sqrt{265}}
-\begin{pmatrix} 12 \\ -11 \end{pmatrix}
+\begin{bmatrix} 12 \\ -11 \end{bmatrix}
 $$
 
 ### Opgave 10  
 
 $$
 \vec{z} =
-\begin{pmatrix} 2 \\ 12 \end{pmatrix}
+\begin{bmatrix} 2 \\ 12 \end{bmatrix}
 $$
 
 $$
@@ -78,5 +80,5 @@ $$
 $$
 \text{Richtingsvector} =
 \frac{1}{\sqrt{37}}
-\begin{pmatrix} 1 \\ 6 \end{pmatrix}
+\begin{bmatrix} 1 \\ 6 \end{bmatrix}
 $$
