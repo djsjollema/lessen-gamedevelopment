@@ -40,16 +40,17 @@ Betekenis:
 
 $$
 \begin{pmatrix}
-a \\
+a\\
 b
 \end{pmatrix}
++
 \begin{pmatrix}
-c \\
+ \\
 d
 \end{pmatrix}
 =
 \begin{pmatrix}
-a+c \\
+a+c\\
 b+d
 \end{pmatrix}
 $$
