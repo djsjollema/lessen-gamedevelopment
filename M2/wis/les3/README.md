@@ -20,12 +20,13 @@ Een vector heeft:
 
 Voorbeeld:
 
-$$ \vec{a}=
+```math
+\vec{a}=
 \begin{pmatrix}
 3 \\
 2
 \end{pmatrix}
-$$
+```
 
 Betekenis:
 
@@ -38,7 +39,7 @@ Betekenis:
 
 ### Regel
 
-$$
+```math
 \begin{pmatrix}
 a\\
 b
@@ -53,7 +54,7 @@ d
 a+c\\
 b+d
 \end{pmatrix}
-$$
+```
 
 Dus:
 
@@ -62,7 +63,7 @@ Dus:
 
 ### Voorbeeld
 
-$$
+```math
 \begin{pmatrix}
 4 \\
 1
@@ -76,22 +77,23 @@ $$
 6 \\
 4
 \end{pmatrix}
-$$
+```
 
 ###  Oefening
-$$
+
 1.  
 
+```math
 \begin{pmatrix}1\\
 5
 \end{pmatrix}
 +
 \begin{pmatrix}3\\2\end{pmatrix}
-$$
+```
 
 2.  
 
-$$
+```math
 \begin{pmatrix}
 -2\\
 4
@@ -101,7 +103,7 @@ $$
 5\\
 -1
 \end{pmatrix} 
-$$
+```
 
 ------------------------------------------------------------------------
 
@@ -111,7 +113,7 @@ Een scalair is een gewoon getal.
 
 ### Regel
 
-$$ 
+```math
 \begin{pmatrix}
 a \\
 b
@@ -123,11 +125,11 @@ b
 ka \\
 kb
 \end{pmatrix}
-$$
+```
 
 ###  Voorbeeld
 
-$$
+```math
 3
 \begin{pmatrix}
 2 \\
@@ -140,7 +142,7 @@ $$
 6 \\
 3
 \end{pmatrix}
-$$
+```
 
 ### ❗ Belangrijk
 
@@ -149,18 +151,18 @@ $$
 
 ### ✏️ Oefeningen
 
-1.  2
-$$
+1.  
+```math
 2
 \begin{pmatrix}3\\4\end{pmatrix}
-$$
+```
 
 
 2.  
-$$
+```math
 -1
 \begin{pmatrix}5\\-2\end{pmatrix}
-$$
+```
 
 
 ------------------------------------------------------------------------
@@ -169,51 +171,46 @@ $$
 
 ###  Voorbeeld
 
-$$ 2
-
+```math
+2
 \begin{pmatrix}
 1 \\
 3
 \end{pmatrix}
-
 -   
 \begin{pmatrix}
 4 \\
 -1
 \end{pmatrix}
-
-$$
+```
 
 **Stap 1 --- vermenigvuldigen**
 
-# 
-$$
+```math
 \begin{pmatrix}
 2 \\
 6
 \end{pmatrix}
-
 -   
 \begin{pmatrix}
 4 \\
 -1
 \end{pmatrix}
-$$
+```
 
 **Stap 2 --- optellen**
 
-# 
-$$
+```math
 =
 \begin{pmatrix}
 -2 \\
 5
 \end{pmatrix}
-$$
+```
 
 ### Oefening
 
-$$
+```math
 \begin{pmatrix}
 2 \\
 -1
@@ -223,6 +220,6 @@ $$
 -1 \\
 4
 \end{pmatrix}
-$$
+```
 
 ------------------------------------------------------------------------
