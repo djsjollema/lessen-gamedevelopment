@@ -1,4 +1,4 @@
-# 📐 Les: Rekenen met vectoren
+#  Optellen en scalair vermenigvuldigen
 
 ##  Lesdoelen
 
@@ -144,12 +144,12 @@ kb
 \end{pmatrix}
 ```
 
-### ❗ Belangrijk
+### Belangrijk
 
 -   positief → zelfde richting
 -   negatief → omgekeerde richting
 
-### ✏️ Oefeningen
+###  Oefeningen
 
 1.  
 ```math
