@@ -45,7 +45,7 @@ b
 \end{pmatrix}
 +
 \begin{pmatrix}
- \\
+c\\
 d
 \end{pmatrix}
 =
