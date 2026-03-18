@@ -28,6 +28,8 @@ Voorbeeld:
 \end{pmatrix}
 ```
 
+![Vector a](media/vector_a.svg)
+
 Betekenis:
 
 -   3 naar rechts\
@@ -78,6 +80,8 @@ Dus:
 4
 \end{pmatrix}
 ```
+
+![Vectoren optellen](media/vector_optellen.svg)
 
 ###  Oefening
 
@@ -144,6 +148,8 @@ kb
 \end{pmatrix}
 ```
 
+![Scalair vermenigvuldigen](media/vector_scalair.svg)
+
 ### Belangrijk
 
 -   positief → zelfde richting
@@ -207,6 +213,8 @@ kb
 5
 \end{pmatrix}
 ```
+
+![Combinatie van bewerkingen](media/vector_combinatie.svg)
 
 ### Oefening
 
