@@ -34,16 +34,15 @@ Betekenis:
 
 ------------------------------------------------------------------------
 
-## ➕ Vectoren optellen
+##  Vectoren optellen
 
-### 📊 Regel
+### Regel
 
 $$
 \begin{pmatrix}
 a \\
 b
 \end{pmatrix}
-
 \begin{pmatrix}
 c \\
 d
