@@ -44,15 +44,15 @@ a \\
 b
 \end{pmatrix}
 
-    \begin{pmatrix}
-    c \\
-    d
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-    a+c \\
-    b+d
-    \end{pmatrix}
+\begin{pmatrix}
+c \\
+d
+\end{pmatrix}
+=
+\begin{pmatrix}
+a+c \\
+b+d
+\end{pmatrix}
 $$
 
 Dus:
@@ -81,15 +81,14 @@ $$
 ###  Oefening
 $$
 1.  
-    
-    \begin{pmatrix}1\\
-    5
-    \end{pmatrix}
-    
-    +
-    
-    \begin{pmatrix}3\\2\end{pmatrix}
+
+\begin{pmatrix}1\\
+5
+\end{pmatrix}
++
+\begin{pmatrix}3\\2\end{pmatrix}
 $$
+
 2.  
 
 $$
@@ -151,18 +150,18 @@ $$
 ### ✏️ Oefeningen
 
 1.  2
-    $$
-    2
-    \begin{pmatrix}3\\4\end{pmatrix}
-    $$
+$$
+2
+\begin{pmatrix}3\\4\end{pmatrix}
+$$
 
 
 2.  
-    $$
-    -1
-    \begin{pmatrix}5\\-2\end{pmatrix}
-    $$
-    
+$$
+-1
+\begin{pmatrix}5\\-2\end{pmatrix}
+$$
+
 
 ------------------------------------------------------------------------
 
@@ -178,12 +177,12 @@ $$ 2
 \end{pmatrix}
 
 -   
-    \begin{pmatrix}
-    4 \\
-    -1
-    \end{pmatrix}
-    
-    $$
+\begin{pmatrix}
+4 \\
+-1
+\end{pmatrix}
+
+$$
 
 **Stap 1 --- vermenigvuldigen**
 
@@ -195,10 +194,10 @@ $$
 \end{pmatrix}
 
 -   
-    \begin{pmatrix}
-    4 \\
-    -1
-    \end{pmatrix}
+\begin{pmatrix}
+4 \\
+-1
+\end{pmatrix}
 $$
 
 **Stap 2 --- optellen**
@@ -214,20 +213,16 @@ $$
 
 ### Oefening
 
-$$ 3
-
+$$
 \begin{pmatrix}
 2 \\
 -1
 \end{pmatrix}
-
 -   2
-    
-    \begin{pmatrix}
-    -1 \\
-    4
-    \end{pmatrix}
-    
-    $$
+\begin{pmatrix}
+-1 \\
+4
+\end{pmatrix}
+$$
 
 ------------------------------------------------------------------------
