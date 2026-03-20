@@ -118,6 +118,7 @@ Een scalair is een gewoon getal.
 ### Regel
 
 ```math
+k
 \begin{pmatrix}
 a \\
 b
