@@ -2,7 +2,7 @@
 
 Neem twee punten A(-4,-4) en B(8,5)
 
-Maak twee vectoren $\vec a $ en $ \vec b$ die wijzen naar de punten A en B.
+Maak twee vectoren $\vec a$ en $\vec b$ die wijzen naar de punten A en B.
 
 Wat is de waarde van $\vec a$?
 
