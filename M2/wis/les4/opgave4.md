@@ -2,7 +2,7 @@
 
 Neem twee punten A(-4,-4) en B(8,5)
 
-Maak twee vectoren $ \vec a $ en $ \vec b$ die wijzen naar de punten A en B.
+Maak twee vectoren $\vec a $ en $ \vec b$ die wijzen naar de punten A en B.
 
 Wat is de waarde van $\vec a$?
 
@@ -10,7 +10,7 @@ Wat is de waarde van $\vec b$?
 
 Wat is verschilvector $\vec v = \vec b - \vec a $
 
-Teken vectoren $\vec a$ en $\vec b$ en $\vec v$ in onderstaand rooster
+Teken vectoren $\vec a$ en $\vec b$ en $\vec v$ in onderstaand rooster 
 
 <img src="media/rooster.png">
 
