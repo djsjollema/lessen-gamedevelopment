@@ -32,6 +32,8 @@ Ik laat live zien hoe je van [mixamo.com](https://www.mixamo.com) downloadt.
 - Kies een karakter → **Download**
 - Format: `FBX for Unity`, Skin: `With Skin`, Pose: `T-pose`
 
+![alt text](./gfx/image-6.png)
+
 **Animaties downloaden** (zonder skin, want je hebt het model al):
 
 - Format: `FBX for Unity`, Skin: `Without Skin`, FPS: `30`
@@ -44,6 +46,8 @@ Download de volgende animaties:
 - Jump
 
 Sla elke animatie op met een duidelijke naam, bijv. `Player_Walk.fbx`.
+
+![animations](./gfx/mixamo_animations.gif)
 
 ---
 
@@ -63,6 +67,8 @@ Ik laat zien:
 
 > Als een lichaamsdeel rood is, kun je de bone handmatig toewijzen in het Avatar-venster.
 
+![alt text](./gfx/image-7.png)
+
 ---
 
 ## Oefening 3 — Materials en textures uitpakken (~5 min)
@@ -81,6 +87,8 @@ Na het uitpakken toont het karakter zijn kleuren en texturen correct in de scene
 
 > Als het karakter roze blijft, converteer dan via **Edit → Rendering → Render Pipeline Converter**.
 
+![alt text](./gfx/image-8.png)
+
 ---
 
 ## Oefening 4 — Loop Time & Root Motion instellen (~5 min)
@@ -95,6 +103,8 @@ Moet de animatie loopen? of maar 1x afgespeeld worden?
 - JumpUp?
 
 > **Root Motion** (Bake into Pose) zorgt dat de animatie het karakter niet zelf verplaatst — dat doen we vanuit de code.
+
+![alt text](./gfx/image-9.png)
 
 ---
 
@@ -125,6 +135,8 @@ Ik maak live een `PlayerController` aan en laat zien hoe je states, parameters e
 | Jump      | Idle | HasExitTime         |
 
 > Zet **Has Exit Time uit** en **Transition Duration op 0.1** voor soepele overgangen (behalve bij Jump).
+
+![alt text](./gfx/image-10.png)
 
 ---
 
@@ -164,6 +176,8 @@ void Update()
 > Open het **Animator**-venster tijdens Play mode om live te zien welke state actief is.
 
 ---
+
+![animator](./gfx/animator.gif)
 
 ## Huiswerk: Geanimeerd karakter in je 3D Gym
 

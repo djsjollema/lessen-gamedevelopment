@@ -40,6 +40,8 @@ De docent laat zien:
 
 > Open het bestand via de **Project** view → dubbelklik op `InputSystem_Actions.inputactions`
 
+![alt text](./gfx/image-5.png)
+
 ---
 
 ## Oefening 1 — Twee Action Maps aanmaken (~15 min)
@@ -122,6 +124,8 @@ Koppel het script aan beide blokjes in de Hierarchy:
    - **Player2**: IJKL bewegen, Enter springen
 
 ---
+
+![result](../Lessen/gfx/input_system_2_player.gif)
 
 ## Huiswerk: Input in je 3D Gym
 
