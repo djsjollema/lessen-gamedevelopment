@@ -111,6 +111,6 @@ Lever de link naar je repo in op simulise.
 Maak een mooi gifje van of screenshot van je scene vanuit de gameview en presenteer deze op je readme.
 Geef met text een korte omschrijving van je parcours. Wat kan een speler straks allemaal doen in het level?
 
-Lever de link naar je repo en readme in op simulise
+Lever de link naar je repo en readme in op simulise `GD - M4 - GDV - HNR : URP 3D Environment`
 
 ![alt text](./gfx/image-4.png)
