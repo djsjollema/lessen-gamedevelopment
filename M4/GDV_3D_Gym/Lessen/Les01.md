@@ -6,6 +6,7 @@ Deze les leren jullie het vologende:
 - Je kunt een asset pack importeren via de Assetstore
 - Je kunt een .unitypackage downloaden en uitpakken
 - Je kunt de Render Pipeline Converter gebruiken om materialen te converteren
+- Je kunt een repeating texture in je scene integreren
 - Je kunt een HDRI of 6-sided Skybox integreren
 
 Deze les gaan we aan de gang met het opzetten van een nieuw Unity project voor onze 3d Gym.
@@ -38,7 +39,7 @@ Hernoem deze `SampleScene` naar `3DGym`
 
 ![alt text](./gfx/image-1.png)
 
-## Opdracht 2: Importeren van assets uit de Unity Assetstore
+## Oefening 2: Importeren van assets uit de Unity Assetstore
 
 Ga naar in de unity Assetstore naar [deze Assetpagina](https://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v1-0-87024)
 
@@ -48,7 +49,7 @@ Zorg dat je bent ingelogd op de assetstore en voeg de gratis assets toe aan je a
 
 In Unity open je de package manager en download en importeer deze assetpack naar je project.
 
-## Opdracht 3: Converteren van Materials voor URP
+## Oefening 3: Converteren van Materials voor URP
 
 De assets zijn niet gemaakt voor de 'Universal Renderpipeline' maar voor de 'Builtin Pipeline'.
 
@@ -58,11 +59,11 @@ Je moet dus eerst de assets converteren met behulp van de `Render Pipeline Conve
 
 ![alt text](./gfx/image-2.png)
 
-## Opdracht 4: Importeren van Unitypackage
+## Oefening 4: Importeren van Unitypackage
 
 Download en import deze [bomen package](../Assets/Trees.unitypackage) en zet een paar bomen in je scene.
 
-## Opdracht 5: Opzetten van je 3D Gym
+## Oefening 5: Opzetten van je 3D Gym
 
 Plaats containers en tonnen op een vloer in je scene zodat er eem parcours ontstaat voor de spelers die we later gaan toevoegen.
 
@@ -81,7 +82,7 @@ Unity ondersteunt twee veelgebruikte typen:
 
 De skybox stel je in via **Window → Rendering → Lighting → Environment → Skybox Material**.
 
-## Opdracht 6: Instellen van een Skybox
+## Oefening 6: Instellen van een Skybox
 
 Er zijn meerdere soorten Skyboxes waaronder:
 

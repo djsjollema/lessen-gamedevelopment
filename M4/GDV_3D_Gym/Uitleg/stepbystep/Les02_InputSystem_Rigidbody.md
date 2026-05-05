@@ -109,14 +109,16 @@ Om twee blokjes onafhankelijk van elkaar te kunnen besturen, maak je twee aparte
 12. Klik op de **+** naast "Actions" en maak de volgende actions:
     - `Move` — Action Type: **Value**, Control Type: **Vector2**
     - `Jump` — Action Type: **Button**
+    - `Sprint` — Action Type: **Button**
 13. Klap `Move` open → klik **+ > Add Up/Down/Left/Right Composite**.
 14. Stel de composite in:
-    - Up: `I`
-    - Down: `K`
-    - Left: `J`
-    - Right: `L`
-15. Klik op `<No Binding>` onder `Jump` → **Path**: **Keyboard/Enter**.
-16. Klik **Save Asset** (rechtsboven).
+    - Up: `Up Arrow`
+    - Down: `Down Arrow`
+    - Left: `Left Arrow`
+    - Right: `Right Arrow`
+15. Klik op `<No Binding>` onder `Jump` → **Path**: **Keyboard/Right Ctrl**.
+16. Klik op `<No Binding>` onder `Sprint` → **Path**: **Keyboard/Right Shift**.
+17. Klik **Save Asset** (rechtsboven).
 
 ---
 
@@ -239,8 +241,8 @@ Het script `InputPlayer` werkt voor beide spelers — je stelt per blokje alleen
 ## Stap 7 — Testen
 
 1. Druk op **Play** (▶).
-2. **Player1**: beweeg met WASD, spring met Spatie, sprint met Left Shift.
-3. **Player2**: beweeg met IJKL, spring met Enter.
+2. **Player1**: beweeg met WASD, spring met Left Ctrl, sprint met Left Shift.
+3. **Player2**: beweeg met pijltjestoetsen, spring met Right Ctrl, sprint met Right Shift.
 
 > **Werkt de sprong niet?**  
 > Controleer of de Plane de tag `Ground` heeft. Controleer ook of `isGrounded` correct wordt ingesteld via `OnCollisionEnter`.
@@ -276,28 +278,3 @@ if (jumpAction.WasPressedThisFrame() && IsGrounded())
 ```
 
 Maak een nieuwe **Layer** aan (`Ground`) en wijs die toe aan de vloer. Stel `groundLayer` in de Inspector in op die layer.
-
----
-
-## Veelgemaakte fouten & oplossingen
-
-| Probleem                        | Oorzaak                    | Oplossing                                  |
-| ------------------------------- | -------------------------- | ------------------------------------------ |
-| NullReferenceException op `map` | `mapName` klopt niet       | Controleer spelling van de Action Map naam |
-| Blokje beweegt niet             | Input niet ingeschakeld    | Controleer `OnEnable()` → `Enable()`       |
-| Springen werkt niet             | `isGrounded = false`       | Controleer de Tag van de vloer             |
-| Blokje kantelt weg              | Geen Rigidbody constraints | Freeze Rotation X en Z                     |
-| Dubbele sprong mogelijk         | `isGrounded` nooit `false` | `OnCollisionExit` correct implementeren    |
-
----
-
-## Controlelijst voor afronding
-
-- [ ] InputActionAsset geopend en eigen actions bekeken
-- [ ] Action Maps `Player1` (WASD + Spatie) en `Player2` (IJKL + Enter) aangemaakt
-- [ ] Twee blokjes in de scene, elk met Rigidbody en constraints
-- [ ] Script `InputPlayer` aan beide blokjes gekoppeld met correcte Map Name
-- [ ] Ground tag ingesteld op de vloer
-- [ ] Player1 beweegt met WASD en springt met Spatie
-- [ ] Player2 beweegt met IJKL en springt met Enter
-- [ ] Geen double-jump mogelijk bij beide spelers
