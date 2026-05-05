@@ -1,9 +1,11 @@
 # Les 3 — Mixamo: Modellen, Animaties & Animator Controller
+
 **Zelfstandige stap-voor-stap instructie**
 
 ---
 
 ## Leerdoelen
+
 - Je kunt een karakter en animaties downloaden van Mixamo en correct importeren in Unity
 - Je begrijpt de belangrijkste import settings (Rig, Avatar, Loop Time)
 - Je kunt een Animator Controller opzetten met states, parameters en transitions
@@ -39,6 +41,7 @@ Herhaal dit voor elke animatie die je nodig hebt (Idle, Walk, Run, Jump).
 5. Sla elke animatie op met een duidelijke naam: `Worker_Idle.fbx`, `Worker_Walk.fbx`, etc.
 
 Download minimaal:
+
 - `Idle` (rustig staan)
 - `Walking` (lopen)
 - `Running` (rennen)
@@ -68,7 +71,9 @@ Dit is de **belangrijkste stap** — zonder dit werken animaties niet correct op
 7. Als alles groen is: klik **Done**.
 
 ### Animaties instellen op Humanoid
+
 Herhaal stap 4 voor **elke animatie-FBX** (zonder skin):
+
 1. Selecteer de animatie-FBX.
 2. Rig → Animation Type → **Humanoid**.
 3. Stel **Avatar Definition** in op **Copy From Other Avatar**.
@@ -77,7 +82,29 @@ Herhaal stap 4 voor **elke animatie-FBX** (zonder skin):
 
 ---
 
-## Stap 5 — Animatie-clips instellen (Loop Time, Root Motion)
+## Stap 5 — Materials en textures uitpakken
+
+FBX-bestanden bevatten materialen en textures ingebakken in het bestand. Unity kan ze niet direct aanpassen zolang ze daarin zitten. Je pakt ze los uit zodat je ze kunt bewerken.
+
+> Doe dit alleen voor het **karakter-FBX** mét skin — animatie-FBXes zonder skin hebben geen materialen.
+
+1. Selecteer het **karakter-FBX** in de Project view.
+2. Ga in de Inspector naar het tabblad **Materials**.
+3. Klik op **Extract Textures...**
+   - Kies of maak een map aan, bijv. `Assets/3d/Textures`.
+   - Klik **Choose** (of **Select Folder**).
+4. Klik op **Extract Materials...**
+   - Kies of maak een map aan, bijv. `Assets/3d/Materials`.
+   - Klik **Choose**.
+5. Klik **Apply**.
+
+Na het uitpakken zie je de losse materiaal- en textuurbestanden in je Project view staan. Het karakter toont nu zijn kleuren en texturen correct in de scene.
+
+> **Tip:** Als het karakter roze of paars verschijnt, controleer dan of de materials correct zijn uitgepakt en of je een URP-project gebruikt. Converteer eventueel via **Edit → Rendering → Render Pipeline Converter**.
+
+---
+
+## Stap 6 — Animatie-clips instellen (Loop Time, Root Motion)
 
 1. Selecteer een animatie-FBX, bijv. `Worker_Walk.fbx`.
 2. Ga naar het tabblad **Animation** in de Inspector.
@@ -91,12 +118,13 @@ Herhaal stap 4 voor **elke animatie-FBX** (zonder skin):
 5. Klik **Apply**.
 
 > **Loop Time aan vs uit:**
+>
 > - ✅ Loop Time aan: Idle, Walk, Run (herhalen eindeloos)
 > - ❌ Loop Time uit: Jump, Landing (eenmalig afspelen)
 
 ---
 
-## Stap 6 — Animator Controller aanmaken
+## Stap 7 — Animator Controller aanmaken
 
 1. In de Project view: **rechtermuisknop > Create > Animator Controller**.
 2. Noem het `WorkerController`.
@@ -104,7 +132,7 @@ Herhaal stap 4 voor **elke animatie-FBX** (zonder skin):
 
 ---
 
-## Stap 7 — States toevoegen aan de Animator Controller
+## Stap 8 — States toevoegen aan de Animator Controller
 
 1. In de Animator editor: **rechtermuisknop > Create State > Empty**.
 2. Herhaal dit voor elke animatie. Noem de states:
@@ -122,56 +150,64 @@ Herhaal stap 4 voor **elke animatie-FBX** (zonder skin):
 
 ---
 
-## Stap 8 — Parameters aanmaken
+## Stap 9 — Parameters aanmaken
 
 Parameters zijn variabelen waarmee scripts de Animator aansturen.
 
 1. Klik links op het tabblad **Parameters** in de Animator editor.
 2. Klik op **+** en voeg toe:
-   - `InputVertical` — **Float** (0 = stil, 1 = lopen, 2 = rennen)
+   - `Speed` — **Float** (0 = stil, positief = lopen, groter = rennen)
    - `Grounded` — **Bool** (true = op de grond)
    - `JumpTrigger` — **Trigger** (éénmalig schot)
 
 ---
 
-## Stap 9 — Transitions aanmaken
+## Stap 10 — Transitions aanmaken
 
 Transitions bepalen wanneer de Animator van de ene naar de andere state gaat.
 
 ### Idle → Walk
+
 1. Klik met de rechtermuisknop op de `Idle` state → **Make Transition** → klik op `Walk`.
 2. Selecteer de transition (de pijl). In de Inspector:
    - ❌ **Has Exit Time** — uitvinken (we willen directe overgang)
    - **Transition Duration:** 0.1
 3. Klik **+ (Add Condition)**:
-   - `InputVertical` → **Greater** → `0.1`
+   - `Speed` → **Greater** → `0.1`
 
 ### Walk → Idle
+
 1. Rechtermuisknop op `Walk` → **Make Transition** → `Idle`.
-2. Condition: `InputVertical` → **Less** → `0.1`
+2. Condition: `Speed` → **Less** → `0.1`
 
 ### Walk → Run
-1. `Walk` → `Run`. Condition: `InputVertical` → **Greater** → `0.9`
+
+1. `Walk` → `Run`. Condition: `Speed` → **Greater** → `7.0`
 
 ### Run → Walk
-1. `Run` → `Walk`. Condition: `InputVertical` → **Less** → `0.9`
+
+1. `Run` → `Walk`. Condition: `Speed` → **Less** → `7.0`
 
 ### Idle/Walk/Run → Jump (via Any State)
+
 1. Rechtermuisknop op **Any State** → **Make Transition** → `Jump`.
 2. Condition: `JumpTrigger`
 
 ### Jump → Fall
+
 1. `Jump` → `Fall`. **Has Exit Time**: ✅, Exit Time: `0.8` (na 80% van de sprong-animatie)
 
 ### Fall → Land
+
 1. `Fall` → `Land`. Condition: `Grounded` → **true**
 
 ### Land → Idle
+
 1. `Land` → `Idle`. **Has Exit Time**: ✅, Exit Time: `1.0`
 
 ---
 
-## Stap 10 — Animator Controller koppelen aan karakter
+## Stap 11 — Animator Controller koppelen aan karakter
 
 1. Sleep het karakter-FBX (`Worker_Idle_SKIN.fbx`) vanuit de Project view naar de **Hierarchy** om hem in de scene te plaatsen.
 2. Selecteer het karakter in de Hierarchy.
@@ -181,41 +217,98 @@ Transitions bepalen wanneer de Animator van de ene naar de andere state gaat.
 
 ---
 
-## Stap 11 — Animator aansturen vanuit script
+## Stap 12 — Animator aansturen vanuit script
 
-Voeg dit toe aan je movement-script (of maak een los testscript):
+Voeg de Animator toe aan je bestaande `InputPlayer`-script. Het volledige script ziet er als volgt uit:
 
 ```csharp
-private Animator animator;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-void Awake()
+public class InputPlayer : MonoBehaviour
 {
-    animator = GetComponentInChildren<Animator>();
-}
+    [SerializeField] private InputActionAsset input;
+    [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float turnSpeed = 150f;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private string mapName = "Player";
 
-void Update()
-{
-    Vector2 input = moveAction.ReadValue<Vector2>();
+    private InputAction moveAction;
+    private InputAction jumpAction;
+    private InputAction sprintAction;
 
-    // InputVertical aansturen op basis van beweging
-    float speed = input.magnitude; // 0 = stil, 1 = beweegt
-    if (sprintAction.IsPressed()) speed = 2f; // sprint = waarde 2
-    animator.SetFloat("InputVertical", speed);
+    private Rigidbody rb;
+    [SerializeField] private bool isGrounded = false;
 
-    // Grounded doorgeven
-    animator.SetBool("Grounded", characterController.isGrounded);
+    private Animator animator;
 
-    // Springen
-    if (jumpAction.WasPressedThisFrame() && characterController.isGrounded)
+    void Awake()
     {
-        animator.SetTrigger("JumpTrigger");
+        InputActionMap map = input.FindActionMap(mapName);
+        moveAction   = map.FindAction("Move");
+        jumpAction   = map.FindAction("Jump");
+        sprintAction = map.FindAction("Sprint");
+        rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    void OnEnable()  { input.FindActionMap(mapName).Enable(); }
+    void OnDisable() { input.FindActionMap(mapName).Disable(); }
+
+    void Update()
+    {
+        // Opvragen van de input
+        Vector2 moveInput = moveAction.ReadValue<Vector2>();
+
+        // Bepalen wat de snelheid is
+        float speed = walkSpeed * moveInput.y;
+
+        // Sprinten
+        if (sprintAction.IsPressed())
+            speed *= 2f;
+
+        // Bewegen van de speler
+        Vector3 movement = transform.forward * speed * Time.deltaTime;
+        transform.Translate(movement, Space.World);
+
+        // Draaien van de speler
+        float angle = moveInput.x * turnSpeed * Time.deltaTime;
+        transform.Rotate(0f, angle, 0f, Space.World);
+
+        // Springen
+        if (jumpAction.WasPressedThisFrame() && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+
+            // Spring animatie triggeren
+            animator.SetTrigger("JumpTrigger");
+        }
+
+        // Loop en sprint animaties aansturen
+        animator.SetFloat("Speed", speed);
+        animator.SetBool("Grounded", isGrounded);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = true;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = false;
     }
 }
 ```
 
+> **Let op:** Het karakter-model moet een **child** zijn van het GameObject met dit script, zodat `GetComponentInChildren<Animator>()` de Animator vindt.
+
 ---
 
-## Stap 12 — Testen
+## Stap 13 — Testen
 
 1. Druk op **Play**.
 2. Controleer:
@@ -226,28 +319,3 @@ void Update()
 3. Open het **Animator**-venster in Play mode om live te zien welke state actief is.
 
 ---
-
-## Veelgemaakte fouten & oplossingen
-
-| Probleem | Oorzaak | Oplossing |
-|---|---|---|
-| Avatar is rood | Bones niet herkend | Configure Avatar → wijs bones handmatig toe |
-| Animatie speelt niet in loop | Loop Time staat uit | Animation tab → Loop Time ✅ |
-| Karakter "glijdt" weg tijdens animatie | Root Motion staat aan | Bake XZ into Pose ✅ in animatie-tab |
-| Transition werkt niet | Condition klopt niet | Controleer parameter-naam en operator |
-| Animator Controller niet gekoppeld | Controller-veld leeg | Sleep controller naar Animator component |
-| Animatie knippert abrupt | Transition Duration = 0 | Stel Transition Duration in op 0.1–0.2 |
-
----
-
-## Controlelijst voor afronding
-
-- [ ] Karakter en animaties gedownload van Mixamo (FBX for Unity)
-- [ ] Rig → Humanoid ingesteld op karakter én animaties
-- [ ] Avatar is groen (geen rode bones)
-- [ ] Loop Time aan voor Idle/Walk/Run
-- [ ] Animator Controller aangemaakt met alle states
-- [ ] Parameters aangemaakt: `InputVertical`, `Grounded`, `JumpTrigger`
-- [ ] Alle transitions correct met conditions
-- [ ] Script stuurt animator correct aan
-- [ ] Alle animaties testen correct in Play mode

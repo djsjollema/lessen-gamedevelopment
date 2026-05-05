@@ -29,7 +29,7 @@ Het nieuwe Input System werkt met een **InputActionAsset**: een apart bestand da
 
 ---
 
-## Demo 1 — InputActionAsset bekijken (~10 min)
+## InputActionAsset bekijken (~10 min)
 
 De docent laat zien:
 
@@ -42,9 +42,9 @@ De docent laat zien:
 
 ---
 
-## Demo 2 — Twee Action Maps aanmaken (~15 min)
+## Oefening 1 — Twee Action Maps aanmaken (~15 min)
 
-De docent maakt live twee Action Maps aan voor twee spelers:
+We maken twee Action Maps aan voor twee spelers:
 
 **Player1** — Actions:
 
@@ -62,9 +62,9 @@ De docent maakt live twee Action Maps aan voor twee spelers:
 
 ---
 
-## Demo 3 — Cubes Toevoegen (~5 min)
+## Oefening 2 — Cubes Toevoegen (~5 min)
 
-De docent voegt 2 **Cubes** toe als spelers (`Player1` en `Player2`), elk met een **Rigidbody**
+We voegen 2 **Cubes** toe als spelers (`Player1` en `Player2`), elk met een **Rigidbody**
 
 - Constraints: **Freeze Rotation X en Z**
 
@@ -72,28 +72,38 @@ De docent voegt 2 **Cubes** toe als spelers (`Player1` en `Player2`), elk met ee
 
 ---
 
-## Demo 4 — Script schrijven: InputPlayer.cs (~20 min)
+## Oefening 3 — Script schrijven: InputPlayer.cs (~20 min)
 
-De docent schrijft live het script `InputPlayer.cs`:
+We schrijven het script `InputPlayer.cs`:
 
 **Belangrijkste onderdelen:**
 
 ```csharp
 InputActionMap map = input.FindActionMap(mapName);
-moveAction  = map.FindAction("Move");
-jumpAction  = map.FindAction("Jump");
+moveAction   = map.FindAction("Move");
+jumpAction   = map.FindAction("Jump");
+sprintAction = map.FindAction("Sprint");
 ```
 
 ```csharp
 Vector2 moveInput = moveAction.ReadValue<Vector2>();
-Vector3 movement = new Vector3(moveInput.x, 0f, moveInput.y) * moveSpeed * Time.deltaTime;
+
+// Vooruit/achteruit bewegen
+float speed = walkSpeed * moveInput.y;
+if (sprintAction.IsPressed()) speed *= 2f;
+Vector3 movement = transform.forward * speed * Time.deltaTime;
 transform.Translate(movement, Space.World);
+
+// Links/rechts draaien
+float angle = moveInput.x * turnSpeed * Time.deltaTime;
+transform.Rotate(0f, angle, 0f, Space.World);
 ```
 
 ```csharp
 if (jumpAction.WasPressedThisFrame() && isGrounded)
 {
     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    isGrounded = false;
 }
 ```
 
@@ -101,7 +111,7 @@ Het script krijgt een `[SerializeField] string mapName` zodat je per blokje kunt
 
 ---
 
-## Oefening — Koppelen en testen (~10 min)
+## Oefening 4 — Koppelen en testen (~10 min)
 
 Koppel het script aan beide blokjes in de Hierarchy:
 
@@ -121,6 +131,7 @@ Zorg dat:
 
 - De spelers kunnen bewegen via het nieuwe Input System
 - De spelers kunnen springen
+- Alle waardes getweakt zijn zodat het bewegen en springen lekker aanvoelt
 - De gronddetectie correct werkt (via tag of layer)
 - De scene een uitdagend parcours heeft om doorheen te bewegen
 

@@ -150,7 +150,8 @@ using UnityEngine.InputSystem;
 public class InputPlayer : MonoBehaviour
 {
     [SerializeField] private InputActionAsset input;
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float turnSpeed = 150f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private string mapName = "Player";
 
@@ -175,11 +176,24 @@ public class InputPlayer : MonoBehaviour
 
     void Update()
     {
-        // Beweging
+         // Opvragen van de input
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
-        float speed = sprintAction.IsPressed() ? moveSpeed * 2f : moveSpeed;
-        Vector3 movement = new Vector3(moveInput.x, 0f, moveInput.y) * speed * Time.deltaTime;
+
+        //bepalen wat de snelheid is
+        float speed = walkSpeed * moveInput.y;
+
+        //sprinten
+        if (sprintAction.IsPressed())
+            speed *= 2f;
+
+        //bewegen van de speler
+        Vector3 movement = transform.forward * speed * Time.deltaTime;
         transform.Translate(movement, Space.World);
+
+        //draaien van de speler
+        float angle = moveInput.x * turnSpeed * Time.deltaTime;
+        transform.Rotate(0f, angle, 0f, Space.World);
+
 
         // Springen
         if (jumpAction.WasPressedThisFrame() && isGrounded)
@@ -187,6 +201,7 @@ public class InputPlayer : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
     }
 
     void OnCollisionEnter(Collision collision)
@@ -217,7 +232,7 @@ Het script `InputPlayer` werkt voor beide spelers — je stelt per blokje alleen
 2. Sleep het script `InputPlayer` naar de Inspector, of gebruik **Add Component > InputPlayer**.
 3. Sleep het `InputSystem_Actions.inputactions`-bestand naar het veld **Input**.
 4. Zet **Map Name** op `Player1`.
-5. Stel **Move Speed** in op `5` en **Jump Force** op `5`.
+5. Stel **Move Speed** in op `5`, **Turn Speed** op `150` en **Jump Force** op `5`.
 
 ### Player2
 
@@ -225,7 +240,7 @@ Het script `InputPlayer` werkt voor beide spelers — je stelt per blokje alleen
 7. Voeg ook het script `InputPlayer` toe.
 8. Sleep hetzelfde `InputSystem_Actions.inputactions`-bestand naar het veld **Input**.
 9. Zet **Map Name** op `Player2`.
-10. Stel **Move Speed** in op `5` en **Jump Force** op `5`.
+10. Stel **Move Speed** in op `5`, **Turn Speed** op `150` en **Jump Force** op `5`.
 
 ---
 
