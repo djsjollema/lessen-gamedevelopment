@@ -1,157 +1,104 @@
-# Opdracht week 1 - Casual Game Design
+# Opdracht week 2 - Mechanic Breakdown & Prototype
 
-Deze periode ontwerp en bouw je een kleine casual game in Unity.  
-Je werkt vanuit één centrale actie die de speler steeds herhaalt: de core mechanic.
+Deze week werk je jouw core mechanic verder uit. Je beschrijft hoe de mechanic precies werkt en bouwt daarna een eerste versie in Unity.
 
-Het doel is niet om zoveel mogelijk features toe te voegen.  
-Het doel is om één simpele actie duidelijk, leuk en satisfying te maken.
+Je werkt in twee stappen:
+
+1. Je maakt een mechanic breakdown in je README.
+2. Je bouwt een eerste prototype van je core mechanic in Unity.
 
 ## Voorwaarden
 
-Je game:
+Je prototype:
 
-- is gemaakt in een **2D Unity-project**;
-- heeft maximaal **één core mechanic**;
+- is gemaakt in je bestaande **2D Unity-project**;
+- gebruikt nog steeds maximaal **één core mechanic**;
 - bevat **geen geweld**;
-- is snel te begrijpen;
-- heeft een korte speelsessie;
-- geeft duidelijke feedback aan de speler;
-- gebruikt juiciness om de actie beter te laten voelen.
+- laat de basis van je mechanic werken;
+- heeft minimaal **één feedbacklaag**;
+- staat op GitHub.
 
-## Vandaag
+## Gekozen uitdaging
 
-1. Maak een nieuw **2D Unity-project**.
-2. Koppel je project aan GitHub.
-3. Maak je eerste commit en push.
-4. Lever je Git-link in via Simulise.
-5. Kies je uitdaging: **Fun**, **Extra Fun** of **Lots of Fun**.
-6. Werk je onderzoek en concept uit in je README.
-
-## Onderzoek
-
-Welke casual game heb je onderzocht?
-
-**Naam game:**  
-...
-
-**Core mechanic:**  
-...
-
-**Waarom is dit casual?**  
-...
-
-**Wat neem je mee voor je eigen game?**  
-...
-
-## Kies je uitdaging
-
-Je kiest zelf hoe uitdagend je project wordt.  
-Ik kijk wel mee of het niveau goed bij jou past.
+Gebruik je gekozen uitdaging als richting voor je ontwerp.
 
 ### Fun
 
-Je game heeft:
+Focus deze week op:
 
-- simpele input;
-- duidelijk doel;
-- score of timer;
-- minimaal 2 vormen van feedback.
+- input;
+- actie;
+- gevolg;
+- minimaal 1 feedbacklaag.
 
 ### Extra Fun
 
-Je game heeft alles van **Fun**, plus:
+Focus deze week op **Fun**, en beschrijf alvast:
 
-- moeilijkheidsopbouw;
-- combo of multiplier;
-- betere feedback.
+- hoe je moeilijkheidsopbouw werkt;
+- waar een combo of multiplier kan ontstaan;
+- welke feedback je bij succes en fout wilt geven.
 
 ### Lots of Fun
 
-Je game heeft alles van **Fun** en **Extra Fun**, plus:
+Focus deze week op **Fun**, en beschrijf alvast:
 
-- timing of precisie;
-- dynamische moeilijkheid;
-- meerdere feedbacklagen;
-- goede balans;
-- veel juiciness.
+- waar timing of precisie belangrijk wordt;
+- welke variabele je later wilt balanceren;
+- hoe feedback kan veranderen als het spel moeilijker wordt.
 
-## Concept format
+## Stap 1 - Mechanic Breakdown
 
-Vul de zinnen hieronder aan.
+Werk je mechanic uit in je README.
 
-### Gekozen uitdaging
+Beantwoord:
 
-Ik kies: Fun / Extra Fun / Lots of Fun
+### Wanneer start de actie?
 
-### Core mechanic
+...
 
-Mijn core mechanic is dat de speler ...
+### Wanneer is de actie gelukt?
 
-### Input
+...
 
-De speler doet dit door ...
+### Wat verandert er?
 
-### Doel
+...
 
-De speler probeert ...
+### Welke variabele heb je nodig?
 
-### Easy to learn
+...
 
-De speler begrijpt snel ...
+### Welke feedback krijgt de speler?
 
-### Hard to master
+...
 
-Het wordt uitdagend door ...
+## Stap 2 - Prototype
 
-### Waarom blijft dit leuk?
+Bouw een eerste versie van je mechanic in Unity.
 
-Deze actie blijft leuk om te herhalen omdat ...
+Je prototype bevat:
 
-### Juiciness
+- input;
+- actie;
+- gevolg;
+- minimaal 1 feedbacklaag.
 
-Ik maak deze actie satisfying door ...
+## Klaar?
 
-## Voorbeeld: Candy Crush
+Werk je feedback verder uit:
 
-### Gekozen uitdaging
+- feedback bij een combo;
+- feedback als de speler bijna faalt;
+- extra geluid of animatie;
+- duidelijkere score/progressie;
+- betere timing van je feedback.
 
-Ik kies: Extra Fun
+## Je mag deze opdracht inleveren als alles hieronder klaar is:
 
-### Core mechanic
-
-Mijn core mechanic is dat de speler snoepjes wisselt om combinaties te maken.
-
-### Input
-
-De speler doet dit door twee snoepjes naast elkaar te swipen.
-
-### Doel
-
-De speler probeert drie of meer dezelfde snoepjes op een rij te krijgen.
-
-### Easy to learn
-
-De speler begrijpt snel dat dezelfde snoepjes bij elkaar horen.
-
-### Hard to master
-
-Het wordt uitdagend door beperkte zetten, combo's en kettingreacties.
-
-### Waarom blijft dit leuk?
-
-Deze actie blijft leuk om te herhalen omdat elke wissel direct resultaat kan geven.
-
-### Juiciness
-
-Ik maak deze actie satisfying door animaties, geluid, score-popups en combo-effecten.
-
-## Klaar aan het einde van de les?
-
-Controleer:
-
-- Mijn 2D Unity-project is aangemaakt.
-- Mijn project staat op GitHub.
-- Mijn Git-link is ingeleverd via Simulise.
-- Mijn gekozen uitdaging staat in de README.
-- Mijn onderzoek staat in de README.
-- Mijn core mechanic is uitgewerkt volgens het format.
+- Mijn mechanic breakdown staat in de README.
+- Mijn prototype bevat input, actie en gevolg.
+- Mijn prototype heeft minimaal 1 feedbacklaag.
+- Mijn gekozen uitdaging is verwerkt in mijn mechanic breakdown.
+- Mijn project is gepusht naar GitHub.
+- Mijn laatste commit laat zien wat ik deze week heb gedaan.
