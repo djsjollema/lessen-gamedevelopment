@@ -125,24 +125,25 @@ Ik maak live een `PlayerController` aan en laat zien hoe je states, parameters e
 
 **Transitions (voorbeelden):**
 
-| Van       | Naar | Conditie            |
-| --------- | ---- | ------------------- |
-| Idle      | Walk | `InputVertical > 2` |
-| Walk      | Idle | `InputVertical < 2` |
-| Walk      | Run  | `InputVertical > 7` |
-| Run       | Walk | `InputVertical < 7` |
-| Any State | Jump | `JumpTrigger`       |
-| Jump      | Idle | HasExitTime         |
-
-> Zet **Has Exit Time uit** en **Transition Duration op 0.1** voor soepele overgangen (behalve bij Jump).
+| Van       | Naar | Conditie      |
+| --------- | ---- | ------------- |
+| Idle      | Walk | `Speed > 2`   |
+| Walk      | Idle | `Speed < 2`   |
+| Walk      | Run  | `Speed > 7`   |
+| Run       | Walk | `Speed < 7`   |
+| Any State | Jump | `JumpTrigger` |
+| Jump      | Idle | HasExitTime   |
 
 ![alt text](./gfx/image-10.png)
+![alt text](image.png)
 
 ---
 
 ## Oefening 6 — Animator aansturen vanuit script (~10 min)
 
 Ik voeg aan het bestaande InputPlayer-script code toe om de Animator aan te sturen:
+
+> Zorg dat er ook een variabele is voor de snelheid van je karakter
 
 ```csharp
 //voeg toe aan bestaande code
@@ -171,6 +172,13 @@ void Update()
     animator.SetFloat("Speed", speed);
     animator.SetBool("Grounded", isGrounded);
 }
+
+void OnCollisionEnter(Collision collision)
+{
+    if (collision.gameObject.CompareTag("Ground"))
+        isGrounded = true;
+}
+
 ```
 
 > Open het **Animator**-venster tijdens Play mode om live te zien welke state actief is.
@@ -190,9 +198,16 @@ Zorg dat:
 - Het karakter springt
 - De gronddetectie correct werkt
 
-Optioneel (voor snelle werkers):
+Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : Mixamo & Animator Controller`
+
+**Optioneel (voor snelle werkers):**
 
 - Probeer de sprong op te breken in 3 delen: Springen, Vallen en landen en zorg dat deze op het juiste moment afspelen.
-- Experimenteer met **Blend Trees** voor vloeiende overgangen tussen Idle, Walk en Run
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : Mixamo & Animator Controller`
+> Om een echt nette sprong animatie te krijgen moet je de sprong in stukken knippen. Het afzetten, het hangen / naar beneden vallen en het landen van je karakter.
+
+![jump animation](./gfx/jump_animation.gif)
+
+- Experimenteer met <b><u>[Blend Trees](https://docs.unity3d.com/Manual/class-BlendTree.html)</u></b> voor vloeiende overgangen tussen Idle, Walk en Run
+
+![alt text](image.png)

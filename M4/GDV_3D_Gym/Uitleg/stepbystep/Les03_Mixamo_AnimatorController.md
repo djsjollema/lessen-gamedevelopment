@@ -295,12 +295,6 @@ public class InputPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
             isGrounded = true;
     }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-            isGrounded = false;
-    }
 }
 ```
 
