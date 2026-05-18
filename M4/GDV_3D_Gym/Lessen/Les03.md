@@ -135,7 +135,6 @@ Ik maak live een `PlayerController` aan en laat zien hoe je states, parameters e
 | Jump      | Idle | HasExitTime   |
 
 ![alt text](./gfx/image-10.png)
-![alt text](image.png)
 
 ---
 
@@ -210,4 +209,4 @@ Commit en push je voortgang naar je GitHub-repository en lever de link in op Sim
 
 - Experimenteer met <b><u>[Blend Trees](https://docs.unity3d.com/Manual/class-BlendTree.html)</u></b> voor vloeiende overgangen tussen Idle, Walk en Run
 
-![alt text](image.png)
+![alt text](./gfx/image-11.png)
