@@ -10,7 +10,7 @@ Deze les leren jullie het volgende:
 
 In deze les laat ik zien hoe je een professionele third-person camera opzet met Cinemachine. Je kunt direct meedoen of kijken en aantekeningen maken.
 
-De uitgebreide stap-voor-stap instructie staat hier: [Les07_StepByStep.md](../Uitleg/stepbystep/Les07_Cinemachine_PanTilt.md)
+De uitgebreide stap-voor-stap instructie staat hier: [Les07_StepByStep.md](../Uitleg/stepbystep/Cinemachine_PanTilt.md)
 
 ---
 
@@ -191,4 +191,4 @@ Optioneel (voor snelle werkers):
 - Er een tweede camera (overview) is die je kunt activeren via **Tab**
 - De blend tussen de twee camera's soepel verloopt
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : Cinemachine Camera`
+Commit en push je voortgang naar je GitHub-repository, presenteer de opdracht netjes op je readme en lever de link in op Simulise: `GD - M4 - GDV - HNR : Cinemachine Camera`

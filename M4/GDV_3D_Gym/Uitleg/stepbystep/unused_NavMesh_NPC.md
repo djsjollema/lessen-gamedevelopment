@@ -1,4 +1,4 @@
-# Les 8 — NavMesh & NPC Navigatie
+# Step By Step — NavMesh & NPC Navigatie
 **Zelfstandige stap-voor-stap instructie**
 
 ---

@@ -1,4 +1,4 @@
-﻿# Les 24 — Coyote Time & Jump Buffer: Betere Sprong in een Platformer
+﻿# Step By Step — Coyote Time & Jump Buffer: Betere Sprong in een Platformer
 
 **Zelfstandige stap-voor-stap instructie**
 

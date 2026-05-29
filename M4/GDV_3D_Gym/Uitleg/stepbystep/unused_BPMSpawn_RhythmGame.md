@@ -1,4 +1,4 @@
-﻿# Les 21 — BPM-gebaseerde Spawn: Rhythm Game
+﻿# Step By Step — BPM-gebaseerde Spawn: Rhythm Game
 
 **Zelfstandige stap-voor-stap instructie**
 

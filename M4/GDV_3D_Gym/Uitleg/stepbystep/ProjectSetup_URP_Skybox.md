@@ -1,4 +1,4 @@
-# Les 1 — Project Setup: URP, Package Manager & Skybox
+# Step By Step — Project Setup: URP, Package Manager & Skybox
 
 **Zelfstandige stap-voor-stap instructie**
 

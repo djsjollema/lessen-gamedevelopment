@@ -1,4 +1,4 @@
-# Les 14 — Physics Verdieping: Rigidbody, Forces & Materials
+# Step By Step — Physics Verdieping: Rigidbody, Forces & Materials
 **Zelfstandige stap-voor-stap instructie**
 
 ---

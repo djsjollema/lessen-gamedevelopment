@@ -1,4 +1,4 @@
-# Les 12 — Scene Management & Coroutines
+# Step By Step — Scene Management & Coroutines
 **Zelfstandige stap-voor-stap instructie**
 
 ---

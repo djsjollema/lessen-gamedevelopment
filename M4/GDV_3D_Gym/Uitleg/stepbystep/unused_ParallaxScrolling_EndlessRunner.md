@@ -1,4 +1,4 @@
-# Les 17 — Parallax Scrollende Achtergrond: Endless Runner
+# Step By Step — Parallax Scrollende Achtergrond: Endless Runner
 
 **Zelfstandige stap-voor-stap instructie**
 

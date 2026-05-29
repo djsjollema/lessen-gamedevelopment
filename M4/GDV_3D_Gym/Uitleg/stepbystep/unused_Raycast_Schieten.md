@@ -1,4 +1,4 @@
-# Les 6 — Raycast: Schieten & Obstakels Detecteren
+# Step By Step — Raycast: Schieten & Obstakels Detecteren
 
 **Zelfstandige stap-voor-stap instructie**
 

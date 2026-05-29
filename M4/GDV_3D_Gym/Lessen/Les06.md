@@ -1,189 +1,184 @@
-# M4 GDV HNR LES 6: Particle Systems — Visuele effecten
+# M4 GDV HNR LES 6: Raycasts — Schieten & Exploderen
 
 Deze les leren jullie het volgende:
 
-- Je begrijpt hoe een `ParticleSystem` is opgebouwd en welke modules er zijn
-- Je kunt de belangrijkste instellingen aanpassen (Emission, Shape, Lifetime, Color, Size)
-- Je kunt een Particle System afspelen vanuit een script
-- Je kunt een trigger-zone maken zodat een effect afspeelt als de speler een bepaalde plek bereikt
+- Je begrijpt hoe `Physics.Raycast` werkt met `Ray`, `RaycastHit` en `LayerMask`
+- Je kunt een raycast-gebaseerd schiet systeem bouwen waarbij een barrel direct explodeert
+- Je kunt een debugging lijn tekenen in de scene met `Debug.DrawRay`
+- Je kunt een mooi vormgegeven lijn tekenen met de `LineRenderer`
 
-In deze les laat ik zien hoe je een visueel effect maakt en koppelt aan je scene. Je kunt direct meedoen of kijken en aantekeningen maken.
+In deze les laat ik zien hoe je Raycasts gebruikt voor schieten. Je kunt direct meedoen of kijken en aantekeningen maken.
 
-De uitgebreide stap-voor-stap instructie staat hier: [ParticleSystemTriggerExplosion.md](../Uitleg/stepbystep/ParticleSystemTriggerExplosion.md)
-
----
-
-## Hoe werkt een Particle System?
-
-Een `ParticleSystem` spawnt (genereert) grote hoeveelheden kleine objecten — **deeltjes** — en stuurt elk deeltje aan via modules:
-
-| Module        | Wat het doet                                                    |
-| ------------- | --------------------------------------------------------------- |
-| **Main**      | Levensduur, startsnelheid, startgrootte, startkleur             |
-| **Emission**  | Hoeveel deeltjes per seconde of per burst worden gespawnd       |
-| **Shape**     | De vorm van het spawn-gebied (bol, kegel, vlak, mesh...)        |
-| **Velocity**  | Extra richtingscontrole per deeltje                             |
-| **Color**     | Kleurverloop over de levensduur van het deeltje                 |
-| **Size**      | Grootteverloop over de levensduur (bijv. groot → klein)         |
-| **Renderer**  | Welk materiaal/sprite op de deeltjes wordt geplaatst            |
-
-Elk effect combineer je door de juiste modules aan/uit te zetten en de waarden af te stemmen.
+De uitgebreide stap-voor-stap instructie staat hier: [Les06_StepByStep.md](../Uitleg/stepbystep/Raycast_Schieten_Pickup.md)
 
 ---
 
-## Oefening 1 — YouTube video kijken (~10 min)
+## Hoe werkt een Raycast?
 
-Voordat we beginnen kijk je zelfstandig de onderstaande video. Deze geeft een beknopte maar duidelijke overview van de belangrijkste Particle System instellingen in Unity.
+Een Raycast is een onzichtbare lijn die vanuit een punt in een richting wordt geschoten. Unity controleert of die lijn een Collider raakt en geeft informatie terug via een `RaycastHit`.
 
-> **Kijk de video volledig en maak aantekeningen van de instellingen die je nog niet kende.**
+```
+[Camera] ———————————————————→ [Barrel]
+              ← max 50 m →
+```
 
-🎥 [Particle System Overview — Unity (YouTube)](https://www.youtube.com/watch?v=FEA1wTMJAR0)
+```csharp
+Ray ray = new Ray(origin.position, origin.forward);
+RaycastHit hit;
 
-Beantwoord daarna voor jezelf:
-- Welke module regelt de *kleur* van een deeltje over zijn levensduur?
-- Wat is het verschil tussen **Rate over Time** en **Burst** in de Emission-module?
-- Waarvoor gebruik je de **Shape**-module?
+if (Physics.Raycast(ray, out hit, maxDistance, layerMask))
+{
+    Debug.Log("Geraakt: " + hit.collider.name);
+}
+```
 
----
+| Parameter    | Betekenis                                                   |
+| ------------ | ----------------------------------------------------------- |
+| `Ray`        | Beginpunt + richting van de lijn                            |
+| `RaycastHit` | Resultaat: welk object, positie van botsing, normaalvector  |
+| `maxDistance`| Hoe ver de ray reikt (in meters)                            |
+| `LayerMask`  | Filter: welke lagen mag de ray raken?                       |
 
-## Oefening 2 — Eerste Particle System aanmaken (~10 min)
+**Wanneer Raycast vs. Trigger Collider?**
 
-Ik laat zien hoe je een nieuw Particle System aanmaakt en de basisinstellingen instelt:
-
-1. Rechtermuisknop in de Hierarchy → **Effects > Particle System**.
-2. Noem het object `PS_Explosie`.
-3. In de Inspector zie je de **Main**-module bovenaan. Stel in:
-   - **Start Lifetime:** `1.5`
-   - **Start Speed:** `8`
-   - **Start Size:** `0.5`
-   - **Start Color:** kies een oranje/geel kleur
-   - **Gravity Source:** Physics → **Gravity Modifier:** `1`
-4. Zet de **Loop**-toggle **uit** (want een explosie speelt maar één keer).
-5. Zet **Play On Awake** ook **uit** (we starten het effect vanuit een script).
-
----
-
-## Oefening 3 — Effect vormgeven (~15 min)
-
-Ik laat zien hoe je het effect er als een echte explosie uit laat zien:
-
-**Emission (burst):**
-
-1. Open de **Emission**-module.
-2. Zet **Rate over Time** op `0`.
-3. Klik op het **+** onder **Bursts** → voeg een burst toe met:
-   - **Time:** `0`
-   - **Count:** `50`
-
-**Shape:**
-
-4. Open de **Shape**-module.
-5. Stel **Shape** in op `Sphere`, **Radius:** `0.2`.
-
-**Color over Lifetime:**
-
-6. Open de **Color over Lifetime**-module (activeer hem met het vinkje).
-7. Klik op de kleurenbalk → maak een verloop van `oranje → rood → transparant`.
-
-**Size over Lifetime:**
-
-8. Open de **Size over Lifetime**-module (activeer hem).
-9. Stel een curve in die begint op `1` en eindigt op `0` (deeltjes worden kleiner).
-
-> Klik op **Play** in de Particle System preview (onderkant Inspector) om het effect direct te bekijken zonder de scene te starten.
+| Raycast                                        | Trigger Collider                   |
+| ---------------------------------------------- | ---------------------------------- |
+| Actief per frame of op aanvraag                | Altijd actief                      |
+| Richting-afhankelijk (je moet ernaar wijzen)   | Detecteert alles in de zone        |
+| Goed voor: schieten, interactie, line-of-sight | Goed voor: gebieden, collectibles  |
 
 ---
 
-## Oefening 4 — Trigger-zone maken met een script (~20 min)
+## Oefening 1 — Layers instellen (~5 min)
 
-Nu koppelen we het effect aan de scene: als de speler een bepaalde plek bereikt, speelt het effect af.
+Met een Layer filter je welke objecten de raycast mag raken — zo kan de speler zichzelf nooit raken.
 
-**Trigger zone aanmaken:**
+1. Ga naar **Edit > Project Settings > Tags and Layers**.
+2. Voeg toe:
+   - Layer 6: `Shootable`
+   - Layer 7: `Player`
+3. Selecteer je barrel/krat-prefab in de Hierarchy → zet **Layer** op `Shootable`.
+4. Selecteer het spelerkarakter → zet **Layer** op `Player`.
 
-1. Maak een leeg GameObject aan: **GameObject > Create Empty** → noem het `TriggerZone`.
-2. Voeg toe: **Add Component > Physics > Box Collider**.
-3. Activeer **Is Trigger** op de Box Collider.
-4. Positioneer de `TriggerZone` ergens in je level waar de speler doorheen moet lopen.
+> De barrel heeft verder **geen eigen script nodig** — het schiet-script regelt de explosie en verwijdering.
 
-**Particle System als child toevoegen:**
+---
 
-5. Sleep `PS_Explosie` naar `TriggerZone` als child-object (of maak een nieuwe aan als child).
-6. Stel de positie van `PS_Explosie` in op `0, 0, 0` (relatief aan de trigger).
+## Oefening 2 — Schieten: ShootSystem.cs (~25 min)
 
-**Script schrijven:**
+Ik schrijf het shoot-script met een `LineRenderer` als visuele kogelbaan.
 
-7. Maak een script `EffectTrigger.cs` en koppel dit aan `TriggerZone`:
+**Koppel `ShootSystem.cs` aan de speler (of de camera):**
 
 ```csharp
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class EffectTrigger : MonoBehaviour
+public class ShootSystem : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem effect;
-    private bool hasTriggered = false;
+    [Header("Input")]
+    [SerializeField] private InputActionAsset inputAsset;
+    private InputAction shootAction;
 
-    private void OnTriggerEnter(Collider other)
+    [Header("Raycast")]
+    [SerializeField] private Transform shootOrigin;
+    [SerializeField] private float shootDistance = 50f;
+    [SerializeField] private LayerMask shootableLayers;
+
+    [Header("Visueel")]
+    [SerializeField] private ParticleSystem explosionEffect;
+    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private float lineDuration = 0.1f;
+
+    void Awake()
     {
-        if (hasTriggered) return;
+        shootAction = inputAsset.FindActionMap("Player").FindAction("Shoot");
+    }
 
-        if (other.CompareTag("Player"))
+    void OnEnable()  { inputAsset.FindActionMap("Player").Enable(); }
+    void OnDisable() { inputAsset.FindActionMap("Player").Disable(); }
+
+    void Update()
+    {
+        // Teken de ray in de Scene view voor debugging
+        Debug.DrawRay(shootOrigin.position, shootOrigin.forward * shootDistance, Color.red);
+
+        if (shootAction.WasPressedThisFrame())
+            Shoot();
+    }
+
+    void Shoot()
+    {
+        Ray ray = new Ray(shootOrigin.position, shootOrigin.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, shootDistance, shootableLayers))
         {
-            hasTriggered = true;
-            effect.Play();
+            Debug.Log($"Geraakt: {hit.collider.name}");
+
+            // Explosie spawnen op de positie van het geraakt object
+            if (explosionEffect != null)
+            {
+                ParticleSystem effect = Instantiate(explosionEffect, hit.collider.transform.position, Quaternion.identity);
+                Destroy(effect.gameObject, effect.main.duration);
+            }
+
+            Destroy(hit.collider.gameObject);
+            ShowLine(shootOrigin.position, hit.point);
         }
+        else
+        {
+            ShowLine(shootOrigin.position, shootOrigin.position + shootOrigin.forward * shootDistance);
+        }
+    }
+
+    void ShowLine(Vector3 start, Vector3 end)
+    {
+        if (lineRenderer == null) return;
+        lineRenderer.SetPosition(0, start);
+        lineRenderer.SetPosition(1, end);
+        lineRenderer.enabled = true;
+        StartCoroutine(HideLine());
+    }
+
+    System.Collections.IEnumerator HideLine()
+    {
+        yield return new WaitForSeconds(lineDuration);
+        lineRenderer.enabled = false;
     }
 }
 ```
 
-8. Sleep `PS_Explosie` naar het **Effect**-veld in de Inspector.
-9. Zorg dat het karakter de tag **Player** heeft.
+**Shoot-actie toevoegen aan het Input System:**
 
-> `hasTriggered` zorgt ervoor dat het effect maar één keer afspeelt, ook al loopt de speler er meerdere keren doorheen.
+1. Open `InputSystem_Actions.inputactions`.
+2. Voeg toe aan de **Player** Action Map: `Shoot`, **Action Type: Button**.
+3. Binding: **Mouse/Left Button** → **Save Asset**.
 
----
+**LineRenderer instellen:**
 
-## Oefening 5 — Effect optioneel verwijderen na afspelen (~5 min)
+- **Add Component > Effects > Line Renderer** op de speler.
+- **Width:** `0.05`, **Color:** rood, **Use World Space:** ✅, **Enabled:** ❌ (script zet hem aan).
 
-Een explosie die blijft bestaan in de Hierarchy is een verspilling. Je kunt het GameObject automatisch verwijderen:
-
-```csharp
-using UnityEngine;
-
-public class EffectTrigger : MonoBehaviour
-{
-    [SerializeField] private ParticleSystem effect;
-    private bool hasTriggered = false;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (hasTriggered) return;
-
-        if (other.CompareTag("Player"))
-        {
-            hasTriggered = true;
-            effect.Play();
-            Destroy(effect.gameObject, effect.main.duration + effect.main.startLifetime.constantMax);
-        }
-    }
-}
-```
-
-> `effect.main.duration + effect.main.startLifetime.constantMax` geeft je de totale maximale afspeeltijd van het effect, zodat het GameObject precies op het juiste moment wordt verwijderd.
+> Gebruik `Debug.DrawRay` in de Scene view om te controleren of de ray in de juiste richting schiet.
 
 ---
 
-## Opdracht: Maak jouw eigen effect
+## Huiswerk: Raycasts in je 3D Gym
 
-Maak een eigen visueel effect en voeg dit toe aan je 3D Gym scene.
+Voeg een werkend schiet-systeem toe aan je 3D Gym.
 
-**Vereisten:**
+Zorg dat:
 
-- Het effect speelt af als de speler een bepaalde plek in het level bereikt (via `OnTriggerEnter`)
-- Het effect is zelfbedacht: een explosie, een bliksemflits, vuurwerk, rook, magie — jouw keuze
-- Het effect speelt maar **één keer** af
-- De trigger-zone is duidelijk zichtbaar gepositioneerd in het level (bijv. aan het einde van een pad, bij een item)
+- Er minstens **5 barrels/kratten** in je scene staan die direct exploderen als ze geraakt worden
+- De `Debug.DrawRay` correct de schietrichting aangeeft in de Scene view
 
-**Inleveren:**
+Optioneel (voor snelle werkers):
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise:  
-`GD - M4 - GDV - HNR : Particle System Effect`
+Kun je ook een **pickup-systeem** bouwen? De volledige stap-voor-stap instructie staat in de [stepbystep tutorial](../Uitleg/stepbystep/Raycast_Schieten_Pickup.md). Zorg dan ook dat:
+
+- Er minstens **5 kogel-pickups** verspreid in de scene liggen
+- De interactie-prompt `[E] Oprapen` verschijnt als je naar een kogel kijkt
+- De ammo-teller zichtbaar is in de UI
+
+Commit en push je voortgang naar je GitHub-repository, presenteer de opdracht netjes op je readme en lever de link in op Simulise: `GD - M4 - GDV - HNR : Raycasts`

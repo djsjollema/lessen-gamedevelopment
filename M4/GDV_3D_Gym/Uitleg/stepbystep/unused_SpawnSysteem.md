@@ -1,4 +1,4 @@
-﻿# Les 18 — Spawn-systeem: Objecten Laten Verschijnen
+﻿# Step By Step — Spawn-systeem: Objecten Laten Verschijnen
 
 **Zelfstandige stap-voor-stap instructie**
 

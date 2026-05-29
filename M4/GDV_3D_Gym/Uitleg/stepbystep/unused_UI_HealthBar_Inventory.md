@@ -1,4 +1,4 @@
-# Les 10 — UI Systeem: Canvas, Health Bar & Inventory
+# Step By Step — UI Systeem: Canvas, Health Bar & Inventory
 **Zelfstandige stap-voor-stap instructie**
 
 ---

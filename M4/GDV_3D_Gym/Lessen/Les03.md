@@ -9,7 +9,7 @@ Deze les leren jullie het volgende:
 
 In deze les laat ik zien hoe je een geanimeerd karakter in Unity zet. Je kunt direct meedoen of kijken en aantekeningen maken.
 
-De uitgebreide stap-voor-stap instructie staat hier: [Les03_StepByStep.md](../Uitleg/stepbystep/Les03_Mixamo_AnimatorController.md)
+De uitgebreide stap-voor-stap instructie staat hier: [Les03_StepByStep.md](../Uitleg/stepbystep/Mixamo_AnimatorController.md)
 
 ---
 
@@ -197,7 +197,7 @@ Zorg dat:
 - Het karakter springt
 - De gronddetectie correct werkt
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : Mixamo & Animator Controller`
+Commit en push je voortgang naar je GitHub-repository, presenteer de opdracht netjes op je readme en lever de link in op Simulise: `GD - M4 - GDV - HNR : Mixamo & Animator Controller`
 
 **Optioneel (voor snelle werkers):**
 

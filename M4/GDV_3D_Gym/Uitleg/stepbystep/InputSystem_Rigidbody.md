@@ -1,4 +1,4 @@
-# Les 2 — Input System (Nieuw): Rigidbody Beweging
+# Step By Step — Input System (Nieuw): Rigidbody Beweging
 
 **Zelfstandige stap-voor-stap instructie**
 

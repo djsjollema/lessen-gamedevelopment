@@ -1,4 +1,4 @@
-﻿# Les 19 — Level- en Wave-systeem: Gestructureerde Moeilijkheidsopbouw
+﻿# Step By Step — Level- en Wave-systeem: Gestructureerde Moeilijkheidsopbouw
 
 **Zelfstandige stap-voor-stap instructie**
 

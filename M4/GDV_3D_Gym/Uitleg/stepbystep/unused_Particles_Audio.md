@@ -1,4 +1,4 @@
-# Les 9 — Particle Systems & Audio
+# Step By Step — Particle Systems & Audio
 **Zelfstandige stap-voor-stap instructie**
 
 ---

@@ -1,4 +1,4 @@
-# Les 15 — Splines & Timeline: Camera & Cutscenes
+# Step By Step — Splines & Timeline: Camera & Cutscenes
 **Zelfstandige stap-voor-stap instructie**
 
 ---

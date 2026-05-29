@@ -1,4 +1,4 @@
-﻿# Les 23 — Dialogue-systeem: NPC Gesprekken
+﻿# Step By Step — Dialogue-systeem: NPC Gesprekken
 
 **Zelfstandige stap-voor-stap instructie**
 

@@ -1,4 +1,4 @@
-# Les 13 — Post Processing & Verlichting
+# Step By Step — Post Processing & Verlichting
 **Zelfstandige stap-voor-stap instructie**
 
 ---

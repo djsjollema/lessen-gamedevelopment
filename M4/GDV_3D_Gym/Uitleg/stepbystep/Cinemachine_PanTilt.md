@@ -1,4 +1,4 @@
-# Les 7 — Cinemachine 3: Camera Systemen (Pan & Tilt)
+# Step By Step — Cinemachine 3: Camera Systemen (Pan & Tilt)
 **Zelfstandige stap-voor-stap instructie**
 
 ---

@@ -1,4 +1,4 @@
-# Les 5 — Raycast: Items Oppakken & Interactie
+# Step By Step — Raycast: Items Oppakken & Interactie
 **Zelfstandige stap-voor-stap instructie**
 
 ---

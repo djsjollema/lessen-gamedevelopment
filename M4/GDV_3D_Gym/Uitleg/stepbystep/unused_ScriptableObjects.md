@@ -1,4 +1,4 @@
-# Les 11 — ScriptableObjects: Data-gedreven Design
+# Step By Step — ScriptableObjects: Data-gedreven Design
 **Zelfstandige stap-voor-stap instructie**
 
 ---

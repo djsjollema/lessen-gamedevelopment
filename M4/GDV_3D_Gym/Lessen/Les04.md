@@ -9,7 +9,7 @@ Deze les leren jullie het volgende:
 
 In deze les laat ik zien hoe je een CharacterController opzet voor een geanimeerd karakter. Je kunt direct meedoen of kijken en aantekeningen maken.
 
-De uitgebreide stap-voor-stap instructie staat hier: [Les04_StepByStep.md](../Uitleg/stepbystep/Les04_CharacterController_Springen.md)
+De uitgebreide stap-voor-stap instructie staat hier: [Les04_StepByStep.md](../Uitleg/stepbystep/CharacterController_Springen.md)
 
 ---
 
@@ -153,4 +153,4 @@ Optioneel (voor snelle werkers):
 
 - Voeg een **sprint** toe die ook de animatie versnelt
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : CharacterController`
+Commit en push je voortgang naar je GitHub-repository, presenteer de opdracht netjes op je readme en lever de link in op Simulise: `GD - M4 - GDV - HNR : CharacterController`

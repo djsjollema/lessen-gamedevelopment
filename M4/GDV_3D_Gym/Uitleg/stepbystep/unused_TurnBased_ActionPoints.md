@@ -1,4 +1,4 @@
-# Les 16 — Beurt-gebaseerd Spel: Action Points System
+# Step By Step — Beurt-gebaseerd Spel: Action Points System
 
 **Zelfstandige stap-voor-stap instructie**
 

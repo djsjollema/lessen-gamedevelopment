@@ -14,7 +14,7 @@ De 3d gym is waar we alle mechanics en features deze periode gaan verwerken zoda
 
 In deze les zal ik klassiekaal laten zien hoe je de bovenstaande doelstellingen in unity kunt bereiken. Je kunt dus live meedoen of gewoon kijken en aantekeningen maken.
 
-Er is ook een Step By Step instructie die je later nog terug kunt kijken als je ergens niet uit komt of als je onverhoopt de les hebt gemist: [Les01_StepByStep.md](../Uitleg/stepbystep/Les01_ProjectSetup_URP_Skybox.md)
+Er is ook een Step By Step instructie die je later nog terug kunt kijken als je ergens niet uit komt of als je onverhoopt de les hebt gemist: [Les01_StepByStep.md](../Uitleg/stepbystep/ProjectSetup_URP_Skybox.md)
 
 ## URP, HDRP vs Builtin renderpipeline
 

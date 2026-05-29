@@ -1,4 +1,4 @@
-﻿# Les 22 — Inventory-systeem: Items Oprapen en Gebruiken
+﻿# Step By Step — Inventory-systeem: Items Oprapen en Gebruiken
 
 **Zelfstandige stap-voor-stap instructie**
 

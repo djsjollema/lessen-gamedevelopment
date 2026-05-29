@@ -1,4 +1,4 @@
-﻿# Les 20 — Checkpoint-systeem: Voortgang Opslaan
+﻿# Step By Step — Checkpoint-systeem: Voortgang Opslaan
 
 **Zelfstandige stap-voor-stap instructie**
 

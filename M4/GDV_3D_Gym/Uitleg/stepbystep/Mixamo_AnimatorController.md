@@ -1,4 +1,4 @@
-# Les 3 — Mixamo: Modellen, Animaties & Animator Controller
+# Step By Step — Mixamo: Modellen, Animaties & Animator Controller
 
 **Zelfstandige stap-voor-stap instructie**
 

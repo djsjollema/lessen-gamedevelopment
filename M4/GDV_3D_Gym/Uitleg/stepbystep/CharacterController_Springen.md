@@ -1,4 +1,4 @@
-# Les 4 — CharacterController: Bewegen & Springen
+# Step By Step — CharacterController: Bewegen & Springen
 
 **Zelfstandige stap-voor-stap instructie**
 
