@@ -9,7 +9,7 @@ Deze les leren jullie het volgende:
 
 In deze les laat ik zien hoe je een CharacterController opzet voor een geanimeerd karakter. Je kunt direct meedoen of kijken en aantekeningen maken.
 
-De uitgebreide stap-voor-stap instructie staat hier: [Les04_StepByStep.md](../Uitleg/stepbystep/Les04_CharacterController_Springen.md)
+De uitgebreide stap-voor-stap instructie staat hier: [Les04_StepByStep.md](../Uitleg/stepbystep/CharacterController_Springen.md)
 
 ---
 
@@ -24,6 +24,8 @@ De uitgebreide stap-voor-stap instructie staat hier: [Les04_StepByStep.md](../Ui
 
 **Kies CharacterController** als je volledige controle wilt over hoe de speler beweegt.  
 **Kies Rigidbody** als een object realistisch moet reageren op botsingen en krachten.
+
+![character controller](./gfx/character_controller_no_cinema.gif)
 
 ---
 
@@ -40,7 +42,10 @@ Ik laat zien hoe je de CharacterController instelt op een karakter:
 
 De groene capsule in de Scene view moet het karakter netjes omhullen.
 
+![alt text](./gfx/image-12.png)
+
 > Zie je de capsule niet? Klik op **Gizmos** (rechtsboven in Scene view) en zorg dat Physics aangevinkt is.
+> ![gizmos](./gfx/gizmos.gif)
 
 ---
 
@@ -54,13 +59,15 @@ Ik schrijf live het script `MoveCharacterController.cs` op basis van het eerdere
 Vector2 movementInput = moveAction.ReadValue<Vector2>();
 
 float speed = movementInput.y * moveSpeed;
-if (sprintAction.IsPressed()) speed *= 2;
+if (sprintAction.IsPressed()) speed *= 2; //sprinten
 
-Vector3 move = transform.forward * speed * Time.deltaTime;
+Vector3 move = transform.forward * speed * Time.deltaTime; //De move variabele gebruiken we later in de Move() functie
 transform.Rotate(Vector3.up * movementInput.x * rotationSpeed * Time.deltaTime);
 ```
 
 **Zwaartekracht zelf implementeren:**
+
+> Let op het `CharacterController` component heeft zelf ook al de eigenschap `.isGrounded` die automatisch wordt bijgehouden. Deze hoeven we dus niet meer zelf bij te houden in het script.
 
 ```csharp
 if (characterController.isGrounded)
@@ -69,17 +76,17 @@ if (characterController.isGrounded)
 
     if (jumpAction.WasPressedThisFrame())
     {
-        verticalVelocity = Mathf.Sqrt(2f * Mathf.Abs(gravity) * jumpHeight);
+        verticalVelocity = Mathf.Sqrt(2f * Mathf.Abs(gravity) * jumpHeight); //hoeveel kracht moet je geven om op de juiste hoogte uit te komen?
         animator.SetTrigger("JumpTrigger");
     }
 }
 else
 {
-    verticalVelocity += gravity * Time.deltaTime;
+    verticalVelocity += gravity * Time.deltaTime; // zwaartekracht trekt mij naar beneden
 }
 
-move.y = verticalVelocity * Time.deltaTime;
-characterController.Move(move);
+move.y = verticalVelocity * Time.deltaTime; //verticale berekening word meegegeven aan de move variabele
+characterController.Move(move); //hier geven we de uiteindelijke move variabele mee aan de Move functie
 ```
 
 **Animator aansturen:**
@@ -105,6 +112,8 @@ $$u = \sqrt{2 \times 20 \times 2} = \sqrt{80} \approx 8.94$$
 
 Dit geeft precies genoeg beginsnelheid om 2 meter hoog te springen. Hoe hoger de zwaartekracht, hoe sneller de speler terugvalt.
 
+> [Hier](../Uitleg/SprongFormule.md) vind je meer uitleg over de sprong formule als je deze echt goed wilt begrijpen
+
 ---
 
 ## Oefening 3 — Script koppelen en testen (~10 min)
@@ -128,6 +137,8 @@ Dit geeft precies genoeg beginsnelheid om 2 meter hoog te springen. Hoe hoger de
 
 ## Huiswerk: CharacterController in je 3D Gym
 
+![huiswerk](./gfx/character_controller_no_cinema.gif)
+
 Voeg het nieuwe karaker met CharacterController toe in je 3D Gym. Zorg dat alle animaties weer worden uitgevoerd.
 
 Zorg dat:
@@ -136,10 +147,10 @@ Zorg dat:
 - Het karakter springt met de juiste springhoogte
 - Idle, Walk, Run en Jump animaties correct werken
 - De sprong goed aanvoelt (tweaken van Jump Height en Gravity)
+- Experimenteer eens met de `slope limit` en `step offset` wat heeft dit te maken met schuine oppervlakten en traplopen?
 
 Optioneel (voor snelle werkers):
 
 - Voeg een **sprint** toe die ook de animatie versnelt
-- Zorg dat het karakter niet door muren heen gaat bij schuine botsingen
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : CharacterController`
+Commit en push je voortgang naar je GitHub-repository, presenteer de opdracht netjes op je readme en lever de link in op Simulise: `GD - M4 - GDV - HNR : CharacterController`

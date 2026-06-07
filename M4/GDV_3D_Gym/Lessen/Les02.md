@@ -10,7 +10,7 @@ Deze les leren jullie het volgende:
 
 In deze les laat de docent live zien hoe je het nieuwe Input System instelt en een speelbaar blokje maakt. Je kunt meekijken en aantekeningen maken, of direct meedoen.
 
-De uitgebreide stap-voor-stap instructie staat hier: [Les02_StepByStep.md](../Uitleg/stepbystep/Les02_InputSystem_Rigidbody.md)
+De uitgebreide stap-voor-stap instructie staat hier: [Les02_StepByStep.md](../Uitleg/stepbystep/InputSystem_Rigidbody.md)
 
 ---
 
@@ -148,4 +148,4 @@ Maak een mooi gifje van je gameview waarbij je laat zien dat je 2 blokjes kunt b
 
 Geef met tekst een toelichting op wat je hebt gemaakt.
 
-Commit en push je voortgang naar je GitHub-repository en lever de link in op Simulise: `GD - M4 - GDV - HNR : Input System & Rigidbody`
+Commit en push je voortgang naar je GitHub-repository, presenteer de opdracht netjes op je readme en lever de link in op Simulise: `GD - M4 - GDV - HNR : Input System & Rigidbody`
