@@ -1,0 +1,51 @@
+Ik wil een plan hebben waarin het volgende staat uitgewerkt.
+
+in de introdwweek van 1-09-2026 tot en met 3-09-2026 wil ik dat alle studenten van de opleiding SoftwareDeveloper gaan werken aan een game jam.
+De opdracht is het bouwen van een arcade game die kan draaien op een arcade machine “NAMCO Noir Cabinet FHD”
+
+Hierbij de specs van de machine:
+Windows 10
+totaal 2 stuks 8-way joystick (niet analoog).
+minimaal 4 aktieknoppen en 1 dedicated startknop per speler(DirectInput)
+simpele videokaart (Nvidia GT 730)
+32" 1080p scherm
+Stereo speakers
+
+Daarnaast zijn er 2 kale arcade kasten waar studenten eigen input devices moeten maken en de signalen van deze input devices integreren in de games.
+
+Het gaat om de volgende groepen studenten :
+
+Leerjaar 3 Gamedevelopers 30 studenten (sd3a)
+Leerjaar 3 Fullstack developers 40 studenten (sd3b, sd3c)
+
+Leerjaar 2 Gamedevelopers 30 studenten (sd2a)
+Leerjaar 2 Fullstack developers 30 studenten (sd2b)
+
+Leerjaar 1 90 studenten (3 klassen sd1a, sd1b, sd1c)
+
+De opdrachtgever is "Blast Galaxy" een arcadehal die deze kasten wil exposeren.
+
+Het moeten leuke snelle games zijn die lekker de aandacht trekken. Ook moet het goede promotie zijn voor de opleiding.
+
+De kickoff van het project doen we op school in de dintelzaal. op dinsdag om 14:00
+Eerst gaan de klassen kennismaken met hun nieuwe stuediebegeleider.
+
+Na de kickoff gaan de 3 jaars de leiding nemen over een team van +- 10 man.
+
+2e jaars worden aangestuurd door de 3e jaars en de 2e jaars werken samen met de 1e jaars door te pair programmen.
+
+Er moet gebruik gemaakt worden van github , feature branches en pull request.
+
+De art voor de game mag gegenereerd worden met AI of van internet gehaald worden.
+
+Uiteindelijk presenteren de studenten de games en de kasten op vrijdag aan de klant in de dintelzaal. (15:00)
+
+De beste game wint vrijkaartjes voor de blast galaxy arcadehal.
+
+De beste 3 games worden op de NAmco kast gezet en het beste input controller met kast komt ook in blast galaxy te staan. Deze moet wel hufterproof zijn.
+
+Verwerk bovenstaande plan zodanig dat dit uit te voeren en te begeleiden is door een docententeam van 7 man.
+
+Houd rekening met goede didactische en pedagogische begeleidingsnormen
+
+verwerk het plan in Gamejam_introweek_26_27.md
