@@ -1,31 +1,45 @@
-# Step By Step — Cinemachine 3: Camera Systemen (Pan & Tilt)
+# Step By Step — Cinemachine 3: Follow Camera met Pan & Tilt
+
 **Zelfstandige stap-voor-stap instructie**
 
 ---
 
 ## Leerdoelen
-- Je kunt een Cinemachine Virtual Camera instellen met een Follow-target
-- Je begrijpt het verschil tussen pan (horizontaal) en tilt (verticaal) camerabesturing
-- Je kunt de Cinemachine Input Handler koppelen aan het nieuwe Input System
+
+- Je kunt Cinemachine installeren en de `CinemachineBrain` instellen op de Main Camera
+- Je begrijpt het verschil tussen `CinemachineBrain` en een `CinemachineCamera` (Virtual Camera)
+- Je kunt een follow-camera instellen met `Third Person Follow` en `Pan Tilt` voor muis-besturing
+- Je kunt de `Look`-actie uit het Input System koppelen aan Cinemachine
+- Je kunt wisselen tussen twee Virtual Cameras via een knop
 
 ---
 
 ## Achtergrond: Hoe werkt Cinemachine?
 
 Cinemachine werkt met twee onderdelen:
-- **CinemachineBrain**: zit op de Main Camera. Luistert naar alle Virtual Cameras en beslist welke actief is.
-- **CinemachineCamera** (Virtual Camera): definieert hoe de camera beweegt en kijkt.
 
-Je kunt meerdere Virtual Cameras maken (follow-cam, overview, cutscene-cam) en ze wisselen via prioriteit of vanuit code.
+| Onderdeel                            | Zit op           | Taak                                                          |
+| ------------------------------------ | ---------------- | ------------------------------------------------------------- |
+| `CinemachineBrain`                   | Main Camera      | Luistert naar alle Virtual Cameras en beslist welke actief is |
+| `CinemachineCamera` (Virtual Camera) | Eigen GameObject | Definieert hoe de camera beweegt en kijkt                     |
+
+Je kunt meerdere Virtual Cameras maken (follow-cam, overview-cam, cutscene-cam) en ze wisselen via **prioriteit** of vanuit **code**. De CinemachineBrain zorgt voor soepele overgangen (blends) tussen de camera's.
+
+**Pan** = horizontale draaiing (links/rechts om de speler draaien)  
+**Tilt** = verticale draaiing (omhoog/omlaag kijken)
 
 ---
 
 ## Stap 1 — Cinemachine installeren
 
+Cinemachine 3 is niet zomaar beschikbaar via de zoekfunctie. Installeer het via de naam:
+
 1. Ga naar **Window > Package Manager**.
-2. Klik op het dropdown linksboven → **Unity Registry**.
-3. Zoek naar **Cinemachine**.
-4. Selecteer versie **3.x** en klik **Install**.
+2. Klik op het **+**-icoon linksboven → **Install package by name**.
+3. Vul in:
+   - **Name:** `com.unity.cinemachine`
+   - **Version:** `3.1.5`
+4. Klik op **Install**.
 
 ---
 
@@ -39,13 +53,13 @@ Na installatie:
 
 ---
 
-## Stap 3 — Follow-target aanmaken op de speler
+## Stap 3 — CameraTarget aanmaken op de speler
 
 Cinemachine volgt een specifiek punt op de speler, niet het hele object.
 
 1. Selecteer het karakter in de Hierarchy.
 2. Maak een leeg child-object: **rechtermuisknop > Create Empty**. Noem het `CameraTarget`.
-3. Positioneer `CameraTarget` op borsthoogte: Y = 1.5.
+3. Zet de positie op Y = `1.5` (borsthoogte).
 
 ---
 
@@ -53,92 +67,102 @@ Cinemachine volgt een specifiek punt op de speler, niet het hele object.
 
 1. Ga naar **GameObject > Cinemachine > CinemachineCamera**.
 2. Noem hem `VC_Follow`.
-3. In de Inspector: stel in:
-   - **Follow:** sleep `CameraTarget` hierheen
-   - **Look At:** sleep `CameraTarget` hierheen
+3. Sleep je `CameraTarget` object in het **Tracking Target** veld in de Inspector.
 
 ---
 
-## Stap 5 — OrbitalFollow instellen
+## Stap 5 — Procedural components instellen
 
-De `CinemachineOrbitalFollow`-component zorgt voor de pan & tilt beweging rondom de speler.
+Stel de bewegings- en rotatiebesturing in via de **Procedural Components**:
 
 1. Selecteer `VC_Follow`.
-2. Klik **Add Extension > CinemachineOrbitalFollow** (of het staat al als component).
+2. Zoek het onderdeel **Procedural Components** in de Inspector.
 3. Stel in:
-   - **Radius / Camera Distance:** 5 (hoe ver de camera achter de speler is)
-   - **Vertical Axis → Value:** 20 (standaard kijkhoek naar beneden, in graden)
-   - **Vertical Axis → Range:** Min = -30, Max = 60 (tilt-beperking)
-   - **Horizontal Axis:** dit is de pan-as
+   - **Position Control:** `Third Person Follow`
+   - **Rotation Control:** `Pan Tilt`
 
 ---
 
-## Stap 6 — Input System koppelen aan Cinemachine
-
-Cinemachine 3 gebruikt de `CinemachineInputAxisController` om input te ontvangen.
+## Stap 6 — Third Person Follow instellen
 
 1. Selecteer `VC_Follow`.
-2. **Add Component > Cinemachine > CinemachineInputAxisController**.
-3. In de Inspector zie je de axes:
-   - **Look X** → koppel aan de `Look`-actie (horizontale muis)
-   - **Look Y** → koppel aan de `Look`-actie (verticale muis)
-
-### Look-actie toevoegen aan InputActionAsset
-4. Open `PlayerInput.inputactions`.
-5. Voeg een actie toe: `Look`, **Action Type: Value**, **Control Type: Vector2**.
-6. Binding: **Mouse/Delta** (voor muisbeweging).
-7. **Save Asset**.
-
-### Terugkoppelen in Cinemachine
-8. In `CinemachineInputAxisController`:
-   - Klik bij **Controllers** op **+**.
-   - Stel **Name** in op `Look`.
-   - Koppel de `Look`-action via de InputActionReference.
-
----
-
-## Stap 7 — Damping instellen voor soepele camerabewegingen
-
-1. Selecteer `VC_Follow`.
-2. Zoek het `CinemachinePositionComposer` of `CinemachineOrbitalFollow`-component.
+2. Zoek het `CinemachineThirdPersonFollow`-component in de Inspector.
 3. Stel in:
-   - **Damping:** X = 0.5, Y = 0.5, Z = 0.5 (hoe snel de camera de speler volgt; 0 = instant)
+   - **Shoulder Offset:** X = `0`, Y = `1`, Z = `0`
+   - **Camera Distance:** `5.14`
+
+---
+
+## Stap 7 — Pan Tilt instellen
+
+1. Selecteer `VC_Follow`.
+2. Zoek het `CinemachinePanTilt`-component in de Inspector.
+3. Stel in:
+   - **Reference Frame:** `LookAtTarget`
+
+---
+
+## Stap 8 — Input System koppelen aan Cinemachine
+
+Cinemachine 3 gebruikt de `CinemachineInputAxisController` voor musinput.
+
+### Look-actie toevoegen aan het InputActionAsset
+
+1. Open `InputSystem_Actions.inputactions`.
+2. Voeg in de **Player** Action Map een actie toe: `Look`, **Action Type: Value**, **Control Type: Vector2**.
+3. Voeg als binding toe: **Mouse/Delta** → **Save Asset**.
+
+### Koppelen in Cinemachine
+
+4. Selecteer `VC_Follow` → **Add Component > Cinemachine > CinemachineInputAxisController**.
+5. In de Inspector: koppel **Look X** en **Look Y** aan de `Look`-actie.
+6. Stel de **Gain** in:
+   - **Look X:** `1`
+   - **Look Y:** `-5`
+
+---
+
+## Stap 9 — Damping instellen voor soepele camerabewegingen
+
+1. Selecteer `VC_Follow`.
+2. Zoek het `CinemachineThirdPersonFollow`-component.
+3. Stel in:
+   - **Damping:** X = `0.5`, Y = `0.5`, Z = `0.5`
 4. Test in Play mode: de camera volgt nu met een kleine vertraging voor een professioneler gevoel.
 
 ---
 
-## Stap 8 — Recentering inschakelen
+## Stap 10 — Recentering inschakelen
 
-Als de speler stopt met rondkijken, kan de camera automatisch terugkeren naar achter de speler.
+Als de speler stopt met rondkijken, keert de camera automatisch terug naar achter de speler.
 
 1. Selecteer `VC_Follow`.
-2. Zoek **Horizontal Axis** in het `CinemachineOrbitalFollow`-component.
-3. Activeer **Recentering**:
-   - ✅ **Enable Recentering**
-   - **Wait Time:** 2 (seconden voor de camera begint te recenteren)
-   - **Recentering Time:** 1 (seconden voor de overgang)
+2. Zoek het `CinemachinePanTilt`-component.
+3. Stel in:
+   - **Recenter Target:** `Axis Center`
 
 ---
 
-## Stap 9 — Camera-collision instellen (CinemachineDeoccluder)
+## Stap 11 — Camera-collision instellen (CinemachineDeoccluder)
 
 Voorkomt dat de camera door muren gaat.
 
 1. Selecteer `VC_Follow`.
 2. **Add Extension > CinemachineDeoccluder**.
 3. Stel in:
-   - **Strategy:** Pull Camera Forward
-   - **Camera Radius:** 0.3
+   - **Strategy:** `Pull Camera Forward`
+   - **Camera Radius:** `0.3`
 
 ---
 
-## Stap 10 — Tweede Virtual Camera: Overview
+## Stap 12 — Tweede Virtual Camera: Overview
 
-1. **GameObject > Cinemachine > CinemachineCamera**. Noem hem `VC_Overview`.
-2. Positioneer hem hoog boven de scene: Y = 20, kijk omlaag (Rotation X = 90).
+1. **GameObject > Cinemachine > CinemachineCamera** → noem hem `VC_Overview`.
+2. Positioneer hem hoog boven de scene: Y = `20`, kijk omlaag (Rotation X = `90`).
 3. Stel **Priority** in op `0` (lager dan de follow-cam, die op `10` staat).
 
-### Wisselen via een knop
+### Wisselen via Tab
+
 4. Maak een script `CameraSwitch.cs` en koppel dit aan een leeg GameObject:
 
 ```csharp
@@ -156,7 +180,6 @@ public class CameraSwitch : MonoBehaviour
 
     void Awake()
     {
-        // Voeg een "SwitchCamera"-actie toe aan je InputActionAsset (bijv. Tab-toets)
         switchAction = inputAsset.FindActionMap("Player").FindAction("SwitchCamera");
     }
 
@@ -176,11 +199,11 @@ public class CameraSwitch : MonoBehaviour
 ```
 
 5. Voeg `SwitchCamera` toe aan de InputActionAsset met binding **Keyboard/Tab**.
-6. Sleep de twee cameras naar de Inspector-velden.
+6. Sleep de twee cameras naar de Inspector-velden van het script.
 
 ---
 
-## Stap 11 — Blend instellen
+## Stap 13 — Blend instellen
 
 De `CinemachineBrain` bepaalt hoe soepel overgangen zijn.
 
@@ -191,7 +214,7 @@ De `CinemachineBrain` bepaalt hoe soepel overgangen zijn.
 
 ---
 
-## Stap 12 — Testen
+## Stap 14 — Testen
 
 1. Druk op **Play**.
 2. Beweeg de muis: draait de camera mee (pan links/rechts, tilt omhoog/omlaag)?
@@ -203,13 +226,13 @@ De `CinemachineBrain` bepaalt hoe soepel overgangen zijn.
 
 ## Veelgemaakte fouten & oplossingen
 
-| Probleem | Oorzaak | Oplossing |
-|---|---|---|
-| Camera beweegt niet | CinemachineBrain ontbreekt op Main Camera | Add Component > CinemachineBrain |
-| Input werkt niet | Look-actie niet gekoppeld | CinemachineInputAxisController instellen |
-| Camera gaat door muren | Deoccluder niet ingesteld | Add Extension > CinemachineDeoccluder |
-| Overgang niet soepel | Blend Time = 0 | CinemachineBrain → Default Blend Time |
-| Pan werkt, tilt niet | Vertical axis range te klein | Stel Min/Max in op -30 / 60 |
+| Probleem               | Oorzaak                                   | Oplossing                                |
+| ---------------------- | ----------------------------------------- | ---------------------------------------- |
+| Camera beweegt niet    | CinemachineBrain ontbreekt op Main Camera | Add Component > CinemachineBrain         |
+| Input werkt niet       | Look-actie niet gekoppeld                 | CinemachineInputAxisController instellen |
+| Camera gaat door muren | Deoccluder niet ingesteld                 | Add Extension > CinemachineDeoccluder    |
+| Overgang niet soepel   | Blend Time = 0                            | CinemachineBrain → Default Blend Time    |
+| Pan werkt, tilt niet   | Vertical axis range te klein              | Stel Min/Max in op -30 / 60              |
 
 ---
 
