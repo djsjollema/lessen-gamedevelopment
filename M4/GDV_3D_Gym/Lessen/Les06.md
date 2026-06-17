@@ -32,20 +32,20 @@ if (Physics.Raycast(ray, out hit, maxDistance, layerMask))
 }
 ```
 
-| Parameter    | Betekenis                                                   |
-| ------------ | ----------------------------------------------------------- |
-| `Ray`        | Beginpunt + richting van de lijn                            |
-| `RaycastHit` | Resultaat: welk object, positie van botsing, normaalvector  |
-| `maxDistance`| Hoe ver de ray reikt (in meters)                            |
-| `LayerMask`  | Filter: welke lagen mag de ray raken?                       |
+| Parameter     | Betekenis                                                  |
+| ------------- | ---------------------------------------------------------- |
+| `Ray`         | Beginpunt + richting van de lijn                           |
+| `RaycastHit`  | Resultaat: welk object, positie van botsing, normaalvector |
+| `maxDistance` | Hoe ver de ray reikt (in meters)                           |
+| `LayerMask`   | Filter: welke lagen mag de ray raken?                      |
 
 **Wanneer Raycast vs. Trigger Collider?**
 
-| Raycast                                        | Trigger Collider                   |
-| ---------------------------------------------- | ---------------------------------- |
-| Actief per frame of op aanvraag                | Altijd actief                      |
-| Richting-afhankelijk (je moet ernaar wijzen)   | Detecteert alles in de zone        |
-| Goed voor: schieten, interactie, line-of-sight | Goed voor: gebieden, collectibles  |
+| Raycast                                        | Trigger Collider                  |
+| ---------------------------------------------- | --------------------------------- |
+| Actief per frame of op aanvraag                | Altijd actief                     |
+| Richting-afhankelijk (je moet ernaar wijzen)   | Detecteert alles in de zone       |
+| Goed voor: schieten, interactie, line-of-sight | Goed voor: gebieden, collectibles |
 
 ---
 
@@ -158,7 +158,7 @@ public class ShootSystem : MonoBehaviour
 **LineRenderer instellen:**
 
 - **Add Component > Effects > Line Renderer** op de speler.
-- **Width:** `0.05`, **Color:** rood, **Use World Space:** ✅, **Enabled:** ❌ (script zet hem aan).
+- **Width:** `0.05`, **Color:** rood, **Use World Space:** AAN, **Enabled:** UIT (script zet hem aan).
 
 > Gebruik `Debug.DrawRay` in de Scene view om te controleren of de ray in de juiste richting schiet.
 
