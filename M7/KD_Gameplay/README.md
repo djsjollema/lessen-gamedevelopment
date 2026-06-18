@@ -37,7 +37,7 @@ en/of leidinggevende en stemt zijn werkzaamheden af.
 
 Het game project kunnen jullie hier terugvinden op github: https://github.com/erwinhenraat/Gelactic_Ricochet/tree/development
 
-## Extra voor SD Studenten
+## Extra voor SD Studenten 
 
 - Jullie realiseren de nieuwe feature(s) op de feature branch(es)
 - Jullie testen de feature of deze leuk en bugvrij is en of deze voldoet aan de technische eisen uit het technisch design
