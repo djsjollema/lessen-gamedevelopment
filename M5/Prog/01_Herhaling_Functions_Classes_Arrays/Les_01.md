@@ -1,5 +1,100 @@
 # Les 01 – Herhaling: Variabelen, Functies, Classes en Arrays
 
+## Theorie
+
+### Variabelen
+
+Een variabele slaat een waarde op onder een naam. Je geeft altijd het **type** aan.
+
+```csharp
+int score = 10;
+string naam = "Speler1";
+bool leeft = true;
+```
+
+Veelgebruikte types: `int` (geheel getal), `float` (decimaal), `string` (tekst), `bool` (waar/niet-waar).
+
+#### Overzicht veelgebruikte datatypes
+
+| Type | Omschrijving | Voorbeeld |
+|------|-------------|-----------|
+| `int` | Geheel getal (32-bit) | `int score = 42;` |
+| `float` | Decimaal getal (32-bit, ~7 cijfers) | `float snelheid = 3.5f;` |
+| `double` | Decimaal getal (64-bit, ~15 cijfers) | `double afstand = 1.234567890;` |
+| `bool` | Waar of niet-waar | `bool isActief = true;` |
+| `string` | Tekst (reeks tekens) | `string naam = "Speler";` |
+| `char` | Eén enkel teken | `char letter = 'A';` |
+| `long` | Groot geheel getal (64-bit) | `long punten = 9999999999L;` |
+| `byte` | Klein geheel getal (0–255) | `byte niveau = 3;` |
+| `uint` | Positief geheel getal (0–4 miljard) | `uint stappen = 100000u;` |
+| `Vector2` | 2D-positie (Unity) | `Vector2 pos = new Vector2(1f, 2f);` |
+| `Vector3` | 3D-positie (Unity) | `Vector3 pos = new Vector3(0f, 1f, 0f);` |
+
+---
+
+### Functies
+
+Een functie is een herbruikbaar stuk code. Je geeft aan wat hij **teruggeeft** en welke **parameters** hij nodig heeft.
+
+```csharp
+int Optellen(int a, int b)
+{
+    return a + b;
+}
+
+int resultaat = Optellen(3, 5); // resultaat = 8
+```
+
+Gebruik `void` als de functie niets teruggeeft.
+
+---
+
+### Classes
+
+Een class is een **blauwdruk** voor een object. Een object is een instantie van die class.
+
+```csharp
+class Vijand
+{
+    public string Naam;
+    public int HP;
+
+    public void Aanval()
+    {
+        Console.WriteLine(Naam + " valt aan!");
+    }
+}
+
+Vijand v = new Vijand();
+v.Naam = "Goblin";
+v.HP = 50;
+v.Aanval();
+```
+
+---
+
+### Arrays
+
+Een array slaat meerdere waarden van hetzelfde type op in één variabele.
+
+```csharp
+int[] scores = new int[3];
+scores[0] = 10;
+scores[1] = 20;
+scores[2] = 30;
+
+// Of direct initialiseren:
+string[] namen = { "Alice", "Bob", "Charlie" };
+
+// Doorlopen met een lus:
+for (int i = 0; i < namen.Length; i++)
+{
+    Console.WriteLine(namen[i]);
+}
+```
+
+---
+
 ## Oefeningen
 
 ---
