@@ -16,7 +16,7 @@ In deze allereerste les maak je kennis met Unity en leer je de basis van hoe een
 
 Unity is een **game engine** - een programma waarmee je games kunt maken zonder alles vanaf nul te bouwen.
 
-![Unity](../gfx/1_1_unity.gif)
+![Unity](../../gfx/1_1_unity.gif)
 
 ### Waarom Unity?
 
@@ -401,7 +401,7 @@ Bewaar al je aantekeningen goed! Deze moet je aan het einde van de periode inlev
 ## Oefeningen uitvoeren
 
 Doe nu minimaal 1 oefening naar keuze voor les 1.1
-De oefeningen vind je [hier](../Oefeningen/oefeningen_1_1.md) terug
+De oefeningen vind je [hier](../../Oefeningen/oefeningen_1_1.md) terug
 
 ![exercise](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZXRrc3QwYWV1Ym5oY2FrZnF5YWxnaW9heTRsNnZzdnpnMmRxeXM1ZiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/x1BVziEYuKBd1aVZRz/giphy.gif)
 
