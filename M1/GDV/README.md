@@ -101,9 +101,9 @@ Naast het opletten in de les en het doen van de oefeningen is het ook een opdrac
 
 ## Inleveren werk
 
-De oefeningen moeten jullie inleveren via een zogenaamde README file op Github.
+De oefeningen moeten jullie inleveren via een zogenaamde README.md file op Github.
 
-[Les 7](./Lessen/Les_7/Les_7.md) moet je tuis zelfstandig doornemen. Hierin staat uitleg over hoe je een readme schrijft. Deze kennis heb je nodig om al je werk op de juiste manier in te leveren. Als je vragen hebt over les 7 kun je die altijd stellen in de les.
+In week 4 leren jullie bij de **SKILL-GitHub** lessen meer over hoe je README bestanden opmaakt en hier beeld materiaal in verwerkt. Tot die tijd volstaat het om de oefeningen aan de docent te laten zien.
 
 Voor alle oefeningen geldt dat je een titel plaatst. Een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
 
