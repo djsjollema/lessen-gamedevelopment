@@ -126,7 +126,7 @@ Controleer je werk:
 - [ ] Ik heb duidelijke namen gebruikt
 - [ ] Ik heb mijn scene opgeslagen
 - [ ] Ik heb een screenshot of gif gemaakt
-- [ ] Ik heb mijn opdracht ingeleverd via Simulise
+- [ ] Ik heb mijn opdracht ingeleverd via  [Simulise](https://ma.simulise.com/school/assignment/d95819ef-7f0e-47b1-a81a-264c0e92103d/view)
 
 ---
 
