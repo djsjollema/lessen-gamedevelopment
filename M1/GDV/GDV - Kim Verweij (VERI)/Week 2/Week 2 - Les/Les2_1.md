@@ -188,14 +188,11 @@ public class RotateObject : MonoBehaviour
 
 Dan moet je bestand ook `RotateObject.cs` heten.
 
-### Mijn object verdwijnt uit beeld
-
+Mijn object verdwijnt uit beeld
 Selecteer het object in de Hierarchy en druk op **F**.
 
-### Ik zie mijn public variabele niet in de Inspector
-
+Ik zie mijn public variabele niet in de Inspector
 Sla je script op en ga terug naar Unity.
-
 Check ook of je variabele echt `public` is.
 
 ---
