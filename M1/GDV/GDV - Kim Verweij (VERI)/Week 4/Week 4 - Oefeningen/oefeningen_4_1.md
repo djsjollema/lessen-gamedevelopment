@@ -1,77 +1,148 @@
 # Oefeningen Les 4.1: Trigger vs Collision Quest
 
-## Werkwijze
-Begin met **Oefening 4.1A**.  
-Heb je die af? Ga door met **Oefening 4.1B** en daarna met **Oefening 4.1C**.  
-De oefeningen bouwen op elkaar voort, dus het is het beste om ze in deze volgorde te maken.  
+Vandaag ga je oefenen met triggers, collisions en tags.
 
+Je begint met **Oefening 4.1A**.  
+Heb je die af? Dan ga je door met **Oefening 4.1B**.  
+Heb je daarna nog tijd, dan mag je **Oefening 4.1C** proberen.
 
-Als je klaar bent, vul dan [dit](https://forms.gle/VqBssDKbTQtTE37n8) formulier in. De kennisvragen helpen je om te ontdekken of je de belangrijkste onderdelen van de les echt begrijpt. Dezelfde onderwerpen komen later terug in de toets.
+De oefeningen bouwen op elkaar voort, dus maak ze het liefst in deze volgorde.
+
+---
+
+## Inleveren
+
+Lever je opdracht in via Simulise:
+
+[Lever hier in op Simulise](PLAATS-HIER-DE-SIMULISE-LINK)
+
+Zorg dat je inlevering bevat:
+
+- een screenshot of gif van je resultaat
+- een korte uitleg van wat je hebt gemaakt
+- welke objecten een Trigger gebruiken
+- welke objecten een Collision gebruiken
+- welke Tags je hebt gebruikt
+- wat goed lukte
+- wat je lastig vond
 
 ---
 
 ## Oefening 4.1A: Coin Collector
 
-**Doel**  
-Leer hoe je een speler laat bewegen, coins oppakt via een trigger en muren gebruikt als collision.  
+### Doel
 
-**Wat ga je doen?**  
-Je maakt een speler die coins kan verzamelen. Coins verdwijnen via een **Trigger** en muren blokkeren de speler via een **Collision**. De score wordt zichtbaar gemaakt in de Console.  
+Je leert het verschil tussen een Trigger en een Collision.
 
-**Stappen**  
-- Maak een **Player** (bijv. Cube) met Rigidbody en Collider. Zet de tag op **Player**.  
-- Maak een **Coin** (bijv. Sphere) met Collider, zet **Is Trigger** aan en de tag op **Coin**.  
-- Maak een **Muur** (Cube) met Collider. Laat **Is Trigger** uit staan.  
-- Laat de speler links en rechts bewegen via `Input.GetAxis("Horizontal")`.  
-- Zorg dat coins verdwijnen met `OnTriggerEnter` en dat er een score in de Console wordt bijgehouden.  
-- Zorg dat muren de speler blokkeren met een Collision.  
+### Wat ga je doen?
 
-**Bonus uitdagingen**  
-- Laat de coin ronddraaien in de lucht en kies bewust voor **Space.Self** of **Space.World**.  
-- Voeg meerdere coins toe en tel ze allemaal mee in de score.  
-- Toon in de Console een duidelijke melding bij zowel Trigger als Collision.  
+Je maakt een speler die coins kan verzamelen.
+
+Coins verdwijnen via een **Trigger**.  
+Muren blokkeren de speler met een **Collision**.  
+De score laat je zien in de Console.
+
+### Stappen
+
+1. Maak een **Player** met Rigidbody en Collider.
+2. Zet de tag van de Player op **Player**.
+3. Maak een **Coin** met Collider.
+4. Zet bij de Coin **Is Trigger** aan.
+5. Zet de tag van de Coin op **Coin**.
+6. Maak een **Muur** met Collider.
+7. Laat **Is Trigger** bij de muur uit staan.
+8. Laat de Player bewegen met `Input.GetAxis("Horizontal")`.
+9. Zorg dat coins verdwijnen met `OnTriggerEnter`.
+10. Houd de score bij in de Console.
+
+### Bonus
+
+- Laat de coin ronddraaien.
+- Voeg meerdere coins toe.
+- Toon in de Console wanneer iets een Trigger of Collision is.
 
 ---
 
 ## Oefening 4.1B: Goomba Trouble
 
-**Doel**  
-Leer hoe je naast triggers ook collisions met vijanden en UI-feedback gebruikt.  
+### Doel
 
-**Wat ga je doen?**  
-Je breidt je coin-scène uit met een vijand (Goomba of stilstaand object) die een leven kost bij collision. Coins keren automatisch terug en de score verschijnt in een Canvas-tekst.  
+Je leert hoe je een vijand toevoegt met Collision.
 
-**Stappen**  
-- Breid je vorige scène uit.  
-- Voeg een **Canvas** toe met een Text (of TextMeshProUGUI) voor de score.  
-- Zorg dat coins na een paar seconden respawnen.  
-- Voeg een **Enemy** toe (Goomba of stilstaand object) met Collider en tag **Enemy**.  
-- Laat bij collision met de Enemy een leven van de speler afgaan (houd dit bij met een int-variabele en toon dit in de Console of UI).  
+### Wat ga je doen?
 
-**Bonus uitdagingen**  
-- Laat de coin krimpen bij oppakken en terugploppen bij respawn.  
-- Laat de Enemy of Goomba om een **pivot** draaien in plaats van op zichzelf.  
-- Voeg een geluidseffect toe bij het oppakken van coins.  
+Je breidt je coin-scene uit met een vijand.
+
+Als de speler de vijand raakt, verliest de speler een leven.  
+Coins komen na een paar seconden weer terug.
+
+### Stappen
+
+1. Breid je scene van oefening 4.1A uit.
+2. Voeg een **Enemy** toe, bijvoorbeeld een Goomba of blok.
+3. Geef de Enemy een Collider.
+4. Zet de tag van de Enemy op **Enemy**.
+5. Laat de speler een leven verliezen bij Collision met de Enemy.
+6. Houd levens bij met een `int` variabele.
+7. Laat coins na een paar seconden respawnen.
+8. Toon score en levens in de Console of UI.
+
+### Bonus
+
+- Laat de coin krimpen bij oppakken.
+- Laat de coin terugploppen bij respawn.
+- Laat de Enemy bewegen of draaien.
+- Voeg een geluidseffect toe.
 
 ---
 
 ## Oefening 4.1C: Boo Challenge
 
-**Doel**  
-Leer hoe je complexe collisions en triggers combineert, inclusief respawn-mechanieken.  
+### Doel
 
-**Wat ga je doen?**  
-Je voegt een bewegende vijand toe die rond een as draait, een KillZone die levens kost bij vallen, en coins met verschillende waarden en respawntijden.  
+Je leert meerdere Triggers en Collisions combineren.
 
-**Stappen**  
-- Breid je vorige scène uit.  
-- Voeg een **Boo** of ander vijand-object toe dat rond een empty parent draait. Zet de tag op **Enemy**.  
-- Zorg dat collision met deze vijand levens aftrekt.  
-- Maak een **KillZone** onder het level (bijv. een groot vlak met Is Trigger aan en tag KillZone).  
-- Laat de speler een leven verliezen en terugkeren naar een RespawnPoint wanneer deze in de KillZone valt.  
-- Voeg meerdere coins toe met verschillende scorewaarden en respawntijden.  
+### Wat ga je doen?
 
-**Bonus uitdagingen**  
-- Laat de Boo wiebelen tijdens het roteren om hem levendiger te maken.  
-- Voeg een **Checkpoint** toe als Trigger die tijdelijk een bericht in de UI toont. Tag dit object **Checkpoint**.  
-- Bouw een cooldown zodat de speler niet meerdere levens tegelijk verliest bij aanhoudend contact met een vijand.  
+Je voegt een bewegende vijand, een KillZone en coins met verschillende waardes toe.
+
+Als de speler in de KillZone valt, verliest de speler een leven en komt terug bij een RespawnPoint.
+
+### Stappen
+
+1. Breid je vorige scene uit.
+2. Voeg een **Boo** of andere vijand toe.
+3. Laat de Boo rond een empty parent draaien.
+4. Zet de tag van de Boo op **Enemy**.
+5. Zorg dat Collision met Boo levens aftrekt.
+6. Maak een **KillZone** onder het level.
+7. Zet bij de KillZone **Is Trigger** aan.
+8. Zet de tag op **KillZone**.
+9. Maak een **RespawnPoint**.
+10. Laat de speler terugkeren naar het RespawnPoint.
+11. Voeg meerdere coins toe met verschillende scorewaardes.
+
+### Bonus
+
+- Laat Boo wiebelen tijdens het bewegen.
+- Voeg een Checkpoint toe als Trigger.
+- Toon tijdelijk een bericht in de UI.
+- Bouw een cooldown zodat de speler niet meerdere levens tegelijk verliest.
+
+---
+
+## Klaar?
+
+Controleer je werk:
+
+- [ ] Mijn speler kan bewegen
+- [ ] Mijn coins werken met een Trigger
+- [ ] Mijn muren werken met Collision
+- [ ] Ik heb Tags gebruikt
+- [ ] Ik gebruik `OnTriggerEnter`
+- [ ] Ik gebruik `OnCollisionEnter`
+- [ ] Mijn score of levens worden bijgehouden
+- [ ] Ik heb mijn scene opgeslagen
+- [ ] Ik heb een screenshot of gif gemaakt
+- [ ] Ik heb mijn opdracht ingeleverd via [Simulise](PLAATS-HIER-DE-SIMULISE-LINK)
+
