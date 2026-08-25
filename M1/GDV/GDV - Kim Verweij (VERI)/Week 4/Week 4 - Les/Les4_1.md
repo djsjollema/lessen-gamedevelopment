@@ -1,384 +1,162 @@
-# Les 4.1: Colliders, Triggers en Tags
+# Les 4.1: Botsen of detecteren?
 
-## Wat Ga Je Leren?
+Vandaag ga je leren hoe objecten op elkaar kunnen reageren.
 
-In deze les leer je hoe GameObjects met elkaar kunnen "praten" en reageren op contact. Je gaat:
+Soms wil je dat objecten echt botsen, zoals een speler tegen een muur.  
+Soms wil je alleen detecteren dat iets geraakt wordt, zoals een coin die je oppakt.
 
-- Begrijpen wat Colliders en Triggers zijn
-- Het verschil leren tussen Physics Colliders en Trigger Colliders
-- Tags gebruiken om objecten te identificeren
-- Je eerste detectie systemen maken
-- Objecten laten reageren op aanraking
+Daarvoor gebruiken we Colliders, Triggers en Tags.
 
 ---
 
-## Colliders Revisited - Meer dan alleen Physics
+## Na deze les
 
-In Les 3.1 heb je Colliders leren kennen voor **physics botsingen**. Maar Colliders kunnen nog veel meer!
+Na deze les kun je:
 
-### Twee Soorten Colliders
-
-**1. Physics Colliders (Is Trigger = false)**
-
-- Objecten botsen **fysiek** tegen elkaar
-- Gebruikt voor muren, grond, echte botsingen
-- Objecten kunnen niet door elkaar heen
-
-**2. Trigger Colliders (Is Trigger = true)**
-
-- Objecten gaan **door elkaar heen**
-- Detecteert alleen **wanneer** objecten elkaar raken
-- Perfect voor pickup items, checkpoints, detectie zones
-
-![trigger vs collider](../../gfx/4_1_pickups.png)
+- uitleggen wat een Collider doet
+- uitleggen wat een Trigger doet
+- het verschil uitleggen tussen botsen en detecteren
+- een Tag toevoegen aan een GameObject
+- controleren waarom een Trigger soms niet werkt
 
 ---
 
-## Trigger Colliders Maken
+## Collider
 
-### Stap 1: Een Trigger Object Maken
+Een `Collider` bepaalt de vorm waarmee Unity botsingen berekent.
 
-1. **Maak een Cube** (GameObject → 3D Object → Cube)
-2. **Selecteer de Cube** in de Hierarchy
-3. **Kijk naar de Box Collider** in de Inspector
-4. **Vink "Is Trigger" aan**
+Voorbeelden:
 
-![trigger setup](../../gfx/4_1_trigger_setup.png)
+- een muur houdt de speler tegen
+- een vloer zorgt dat een bal niet door de grond valt
+- een obstakel blokkeert de route
 
-**Nu is je Cube een Trigger!** Andere objecten kunnen er doorheen lopen, maar het detecteert wel contact.
-
-### Stap 2: Trigger Transparant Maken
-
-1. **Rechtsklik in Project** → Create → Material
-2. **Noem het "TriggerMaterial"**
-3. **Zet Surface Type op "Transparent"**
-4. **Verlaag de Alpha waarde**
-5. **Sleep het materiaal op je trigger object**
-
-![transparent material](../../gfx/4_1_transparent_material.png)
+Een Collider is meestal onzichtbaar tijdens het spelen, maar Unity gebruikt hem wel om contact te herkennen.
 
 ---
 
-## Tags - GameObjects Labelen
+## Trigger
 
-### Wat Zijn Tags?
+Een `Trigger` is een Collider waarbij `Is Trigger` aanstaat.
 
-**Tags** zijn zoals **labels** die je op GameObjects plakt om ze te identificeren.
+Een Trigger houdt objecten niet tegen.  
+Objecten kunnen er dus doorheen.
 
-**Vergelijking:**  
-Het is zoals naamplaatjes op een feest - je weet meteen wie wie is!
+Maar Unity kan wel detecteren dat er iets door de Trigger heen gaat.
 
-![name tags](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGRveTJ0bWs3YTdja3lyYjllZzAwYmI0cGNpd2dwOGN4Z2RuMHE5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9PqOegBqgBnMHvERV3/giphy.gif)
+Triggers gebruik je bijvoorbeeld voor:
 
-### Tags Maken en Gebruiken
+- coins oppakken
+- checkpoints
+- deuren openen
+- killzones
+- geheime gebieden
 
-#### Stap 1: Een Tag Maken
+---
 
-1. **Selecteer een GameObject**
-2. **Klik op "Tag" dropdown** (bovenin Inspector)
-3. **Kies "Add Tag..."**
-4. **Klik het + icoontje**
-5. **Type een tag naam** bijvoorbeeld: "Player", "Enemy", "Pickup"
+## Collision of Trigger?
 
-![create tag](../../gfx/4_1_add_tag.png)
-![save tag](../../gfx/4_1_save_tag.png)
+Gebruik een normale Collider als iets moet blokkeren.
 
-#### Stap 2: Tag Toewijzen
+Gebruik een Trigger als iets alleen iets moet detecteren.
 
-1. **Selecteer je GameObject**
-2. **Klik op Tag dropdown**
-3. **Kies je nieuwe tag**
+Voorbeelden:
 
-![set tag](../../gfx/4_1_set_tag.png)
+- muur = Collision
+- coin = Trigger
+- vloer = Collision
+- checkpoint = Trigger
 
-### Veelgebruikte Tags
+---
 
-```
-Player          // De speler
-Enemy           // Vijanden
-Pickup          // Verzamelt items
-Wall            // Muren
-Ground          // Grond
-Checkpoint      // Save punten
-PowerUp         // Special items
+## Tags
+
+Een `Tag` is een label voor een GameObject.
+
+Met Tags kun je herkennen wat iets is.
+
+Voorbeelden:
+
+- `Player`
+- `Enemy`
+- `Coin`
+- `Wall`
+- `Checkpoint`
+
+Later kun je in code bijvoorbeeld checken:
+
+```csharp
+if (other.CompareTag("Player"))
+{
+    Debug.Log("De speler is geraakt");
+}
 ```
 
----
-
-## Trigger Detection in Unity
-
-### Wat Gebeurt Er Bij Contact?
-
-Wanneer een GameObject met een Trigger Collider contact maakt met een ander GameObject, kan Unity dit detecteren en er automatisch op reageren.
-
-**Belangrijke voorwaarden voor triggers:**
-
-- Minimaal één object moet een **Rigidbody** hebben
-- Minimaal één object moet een **Collider** hebben met **"Is Trigger" aangevinkt**
-- Beide objecten moeten **actief** zijn in de scene
-
-### Rigidbody en Triggers
-
-**Wat is een Rigidbody?**
-Een Rigidbody component geeft een GameObject physics eigenschappen. Voor triggers hoef je geen volledige physics - je kunt een **Kinematic Rigidbody** gebruiken:
-
-1. **Voeg Rigidbody toe** aan je bewegende object (Add Component → Physics → Rigidbody)
-2. **Vink "Is Kinematic" aan** (geen zwaartekracht, maar wel trigger detectie)
-
-![rigidbody kinematic](../../gfx/4_1_rigidbody_kinematic.png)
-
-### Praktisch Voorbeeld: Pickup System Setup
-
-**Stap 1: Maak de Player**
-
-1. Maak een **Capsule** (GameObject → 3D Object → Capsule)
-2. Hernoem naar **"Player"**
-3. Geef tag **"Player"**
-4. Voeg **Rigidbody** toe (Add Component → Physics → Rigidbody)
-
-**Stap 2: Maak een Pickup Item**
-
-1. Maak een **Sphere** (GameObject → 3D Object → Sphere)
-2. Hernoem naar **"Coin"**
-3. Geef tag **"Pickup"**
-4. Ga naar **Sphere Collider** in Inspector
-5. **Vink "Is Trigger" aan**
-
-**Stap 3: Test de Setup**
-
-- Beweeg de Player naar de Coin in Scene View
-- Ze gaan door elkaar heen (omdat het een trigger is)
+Zo voorkom je dat elk object zomaar dezelfde reactie geeft.
 
 ---
 
-## Collider Types en Hun Gebruik
+## Wanneer werkt een Trigger?
 
-### Box Collider
+Check even:
 
-**Beste voor:**
+- beide objecten hebben een Collider
+- bij één Collider staat `Is Trigger` aan
+- minstens één van de objecten heeft een Rigidbody
+- beide objecten staan actief in de scene
+- je script staat op het juiste GameObject
 
-- Kubussen, muren, platformes
-- Rechthoekige objecten
-- Pickup boxes
-
-**Instellingen:**
-
-- **Center**: Verschuif het midden van de collider
-- **Size**: Maak groter/kleiner onafhankelijk van het object
-
-### Sphere Collider
-
-**Beste voor:**
-
-- Ballen, planeten, explosies
-- Ronde pickup items
-- Detection zones rond objecten
-
-**Instellingen:**
-
-- **Center**: Verschuif het midden
-- **Radius**: Grootte van de bol
-
-### Capsule Collider
-
-**Beste voor:**
-
-- Spelers, vijanden (humanoid vorm)
-- Pilaren, bomen
-- Lange cilindervormige objecten
-
-**Instellingen:**
-
-- **Center**: Midden van capsule
-- **Radius**: Breedte
-- **Height**: Hoogte
-- **Direction**: X, Y, of Z-as
-
-### Mesh Collider
-
-**Beste voor:**
-
-- Complexe 3D modellen
-- Terrein, landschappen
-- Objecten met rare vormen
-
-**⚠️ Waarschuwing:** Mesh Colliders zijn **duur** voor performance. Gebruik alleen als echt nodig!
+Als je Trigger niets doet, zit het probleem meestal in één van deze punten.
 
 ---
 
-## Physics en Trigger Interactie
+## Kinematic Rigidbody
 
-### Kinematic vs Non-Kinematic
+Soms wil je wel detectie, maar geen zwaartekracht.
 
-**Non-Kinematic Rigidbody:**
+Dan kun je een Rigidbody toevoegen en `Is Kinematic` aanzetten.
 
-- Reageert op **zwaartekracht**
-- Kan **duwen en geduwd** worden
-- Physics bepaalt beweging
+Handig voor bijvoorbeeld:
 
-**Kinematic Rigidbody:**
-
-- **Geen zwaartekracht**
-- Kan **niet geduwd** worden
-- Jij bestuurt beweging via code
-- **Wel trigger detectie**
-
-### Trigger Combinaties
-
-**Scenario 1: Player loopt over pickup**
-
-- Player: Rigidbody (kinematic) + Capsule Collider
-- Pickup: Sphere Collider (Is Trigger ✅)
-- **Resultaat**: Trigger detectie werkt
-
-**Scenario 2: Vallende objecten in detectie zone**
-
-- Object: Rigidbody (non-kinematic) + Collider
-- Zone: Box Collider (Is Trigger ✅)
-- **Resultaat**: Objects vallen door zone, trigger detecteert
-
-**Scenario 3: Twee statische objecten**
-
-- Object A: Alleen Collider
-- Object B: Alleen Collider (Is Trigger ✅)
-- **Resultaat**: Geen trigger detectie (geen Rigidbody!)
+- een speler die je zelf bestuurt
+- een bewegend platform
+- een triggerzone die niet moet vallen
 
 ---
 
-## Layer en Tag Systemen
+## Veelgemaakte fouten
 
-### Collision Layers (Geavanceerd)
+### Mijn speler gaat door de muur
 
-Unity heeft ook een **Layer** systeem naast Tags:
+Check of `Is Trigger` uitstaat op de muur.
 
-**Verschil tussen Tags en Layers:**
+### Mijn coin verdwijnt niet
 
-- **Tags**: Identificatie ("Wat ben je?")
-- **Layers**: Interactie regels ("Met wie kun je botsen?")
+Check of de coin een Trigger is en of één van de objecten een Rigidbody heeft.
 
-**Layer Example:**
+### Mijn script reageert op het verkeerde object
 
-- Player (Layer 8)
-- Enemies (Layer 9)
-- Player Projectiles (Layer 10)
+Gebruik een Tag, bijvoorbeeld `Player` of `Coin`.
 
-Je kunt zelf layers toevoegen via de inspector
+### Mijn Trigger werkt niet
 
-![Add Layer](../../gfx/4_1_add_layer.png)
-
-Via **Project Settings → Physics → Settings** kun je bepalen welke layers met elkaar kunnen botsen.
-
-![Physics Layer Matrix](../../gfx/4_1_physics_layer_matrix.png)
+Check of je script op het juiste object staat en kijk in de Console.
 
 ---
 
-## Veelvoorkomende Problemen en Oplossingen
+## Oefening
 
-### "Mijn trigger werkt niet"
+Ga nu naar de oefeningen van les 4.1:
 
-**Checklist:**
-
-1. Is "Is Trigger" aangevinkt?
-2. Heeft één object een Rigidbody?
-3. Zijn beide objecten actief (not disabled)?
-4. Overlappen de colliders daadwerkelijk?
-5. Staat het script op het juiste object?
-
-### "Objects vallen door de grond"
-
-**Probleem:** Je grond heeft waarschijnlijk "Is Trigger" aanstaan.
-**Oplossing:** Zet "Is Trigger" uit voor de grond collider.
-
-### "Performance problemen"
-
-**Oorzaken:**
-
-- Te veel Mesh Colliders
-- Te veel OnTriggerStay events
-- Complexe collider shapes
-
-**Oplossingen:**
-
-- Gebruik Box/Sphere/Capsule colliders waar mogelijk
-- Beperk OnTriggerStay gebruik
-- Gebruik Layers om onnodige checks te vermijden
+[Oefeningen Les 4.1](../Week%204%20-%20Oefeningen/oefeningen_4_1.md)
 
 ---
 
-## Aantekeningen maken
+## Checklist
 
-Maak aantekeningen over de behandelde stof in de les. Schrijf het nu zo op zodat je het later makkelijk begrijpt als je het terugleest.
-
-**Belangrijke punten om te noteren:**
-
-- Wat is het verschil tussen normale Colliders en Trigger Colliders?
-- Wat zijn Tags en waarom gebruik je ze?
-- Welke soorten Colliders zijn er en wanneer gebruik je welke?
-- Wat doet een Rigidbody en wanneer heb je er een nodig?
-- Wat is het verschil tussen Kinematic en Non-Kinematic Rigidbodies?
-- Hoe maak je triggers visueel herkenbaar?
-- Welke voorwaarden zijn er voor trigger detectie?
-
-Schrijf ook op wat je niet hebt begrepen uit deze les. Dan kun je hier later nog vragen over stellen aan de docent.
-
-Bewaar al je aantekeningen goed! Deze moet je aan het einde van de periode inleveren.
-
-![notes](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHhzdzZzbHQzYWgyNG1mZDRhdW05dWIwMDI2b2xoNWtkMWN0ODl2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7GUB9ExWUxjiSrKw/giphy.gif)
-
-## Wat Heb Je Geleerd?
-
-### Checklist
-
-- [ ] Je begrijpt het verschil tussen Physics en Trigger Colliders
-- [ ] Je kunt Tags maken en toewijzen aan GameObjects
-- [ ] Je kent de verschillende Collider types (Box, Sphere, Capsule, Mesh)
-- [ ] Je weet wat een Rigidbody doet en wanneer je het nodig hebt
-- [ ] Je begrijpt Kinematic vs Non-Kinematic Rigidbodies
-- [ ] Je kunt triggers visueel herkenbaar maken met materials
-- [ ] Je kunt veelvoorkomende trigger problemen oplossen
-
-### Volgende Stap
-
-In Les 4.2 gaan we leren hoe we met code kunnen reageren op trigger events met OnTriggerEnter() en hoe we botsingen kunnen afvangen met OnCollisionEnter()!
-
----
-
-## Veelgestelde Vragen
-
-### Q: Wat is het verschil tussen een Collider en een Trigger?
-
-**A:** Een normale Collider zorgt voor fysieke botsingen (objecten kunnen niet door elkaar heen). Een Trigger laat objecten door elkaar heen gaan maar detecteert wel wanneer ze contact maken.
-
-### Q: Wanneer gebruik ik welk type Collider?
-
-**A:**
-
-- **Box**: Voor kubussen, muren, platforms
-- **Sphere**: Voor ballen, planeten, ronde objecten
-- **Capsule**: Voor spelers, humanoids, cilinders
-- **Mesh**: Alleen voor complexe vormen (duur!)
-
-### Q: Waarom heb ik een Rigidbody nodig voor triggers?
-
-**A:** Unity's physics engine heeft een Rigidbody nodig om beweging en contact te detecteren. Zonder Rigidbody kan Unity niet weten wanneer objecten elkaar raken.
-
-### Q: Wat is het verschil tussen Kinematic en Non-Kinematic?
-
-**A:**
-
-- **Non-Kinematic**: Reageert op zwaartekracht en physics krachten
-- **Kinematic**: Jij bestuurt de beweging, geen zwaartekracht, maar wel trigger detectie
-
-### Q: Mijn triggers werken soms wel, soms niet. Waarom?
-
-**A:** Dit komt vaak door timing. Als objecten te snel bewegen kunnen ze door colliders heen "teleporteren". Gebruik kleinere Time.deltaTime stappen of Continuous collision detection.
-
-### Q: Kan ik meerdere tags per GameObject hebben?
-
-**A:** Nee, Unity ondersteunt één tag per GameObject. Gebruik parent-child hierarchies of custom scripts voor meerdere identificaties.
-
-### Q: Hoe maak ik een trigger zone die alleen spelers detecteert?
-
-**A:** Gebruik Layer filtering of check in code: `if(other.CompareTag("Player"))`. Dit is efficiënter dan alle objecten checken.
-
----
+- [ ] Ik weet wat een Collider doet
+- [ ] Ik weet wat een Trigger doet
+- [ ] Ik weet het verschil tussen botsen en detecteren
+- [ ] Ik heb een Tag toegevoegd
+- [ ] Ik weet wanneer een Rigidbody nodig is
+- [ ] Ik kan uitleggen waarom een Trigger soms niet werkt
