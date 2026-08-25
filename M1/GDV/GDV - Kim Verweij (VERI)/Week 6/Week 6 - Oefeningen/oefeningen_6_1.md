@@ -1,50 +1,123 @@
-# Oefening 6.1 – Bouw je eigen mini-level
+# Oefening 6.1: Bouw je eigen mini-level
 
-Vandaag ga je zelf aan de slag met het bouwen van een klein speelbaar level in Unity.  
-Je gebruikt de kennis en scripts van eerdere lessen en laat zien dat je de basis van beweging, physics, colliders, input en logica beheerst.  
+Vandaag ga je zelf een klein speelbaar level maken in Unity.
 
-Je hebt **1,5 uur** de tijd om een werkend mini-level te maken en aan het einde van de les jouw scene te laten zien.
+Je gebruikt wat je de afgelopen lessen hebt geleerd.  
+Denk aan bewegen, physics, colliders, triggers, `if`, `switch` en simpele gameplay.
+
+Je hebt **1,5 uur** de tijd.
+
+Hou het klein.  
+Het hoeft geen complete game te worden. Het moet vooral werken.
 
 ---
 
-## Werkwijze
-In deze les bouw je een eigen speelbaar mini-level waarin je laat zien wat je tot nu toe hebt geleerd.  
-Gebruik de kennis en scripts uit eerdere lessen. Extra uitdaging: Voeg minimaal één nieuwe feature toe die jij zelf hebt bedacht.  
+## Wat ga je maken?
+
+Je maakt een mini-level met een duidelijk doel.
+
+Bijvoorbeeld:
+
+- verzamel alle coins
+- pak een sleutel en open een deur
+- ontwijk obstakels en bereik de finish
+- raak doelwitten met verschillende aanvallen
+- los een kleine puzzel op met triggers
+
+Je mag zelf kiezen wat je maakt.
 
 ---
 
 ## Eisen
-Je level bevat minimaal:  
-- 1 bewegend object (via script of physics)  
-- 1 interactie met een if- of switch-statement (bijv. deur open bij sleutel, verschillende aanvallen, score bij item)  
-- 1 collider of trigger
 
-Extra:
-- 1 eigen feature of idee gebaseerd op wat je al kunt
+Je level bevat minimaal:
 
+- **1 bewegend object**
+- **1 collider of trigger**
+- **1 interactie met `if` of `switch`**
+- **1 eigen extra idee**
 
-Je mag scripts van eerdere lessen hergebruiken of aanpassen.  
+Je mag scripts van eerdere lessen hergebruiken of aanpassen.
 
 ---
 
-## Inspiratie
-- Collect them all:  Een eindpunt dat verschijnt als je alle items verzamelt 
-- Mini adventure: verzamel sleutels om een deur te openen  
-- Obstacle run: ontwijk bewegende obstakels en bereik de finish  
-- Arena challenge: kies aanval met switch (sword/bow/magic) en raak doelwitten  
-- Puzzle room: gebruik triggers en if-statements om puzzels op te lossen  
+## Stap 1: Bedenk je mini-level
+
+Schrijf voor jezelf kort op:
+
+- wat moet de speler doen?
+- wat is het doel?
+- wat beweegt er?
+- waar gebruik je een trigger of collider?
+- waar gebruik je `if` of `switch`?
+
+Hou je idee klein en haalbaar.
+
+---
+
+## Stap 2: Bouw je scene
+
+Maak je mini-level in Unity.
+
+Denk aan:
+
+- een duidelijke start
+- een duidelijk doel
+- objecten die goed te herkennen zijn
+- obstakels, items of triggers
+- een scene die werkt als je op Play drukt
+
+---
+
+## Stap 3: Voeg interactie toe
+
+Voeg minimaal één stukje logica toe met `if` of `switch`.
+
+Bijvoorbeeld:
+
+- als je een sleutel hebt, gaat de deur open
+- als je alle coins hebt, verschijnt de finish
+- als je health 0 is, stopt het spel
+- als je wapen `Sword` is, doe je iets anders dan bij `Bow`
+
+---
+
+## Stap 4: Test je level
+
+Druk op Play en test je scene.
+
+Check:
+
+- kan de speler bewegen?
+- werkt je bewegende object?
+- werkt je trigger of collider?
+- werkt je `if` of `switch`?
+- is het doel van je level duidelijk?
 
 ---
 
 ## Inleveren
-- Sla je project op in je GitHub-repository  
-- Zorg dat je scene duidelijk is benoemd (bijv. `Level_6_1.unity`)  
-- Laat aan het einde van de les jouw scene aan de docent zien  
+
+Lever je opdracht in via [Simulise.](PLAATS-HIER-DE-SIMULISE-LINK)
+
+Je inlevering bevat:
+
+- een screenshot of gif van je mini-level
+- een korte uitleg van wat je hebt gebouwd
+- welke onderdelen uit eerdere lessen je hebt gebruikt
+- welke eigen extra feature je hebt toegevoegd
+- wat goed lukte
+- wat je lastig vond
 
 ---
 
-## Reflectie
-Beantwoord in je `README.md` onderaan de volgende vragen:  
-1. Wat heb je in dit level toegepast van eerdere lessen?  
-2. Welke nieuwe feature heb je toegevoegd?  
-3. Wat zou je verbeteren als je meer tijd had?  
+## Klaar?
+
+Controleer voor het inleveren:
+
+- mijn level heeft een duidelijk doel
+- mijn level heeft minimaal één bewegend object
+- mijn level heeft minimaal één collider of trigger
+- mijn level gebruikt `if` of `switch`
+- mijn level heeft één eigen extra idee
+- mijn scene is opgeslagen
