@@ -14,7 +14,7 @@ De oefeningen bouwen op elkaar voort, dus maak ze het liefst in deze volgorde.
 
 Lever je opdracht in via Simulise:
 
-[Lever hier in op Simulise](PLAATS-HIER-DE-SIMULISE-LINK)
+[Lever hier in op Simulise](https://ma.simulise.com/school/assignment/257ad4bb-28c2-4372-b962-efcbf246a7fb/view)
 
 Zorg dat je inlevering bevat:
 
@@ -144,5 +144,5 @@ Controleer je werk:
 - [ ] Mijn score of levens worden bijgehouden
 - [ ] Ik heb mijn scene opgeslagen
 - [ ] Ik heb een screenshot of gif gemaakt
-- [ ] Ik heb mijn opdracht ingeleverd via [Simulise](PLAATS-HIER-DE-SIMULISE-LINK)
+- [ ] Ik heb mijn opdracht ingeleverd via [Simulise](https://ma.simulise.com/school/assignment/257ad4bb-28c2-4372-b962-efcbf246a7fb/view)
 
