@@ -1,92 +1,187 @@
-# Oefeningen Les 3.1: Unity Physics en Colliders  
+# Oefeningen Les 3.1: Vallen, botsen en stuiteren
 
-## Werkwijze  
-In deze les begin je met **Oefening 3.1A**.  
-Heb je die af? Dan ga je door met **Oefening 3.1B** en daarna met **Oefening 3.1C**.  
-De oefeningen bouwen op elkaar voort, dus het is het beste om ze in deze volgorde te maken.  
+Vandaag ga je oefenen met physics in Unity.
 
-De oefeningen lever je in via een **README.md** bestand op GitHub met:  
-- Titel van de oefening  
-- Korte omschrijving van wat je hebt gedaan  
-- Een gifje met je resultaat  
-- Link naar je script
+Je begint met **Oefening 3.1A**.  
+Heb je die af? Dan ga je door met **Oefening 3.1B**.  
+Heb je daarna nog tijd, dan mag je **Oefening 3.1C** proberen.
 
-Ben je klaar met de oefeningen? Vul dan [dit](https://forms.gle/FZf25qqManYV2cFQ6) formulier in. De kennisvragen helpen je om te ontdekken of je de belangrijkste onderdelen van de les echt begrijpt. Dezelfde onderwerpen komen later terug in de toets.
+De oefeningen bouwen op elkaar voort. Maak ze dus het liefst in deze volgorde.
 
 ---
 
-## Oefening 3.1A: Vallende bal met stuiter  
+## Inleveren
 
-**Doel**  
-Leer hoe je in 3D een object laat vallen en realistisch laat stuiteren met behulp van physics.  
+Lever je opdracht in via Simulise.
 
-**Wat ga je doen?**  
-Je maakt een bal die door zwaartekracht naar beneden valt en stuitert op de vloer, vergelijkbaar met een stuiterbal in *Angry Birds*.  
+Zorg dat je inlevering bevat:
 
-**Stappen**  
-- Voeg een Plane of Cube toe als vloer en geef deze een **BoxCollider**.  
-- Voeg een **Sphere** toe als bal en geef deze een **SphereCollider**.  
-- Voeg aan de bal een **Rigidbody** toe. Laat **Use Gravity** aan staan.  
-- Maak in de Project window een **Physic Material** aan en zet **Bounciness** boven 0.  
-- Sleep dit Physic Material naar de **Collider** van de bal.  
-- Speel de scène af en observeer het verschil in stuiteren bij andere bounciness-waarden.  
-
-**Bonus uitdagingen**  
-- Maak een “trampolinevloer” door de vloer een Physic Material met hoge bounciness te geven.  
-- Laat een blok verdwijnen zodra de bal erop landt, alsof je een breekbaar platform hebt.  
+- een screenshot of gif van je resultaat
+- een korte uitleg van wat je hebt gemaakt
+- welke physics-instellingen je hebt gebruikt
+- wat goed lukte
+- wat je lastig vond
 
 ---
 
-## Oefening 3.1B: Foutieve physics verkennen  
+## Oefening 3.1A: Vallende bal met stuiter
 
-**Doel**  
-Begrijp wat er gebeurt als physics expres fout of extreem zijn ingesteld.  
+### Doel
 
-**Wat ga je doen?**  
-Je maakt een scène waarin een object onnatuurlijk reageert, bijvoorbeeld zweeft of overdreven stuitert, alsof je een “maanlevel” of glitch nabootst.  
+Je leert hoe je een object laat vallen en stuiteren met Unity physics.
 
-**Stappen**  
-- Kopieer je scène van 3.1A.  
-- Zet bij de bal **Use Gravity** uit of zet de globale **Gravity** tijdelijk richting 0 in Project Settings.  
-- Geef de bal een Physic Material met **Bounciness** rond 1 en **Friction** laag.  
-- Speel af en noteer in je README wat er gebeurt en waarom dit niet realistisch is.  
+### Wat ga je doen?
 
-**Bonus uitdagingen**  
-- Laat een object zweven alsof het een ballon is en langzaam omhoog gaat.  
-- Maak een ijsvloer waar een blok eindeloos door blijft glijden.  
-- Laat een vijand heel overdreven stuiteren door extreem hoge bounciness.  
+Je maakt een bal die door zwaartekracht naar beneden valt en stuitert op de vloer.
+
+### Stappen
+
+1. Maak een vloer met een `Plane` of `Cube`.
+2. Zorg dat de vloer een `Collider` heeft.
+3. Maak een bal met een `Sphere`.
+4. Zorg dat de bal een `Sphere Collider` heeft.
+5. Voeg een `Rigidbody` toe aan de bal.
+6. Laat `Use Gravity` aan staan.
+7. Maak een `Physics Material`.
+8. Zet `Bounciness` hoger dan `0`.
+9. Sleep het Physics Material naar de Collider van de bal.
+10. Druk op Play en kijk wat er gebeurt.
+
+### Probeer uit
+
+Verander de waarde van `Bounciness`.
+
+Wat gebeurt er als de waarde laag is?  
+Wat gebeurt er als de waarde hoog is?
+
+### Bonus
+
+- Maak een trampolinevloer met hoge `Bounciness`.
+- Maak een bal die bijna niet stuitert.
+- Maak meerdere ballen met verschillende Physics Materials.
 
 ---
 
-## Oefening 3.1C: Velocity, botsing en trigger-event  
+## Oefening 3.1B: Foutieve physics verkennen
 
-**Doel**  
-Leer een object met snelheid vooruit te schieten en bij botsing of trigger een event af te handelen.  
+### Doel
 
-**Wat ga je doen?**  
-Je bouwt een scène waarin een bal met **velocity** tegen een muur botst en de muurkleur verandert. Daarna vliegt de bal door een poortje met **Is Trigger** aan, waarna het poortje verdwijnt of een melding geeft.  
+Je leert wat er gebeurt als physics expres raar of extreem zijn ingesteld.
 
-**Stappen**  
-- Voeg een **muur** toe met **BoxCollider** en geef de Renderer een duidelijke kleur.  
-- Voeg een **poortje** of ring toe met een **Collider** en zet **Is Trigger** aan.  
-- Zorg dat je **bal** een **Rigidbody** en **SphereCollider** heeft.  
-- Maak een script (bijvoorbeeld `BallShooter.cs`) en geef de bal in `Start()` een beginsnelheid:  
+### Wat ga je doen?
 
-  ```csharp
-  using UnityEngine;
-  public class BallShooter : MonoBehaviour
-  {
-      [SerializeField] private Vector3 initialVelocity = new Vector3(8f, 0f, 0f);
-      private Rigidbody rb;
-      void Awake() { rb = GetComponent<Rigidbody>(); }
-      void Start() { rb.velocity = initialVelocity; }
-  }
-Maak een script op de muur dat bij botsing de kleur verandert met OnCollisionEnter(Collision collision).
+Je maakt een scene waarin een object onnatuurlijk reageert.
 
-Maak een script op het poortje dat bij OnTriggerEnter(Collider other) een melding logt of het poortje verwijdert.
+Dat klinkt misschien gek, maar juist daardoor zie je goed wat instellingen zoals Gravity, Bounciness en Friction doen.
 
-Bonus uitdagingen
-- Laat een deur openzwaaien als de bal er tegenaan botst.
+### Stappen
+
+1. Kopieer je scene van oefening 3.1A.
+2. Zet bij de bal `Use Gravity` uit.
+3. Test wat er gebeurt.
+4. Geef de bal een Physics Material met hoge `Bounciness`.
+5. Zet `Friction` laag.
+6. Druk op Play en kijk wat er gebeurt.
+
+### Probeer uit
+
+Maak bijvoorbeeld:
+
+- een maanlevel waar objecten langzaam vallen
+- een ijsvloer waar objecten lang doorglijden
+- een bal die overdreven blijft stuiteren
+- een object dat blijft zweven
+
+### Bonus
+
+- Maak een object dat langzaam omhoog beweegt alsof het een ballon is.
+- Maak een vloer waarop bijna geen wrijving zit.
+- Maak een korte gif waarin je rare physics goed zichtbaar is.
+
+---
+
+## Oefening 3.1C: Snelheid, botsing en trigger
+
+### Doel
+
+Je leert hoe je een object snelheid geeft en laat reageren op een botsing of trigger.
+
+### Wat ga je doen?
+
+Je bouwt een scene waarin een bal vooruit schiet.
+
+De bal botst tegen een muur. Als dat gebeurt, verandert de muur van kleur.
+
+Daarna mag je een poortje maken met `Is Trigger`. Als de bal door het poortje gaat, verdwijnt het poortje of verschijnt er een melding in de Console.
+
+### Stappen
+
+1. Maak een bal met een `Rigidbody` en `Sphere Collider`.
+2. Maak een muur met een `Box Collider`.
+3. Geef de muur een duidelijke kleur.
+4. Maak een script, bijvoorbeeld `BallShooter`.
+5. Geef de bal in `Start()` een beginsnelheid met `linearVelocity`.
+
+```csharp
+using UnityEngine;
+
+public class BallShooter : MonoBehaviour
+{
+    public Vector3 initialVelocity = new Vector3(8f, 0f, 0f);
+
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.linearVelocity = initialVelocity;
+    }
+}
+```
+
+6. Zet het script op de bal.
+7. Druk op Play en kijk of de bal vooruit schiet.
+8. Maak daarna een script op de muur dat bij een botsing de kleur verandert.
+9. Gebruik hiervoor `OnCollisionEnter`.
+
+### Extra uitdaging: triggerpoortje
+
+1. Maak een poortje of ring.
+2. Geef het poortje een Collider.
+3. Zet `Is Trigger` aan.
+4. Maak een script dat reageert met `OnTriggerEnter`.
+5. Laat het poortje verdwijnen of log een bericht in de Console.
+
+### Bonus
+
+- Laat een deur openzwaaien als de bal ergens tegenaan botst.
 - Laat een muntje verdwijnen als de bal erdoorheen gaat.
-- Voeg een scoreteller toe die +1 optelt in de Console wanneer de bal de trigger passeert.
+- Tel +1 op in de Console wanneer de bal door een trigger gaat.
 - Bouw een klein parcours met meerdere muren en poortjes.
+
+---
+
+## Klaar?
+
+Controleer je werk:
+
+- [ ] Mijn bal valt door zwaartekracht
+- [ ] Mijn bal botst met de vloer
+- [ ] Ik heb een `Rigidbody` gebruikt
+- [ ] Ik heb een `Collider` gebruikt
+- [ ] Ik heb een Physics Material gebruikt
+- [ ] Ik heb getest met verschillende instellingen
+- [ ] Ik heb mijn scene opgeslagen
+- [ ] Ik heb een screenshot of gif gemaakt
+- [ ] Ik heb mijn opdracht ingeleverd via [Simulise](PLAATS-HIER-DE-SIMULISE-LINK)
+
+---
+
+## Tips
+
+- Sla regelmatig op met **Ctrl+S**.
+- Kijk in de Console als je script niet werkt.
+- Als je object door de grond valt, check dan de Colliders.
+- Als je object niet valt, check dan de Rigidbody en `Use Gravity`.
+- Als je object niet stuitert, check dan het Physics Material.
+- Als iets misgaat, gebruik **Ctrl+Z**.
