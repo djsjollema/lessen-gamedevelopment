@@ -1,84 +1,139 @@
-# Oefeningen Les 2.1: Scriptmatige Beweging in Unity
+# Oefeningen Les 2.1: Scriptmatige beweging in Unity
 
-## Werkwijze
+Vandaag ga je oefenen met beweging in Unity.
 
-In deze les begin je met **Oefening 2.1A**.  
-Heb je die af? Dan kun je doorgaan met **Oefening 2.1B** en daarna eventueel met **Oefening 2.1C**.  
-De oefeningen bouwen op elkaar voort, dus het is het beste om ze in deze volgorde te maken.
+Je begint met **Oefening 2.1A**.  
+Heb je die af? Dan ga je door met **Oefening 2.1B**.  
+Heb je daarna nog tijd, dan mag je **Oefening 2.1C** proberen.
 
-De oefeningen lever je in via een README.md bestand op GitHub met:
+De oefeningen bouwen op elkaar voort, dus maak ze het liefst in deze volgorde.
 
-- Titel van de oefening
-- Korte omschrijving van wat je hebt gedaan
-- Een gifje met je resultaat
-- Link naar je script
+Het hoeft nog niet perfect te zijn. Het belangrijkste is dat je begrijpt hoe je een GameObject laat bewegen met een script.
 
-Ben je klaar met de oefeningen? Vul dan [dit](https://docs.google.com/forms/d/e/1FAIpQLSc8-3RZsUtxR6Z4annQGl3EQ0uibrmHkpAdSf8VyMZ-uLLdiw/viewform?usp=sharing&ouid=101068750037276710520) formulier in. De kennisvragen helpen je om te ontdekken of je de belangrijkste onderdelen van de les echt begrijpt. Dezelfde onderwerpen komen later terug in de toets.
+---
+
+## Inleveren
+
+Lever je opdracht in via Simulise.
+
+Zorg dat je inlevering bevat:
+
+- een screenshot of gif van je resultaat
+- een korte uitleg van wat je hebt gemaakt
+- welke beweging je hebt gemaakt
+- wat goed lukte
+- wat je lastig vond
 
 ---
 
 ## Oefening 2.1A: Draaiend muntje (Coin)
 
-**Doel**  
-Leer hoe je een GameObject rond zijn eigen as laat draaien met een script.
+### Doel
 
-**Wat ga je doen?**  
-Je maakt een muntje (of ander object) dat automatisch draait, zoals in Mario.
+Je leert hoe je een GameObject rond zijn eigen as laat draaien met een script.
 
-**Stappen**
+### Wat ga je doen?
 
-- Voeg een `Cube` of `Cylinder` toe en geef deze een goud materiaal.
-- Schrijf een script waarin je `transform.Rotate()` gebruikt.
-- Gebruik `Time.deltaTime` voor vloeiende beweging.
-- Maak de snelheid instelbaar met een `public float rotateSpeed`.
+Je maakt een muntje dat automatisch ronddraait, zoals een coin in een game.
 
-**Bonus uitdagingen**
+### Stappen
 
-- Laat het muntje langzaam omhoog zweven terwijl het draait.
-- Experimenteer met draaien om meerdere assen tegelijk.
+1. Voeg een `Cube` of `Cylinder` toe.
+2. Geef het object een duidelijke naam, bijvoorbeeld `Coin`.
+3. Geef het object eventueel een goud materiaal.
+4. Maak een script, bijvoorbeeld `RotateCoin`.
+5. Zet het script op je coin.
+6. Gebruik `transform.Rotate()` om het object te laten draaien.
+7. Gebruik `Time.deltaTime` zodat de beweging netjes blijft.
+8. Maak de draaisnelheid instelbaar met een `public float rotateSpeed`.
+
+### Bonus
+
+- Laat het muntje om meerdere assen draaien.
+- Maak meerdere coins met verschillende snelheden.
+- Laat het muntje langzaam omhoog en omlaag bewegen.
 
 ---
 
 ## Oefening 2.1B: Heen-en-weer beweging (Goomba)
 
-**Doel**  
-Leer een GameObject heen en weer te laten bewegen met behulp van een script.
+### Doel
 
-**Wat ga je doen?**  
-Je maakt een object dat heen en weer loopt, zoals Goomba in Mario.
+Je leert hoe je een GameObject automatisch heen en weer laat bewegen.
 
-**Stappen**
+### Wat ga je doen?
 
-- Voeg een `Cube` of `Sphere` toe.
-- Gebruik `transform.position` in `Update()` om de X- of Z-waarde aan te passen.
-- Tip: gebruik `Mathf.PingPong()` of een sinusfunctie voor een herhalend patroon.
-- Maak snelheid en afstand instelbaar met `public variabelen`.
+Je maakt een object dat heen en weer beweegt, zoals een Goomba in Mario.
 
-**Bonus uitdagingen**
+### Stappen
 
-- Laat het object draaien in de richting waarin het loopt.
-- Voeg meerdere Goomba’s toe met verschillende snelheden.
+1. Voeg een `Cube` of `Sphere` toe.
+2. Geef het object een duidelijke naam, bijvoorbeeld `Goomba`.
+3. Maak een script, bijvoorbeeld `GoombaMovement`.
+4. Zet het script op je Goomba.
+5. Gebruik `transform.position` of `transform.Translate()` om het object te bewegen.
+6. Laat het object bewegen over de X-as of Z-as.
+7. Gebruik `Time.deltaTime`.
+8. Maak de snelheid instelbaar met een `public float speed`.
+
+### Tip
+
+Je kunt bijvoorbeeld `Mathf.PingPong()` gebruiken om een beweging heen en weer te maken.
+
+### Bonus
+
+- Maak de afstand instelbaar met een `public float distance`.
+- Laat meerdere Goomba’s bewegen met verschillende snelheden.
+- Laat de Goomba draaien in de richting waarin hij beweegt.
 
 ---
 
 ## Oefening 2.1C: Cirkelbeweging (Boo)
 
-**Doel**  
-Leer een GameObject in een cirkel rond een punt te laten bewegen.
+### Doel
 
-**Wat ga je doen?**  
-Je maakt een Boo die rond een middelpunt zweeft, zoals in Mario.
+Je leert hoe je een GameObject rond een punt laat bewegen.
 
-**Stappen**
+### Wat ga je doen?
 
-- Voeg een `Sphere` toe als Boo.
-- Gebruik `transform.RotateAround()` om rond een punt te draaien.
-- Alternatief: gebruik `Mathf.Sin()` en `Mathf.Cos()` om X en Z te berekenen.
-- Maak snelheid (`orbitSpeed`) en straal (`radius`) instelbaar met `public variabelen`.
+Je maakt een Boo die rond een middelpunt zweeft.
 
-**Bonus uitdagingen**
+### Stappen
 
-- Laat meerdere Boo’s rond hetzelfde punt draaien.
-- Combineer een cirkelbeweging met een zwevende op-en-neer beweging.
+1. Voeg een `Sphere` toe als Boo.
+2. Maak eventueel een leeg GameObject als middelpunt.
+3. Maak een script, bijvoorbeeld `BooOrbit`.
+4. Zet het script op je Boo.
+5. Gebruik `transform.RotateAround()` om rond een punt te draaien.
+6. Gebruik `Time.deltaTime`.
+7. Maak de snelheid instelbaar met een `public float orbitSpeed`.
+
+### Bonus
+
+- Laat meerdere Boo’s rond hetzelfde punt bewegen.
+- Geef elke Boo een andere snelheid.
+- Combineer de cirkelbeweging met een op-en-neer beweging.
 
 ---
+
+## Klaar?
+
+Controleer je werk:
+
+- [ ] Mijn object beweegt automatisch
+- [ ] Mijn script staat op het juiste GameObject
+- [ ] Ik gebruik `Time.deltaTime`
+- [ ] Ik heb duidelijke namen gebruikt
+- [ ] Ik heb mijn scene opgeslagen
+- [ ] Ik heb een screenshot of gif gemaakt
+- [ ] Ik heb mijn opdracht ingeleverd via Simulise
+
+---
+
+## Tips
+
+- Sla regelmatig op met **Ctrl+S**.
+- Gebruik duidelijke namen zoals `Coin`, `Goomba` en `Boo`.
+- Als je object uit beeld verdwijnt, selecteer het in de Hierarchy en druk op **F**.
+- Als iets misgaat, gebruik **Ctrl+Z**.
+- Kijk in de Console als je script niet werkt.
