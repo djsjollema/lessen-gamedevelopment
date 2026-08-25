@@ -1,18 +1,29 @@
-# Oefeningen Les 5.1: If-Statements en Switch Gebruiken
+# Oefeningen Les 5.1: Keuzes maken met code
 
-Kies of je start met oefening A of B. Maak beide af voor volgende week.  
-Het is verstandig om daarna ook oefening C te doen — die kun je pas maken als A en B klaar zijn.  
+Vandaag ga je oefenen met `if`, `else if`, `else` en `switch`.
 
-Reflectievragen horen bij elke opdracht en moeten in je README worden beantwoord.  
-Succes!
+Kies of je start met **Oefening 5.1A** of **Oefening 5.1B**.  
+Maak ze allebei af voor volgende week.
 
-## Inleveren werk
+Heb je A en B af? Dan kun je verder met **Oefening 5.1C**.
 
-De oefeningen moeten jullie inleveren via een README.md file op Github.
+---
 
-Voor alle oefeningen geldt dat je een titel met de opdracht plaatst, een korte omschrijving van wat je hebt gedaan, een gifje met daarin je werk goed in beeld gebracht en een link naar de code die bij de opdracht hoort.
+## Inleveren
 
-[gebruik dit als template](../README.md#voorbeeld-readme-opdracht-format)
+Lever je opdracht in via Simulise:
+
+[Lever hier in op Simulise](https://ma.simulise.com/school/assignment/ff9eee03-5b14-4b1b-bd74-16d84222cc62/view)
+
+Zorg dat je inlevering bevat:
+
+- een screenshot of gif van je resultaat
+- een korte uitleg van wat je hebt gemaakt
+- welke keuzes je code maakt
+- waar je `if` hebt gebruikt
+- waar je `switch` hebt gebruikt
+- wat goed lukte
+- wat je lastig vond
 
 ---
 
@@ -20,42 +31,40 @@ Voor alle oefeningen geldt dat je een titel met de opdracht plaatst, een korte o
 
 ### Doel
 
-Oefen met if, else if en else door een health status systeem te maken.
+Je oefent met `if`, `else if` en `else`.
 
 ### Wat ga je doen?
 
-Je maakt een script dat de gezondheid van een speler controleert en verschillende berichten toont afhankelijk van de waarde.
+Je maakt een health-systeem dat verschillende berichten toont bij verschillende health-waardes.
 
 ### Stappen
 
-1. **Maak een nieuwe scene** genaamd "HealthStatus"
-2. **Maak een script** `HealthStatus.cs` met een variabele `int health`
-3. **Gebruik if, else if en else** om verschillende statusberichten te tonen in de console:
-   - health > 80: "Excellent health!"
-   - health > 50: "Good health!"
-   - health > 20: "Warning: Low health!"
-   - anders: "Critical: Very low health!"
-4. **Laat health afnemen** met een toets (bijvoorbeeld H) en verhogen met een andere toets (bijvoorbeeld J)
-5. **Test het systeem** door health te veranderen en de juiste berichten te tonen
+1. Maak een nieuwe scene met de naam `HealthStatus`.
+2. Maak een script met de naam `HealthStatus`.
+3. Maak een variabele `int health`.
+4. Gebruik `if`, `else if` en `else` voor deze statussen:
 
-#### Voorbeeld Console Output
+| Health | Bericht |
+| --- | --- |
+| hoger dan 80 | Excellent health |
+| hoger dan 50 | Good health |
+| hoger dan 20 | Warning: Low health |
+| 20 of lager | Critical: Very low health |
 
-```
-Excellent health!
-Warning: Low health!
-Critical: Very low health!
-```
+5. Laat `health` lager worden met een toets, bijvoorbeeld **H**.
+6. Laat `health` hoger worden met een toets, bijvoorbeeld **J**.
+7. Test of de juiste berichten in de Console verschijnen.
 
 ### Reflectievragen
 
-- Waarom past hier een if-structuur goed?  
-- Wanneer zou een switch beter werken?
+- Waarom past hier een `if` goed?
+- Wanneer zou een `switch` beter werken?
 
-### Bonus Uitdagingen
+### Bonus
 
-- Voeg een visueel effect toe bij elke status (kleur veranderen)
-- Toon een "Game Over" bericht als health 0 is
-- Voeg een heal item toe dat health herstelt
+- Toon `Game Over` als health `0` is.
+- Verander de kleur van je speler per health-status.
+- Voeg een heal item toe dat health teruggeeft.
 
 ---
 
@@ -63,89 +72,104 @@ Critical: Very low health!
 
 ### Doel
 
-Oefen met switch-statements door een wapenwissel systeem te maken.
+Je oefent met een `switch`.
 
 ### Wat ga je doen?
 
-Je maakt een script waarin je tussen verschillende wapens kunt wisselen en bij elk wapen andere stats toont.
+Je maakt een systeem waarmee je tussen wapens wisselt.
+
+Elk wapen krijgt andere stats.
 
 ### Stappen
 
-1. **Maak een nieuwe scene** genaamd "WeaponSwitch"
-2. **Maak een script** `WeaponSwitch.cs` met een variabele `string currentWeapon`
-3. **Gebruik een switch-statement** om damage en attack speed te bepalen:
-   - "Sword": damage 25, speed 1.0
-   - "Bow": damage 20, speed 1.5
-   - "Staff": damage 35, speed 0.7
-   - "Dagger": damage 15, speed 2.0
-   - default: damage 10, speed 1.0
-4. **Wissel van wapen** met toetsen (1-4) en toon de stats in de console
-5. **Test het systeem** door te wisselen en te zien dat de stats veranderen
+1. Maak een nieuwe scene met de naam `WeaponSwitch`.
+2. Maak een script met de naam `WeaponSwitch`.
+3. Maak een variabele `string currentWeapon`.
+4. Gebruik een `switch` voor deze wapens:
 
-#### Voorbeeld Console Output
+| Weapon | Damage | Speed |
+| --- | --- | --- |
+| Sword | 25 | 1.0 |
+| Bow | 20 | 1.5 |
+| Staff | 35 | 0.7 |
+| Dagger | 15 | 2.0 |
+| Default | 10 | 1.0 |
 
-```
-Equipped: Sword
-Damage: 25, Speed: 1
-Equipped: Bow
-Damage: 20, Speed: 1.5
-```
+5. Wissel van wapen met toetsen **1**, **2**, **3** en **4**.
+6. Toon het gekozen wapen en de stats in de Console.
 
 ### Reflectievragen
 
-- Waarom past hier een switch-statement beter dan een if-structuur?  
-- Wat zou er gebeuren als je dit met if/else zou doen?
+- Waarom past hier een `switch` goed?
+- Wat zou er gebeuren als je dit met veel `if`/`else` zou doen?
 
-- 
-### Bonus Uitdagingen
+### Bonus
 
-- Voeg een "Unarmed" optie toe als default
-- Toon een korte beschrijving bij elk wapen
-- Voeg een visueel model wissel toe bij wapen switch
+- Voeg een `Unarmed` optie toe.
+- Toon per wapen een korte beschrijving.
+- Laat een object van kleur veranderen bij elk wapen.
 
 ---
 
-## Oefening 5.1C: Verdieping – Weapon Switch met Enum
+## Oefening 5.1C: Weapon Switch met enum
 
 ### Doel
 
-Leer hoe je vaste keuzes typeveilig en overzichtelijk maakt met een enum.
+Je leert hoe je vaste keuzes netter kunt opslaan met een `enum`.
 
 ### Wat ga je doen?
 
-Je breidt de vorige opdracht uit en vervangt de string door een enum voor de wapentypes.
+Je breidt je Weapon Switch uit.  
+In plaats van een `string` gebruik je een `enum`.
 
 ### Stappen
 
-1. **Kopieer** je bestaande script `WeaponSwitch.cs` en noem het `WeaponSwitchEnum.cs`.  
-2. **Verwijder** de stringvariabele en **voeg een enum toe** bovenaan in je script:  
-   ```csharp
-   public enum WeaponType { Sword, Bow, Staff, Dagger }
-   ```
-Maak een variabele aan:
-  ```csharp
-   public WeaponType selectedWeapon = WeaponType.Sword;
+1. Kopieer je script `WeaponSwitch`.
+2. Noem het nieuwe script `WeaponSwitchEnum`.
+3. Voeg bovenaan je script een enum toe:
+
+```csharp
+public enum WeaponType
+{
+    Sword,
+    Bow,
+    Staff,
+    Dagger
+}
 ```
-Gebruik toetsen R, T, Y, U om te wisselen tussen wapens.
 
-Gebruik een switch om feedback te tonen via Debug.Log() of TextMeshPro.
+4. Maak een variabele:
 
-Roep SelectWeapon(selectedWeapon) alleen aan binnen de juiste toetsblokken.
-
-Voorbeeld Console Output
-  ```csharp
-   You selected the sword: strong and close range.
-   You selected the bow: long range and fast.
-   You selected the magic staff: powerful but uses mana.
-   You selected the hammer: heavy, slow, but deals massive damage.
+```csharp
+public WeaponType selectedWeapon = WeaponType.Sword;
 ```
+
+5. Gebruik een `switch` op `selectedWeapon`.
+6. Toon per wapen een passend bericht in de Console.
+7. Test of je de enum kunt aanpassen in de Inspector.
+
 ### Reflectievragen
-- Wat is het verschil tussen het gebruik van een string en een enum?
-- Waarom zou een professionele developer een enum gebruiken?
-  
-Bonus Uitdagingen
-- Laat de enum zichtbaar zijn in de Unity Inspector (dropdown)
-- Voeg een nieuw wapen toe aan de enum, bijvoorbeeld Axe
-- Combineer enum met een if: toon extra info als het wapen Staff is én health > 50
 
+- Wat is het verschil tussen een `string` en een `enum`?
+- Waarom zou een developer een `enum` gebruiken?
 
+### Bonus
+
+- Voeg een nieuw wapen toe, bijvoorbeeld `Axe`.
+- Combineer je enum met een `if`.
+- Toon extra info als het wapen `Staff` is en health hoger is dan 50.
+
+---
+
+## Klaar?
+
+Controleer je werk:
+
+- [ ] Ik heb oefening A gemaakt
+- [ ] Ik heb oefening B gemaakt
+- [ ] Ik heb `if`, `else if` en `else` gebruikt
+- [ ] Ik heb een `switch` gebruikt
+- [ ] Mijn berichten verschijnen in de Console
+- [ ] Ik heb mijn scene opgeslagen
+- [ ] Ik heb een screenshot of gif gemaakt
+- [ ] Ik heb mijn opdracht ingeleverd via [Simulise](https://ma.simulise.com/school/assignment/ff9eee03-5b14-4b1b-bd74-16d84222cc62/view)
