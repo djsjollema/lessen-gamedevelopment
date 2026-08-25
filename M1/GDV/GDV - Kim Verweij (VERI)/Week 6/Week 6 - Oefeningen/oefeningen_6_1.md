@@ -98,7 +98,7 @@ Check:
 
 ## Inleveren
 
-Lever je opdracht in via [Simulise.](PLAATS-HIER-DE-SIMULISE-LINK)
+Lever je opdracht in via [Simulise.](https://ma.simulise.com/school/assignment/818c8638-2ea6-4a73-9d0b-4eedfbd5400f/view)
 
 Je inlevering bevat:
 
